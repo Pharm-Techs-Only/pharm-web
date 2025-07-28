@@ -6,7 +6,7 @@ module.exports = {
     title: `Pharm Techs Only!`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-google-gtag", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
@@ -18,5 +18,17 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
-  }]
+  }, 
+  {
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: [
+        "G-YVBVKF9KLX"
+      ],
+      pluginConfig: {
+        head: true,
+      },
+    },
+  }
+  ]
 };

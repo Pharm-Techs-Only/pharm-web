@@ -1,176 +1,195 @@
-import * as React from "react"
+import React from 'react'
+import Layout from '../components/Layout'
+import { Link } from 'gatsby'
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-const IndexPage = () => {
+const HomePage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+    <Layout>
+      {/* Main Hero Section */}
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Exciting news! A new era for PharmTechs Only! is on the Horizon!
+              </h1>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Get ready for a revolutionary new way to connect, learn, and grow within our global community! We are thrilled to announce that we are in the process of building an entirely new, custom experience for both web and mobile. This next-generation platform is being crafted from the ground up with one goal in mind: to better support and empower you, our dedicated community of pharmacy technicians. Imagine a seamless, intuitive, and feature-rich environment built to your specifications, available wherever you are. This is more than just an update; it's a complete reimagining of how we connect and advance together. Stay tuned for more details as we build the future of our community, together!
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="bg-gray-200 rounded-lg w-full h-96 flex items-center justify-center">
+                <span className="text-gray-500 text-lg">Hero Image</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Subscribe Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center">
+              <div className="bg-gray-200 rounded-lg w-full h-80 flex items-center justify-center">
+                <span className="text-gray-500 text-lg">Community Image</span>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                A community for us, by us
+              </h2>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                Being a pharmacy technician can be a challenging, and isolating career. It is hard to find the right resources, advance ones career, and find others that you can connect with. Our founder has felt this first-hand, and for the past 5 years she has been working tirelessly to build Pharm Techs Only. A place for Pharm Techs, by Pharm Techs. Where our global community can come together to learn, share, support, and grow.
+              </p>
+              
+              {/* Mailchimp signup form */}
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4">Stay Connected</h3>
+                <form className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resource Center Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Learn</h2>
+          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+            {[
+              'Certified Pharm Tech Certification Course',
+              'Free CEUs',
+              'Organizations',
+              'Ebooks',
+              'Medical Dictionary',
+              'Pill Identifier',
+              'Conferences'
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-gray-900">{item}</h3>
+              </div>
+            ))}
+          </div>
+          
+          <Link
+            to="/resource-center"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+            Go to Resource Center
+          </Link>
+        </div>
+      </section>
+
+      {/* Tech Connect Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Tech Connect</h2>
+          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            Building community, a centralized place to connect, share, and interact with other pharmacy technicians, just like you.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+            {['Interact', 'Connect', 'Chat', 'Polls', 'Communities'].map((item, index) => (
+              <div key={index} className="bg-indigo-50 border border-indigo-200 p-6 rounded-lg">
+                <h3 className="font-semibold text-indigo-900">{item}</h3>
+              </div>
+            ))}
+          </div>
+          
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 inline-block">
+            <p className="text-yellow-800 font-medium">Tech Connect Coming Soon</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Careers Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Careers</h2>
+          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            Supporting your career growth from certification through career advancement.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {[
+              'Global Job Board',
+              'Career Tools',
+              'Resume Writing',
+              'Exam Study Tools'
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-gray-900">{item}</h3>
+              </div>
+            ))}
+          </div>
+          
+          <Link
+            to="/careers"
+            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
+          >
+            Go to Careers
+          </Link>
+        </div>
+      </section>
+
+      {/* Employers Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Employer? See our tools built just for you!
+          </h2>
+          <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            Are you a pharmacy looking to fill your opening with the certified, experienced pharmacy technicians?
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {[
+              'Post Jobs',
+              'Search Candidates',
+              'List Your Company',
+              'Advertise on Tech Connect'
+            ].map((item, index) => (
+              <div key={index} className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
+                <h3 className="font-semibold text-purple-900">{item}</h3>
+              </div>
+            ))}
+          </div>
+          
+          <Link
+            to="/employers"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
+          >
+            Create your FREE Employer Account
+          </Link>
+        </div>
+      </section>
+    </Layout>
   )
 }
 
-export default IndexPage
+export default HomePage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => (
+  <>
+    <title>PharmTechs Only - Community for Pharmacy Technicians</title>
+    <meta name="description" content="A community for pharmacy technicians to connect, learn, and grow together." />
+  </>
+)

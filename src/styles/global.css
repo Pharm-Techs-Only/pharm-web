@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom breakpoint for navigation at 1100px */
+@media (min-width: 1100px) {
+  .desktop-nav\:flex {
+    display: flex;
+  }
+  .mobile-menu-btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  .desktop-nav\:flex {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}

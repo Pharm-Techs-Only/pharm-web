@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <header className="bg-white shadow-sm border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,8 +19,8 @@ const Header = () => {
             </Link>
           </div>
           
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Desktop Navigation - Show for screens >= 1100px */}
+          <nav className="hidden desktop-nav:flex space-x-8">
             <Link 
               to="/tech-connect" 
               className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
@@ -41,15 +47,61 @@ const Header = () => {
             </Link>
           </nav>
           
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button className="text-gray-700 hover:text-blue-600">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+          {/* Mobile menu button - Show for screens < 1100px */}
+          <div className="mobile-menu-btn">
+            <button 
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
+        
+        {/* Mobile Navigation Menu - Show for screens < 1100px */}
+        {isMenuOpen && (
+          <div className="mobile-menu border-t border-gray-200 py-4">
+            <nav className="flex flex-col space-y-2">
+              <Link 
+                to="/tech-connect" 
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors block"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Tech Connect
+              </Link>
+              <Link 
+                to="/careers" 
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors block"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Careers
+              </Link>
+              <Link 
+                to="/resource-center" 
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors block"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Resource Center
+              </Link>
+              <Link 
+                to="/store" 
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors block"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Store
+              </Link>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   )

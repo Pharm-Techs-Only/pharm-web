@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 import { Link } from 'gatsby'
 
 const ResourceCenterPage = () => {
@@ -46,8 +46,8 @@ const ResourceCenterPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="bg-gradient-to-br from-[#D8EBFF/0] to-[#8EC1F3/16] py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1448px] mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Resource Center
           </h1>
@@ -59,7 +59,7 @@ const ResourceCenterPage = () => {
 
       {/* Categories Filter */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white border-b">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1448px] mx-auto">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category, index) => (
               <button
@@ -79,7 +79,7 @@ const ResourceCenterPage = () => {
 
       {/* Resources Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1448px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource, index) => (
               <div key={index} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">

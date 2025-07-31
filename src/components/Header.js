@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -9,39 +10,49 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-sm border-b">
+    <header className="bg-white shadow-sm border-b max-w-[1170px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-blue-600">
-              PharmTechs Only
+              <StaticImage
+                src="../images/logo.svg"
+                alt="PharmTechsOnly!"
+              />
             </Link>
           </div>
           
           {/* Desktop Navigation - Show for screens >= 1100px */}
           <nav className="hidden desktop-nav:flex space-x-8">
             <Link 
-              to="/tech-connect" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              to="/#waitlist" 
+              className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              activeClassName="text-pharm-blue"
             >
-              Tech Connect
+              Tech Connect<br/>
+              (Coming Soon)
             </Link>
             <Link 
-              to="/careers" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              to="https://careers.pharmtechsonly.com" 
+              target="_blank"
+              className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              activeClassName="text-pharm-blue"
             >
               Careers
             </Link>
             <Link 
               to="/resource-center" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              activeClassName="text-pharm-blue"
             >
               Resource Center
             </Link>
             <Link 
-              to="/store" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+              to="https://store.pharmtechsonly.com" 
+              target="_blank"
+              className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              activeClassName="text-pharm-blue"
             >
               Store
             </Link>
@@ -51,7 +62,7 @@ const Header = () => {
           <div className="mobile-menu-btn">
             <button 
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-pharm-grey hover:text-blue-600 focus:outline-none focus:text-blue-600"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -73,28 +84,32 @@ const Header = () => {
             <nav className="flex flex-col space-y-2">
               <Link 
                 to="/tech-connect" 
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors block"
+                className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors block"
+                activeClassName="text-pharm-blue"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Tech Connect
               </Link>
               <Link 
                 to="/careers" 
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors block"
+                className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors block"
+                activeClassName="text-pharm-blue"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Careers
               </Link>
               <Link 
                 to="/resource-center" 
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors block"
+                className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors block"
+                activeClassName="text-pharm-blue"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Resource Center
               </Link>
               <Link 
                 to="/store" 
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors block"
+                className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors block"
+                activeClassName="text-pharm-blue"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Store

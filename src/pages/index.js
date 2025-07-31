@@ -20,7 +20,7 @@ const HomePage = () => {
             </div>
             <div className="flex justify-center">
               <div className="bg-gray-200 rounded-lg w-full h-96 flex items-center justify-center">
-                <StaticImage src="../images/hero-home.svg" alt="Two Pharmacy Technicians" />
+                <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" />
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <div className="bg-gray-200 rounded-lg w-full h-80 flex items-center justify-center">
-                <StaticImage src="../images/hero-home.svg" alt="Two Pharmacy Technicians" />
+                <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" />
               </div>
             </div>
             <div>

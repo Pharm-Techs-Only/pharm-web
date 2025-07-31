@@ -32,7 +32,7 @@ const FreeCEUsPage = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-8">
+      <div className="content-container px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <nav className="mb-6">
             <Link to="/resource-center" className="text-blue-600 hover:text-blue-800">

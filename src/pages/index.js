@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import HeroHeader from '../components/HeroHeader'
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -7,14 +8,14 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Main Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 px-4 sm:px-6 lg:px-8">
+      <HeroHeader className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="content-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative right-500">
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-[42px] font-500 text-pharm-blue mb-6">
                 Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
               </h1>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-[16px] text-pharm-grey">
                 Get ready for a revolutionary new way to connect, learn, and grow within our global community! We are thrilled to announce that we are in the process of building an entirely new, custom experience for both web and mobile. This next-generation platform is being crafted from the ground up with one goal in mind: to better support and empower you, our dedicated community of pharmacy technicians. This is more than just an update; it's a complete reimagining of how we connect and advance together. Stay tuned for more details as we build the future of our community, together!
               </p>
             </div>
@@ -23,9 +24,12 @@ const HomePage = () => {
                 <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" />
               </div>
             </div>
+            <StaticImage className="absolute -z-1 w-[352px] h-[99px]" style={{ left: "50px", top: 0 }} src="../images/cloud_one.svg" alt="Cloud One" />
+            <StaticImage className="absolute -z-1 w-[831px] h-[151px]" style={{ right: 0, bottom: "200px" }} src="../images/cloud_three.svg" alt="Cloud Three" />
+            <StaticImage className="absolute -z-1 w-full h-auto" style={{ left: 0, bottom: 0 }} src="../images/cloud_floor.svg" alt="Cloud Floor" />
           </div>
         </div>
-      </section>
+      </HeroHeader>
 
       {/* Subscribe Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">

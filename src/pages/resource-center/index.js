@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 
 const ResourceCenterPage = () => {
@@ -23,7 +24,7 @@ const ResourceCenterPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#D8EBFF/0] to-[#8EC1F3/16] py-16 px-4 sm:px-6 lg:px-8">
+      <HeroHeader className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="content-container text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Resource Center
@@ -32,7 +33,7 @@ const ResourceCenterPage = () => {
             Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
           </p>
         </div>
-      </section>
+      </HeroHeader>
 
       {/* Categories Filter */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white border-b">

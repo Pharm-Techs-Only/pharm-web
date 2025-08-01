@@ -2,10 +2,10 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, includeHeader = false }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      {includeHeader && <Header />}
       <main className="flex-grow">
         {children}
       </main>

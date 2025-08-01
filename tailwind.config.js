@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'heading': ['"MADE Tommy Soft"', 'sans-serif'],
+        'heading': ['MADE Tommy Soft', 'sans-serif'],
         'body': ['Poppins', 'sans-serif'],
       },
       fontWeight: {

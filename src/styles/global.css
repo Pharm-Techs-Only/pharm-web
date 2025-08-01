@@ -5,6 +5,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@reference {
+  @layer base {
+    body {
+      margin: 0;
+      @apply font-body;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-heading font-heading;
+    }
+    
+    p {
+      @apply font-body font-body;
+    }
+  }
+  @layer components {
+    .header-container {
+      @apply w-full max-w-[1448px] mx-auto py-[1.5rem] px-[1rem];
+    }
+    .content-container {
+      @apply w-full max-w-[1448px] mx-auto py-[10rem] px-[1rem];
+    }
+  }
+}
+
+
 /* Custom breakpoint for navigation at 1100px */
 @media (min-width: 1100px) {
   .desktop-nav\:flex {
@@ -24,14 +50,5 @@
   }
   .mobile-menu-btn {
     display: block;
-  }
-}
-
-@layer components {
-  .header-container {
-    @apply w-full max-w-[1448px] mx-auto py-6 px-4;
-  }
-  .content-container {
-    @apply w-full max-w-[1448px] mx-auto py-[170px] px-4;
   }
 }

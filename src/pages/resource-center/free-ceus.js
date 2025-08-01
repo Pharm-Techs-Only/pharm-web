@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 
 const FreeCEUsPage = () => {
@@ -32,6 +33,18 @@ const FreeCEUsPage = () => {
 
   return (
     <Layout>
+      {/* Hero Section */}
+      <HeroHeader className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="content-container text-center">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Free Continuing Education Units (CEUs)
+          </h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
+          </p>
+        </div>
+      </HeroHeader>
+
       <div className="content-container px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <nav className="mb-6">
@@ -39,8 +52,6 @@ const FreeCEUsPage = () => {
               ← Back to Resource Center
             </Link>
           </nav>
-          
-          <h1 className="text-4xl font-bold mb-6">Free Continuing Education Units (CEUs)</h1>
           
           <div className="prose max-w-none">
             <p className="text-lg text-gray-600 mb-8">

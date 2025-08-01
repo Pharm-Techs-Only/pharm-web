@@ -28,7 +28,10 @@
 }
 
 @layer components {
+  .header-container {
+    @apply w-full max-w-[1448px] mx-auto py-6 px-4;
+  }
   .content-container {
-    @apply w-full max-w-[1448px] mx-auto;
+    @apply w-full max-w-[1448px] mx-auto py-[170px] px-4;
   }
 }

@@ -5,28 +5,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@reference {
-  @layer base {
-    body {
-      margin: 0;
-      @apply font-body;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      @apply font-heading font-heading;
-    }
-    
-    p {
-      @apply font-body font-body;
-    }
+@layer base {
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
   }
-  @layer components {
-    .header-container {
-      @apply w-full max-w-[1448px] mx-auto py-[1.5rem] px-[1rem];
-    }
-    .content-container {
-      @apply w-full max-w-[1448px] mx-auto py-[10rem] px-[1rem];
-    }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'MADE Tommy Soft', sans-serif;
+    font-weight: 800;
+    margin: 0 0 2rem;
+    color: #09447E;
+  }
+  
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 0 0 2rem;
   }
 }
 
@@ -50,5 +46,20 @@
   }
   .mobile-menu-btn {
     display: block;
+  }
+}
+
+@layer components {
+  .header-container {
+    width:100%;
+    max-width: 1448px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+  }
+  .content-container {
+    width: 100%;
+    max-width: 1448px;
+    margin: 0 auto;
+    padding: 10rem 1rem;
   }
 }

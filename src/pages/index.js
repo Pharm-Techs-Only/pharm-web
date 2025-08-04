@@ -13,7 +13,7 @@ const HomePage = () => {
           <div className="content-container">
             <div className="flex flex-row justify-between items-center">
               <div className="max-w-[730px] w-[60%]">
-                <h1 className="text-[42px] font-500 text-pharm-blue mb-6">
+                <h1 className="text-[42px] font-medium text-pharm-blue mb-6">
                   Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
                 </h1>
                 <p className="text-[16px] text-pharm-grey">

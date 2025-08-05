@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
+import MailchimpSubscribe from '../components/MailchimpSubscribe'
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -24,9 +25,9 @@ const HomePage = () => {
                 <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="relative -bottom-[150px]" />
               </div>
             </div>
-            <StaticImage className="absolute -z-1 w-[352px] h-[99px]" style={{ left: "50px", top: "220px" }} src="../images/cloud_one.svg" alt="Cloud One" />
-            <StaticImage className="absolute -z-1 w-[831px] h-[151px]" style={{ right: 0, bottom: "200px" }} src="../images/cloud_three.svg" alt="Cloud Three" />
-            <StaticImage className="absolute -z-1 w-full h-auto" style={{ left: 0, bottom: 0 }} src="../images/cloud_floor.svg" alt="Cloud Floor" />
+            <StaticImage className="absolute -z-1 w-[352px] h-[99px] l-[50px] t-[220px]" src="../images/cloud_one.svg" alt="Cloud One" />
+            <StaticImage className="absolute -z-1 w-[831px] h-[151px] r-[0] b-[200px]" src="../images/cloud_three.svg" alt="Cloud Three" />
+            <StaticImage className="absolute -z-1 w-full h-auto l-[0] b-[0]" src="../images/cloud_floor.svg" alt="Cloud Floor" />
           </div>
         </div>
       </HeroHeader>
@@ -51,39 +52,8 @@ const HomePage = () => {
                 </p>
                 
                 {/* Mailchimp signup form */}
-                <div id="waitlist" className="bg-gray-50 p-6 rounded-lg">
-                  <h3>Join the Waitlist</h3>
-                  <div id="mc_embed_shell">
-                    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
-                    <style type="text/css">{`
-                          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-                          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                    `}</style>
-                    <div id="mc_embed_signup">
-                      <form action="https://pharmtechsonly.us10.list-manage.com/subscribe/post?u=647acc4c58e278ba9635c4a4b&amp;id=6fa4d8c02e&amp;f_id=005a48e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
-                          <div id="mc_embed_signup_scroll">
-                              <div className="indicates-required"><span className="asterisk">*</span> indicates required</div>
-                              <div className="mc-field-group"><label htmlFor="mce-EMAIL">Email Address <span className="asterisk">*</span></label><input type="email" name="EMAIL" className="required email" id="mce-EMAIL" required="" value="" /></div>
-                          <div id="mce-responses" className="clear foot">
-                              <div className="response" id="mce-error-response" style={{display: "none"}}></div>
-                              <div className="response" id="mce-success-response" style={{display: "none"}}></div>
-                          </div>
-                          <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
-                              {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-                              <input type="text" name="b_647acc4c58e278ba9635c4a4b_6fa4d8c02e" tabIndex="-1" value="" />
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-                    <script 
-                      type="text/javascript"
-                      dangerouslySetInnerHTML={{
-                        __html: `(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';fnames[7]='MERGE7';ftypes[7]='text';fnames[8]='MMERGE8';ftypes[8]='text';}(jQuery));var $mcj = jQuery.noConflict(true);`
-                      }}
-                    />
-                  </div>
+                <div id="waitlist">
+                  <MailchimpSubscribe />
                 </div>
               </div>
             </div>
@@ -94,23 +64,31 @@ const HomePage = () => {
       {/* Resource Center Section */}
       <section className={`bg-gradient-to-b from-[rgba(142, 193, 243, 1)] to-[rgba(216, 235, 255, 0)]`}>
         <div className="relative">
-          <div className="content-container">
+          <div className="content-container flex flex-col items-center">
               <h2>Learn</h2>
               <p>
                 Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
-                {[
-                  {'title': 'Free CEUs', 'link': '/resource-center/free-ceus', 'icon': 'icon_free-ceus.svg'},
-                  {'title': 'Organizations', 'link': '/resource-center/organizations', 'icon': 'icon_organizations.svg'},
-                  {'title': 'Blog', 'link': '/resource-center/blog', 'icon': 'icon_blog.svg'},
-                ].map((item, index) => (
-                  <Link key={index} to={item.link} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
-                    <StaticImage src={`../images/${item.icon}`} alt={item.title} className="mb-4 w-[100px] h-[auto]" />
-                    <h3>{item.title}</h3>
-                  </Link>
-                ))}
+                <Link to="/resource-center/free-ceus" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                  <div className="height-[102px] mb-4">
+                    <StaticImage src="../images/icon_career-resources.svg" alt="Free CEUs" className="w-[98px] h-[89px]" />
+                  </div>
+                  <h3>Free CEUs</h3>
+                </Link>
+                <Link to="/resource-center/organizations" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                  <div className="height-[102px] mb-4">
+                    <StaticImage src="../images/icon_organizations.svg" alt="Organizations" className="w-[84px] h-[102px]" />
+                  </div>
+                  <h3>Organizations</h3>
+                </Link>
+                <Link to="/resource-center/blog" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                  <div className="height-[102px] mb-4">
+                    <StaticImage src="../images/icon_blog.svg" alt="Blog" className="w-[91px] h-[83px]" />
+                  </div>
+                  <h3>Blog</h3>
+                </Link>
               </div>
               
               <Link
@@ -126,7 +104,7 @@ const HomePage = () => {
       {/* Tech Connect Section */}
       <section className={`bg-gradient-to-b from-[rgba(142, 193, 243, 1)] to-[rgba(216, 235, 255, 0)]`}>
         <div className="relative">
-          <div className="content-container">
+          <div className="content-container flex flex-col items-center">
             <h2>Tech Connect</h2>
             <p>
               Building community, a centralized place to connect, share, and interact with other pharmacy technicians, just like you.
@@ -154,23 +132,37 @@ const HomePage = () => {
       {/* Careers Section */}
       <section className={`bg-gradient-to-b from-[rgba(142, 193, 243, 1)] to-[rgba(216, 235, 255, 0)]`}>
         <div className="relative">
-          <div className="content-container">
+          <div className="content-container flex flex-col items-center">
             <h2>Grow</h2>
             <p>
               Supporting your career growth from certification through career advancement.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {[
-                {title: 'Global Career Center', link: 'https://careers.pharmtechsonly.com'},
-                {title: 'Career Resources', link: 'https://careers.pharmtechsonly.com/career-resources'}, 
-                {title: 'Interview Coach', link: 'https://careers.pharmtechsonly.com/interview-coach'},
-                {title: 'Offer Analyzer', link: 'https://careers.pharmtechsonly.com/analyze-offer'},
-              ].map((item, index) => (
-                <Link key={index} to={item.link} target="_blank" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <h3>{item.title}</h3>
-                </Link>
-              ))}
+              <Link to="https://careers.pharmtechsonly.com" target="_blank" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_global-careers.svg" alt="Global Career Center" className="w-[98px] h-[89px]" />
+                </div>
+                <h3>Global Career Center</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/career-resources" target="_blank" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_career-resources.svg" alt="Career Resources" className="w-[98px] h-[89px]" />
+                </div>
+                <h3>Career Resources</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/interview-coach" target="_blank" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_career-resources.svg" alt="Interview Coach" className="w-[98px] h-[89px]" />
+                </div>
+                <h3>Interview Coach</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/analyze-offer" target="_blank" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_career-resources.svg" alt="Offer Analyzer" className="w-[98px] h-[89px]" />
+                </div>
+                <h3>Offer Analyzer</h3>
+              </Link>
             </div>
             
             <Link

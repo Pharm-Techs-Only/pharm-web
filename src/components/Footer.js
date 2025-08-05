@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import MailchimpSubscribe from './MailchimpSubscribe'
 
 const Footer = () => {
   return (
@@ -13,21 +14,17 @@ const Footer = () => {
             </h3>
             
             {/* Email signup form */}
-            <form className="mb-6">
-              <div className="flex max-w-md">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 text-gray-900 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button
-                  type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-md font-medium transition-colors"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
+            <div className="mb-6">
+              <MailchimpSubscribe 
+                title="Stay Updated"
+                showTitle={false}
+                containerClasses=""
+                layout="horizontal"
+                inputClasses="flex-1 px-4 py-2 text-gray-900 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 required email"
+                buttonClasses="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-md font-medium transition-colors"
+                buttonText="Subscribe"
+              />
+            </div>
             
             {/* Social Links */}
             <div className="flex space-x-4 mb-4">
@@ -49,7 +46,7 @@ const Footer = () => {
             </div>
             
             <p className="text-gray-400 text-sm">
-              © 2024 PharmTechs Only. All rights reserved.
+              © 2025 PharmTechs Only. All rights reserved.
             </p>
           </div>
           

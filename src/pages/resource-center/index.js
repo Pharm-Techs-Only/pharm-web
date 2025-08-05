@@ -26,10 +26,10 @@ const ResourceCenterPage = () => {
       {/* Hero Section */}
       <HeroHeader>
         <div className="content-container text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h1>
             Resource Center
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p>
             Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
           </p>
         </div>

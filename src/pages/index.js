@@ -13,10 +13,10 @@ const HomePage = () => {
           <div className="content-container">
             <div className="flex flex-row justify-between items-center">
               <div className="max-w-[730px] w-[60%]">
-                <h1 className="text-[42px] font-medium text-pharm-blue mb-6">
+                <h1>
                   Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
                 </h1>
-                <p className="text-[16px] text-pharm-grey">
+                <p>
                   Get ready for a revolutionary new way to connect, learn, and grow within our global community! We are thrilled to announce that we are in the process of building an entirely new, custom experience for both web and mobile. This next-generation platform is being crafted from the ground up with one goal in mind: to better support and empower you, our dedicated community of pharmacy technicians. This is more than just an update; it's a complete reimagining of how we connect and advance together. Stay tuned for more details as we build the future of our community, together!
                 </p>
               </div>
@@ -40,19 +40,19 @@ const HomePage = () => {
                 <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" />
               </div>
               <div className="max-w-[730px] w-[60%]">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2>
                   A Community For Us, By Us
                 </h2>
-                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                <p>
                   Being a pharmacy technician can be a challenging, and isolating career. It is hard to find the right resources, advance one's career, and find others that you can connect with.
                 </p>
-                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                <p>
                   Our founder has felt this first-hand, and for the past 5 years she has been working tirelessly to build Pharm Techs Only!... a place for Pharm Techs, by Pharm Techs. Where our global community can come together to learn, share, support, and grow.
                 </p>
                 
                 {/* Mailchimp signup form */}
                 <div id="waitlist" className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-4">Join the Waitlist</h3>
+                  <h3>Join the Waitlist</h3>
                   <div id="mc_embed_shell">
                     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
                     <style type="text/css">{`
@@ -95,20 +95,21 @@ const HomePage = () => {
       <section className={`bg-gradient-to-b from-[rgba(142, 193, 243, 1)] to-[rgba(216, 235, 255, 0)]`}>
         <div className="relative">
           <div className="content-container">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Learn</h2>
-              <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+              <h2>Learn</h2>
+              <p>
                 Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
                 {[
-                  'Free CEUs',
-                  'Organizations',
-                  'Blog',
+                  {'title': 'Free CEUs', 'link': '/resource-center/free-ceus', 'icon': 'icon_free-ceus.svg'},
+                  {'title': 'Organizations', 'link': '/resource-center/organizations', 'icon': 'icon_organizations.svg'},
+                  {'title': 'Blog', 'link': '/resource-center/blog', 'icon': 'icon_blog.svg'},
                 ].map((item, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <h3 className="font-semibold text-gray-900">{item}</h3>
-                  </div>
+                  <Link key={index} to={item.link} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                    <StaticImage src={`../images/${item.icon}`} alt={item.title} className="mb-4 w-[100px] h-[auto]" />
+                    <h3>{item.title}</h3>
+                  </Link>
                 ))}
               </div>
               
@@ -126,22 +127,22 @@ const HomePage = () => {
       <section className={`bg-gradient-to-b from-[rgba(142, 193, 243, 1)] to-[rgba(216, 235, 255, 0)]`}>
         <div className="relative">
           <div className="content-container">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Tech Connect</h2>
-            <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            <h2>Tech Connect</h2>
+            <p>
               Building community, a centralized place to connect, share, and interact with other pharmacy technicians, just like you.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
               {['Interact', 'Connect', 'Chat', 'Polls', 'Communities'].map((item, index) => (
                 <div key={index} className="bg-indigo-50 border border-indigo-200 p-6 rounded-lg">
-                  <h3 className="font-semibold text-indigo-900">{item}</h3>
+                  <h3>{item}</h3>
                 </div>
               ))}
             </div>
             
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 inline-block">
-              <p className="text-yellow-800 font-medium">Tech Connect Coming Soon</p>
-              <p className="text-yellow-800 font-medium"><Link
+              <p>Tech Connect Coming Soon</p>
+              <p><Link
               to="/#waitlist"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
             >Join the Waitlist!</Link></p>
@@ -154,8 +155,8 @@ const HomePage = () => {
       <section className={`bg-gradient-to-b from-[rgba(142, 193, 243, 1)] to-[rgba(216, 235, 255, 0)]`}>
         <div className="relative">
           <div className="content-container">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Grow</h2>
-            <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            <h2>Grow</h2>
+            <p>
               Supporting your career growth from certification through career advancement.
             </p>
             
@@ -167,7 +168,7 @@ const HomePage = () => {
                 {title: 'Offer Analyzer', link: 'https://careers.pharmtechsonly.com/analyze-offer'},
               ].map((item, index) => (
                 <Link key={index} to={item.link} target="_blank" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="font-semibold text-gray-900">{item.title}</h3>
+                  <h3>{item.title}</h3>
                 </Link>
               ))}
             </div>
@@ -187,10 +188,10 @@ const HomePage = () => {
       <section className={`bg-gradient-to-b from-[rgba(142, 193, 243, 1)] to-[rgba(216, 235, 255, 0)]`}>
         <div className="relative">
           <div className="content-container">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2>
               Employer? See our tools built just for you!
             </h2>
-            <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+            <p>
               Are you a pharmacy looking to fill your opening with the certified, experienced pharmacy technicians?
             </p>
             

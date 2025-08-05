@@ -1,10 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=MADE+Tommy+Soft:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* MADE Tommy Soft Local Font Faces */
+@font-face {
+  font-family: 'MADE Tommy Soft';
+  src: url('../fonts/made_tommy_soft/MADE Tommy Soft Thin PERSONAL USE.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Tommy Soft';
+  src: url('../fonts/made_tommy_soft/MADE Tommy Soft Light PERSONAL USE.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Tommy Soft';
+  src: url('../fonts/made_tommy_soft/MADE Tommy Soft Regular PERSONAL USE.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Tommy Soft';
+  src: url('../fonts/made_tommy_soft/MADE Tommy Soft Medium PERSONAL USE.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Tommy Soft';
+  src: url('../fonts/made_tommy_soft/MADE Tommy Soft Bold PERSONAL USE.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Tommy Soft';
+  src: url('../fonts/made_tommy_soft/MADE Tommy Soft ExtraBold PERSONAL USE.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Tommy Soft';
+  src: url('../fonts/made_tommy_soft/MADE Tommy Soft Black PERSONAL USE.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 @import "tailwindcss";
 @layer theme, base, components, utilities;
 
 @theme {
+  --font-family-sans: Poppins, ui-sans-serif, system-ui, sans-serif;
+  --font-family-heading: "MADE Tommy Soft", ui-sans-serif, system-ui, sans-serif;
+  
   --color-pharm-blue: #09447E;
   --color-pharm-light-blue: #9DCBE9;
   --color-pharm-purple: #495DA9;
@@ -14,22 +73,32 @@
 @layer base {
   body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-sans);
     font-weight: 500;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'MADE Tommy Soft', sans-serif;
+    font-family: var(--font-family-heading);
     font-weight: 800;
     margin: 0 0 2rem;
-    color: #09447E;
+    color: var(--color-pharm-blue);
+  }
+
+  h1, h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 2rem;
   }
   
   p {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-sans);
     font-weight: 500;
     margin: 0 0 2rem;
+    font-size:16px;
+    line-height: 1.2;
+    color: var(--color-pharm-grey)
   }
+  
   .-z-1 {
     z-index: -1;
   }

@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Pharm Techs Only!`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.pharmtechsonly.com`,
   },
   plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',

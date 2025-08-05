@@ -24,7 +24,7 @@ const ResourceCenterPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroHeader className="py-16 px-4 sm:px-6 lg:px-8">
+      <HeroHeader>
         <div className="content-container text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Resource Center

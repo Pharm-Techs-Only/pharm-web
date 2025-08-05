@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Main Hero Section */}
-      <HeroHeader className="py-16 px-4 sm:px-6 lg:px-8">
+      <HeroHeader>
         <div className="relative">
           <div className="content-container">
             <div className="flex flex-row justify-between items-center">

@@ -38,7 +38,7 @@ const HomePage = () => {
           <div className="content-container">
             <div className="flex flex-row justify-between items-center">
               <div className="flex justify-center">
-                <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" />
+                <StaticImage src="../images/home_community.svg" alt="Two Pharmacy Technicians" />
               </div>
               <div className="max-w-[730px] w-[60%]">
                 <h2>

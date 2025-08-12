@@ -9,28 +9,26 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Main Hero Section */}
-      <HeroHeader className="relative">
-        <div className="relative">
-          <div className="content-container">
-            <div className="flex flex-row justify-between items-center">
-              <div className="max-w-[730px] w-[60%]">
-                <h1>
-                  Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
-                </h1>
-                <p>
-                  Get ready for a revolutionary new way to connect, learn, and grow within our global community! We are thrilled to announce that we are in the process of building an entirely new, custom experience for both web and mobile. This next-generation platform is being crafted from the ground up with one goal in mind: to better support and empower you, our dedicated community of pharmacy technicians. This is more than just an update; it's a complete reimagining of how we connect and advance together. Stay tuned for more details as we build the future of our community, together!
-                </p>
-              </div>
-              <div className="flex justify-center">
-                <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="relative -bottom-[150px]" />
-              </div>
+      <HeroHeader className="relative z-3">
+        <div className="content-container relative z-3">
+          <div className="flex flex-row justify-between items-center">
+            <div className="max-w-[730px] w-[60%]">
+              <h1>
+                Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
+              </h1>
+              <p>
+                Get ready for a revolutionary new way to connect, learn, and grow within our global community! We are thrilled to announce that we are in the process of building an entirely new, custom experience for both web and mobile. This next-generation platform is being crafted from the ground up with one goal in mind: to better support and empower you, our dedicated community of pharmacy technicians. This is more than just an update; it's a complete reimagining of how we connect and advance together. Stay tuned for more details as we build the future of our community, together!
+              </p>
             </div>
-            <StaticImage className="absolute -z-1 w-[352px] h-[99px] l-[50px] t-[220px]" src="../images/cloud_home-hero-one.svg" alt="Cloud One" />
-            <StaticImage className="absolute -z-1 w-[831px] h-[151px] r-[0] b-[200px]" src="../images/cloud_home-hero-three.svg" alt="Cloud Three" />
-            <StaticImage className="absolute z-2 w-full h-auto l-[0] b-[0]" src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" />
+            <div className="flex justify-center">
+              <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="relative -bottom-[150px]" />
+            </div>
           </div>
         </div>
-        <div className="absolute z-1 w-full h-full l-[0] t-[0] bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF] opacity-75"></div>
+        <StaticImage className="absolute -z-1 w-[352px] h-[99px] left-[50px] top-[220px]" src="../images/cloud_home-hero-one.svg" alt="Cloud One" />
+        <StaticImage className="absolute -z-1 w-[831px] h-[151px] right-[0] bottom-[200px]" src="../images/cloud_home-hero-three.svg" alt="Cloud Three" />
+        <StaticImage className="absolute z-2 w-full h-auto left-[0] bottom-[0]" src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" />
+        <div className="absolute z-1 w-full h-full left-[0] top-[0] bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF] opacity-75"></div>
       </HeroHeader>
 
       {/* Subscribe Section */}

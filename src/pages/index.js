@@ -27,8 +27,8 @@ const HomePage = () => {
         </div>
         <StaticImage className="absolute -z-1 w-[352px] h-[99px] left-[50px] top-[220px]" src="../images/cloud_home-hero-one.svg" alt="Cloud One" />
         <StaticImage className="absolute -z-1 w-[831px] h-[151px] right-[0] bottom-[200px]" src="../images/cloud_home-hero-three.svg" alt="Cloud Three" />
-        <StaticImage className="absolute z-2 w-full h-auto left-[0] bottom-[0]" src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" />
-        <div className="absolute z-1 w-full h-full left-[0] top-[0] bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF] opacity-75"></div>
+        <StaticImage className="absolute z-1 w-full h-auto left-[0] bottom-[0]" src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" />
+        <div className="absolute z-2 w-full h-full left-[0] top-[0] bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF] opacity-75"></div>
       </HeroHeader>
 
       {/* Subscribe Section */}

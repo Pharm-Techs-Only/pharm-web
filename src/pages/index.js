@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Main Hero Section */}
-      <HeroHeader>
+      <HeroHeader className="relative">
         <div className="relative">
           <div className="content-container">
             <div className="flex flex-row justify-between items-center">
@@ -25,11 +25,12 @@ const HomePage = () => {
                 <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="relative -bottom-[150px]" />
               </div>
             </div>
-            <StaticImage className="absolute -z-1 w-[352px] h-[99px] l-[50px] t-[220px]" src="../images/cloud_one.svg" alt="Cloud One" />
-            <StaticImage className="absolute -z-1 w-[831px] h-[151px] r-[0] b-[200px]" src="../images/cloud_three.svg" alt="Cloud Three" />
-            <StaticImage className="absolute -z-1 w-full h-auto l-[0] b-[0]" src="../images/cloud_floor.svg" alt="Cloud Floor" />
+            <StaticImage className="absolute -z-1 w-[352px] h-[99px] l-[50px] t-[220px]" src="../images/cloud_home-hero-one.svg" alt="Cloud One" />
+            <StaticImage className="absolute -z-1 w-[831px] h-[151px] r-[0] b-[200px]" src="../images/cloud_home-hero-three.svg" alt="Cloud Three" />
+            <StaticImage className="absolute z-2 w-full h-auto l-[0] b-[0]" src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" />
           </div>
         </div>
+        <div className="absolute z-1 w-full h-full l-[0] t-[0] bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF] opacity-75"></div>
       </HeroHeader>
 
       {/* Subscribe Section */}

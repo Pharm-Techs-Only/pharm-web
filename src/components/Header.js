@@ -10,8 +10,8 @@ const Header = () => {
   }
 
   return (
-    <header className="header-container relative z-999">
-      <div className="max-w-[1170px] px-4 sm:px-6 lg:px-8">
+    <header className="header-container relative z-90">
+      <div className="max-w-[1612px] px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -27,7 +27,7 @@ const Header = () => {
           <nav className="hidden desktop-nav:flex space-x-8">
             <Link 
               to="/#waitlist" 
-              className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              className="text-white hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
               activeClassName="text-pharm-blue"
             >
               Tech Connect<br/>
@@ -36,14 +36,14 @@ const Header = () => {
             <Link 
               to="https://careers.pharmtechsonly.com" 
               target="_blank"
-              className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              className="text-white hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
               activeClassName="text-pharm-blue"
             >
               Careers
             </Link>
             <Link 
               to="/resource-center" 
-              className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              className="text-white hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
               activeClassName="text-pharm-blue"
             >
               Resource Center
@@ -51,7 +51,7 @@ const Header = () => {
             <Link 
               to="https://store.pharmtechsonly.com" 
               target="_blank"
-              className="text-pharm-grey hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              className="text-white hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
               activeClassName="text-pharm-blue"
             >
               Store

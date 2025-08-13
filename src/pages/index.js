@@ -12,7 +12,7 @@ const HomePage = () => {
       <HeroHeader className="relative">
         <div className="content-container relative z-30">
           <div className="relative px-4 sm:px-6 lg:px-8 py-16 flex flex-row justify-between items-center">
-            <div className="max-w-[730px] w-[60%]">
+            <div className="max-w-[730px] w-[60%] mr-8">
               <h1>
                 Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
               </h1>
@@ -25,15 +25,15 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <StaticImage className="absolute -z-1 w-[352px] h-[99px] left-[50px] top-[220px]" src="../images/cloud_home-hero-one.svg" alt="Cloud One" />
-        <StaticImage className="absolute -z-1 w-[831px] h-[151px] right-[0] bottom-[200px]" src="../images/cloud_home-hero-three.svg" alt="Cloud Three" />
-        <StaticImage className="absolute z-10 w-full h-auto left-[0] bottom-[0]" src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" />
+        <div className="w-[352px] h-[99px] left-[50px] top-[220px] absolute -z-1"><StaticImage src="../images/cloud_home-hero-one.svg" alt="Cloud One" /></div>
+        <div className="w-[831px] h-[151px] right-[0] bottom-[200px] absolute -z-1"><StaticImage src="../images/cloud_home-hero-three.svg" alt="Cloud Three" /></div>
+        <div className="w-full h-[212px] left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" /></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#5eafff] to-[#d8ebff]/34 opacity-75 pointer-events-none z-20"></div>
       </HeroHeader>
 
       {/* Subscribe Section */}
       <section className={`relative content-container`}>
-        <div className="relative px-4 sm:px-6 lg:px-8 py-16 flex flex-row justify-between items-center">
+        <div className="relative z-30 px-4 sm:px-6 lg:px-8 py-16 flex flex-row justify-between items-center">
           <div className="flex justify-center">
             <StaticImage src="../images/home_community.svg" alt="Two Pharmacy Technicians" />
           </div>

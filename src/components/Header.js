@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <header className="header-container relative z-90 bg-[#fff]/90 shadow-lg">
+    <header className="header-container relative z-90 bg-[#fff]/90 shadow-[0_4px_5px_3px_rgba(0,0,0,0.15)]">
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

@@ -73,7 +73,7 @@
   --font-family-heading: "MADE Tommy Soft", ui-sans-serif, system-ui, sans-serif;
   --font-family-nav: "Baloo Da", ui-sans-serif, system-ui, sans-serif;
   --color-pharm-blue: #09447E;
-  --color-pharm-light-blue: #9DCBE9;
+  --color-pharm-light-blue: #5776D3;
   --color-pharm-purple: #495DA9;
   --color-pharm-grey: #495057;
 }
@@ -94,7 +94,7 @@
     font-family: var(--font-family-heading);
     font-weight: 800;
     margin: 0 0 2rem;
-    color: var(--color-pharm-blue);
+    color: var(--color-pharm-purple);
   }
 
   h1, h2 {
@@ -143,15 +143,13 @@
 @layer components {
   .header-container {
     width:100%;
-    max-width: 1448px;
+    max-width: 1612px;
     margin: 0 auto;
-    padding: 1.5rem 1rem;
   }
   .content-container {
     width: 100%;
-    max-width: 1448px;
+    max-width: 1612px;
     margin: 0 auto;
-    padding: 10rem 1rem;
   }
 }
 

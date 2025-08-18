@@ -12,7 +12,7 @@ const HomePage = () => {
       <HeroHeader className="relative">
         <div className="content-container relative z-30">
           <div className="relative px-4 sm:px-6 lg:px-8 py-16 flex flex-row justify-between items-center">
-            <div className="max-w-[730px] w-[60%] mr-8">
+            <div className="max-w-[730px] w-[50%] mr-[120px]">
               <h1>
                 Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
               </h1>
@@ -20,24 +20,24 @@ const HomePage = () => {
                 Get ready for a revolutionary new way to connect, learn, and grow within our global community! We are thrilled to announce that we are in the process of building an entirely new, custom experience for both web and mobile. This next-generation platform is being crafted from the ground up with one goal in mind: to better support and empower you, our dedicated community of pharmacy technicians. This is more than just an update; it's a complete reimagining of how we connect and advance together. Stay tuned for more details as we build the future of our community, together!
               </p>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center w-[50%]">
               <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="relative -bottom-[150px]" />
             </div>
           </div>
         </div>
         <div className="w-[352px] h-[99px] left-[50px] top-[220px] absolute -z-1"><StaticImage src="../images/cloud_home-hero-one.svg" alt="Cloud One" /></div>
         <div className="w-[831px] h-[151px] right-[0] bottom-[200px] absolute -z-1"><StaticImage src="../images/cloud_home-hero-three.svg" alt="Cloud Three" /></div>
-        <div className="w-full h-[212px] left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" /></div>
+        <div className="w-full h-[212px] left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" /></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#5eafff] to-[#d8ebff]/34 opacity-75 pointer-events-none z-20"></div>
       </HeroHeader>
 
       {/* Subscribe Section */}
-      <section className={`relative content-container`}>
+      <section className="relative content-container">
         <div className="relative z-30 px-4 sm:px-6 lg:px-8 py-16 flex flex-row justify-between items-center">
-          <div className="flex justify-center">
+          <div className="flex justify-center w-[50%]">
             <StaticImage src="../images/home_community.svg" alt="Two Pharmacy Technicians" />
           </div>
-          <div className="max-w-[730px] w-[60%]">
+          <div className="max-w-[730px] w-[50%] ml-[120px]">
             <h2>
               A Community For Us, By Us
             </h2>
@@ -54,12 +54,15 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+        <div className="w-[352px] h-[99px] left-[50px] top-[220px] absolute -z-1"><StaticImage src="../images/cloud_home-community-one.svg" alt="Cloud One" /></div>
+        <div className="w-[831px] h-[151px] right-[0] bottom-[200px] absolute -z-1"><StaticImage src="../images/cloud_home-community-three.svg" alt="Cloud Three" /></div>
+        <div className="w-full h-[212px] left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_home-community-floor.svg" alt="Cloud Floor" /></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#d8ebff]/34 to-[#5eafff] opacity-75 pointer-events-none z-20"></div>
       </section>
 
       {/* Resource Center Section */}
       <section className={`relative content-container`}>
-        <div className="relative px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
+        <div className="relative z-30 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
             <h2>Learn</h2>
             <p>
               Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.

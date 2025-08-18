@@ -29,6 +29,18 @@ module.exports = {
         head: true,
       },
     },
-  }
+  }, 
+  {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `PharmTechs Only!`,
+        short_name: `PTO!`,
+        start_url: `/`,
+        background_color: `#09447E`,
+        theme_color: `#5776D3`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
+      },
+    },
   ]
 };

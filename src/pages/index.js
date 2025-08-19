@@ -24,10 +24,10 @@ const HomePage = () => {
               <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
             </div>
           </div>
-          <div className="-left-[60px] top-[40px] absolute -z-1"><StaticImage src="../images/cloud_home-hero-one.svg" alt="Cloud One" /></div>
-          <div className="right-[0] bottom-[180px] absolute -z-1"><StaticImage src="../images/cloud_home-hero-three.svg" alt="Cloud Three" /></div>
+          <div className="-left-[60px] top-[40px] absolute -z-1"><StaticImage src="../images/cloud_hero-one.svg" alt="Cloud One" /></div>
+          <div className="right-[0] bottom-[180px] absolute -z-1"><StaticImage src="../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
         </div>
-        <div className="w-full left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_home-hero-floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        <div className="w-full left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_hero-floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#5eafff] to-[#d8ebff]/34 opacity-75 pointer-events-none z-20"></div>
       </HeroHeader>
 
@@ -55,10 +55,10 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="right-[00px] top-[160px] absolute -z-1"><StaticImage src="../images/cloud_home-community-one.svg" alt="Cloud One" /></div>
-          <div className="-left-[50px] bottom-[120px] absolute -z-1"><StaticImage src="../images/cloud_home-community-three.svg" alt="Cloud Three" /></div>
+          <div className="right-[00px] top-[160px] absolute -z-1"><StaticImage src="../images/cloud_community-one.svg" alt="Cloud One" /></div>
+          <div className="-left-[50px] bottom-[120px] absolute -z-1"><StaticImage src="../images/cloud_community-three.svg" alt="Cloud Three" /></div>
         </div>
-        <div className="w-full left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_home-community-floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        <div className="w-full left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#d8ebff]/34 to-[#5eafff] opacity-75 pointer-events-none z-20"></div>
       </section>
 
@@ -71,31 +71,25 @@ const HomePage = () => {
                 Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
-                <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                  <Link to="/resource-center/free-ceus" target="_blank" className="text-purple-900 hover:text-purple-700">
-                    <div className="height-[102px] mb-4">
-                      <StaticImage src="../images/icon_global-careers.svg" alt="Free CEUs" className="" />
-                    </div>
-                    <h3 className="font-semibold text-purple-900 text-center mb-0">Free CEUs</h3>
-                  </Link>
-                </div>
-                <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                  <Link to="/resource-center/organizations" target="_blank" className="text-purple-900 hover:text-purple-700">
-                    <div className="height-[102px] mb-4">
-                      <StaticImage src="../images/icon_organizations.svg" alt="Organizations" className="" />
-                    </div>
-                    <h3 className="font-semibold text-purple-900 text-center mb-0">Organizations</h3>
-                  </Link>
-                </div>
-                <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                  <Link to="/resource-center/blog" target="_blank" className="text-purple-900 hover:text-purple-700">
-                    <div className="height-[102px] mb-4">
-                      <StaticImage src="../images/icon_blog.svg" alt="Blog" className="" />
-                    </div>
-                    <h3 className="font-semibold text-purple-900 text-center mb-0">Blog</h3>
-                  </Link>
-                </div>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-8">
+                <Link to="/resource-center/free-ceus" target="_blank" className="icon-wrap">
+                  <div className="height-[102px] mb-4">
+                    <StaticImage src="../images/icon_global-careers.svg" alt="Free CEUs" className="" />
+                  </div>
+                  <h3 className="font-semibold text-purple-900 text-center mb-0">Free CEUs</h3>
+                </Link>
+                <Link to="/resource-center/organizations" target="_blank" className="icon-wrap">
+                  <div className="height-[102px] mb-4">
+                    <StaticImage src="../images/icon_organizations.svg" alt="Organizations" className="" />
+                  </div>
+                  <h3 className="font-semibold text-purple-900 text-center mb-0">Organizations</h3>
+                </Link>
+                <Link to="/resource-center/blog" target="_blank" className="icon-wrap">
+                  <div className="height-[102px] mb-4">
+                    <StaticImage src="../images/icon_blog.svg" alt="Blog" className="" />
+                  </div>
+                  <h3 className="font-semibold text-purple-900 text-center mb-0">Blog</h3>
+                </Link>
               </div>
               
               <Link
@@ -106,7 +100,7 @@ const HomePage = () => {
               </Link>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#5eafff] to-[#d8ebff]/34 opacity-75 pointer-events-none z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF]/34 opacity-75 pointer-events-none z-20"></div>
       </section>
 
       {/* Tech Connect Section */}
@@ -118,27 +112,29 @@ const HomePage = () => {
               Building community, a centralized place to connect, share, and interact with other pharmacy technicians, just like you.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-8">
               {['Interact', 'Connect', 'Chat', 'Polls', 'Communities'].map((item, index) => (
-                <div key={index} className="bg-indigo-50 border border-indigo-200 p-6 rounded-lg">
+                <div key={index} className="icon-wrap">
                   <h3 className="mb-0">{item}</h3>
                 </div>
               ))}
             </div>
             
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 inline-block">
-              <p>Tech Connect Coming Soon</p>
-              <p><Link
-              to="/#waitlist"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
-            >Join the Waitlist!</Link></p>
+            <div className="p-6 flex flex-col items-center">
+              <p>Tech Connect Coming Soon!</p>
+              <Link
+                to="/#waitlist"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
+                Join the Waitlist
+              </Link>
             </div>
           </div>
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#D8EBFF]/34 to-[#5EAFFF] opacity-75 pointer-events-none z-20"></div>
       </section>
 
       {/* Careers Section */}
-        <section className="relative py-[60px] lg:py-[160px]">
+      <section className="relative py-[60px] lg:py-[160px]">
         <div className="relative content-container">
           <div className="relative z-30 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
             <h2>Grow</h2>
@@ -146,50 +142,43 @@ const HomePage = () => {
               Supporting your career growth from certification through career advancement.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_global-careers.svg" alt="Global Career Center" className="" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">Global Career Center</h3>
-                </Link>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com/career-resources" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_career-resources.svg" alt="Career Resources" className="" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
-                </Link>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com/interview-coach" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_interview-coach.svg" alt="Interview Coach" className="" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">Interview Coach</h3>
-                </Link>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com/analyze-offer" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_offer-analyzer.svg" alt="Offer Analyzer" className="" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">Offer Analyzer</h3>
-                </Link>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
+              <Link to="https://careers.pharmtechsonly.com" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_global-careers.svg" alt="Global Career Center" className="" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Global Career Center</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/career-resources" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_career-resources.svg" alt="Career Resources" className="" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/interview-coach" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_interview-coach.svg" alt="Interview Coach" className="" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Interview Coach</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/analyze-offer" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_offer-analyzer.svg" alt="Offer Analyzer" className="" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Offer Analyzer</h3>
+              </Link>
             </div>
             
             <Link
               to="https://careers.pharmtechsonly.com"
               target="_blank"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
             >
               Go to Careers
             </Link>
           </div>
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF]/34 opacity-75 pointer-events-none z-20"></div>
       </section>
 
       {/* Employers Section */}
@@ -203,57 +192,48 @@ const HomePage = () => {
               Are you a pharmacy looking to fill your opening with the certified, experienced pharmacy technicians?
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_post-jobs.svg" alt="Post Jobs" className="" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">Post Jobs</h3>
-                </Link>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_search-candidates.svg" alt="Search Candidates" className="" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">Search Candidates</h3>
-                </Link>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_list-company.svg" alt="List Your Company" className="" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">List Your Company</h3>
-                </Link>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_feature-job.svg" alt="Feature Your Job Opening" className="" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">Feature Your Job Opening</h3>
-                </Link>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
-                <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="text-purple-900 hover:text-purple-700">
-                  <div className="height-[102px] mb-4">
-                    <StaticImage src="../images/icon_feature-job.svg" alt="Advertise on Tech Connect" className="w-[98px] h-[89px]" />
-                  </div>
-                  <h3 className="font-semibold text-purple-900 text-center mb-0">Advertise on Tech Connect</h3>
-                </Link>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-8">
+              <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_post-jobs.svg" alt="Post Jobs" className="" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Post Jobs</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_search-candidates.svg" alt="Search Candidates" className="" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Search Candidates</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_list-company.svg" alt="List Your Company" className="" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">List Your Company</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_feature-job.svg" alt="Feature Your Job Opening" className="" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Feature Your Job Opening</h3>
+              </Link>
+              <Link to="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="icon-wrap">
+                <div className="height-[102px] mb-4">
+                  <StaticImage src="../images/icon_feature-job.svg" alt="Advertise on Tech Connect" className="w-[98px] h-[89px]" />
+                </div>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Advertise on Tech Connect</h3>
+              </Link>
             </div>
             
             <Link
               to="https://careers.pharmtechsonly.com/register-employer"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
             >
               Create your FREE Employer Account
             </Link>
           </div>
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#D8EBFF]/34 to-[#5EAFFF] opacity-75 pointer-events-none z-20"></div>
       </section>
     </Layout>
   )

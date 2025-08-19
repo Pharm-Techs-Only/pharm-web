@@ -2,7 +2,7 @@ import React from 'react'
 
 const MailchimpSubscribe = ({ 
   containerClasses = "",
-  inputClasses = "block required email bg-white rounded-[4px] h-[84px] w-full shadow-[0, 4px, 4px, 4px, rgba(0, 0, 0, 0.11)] px-[30px] leading-[84px] mb-[12px]",
+  inputClasses = "block required email bg-white rounded-[4px] h-[84px] w-full shadow-[0_4px_4px_0_rgba(0,0,0,0.11)] px-[30px] leading-[84px] mb-[12px]",
   buttonClasses = "!w-full h-[79px] justify-center border-[1.5px] border-[var(--color-pharm-green)] rounded-[4px] bg-gradient-to-b from-[#6BCE53] to-[#63E044] hover:bg-[#63E044] cursor text-white px-8 py-3 !m-0 min-w-full font-medium transition-colors",
   buttonText = "Subscribe",
   layout = "vertical", // "vertical" or "horizontal"

@@ -116,6 +116,17 @@
   .-z-1 {
     z-index: -1;
   }
+
+  .icon-wrap {
+    width: 292px;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background:#fff;
+    border-radius: 8px;
+  }
 }
 
 

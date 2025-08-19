@@ -3,7 +3,7 @@ import React from 'react'
 const MailchimpSubscribe = ({ 
   containerClasses = "",
   inputClasses = "block required email bg-white rounded-[4px] h-[84px] w-full shadow-[0, 4px, 4px, 4px, rgba(0, 0, 0, 0.11)] px-[30px] leading-[84px] mb-[12px]",
-  buttonClasses = "w-full h-[79px] justify-center border-[1.5px] border-[var(--color-pharm-green)] rounded-[4px] bg-gradient-to-b from-[#6BCE53] to-[#63E044] hover:bg-[#63E044] cursor text-white px-8 py-3 font-medium transition-colors",
+  buttonClasses = "!w-full h-[79px] justify-center border-[1.5px] border-[var(--color-pharm-green)] rounded-[4px] bg-gradient-to-b from-[#6BCE53] to-[#63E044] hover:bg-[#63E044] cursor text-white px-8 py-3 !m-0 min-w-full font-medium transition-colors",
   buttonText = "Subscribe",
   layout = "vertical", // "vertical" or "horizontal"
   inputContainerClasses = ""
@@ -17,7 +17,7 @@ const MailchimpSubscribe = ({
           /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
         `}</style>
-        <div id="mc_embed_signup">
+        <div id="mc_embed_signup" className="lg:mx-0 mx-auto">
           <form action="https://pharmtechsonly.us10.list-manage.com/subscribe/post?u=647acc4c58e278ba9635c4a4b&amp;id=6fa4d8c02e&amp;f_id=005a48e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
               <div id="mc_embed_signup_scroll">
                   <div className={layout === "horizontal" ? "mc-field-group flex max-w-md" : "mc-field-group"}>

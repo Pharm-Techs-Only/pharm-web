@@ -28,7 +28,7 @@ const HomePage = () => {
           <div className="right-[0] bottom-[180px] absolute -z-1"><StaticImage src="../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
         </div>
         <div className="w-full left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_hero-floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#5eafff] to-[#d8ebff]/34 opacity-75 pointer-events-none z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-blue)] to-[#d8ebff]/34 opacity-75 pointer-events-none z-20"></div>
       </HeroHeader>
 
       {/* Subscribe Section */}
@@ -59,7 +59,7 @@ const HomePage = () => {
           <div className="-left-[50px] bottom-[120px] absolute -z-1"><StaticImage src="../images/cloud_community-three.svg" alt="Cloud Three" /></div>
         </div>
         <div className="w-full left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#d8ebff]/34 to-[#5eafff] opacity-75 pointer-events-none z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#d8ebff]/34 to-[var(--color-bg-blue)] opacity-75 pointer-events-none z-20"></div>
       </section>
 
       {/* Learn Section */}
@@ -100,7 +100,7 @@ const HomePage = () => {
               </Link>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF]/34 opacity-75 pointer-events-none z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-blue)] to-[#D8EBFF]/34 opacity-75 pointer-events-none z-20"></div>
       </section>
 
       {/* Tech Connect Section */}
@@ -130,7 +130,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#D8EBFF]/34 to-[#5EAFFF] opacity-75 pointer-events-none z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#D8EBFF]/34 to-[var(--color-bg-blue)] opacity-75 pointer-events-none z-20"></div>
       </section>
 
       {/* Careers Section */}
@@ -178,7 +178,7 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#5EAFFF] to-[#D8EBFF]/34 opacity-75 pointer-events-none z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-blue)] to-[#D8EBFF]/34 opacity-75 pointer-events-none z-20"></div>
       </section>
 
       {/* Employers Section */}
@@ -233,7 +233,7 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#D8EBFF]/34 to-[#5EAFFF] opacity-75 pointer-events-none z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#D8EBFF]/34 to-[var(--color-bg-blue)] opacity-75 pointer-events-none z-20"></div>
       </section>
     </Layout>
   )

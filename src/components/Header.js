@@ -33,14 +33,14 @@ const Header = () => {
               Tech Connect<br/>
               (Coming Soon)
             </Link>
-            <Link 
-              to="https://careers.pharmtechsonly.com" 
+            <a 
+              href="https://careers.pharmtechsonly.com" 
               target="_blank"
               className="text-pharm-light-blue hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
               activeClassName="text-pharm-blue"
             >
               Careers
-            </Link>
+            </a>
             <Link 
               to="/resource-center" 
               className="text-pharm-light-blue hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
@@ -48,6 +48,13 @@ const Header = () => {
             >
               Resource Center
             </Link>
+            <a 
+              href="https://careers.pharmtechsonly.com/register-employer" 
+              className="text-pharm-light-blue hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
+              activeClassName="text-pharm-blue"
+            >
+              Employers
+            </a>
             <Link 
               to="https://store.pharmtechsonly.com" 
               target="_blank"

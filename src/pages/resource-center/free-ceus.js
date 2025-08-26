@@ -2,11 +2,16 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
-import { ceuData } from '../../data/ceus'
+import { 
+  getCEUsGroupedAndSorted, 
+  getAvailableYears,
+  isCEUExpiringSoon
+} from '../../data/ceus'
 
 const FreeCEUsPage = () => {
-  // Get sorted years for consistent display order
-  const sortedYears = Object.keys(ceuData).sort((a, b) => parseInt(a) - parseInt(b))
+  // Get CEUs grouped by year and sorted
+  const ceusByYear = getCEUsGroupedAndSorted()
+  const availableYears = getAvailableYears()
 
   // Format date for display
   const formatExpirationDate = (dateString) => {
@@ -16,15 +21,6 @@ const FreeCEUsPage = () => {
       month: 'long',
       day: 'numeric'
     })
-  }
-
-  // Check if course is expiring soon (within 30 days)
-  const isExpiringSoon = (expirationDate) => {
-    const today = new Date()
-    const expiration = new Date(expirationDate)
-    const timeDiff = expiration.getTime() - today.getTime()
-    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24))
-    return daysDiff <= 30 && daysDiff > 0
   }
 
   return (
@@ -62,14 +58,14 @@ const FreeCEUsPage = () => {
               </p>
             </div>
             
-            {sortedYears.map(year => (
+            {availableYears.map(year => (
               <div key={year} className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-gray-800">
                   Courses Expiring in {year}
                 </h2>
                 
                 <div className="space-y-6">
-                  {ceuData[year].map((ceu, index) => (
+                  {ceusByYear[year]?.map((ceu, index) => (
                     <div key={index} className="bg-white border rounded-lg p-6 shadow-sm">
                       <div className="flex justify-between items-start mb-3">
                         <h3 className="text-xl font-semibold pr-4">{ceu.title}</h3>
@@ -81,7 +77,7 @@ const FreeCEUsPage = () => {
                           }`}>
                             {ceu.status}
                           </span>
-                          {isExpiringSoon(ceu.expirationDate) && (
+                          {isCEUExpiringSoon(ceu) && (
                             <span className="px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
                               Expiring Soon
                             </span>
@@ -111,10 +107,10 @@ const FreeCEUsPage = () => {
                           }
                         }}
                       >
-                        {ceu.status === 'Available' ? 'Start Course' : 'Coming Soon'}
+                        {ceu.status === 'Available' ? 'View CEU' : 'Coming Soon'}
                       </button>
                     </div>
-                  ))}
+                  )) || []}
                 </div>
               </div>
             ))}

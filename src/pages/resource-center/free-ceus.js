@@ -2,34 +2,30 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
+import { ceuData } from '../../data/ceus'
 
 const FreeCEUsPage = () => {
-  const ceuCourses = [
-    {
-      title: 'Medication Safety in Community Pharmacy',
-      hours: '2.0 CE Hours',
-      description: 'Learn best practices for preventing medication errors and ensuring patient safety.',
-      status: 'Available'
-    },
-    {
-      title: 'Immunization Updates for Pharmacy Technicians',
-      hours: '1.5 CE Hours',
-      description: 'Stay current with the latest vaccination protocols and requirements.',
-      status: 'Available'
-    },
-    {
-      title: 'Controlled Substance Regulations',
-      hours: '2.5 CE Hours',
-      description: 'Understanding DEA regulations and compliance requirements.',
-      status: 'Available'
-    },
-    {
-      title: 'Sterile Compounding Fundamentals',
-      hours: '3.0 CE Hours',
-      description: 'Essential knowledge for sterile compounding procedures.',
-      status: 'Coming Soon'
-    }
-  ];
+  // Get sorted years for consistent display order
+  const sortedYears = Object.keys(ceuData).sort((a, b) => parseInt(a) - parseInt(b))
+
+  // Format date for display
+  const formatExpirationDate = (dateString) => {
+    const date = new Date(dateString)
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    })
+  }
+
+  // Check if course is expiring soon (within 30 days)
+  const isExpiringSoon = (expirationDate) => {
+    const today = new Date()
+    const expiration = new Date(expirationDate)
+    const timeDiff = expiration.getTime() - today.getTime()
+    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24))
+    return daysDiff <= 30 && daysDiff > 0
+  }
 
   return (
     <Layout>
@@ -62,43 +58,69 @@ const FreeCEUsPage = () => {
               <h2 className="text-xl font-semibold mb-2 text-yellow-800">Important Note</h2>
               <p className="text-gray-700">
                 All courses are accredited and meet state requirements for pharmacy technician continuing education. 
-                Certificates are provided upon successful completion.
+                Certificates are provided upon successful completion. Please note the expiration dates for each course.
               </p>
             </div>
             
-            <h2 className="text-2xl font-semibold mb-6">Available Courses</h2>
-            
-            <div className="space-y-6">
-              {ceuCourses.map((course, index) => (
-                <div key={index} className="bg-white border rounded-lg p-6 shadow-sm">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-semibold">{course.title}</h3>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      course.status === 'Available' 
-                        ? 'bg-green-100 text-green-800' 
-                        : 'bg-gray-100 text-gray-600'
-                    }`}>
-                      {course.status}
-                    </span>
-                  </div>
-                  <p className="text-blue-600 font-medium mb-2">{course.hours}</p>
-                  <p className="text-gray-600 mb-4">{course.description}</p>
-                  <button 
-                    className={`px-4 py-2 rounded transition-colors ${
-                      course.status === 'Available'
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                    }`}
-                    disabled={course.status !== 'Available'}
-                  >
-                    {course.status === 'Available' ? 'Start Course' : 'Coming Soon'}
-                  </button>
+            {sortedYears.map(year => (
+              <div key={year} className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+                  Courses Expiring in {year}
+                </h2>
+                
+                <div className="space-y-6">
+                  {ceuData[year].map((ceu, index) => (
+                    <div key={index} className="bg-white border rounded-lg p-6 shadow-sm">
+                      <div className="flex justify-between items-start mb-3">
+                        <h3 className="text-xl font-semibold pr-4">{ceu.title}</h3>
+                        <div className="flex flex-col items-end space-y-2">
+                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                            ceu.status === 'Available' 
+                              ? 'bg-green-100 text-green-800' 
+                              : 'bg-gray-100 text-gray-600'
+                          }`}>
+                            {ceu.status}
+                          </span>
+                          {isExpiringSoon(ceu.expirationDate) && (
+                            <span className="px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                              Expiring Soon
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      
+                      <div className="flex flex-wrap items-center gap-4 mb-2">
+                        <p className="text-blue-600 font-medium">{ceu.hours}</p>
+                        <p className="text-red-600 font-medium">
+                          Expires: {formatExpirationDate(ceu.expirationDate)}
+                        </p>
+                      </div>
+                      
+                      <p className="text-gray-600 mb-4">{ceu.description}</p>
+                      
+                      <button 
+                        className={`px-4 py-2 rounded transition-colors ${
+                          ceu.status === 'Available'
+                            ? 'bg-blue-600 text-white hover:bg-blue-700'
+                            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                        }`}
+                        disabled={ceu.status !== 'Available'}
+                        onClick={() => {
+                          if (ceu.status === 'Available' && ceu.link && ceu.link !== '#') {
+                            window.open(ceu.link, '_blank')
+                          }
+                        }}
+                      >
+                        {ceu.status === 'Available' ? 'Start Course' : 'Coming Soon'}
+                      </button>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
             
             <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h2 className="text-2xl font-semibold mb-4 text-blue-800">CEU Requirements</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-blue-800">CEU Requirements & Important Information</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold mb-2">National Requirements</h3>
@@ -107,6 +129,14 @@ const FreeCEUsPage = () => {
                 <div>
                   <h3 className="font-semibold mb-2">State-Specific Info</h3>
                   <p className="text-gray-700">Check with your state board of pharmacy for specific requirements in your jurisdiction.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Expiration Dates</h3>
+                  <p className="text-gray-700">All courses have expiration dates. Complete courses before they expire to ensure credit eligibility.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Certificates</h3>
+                  <p className="text-gray-700">Completion certificates are provided upon successful course completion and can be downloaded for your records.</p>
                 </div>
               </div>
             </div>

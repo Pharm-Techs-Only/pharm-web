@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="relative pb-0">
       <div className="content-container relative">
         <div className="relative px-4 sm:px-6 lg:px-8 z-30 flex flex-col-reverse lg:flex-row justify-between items-center">
-          <div className="flex justify-center w-[50%] px-12">
+          <div className="flex justify-center w-[50%] px-12 relative -bottom-[150px]">
             <StaticImage src="../images/footer_image.svg" alt="Pharmacy Technician" className="" />
           </div>
         
@@ -31,8 +31,9 @@ const Footer = () => {
                 <h4 className="font-semibold mb-3">Resource Center</h4>
                 <ul className="space-y-2 text-sm">
                   <li><Link to="/resource-center/free-ceus" className="text-white hover:underline transition-colors">Free CEUs</Link></li>
-                  <li><Link to="/resource-center/organizations" className="text-white hover:underline transition-colors">Ebooks</Link></li>
-                  <li><Link to="/resource-center/blog" className="text-white hover:underline transition-colors">Pill Identifier</Link></li>
+                  <li><Link to="/resource-center/organizations" className="text-white hover:underline transition-colors">Organizations</Link></li>
+                  <li><Link to="/resource-center/conventions" className="text-white hover:underline transition-colors">Conventions</Link></li>
+                  <li><Link to="/resource-center/blog" className="text-white hover:underline transition-colors">Blog</Link></li>
                 </ul>
               </div>
               

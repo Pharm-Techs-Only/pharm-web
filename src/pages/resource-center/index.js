@@ -14,12 +14,14 @@ const ResourceCenterPage = () => {
       description: 'Directory of professional pharmacy technician organizations and associations.',
     },
     {
+      title: 'Conventions',
+      description: 'Information on upcoming conventions and events for pharmacy technicians.',
+    },
+    {
       title: 'Blog',
       description: 'Insights and articles on pharmacy technician topics and trends.',
     }
   ]
-
-  const categories = ['All', 'Certification', 'Education', 'Professional', 'Resources', 'Reference', 'Tools', 'Events']
 
   return (
     <Layout>
@@ -34,26 +36,6 @@ const ResourceCenterPage = () => {
           </p>
         </div>
       </HeroHeader>
-
-      {/* Categories Filter */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white border-b">
-        <div className="content-container">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                className={`px-4 py-2 rounded-full font-medium transition-colors ${
-                  index === 0 
-                    ? 'bg-blue-600 text-white' 
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Resources Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">

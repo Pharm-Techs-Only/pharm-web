@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import { Link } from 'gatsby'
+import HeroHeader from '../../components/HeroHeader'
 import { organizationsData } from '../../data/organizations'
 
 const OrganizationsPage = () => {
@@ -119,6 +120,17 @@ const OrganizationsPage = () => {
 
   return (
     <Layout>
+      <HeroHeader>
+        <div className="content-container text-center">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Organizations
+          </h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Connect with pharmacy technician organizations in your country.
+          </p>
+        </div>
+      </HeroHeader>
+
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-6">

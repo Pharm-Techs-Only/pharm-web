@@ -84,6 +84,12 @@ const HomePage = () => {
                   </div>
                   <h3 className="font-semibold text-purple-900 text-center mb-0">Organizations</h3>
                 </Link>
+                <Link to="/resource-center/conventions" target="_blank" className="icon-wrap">
+                  <div className="height-[102px] mb-4">
+                    <StaticImage src="../images/icon_conventions.svg" alt="Conventions" className="" />
+                  </div>
+                  <h3 className="font-semibold text-purple-900 text-center mb-0">Conventions</h3>
+                </Link>
                 <Link to="/resource-center/blog" target="_blank" className="icon-wrap">
                   <div className="height-[102px] mb-4">
                     <StaticImage src="../images/icon_blog.svg" alt="Blog" className="" />
@@ -173,7 +179,7 @@ const HomePage = () => {
                 <div className="height-[102px] mb-4">
                   <StaticImage src="../images/icon_connect.svg" alt="Connect" className="" />
                 </div>
-                <h3 className="font-semibold text-purple-900 text-center mb-0">Interact</h3>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Connect</h3>
               </div>
               <div className="icon-wrap">
                 <div className="height-[102px] mb-4">
@@ -185,7 +191,7 @@ const HomePage = () => {
                 <div className="height-[102px] mb-4">
                   <StaticImage src="../images/icon_polls.svg" alt="Polls" className="" />
                 </div>
-                <h3 className="font-semibold text-purple-900 text-center mb-0">Interact</h3>
+                <h3 className="font-semibold text-purple-900 text-center mb-0">Polls</h3>
               </div>
               <div className="icon-wrap">
                 <div className="height-[102px] mb-4">

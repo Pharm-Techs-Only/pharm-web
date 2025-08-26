@@ -10,7 +10,7 @@ export const organizationsData = {
       },
       {
         name: 'Alabama Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '1211 Carmichael Way Montgomery, AL 36106-3672',
         phone: '(334) 271-4222',
         fax: '(334) 271-5423',
@@ -18,7 +18,7 @@ export const organizationsData = {
       },
       {
         name: 'Alabama Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '429 Green Springs HWY Suite 161 #204 Birmingham, AL 35209',
         phone: '0649-800-723',
         email: 'ALSHPharmacist@gmail.com',
@@ -26,7 +26,7 @@ export const organizationsData = {
       },
       {
         name: 'Alaska Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '203 W. 15th Avenue, Suite 100 Anchorage, AK 99501-5128',
         phone: '(907) 563-8880',
         fax: '(907) 563-7880',
@@ -34,7 +34,7 @@ export const organizationsData = {
       },
       {
         name: 'Arizona Pharmacy Alliance',
-        region: 'USA',
+        region: 'United States of America',
         address: '61845 East Southern Avenue, Tempe, AZ 85282-5831',
         phone: '(480) 838-3385',
         fax: '(480) 838-3557',
@@ -42,7 +42,7 @@ export const organizationsData = {
       },
       {
         name: 'California Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '030 Lennane Dr Sacramento, CA 95834-1987',
         phone: '(916) 779-1400',
         fax: '(916) 779-1401',
@@ -50,7 +50,7 @@ export const organizationsData = {
       },
       {
         name: 'California Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Sacramento, CA 95814-1930',
         phone: '(916) 447-1033',
         fax: '(916) 447-2396',
@@ -58,7 +58,7 @@ export const organizationsData = {
       },
       {
         name: 'Colorado Pharmacists Society',
-        region: 'USA',
+        region: 'United States of America',
         address: '2851 S. Parker Rd., Suite 1210 Aurora, CO 80014',
         phone: '(720) 250-9585',
         fax: '(303) 200-7099',
@@ -67,7 +67,7 @@ export const organizationsData = {
       },
       {
         name: 'Connecticut Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '35 Cold Spring Road, Ste. 121 Rocky Hill, CT 06067-3167',
         phone: '(860) 563-4619',
         fax: '(860) 257-8241',
@@ -76,7 +76,7 @@ export const organizationsData = {
       },
       {
         name: 'Connecticut Society of Health System Pharmacist',
-        region: 'USA',
+        region: 'United States of America',
         address: '591 North Avenue, Suite 3-2 Wakefield, MA 01880',
         phone: '(888) 506-3784',
         website: 'https://www.cshponline.org/',
@@ -84,7 +84,7 @@ export const organizationsData = {
       },
       {
         name: 'Delaware Pharmacists Society',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 454 Smyrna, DE 19977',
         phone: '(302) 659-3088',
         fax: '(302) 659-3089',
@@ -93,7 +93,7 @@ export const organizationsData = {
       },
       {
         name: 'Florida Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '610 N. Adams St Tallahassee, FL 32301',
         phone: '(850) 222-2400',
         website: 'https://www.floridapharmacy.org/',
@@ -101,7 +101,7 @@ export const organizationsData = {
       },
       {
         name: 'Florida Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '2910 Kerry Forest Pkwy D4 Suite 376 Tallahassee, FL 32309',
         phone: '(850) 906-9333',
         fax: '(850) 906-9345',
@@ -109,7 +109,7 @@ export const organizationsData = {
       },
       {
         name: 'Georgia Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '6065 Barfield Road NE | Suite 100 Sandy Springs, GA 30328',
         phone: '(404) 231-5074',
         fax: '(404) 237-8435',
@@ -117,7 +117,7 @@ export const organizationsData = {
       },
       {
         name: 'Georgia Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '3015 Shannon Lakes North Tallahassee, FL 32309-4206',
         phone: '(800) 913-4747',
         fax: '(850) 893-1845',
@@ -126,14 +126,14 @@ export const organizationsData = {
       },
       {
         name: 'Hawaii Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 1510 Aiea, HI 96701',
         phone: '(808) 330-7738',
         website: 'https://hapa.memberclicks.net/',
       },
       {
         name: 'Idaho Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 7625 Boise, ID 83707-1625',
         phone: '(208) 342-2581',
         fax: '(208) 342-0020',
@@ -142,7 +142,7 @@ export const organizationsData = {
       },
       {
         name: 'Idaho State Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '816 W Bannock St. Suite #60 Boise, ID 83702',
         phone: '(208) 870-8312',
         website: 'http://ourispa.com/',
@@ -150,7 +150,7 @@ export const organizationsData = {
       },
       {
         name: 'Illinois Council of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '4055 N Perryville Rd Loves Park, IL 61111',
         phone: '(815) 227-9292',
         fax: '(815) 227-9294',
@@ -159,7 +159,7 @@ export const organizationsData = {
       },
       {
         name: 'Illinois Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '204 W. Cook St. Springfield, IL 62704',
         phone: '(217) 522-7300',
         fax: '(217) 522-7349',
@@ -167,7 +167,7 @@ export const organizationsData = {
       },
       {
         name: 'Indiana Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '9449 Priority Way W Dr #230 Indianapolis, IN 46240',
         phone: '(317) 634-4968',
         fax: '(317) 632-1219',
@@ -175,7 +175,7 @@ export const organizationsData = {
       },
       {
         name: 'Iowa Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '8515 Douglas Ave, Ste 16 Des Moines, IA 50322-2927',
         phone: '(515) 270-0713',
         fax: '(515) 270-2979',
@@ -184,7 +184,7 @@ export const organizationsData = {
       },
       {
         name: 'Kansas Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '1020 SW Fairlawn Road Topeka, KS 66604-6055',
         phone: '(785) 228-2327',
         fax: '(785) 228-9147',
@@ -193,7 +193,7 @@ export const organizationsData = {
       },
       {
         name: 'Kentucky Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '96 C. Michael Davenport Blvd Frankfort, KY 40601',
         phone: '502-227-2303',
         fax: '502-227-2258',
@@ -202,7 +202,7 @@ export const organizationsData = {
       },
       {
         name: 'Kentucky Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 4961 Louisville, KY 40204',
         phone: '(502) 456-1851',
         website: 'https://www.kshp.org/',
@@ -210,7 +210,7 @@ export const organizationsData = {
       },
       {
         name: 'Louisiana Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '620 Florida St., Suite 210 Baton Rouge, LA 70801',
         phone: '(225) 346-6883',
         fax: '(225) 344-1132',
@@ -218,7 +218,7 @@ export const organizationsData = {
       },
       {
         name: 'Louisiana Society of Health-System Pharmacist',
-        region: 'USA',
+        region: 'United States of America',
         address: '8550 United Plaza Boulevard, Suite 1001 Baton Rouge, LA 70809-2256',
         phone: '(225) 922-4520',
         fax: '(225) 408-4422',
@@ -227,7 +227,7 @@ export const organizationsData = {
       },
       {
         name: 'Maryland Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '9115 Guilford Road, Suite 200 Columbia, MD 21046',
         phone: '(443) 583-8000',
         fax: '(443) 583-8006',
@@ -236,14 +236,14 @@ export const organizationsData = {
       },
       {
         name: 'Maryland Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         phone: '(978) 364-5035',
         website: 'https://www.mshp.org/',
         email: 'mshprx@gmail.com',
       },
       {
         name: 'Massachusetts Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '500 West Cummings Park, Suite 3475 Woburn, MA 01801-6585',
         phone: '(781) 933-1107',
         fax: '(781) 933-1109',
@@ -252,7 +252,7 @@ export const organizationsData = {
       },
       {
         name: 'Massachusetts Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '4 Lan Drive, Suite 310 Westford, MA 01886',
         phone: '(978) 364-5060',
         fax: '(978) 250-1117',
@@ -260,7 +260,7 @@ export const organizationsData = {
       },
       {
         name: 'Michigan Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '408 Kalamazoo Plaza Lansing, MI 48933',
         phone: '(517) 484-1466',
         fax: '(517) 484-4893',
@@ -269,7 +269,7 @@ export const organizationsData = {
       },
       {
         name: 'Minnesota Society of Health System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '13911 Ridgedale Drive, Ste 260 Minnetonka, MN 55305-1773',
         phone: '(952) 541-9499',
         fax: '(952) 541-9684',
@@ -277,12 +277,12 @@ export const organizationsData = {
       },
       {
         name: 'Mississippi Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         website: 'https://msshp.org/index.php',
       },
       {
         name: 'Missouri Society of Health-System Pharmacist',
-        region: 'USA',
+        region: 'United States of America',
         address: '2650 S. Hanley Rd, Suite 100 St. Louis, MO 63144',
         phone: '(314) 416-2246',
         website: 'http://www.moshp.org/',
@@ -290,7 +290,7 @@ export const organizationsData = {
       },
       {
         name: 'Montana Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 1569 Helena, MT 59624',
         phone: '(406) 449-3843',
         fax: '(406) 442-8018',
@@ -298,7 +298,7 @@ export const organizationsData = {
       },
       {
         name: 'Nebraska Pharmacist Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '6221 South 58th Street, Suite A Lincoln, NE 68516',
         phone: '(402) 420-1500',
         fax: '(402) 420-1406',
@@ -306,7 +306,7 @@ export const organizationsData = {
       },
       {
         name: 'Nevada Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 27371 Las Vegas, NV 89126',
         phone: '(702) 731-8730',
         website: 'https://www.nvshp.org/',
@@ -314,12 +314,12 @@ export const organizationsData = {
       },
       {
         name: 'New Hampshire Society of Health Systems Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         website: 'https://nhshp.org/',
       },
       {
         name: 'New Jersey Pharmacist Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '760 Alexander Road CN 1 Princeton, NJ 08543',
         phone: '(609) 275-4246',
         fax: '(609) 275-4066',
@@ -328,7 +328,7 @@ export const organizationsData = {
       },
       {
         name: 'New Jersey Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '760 Alexander Road, PO Box 1 Princeton, NJ 08543-0001',
         phone: '(609) 936-2205',
         fax: '(609) 228-5434',
@@ -337,7 +337,7 @@ export const organizationsData = {
       },
       {
         name: 'New Mexico Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '2716 San Pedro NE Ste C Albuquerque, NM 87110-3331',
         phone: '(505) 265-8729',
         website: 'https://www.nmpharmacy.org/',
@@ -345,14 +345,14 @@ export const organizationsData = {
       },
       {
         name: 'New Mexico Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 40502 Albuquerque, NM 87196',
         phone: '505-318-0223',
         website: 'https://www.nmshp.org/',
       },
       {
         name: 'New York State Council of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '230 Washington Avenue Extension Suite 101 Albany, NY 12203',
         phone: '(518) 456-8819',
         fax: '(518) 456-9319',
@@ -360,7 +360,7 @@ export const organizationsData = {
       },
       {
         name: 'North Carolina Association of Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '1101 Slater Road, Suite110 Durham, NC 27703',
         phone: '(984) 439-1646',
         fax: '(984) 439-1649',
@@ -368,7 +368,7 @@ export const organizationsData = {
       },
       {
         name: 'North Dakota Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '1641 Capitol Way, Suite 102 Bismarck, ND 58501-2195',
         phone: '(701) 258-4968',
         fax: '(701) 258-9312',
@@ -377,7 +377,7 @@ export const organizationsData = {
       },
       {
         name: 'Ohio Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '2674 Federated Boulevard Columbus, OH 43235',
         phone: '(614) 389-3236',
         fax: '(614) 389-4582',
@@ -386,7 +386,7 @@ export const organizationsData = {
       },
       {
         name: 'Ohio Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '50 Greenwood Circle Marietta, OH 45750-6789',
         phone: '(740) 373-8595',
         fax: '(740) 373-8595',
@@ -395,7 +395,7 @@ export const organizationsData = {
       },
       {
         name: 'Oklahoma Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 18731 Oklahoma City, OK 73154-0731',
         phone: '(405) 557-5772',
         fax: '(405) 528-1417',
@@ -403,14 +403,14 @@ export const organizationsData = {
       },
       {
         name: 'Oklahoma Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 2371 Oklahoma City, OK 73101',
         phone: '(405) 297-2685',
         website: 'https://www.oshp.net/',
       },
       {
         name: 'Oregon Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '147 SE 102nd Ave Portland, OR 97216-2703',
         phone: '(503) 255-2973',
         fax: '(503) 253-9172',
@@ -419,7 +419,7 @@ export const organizationsData = {
       },
       {
         name: 'Pennsylvania Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '508 North Third Street Harrisburg, PA 17101-1199',
         phone: '(717) 234-6151',
         fax: '(717) 236-1618',
@@ -428,7 +428,7 @@ export const organizationsData = {
       },
       {
         name: 'Pennsylvania Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 22520 Philadelphia, PA 19110',
         phone: '(614) 868-1144',
         fax: '(614) 868-1177',
@@ -437,7 +437,7 @@ export const organizationsData = {
       },
       {
         name: 'Pharmacy Society of Wisconsin',
-        region: 'USA',
+        region: 'United States of America',
         address: '701 Heartland Trail Madison, WI 53717',
         phone: '(608) 827-9200',
         fax: '(608) 827-9292',
@@ -446,7 +446,7 @@ export const organizationsData = {
       },
       {
         name: 'South Carolina Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '1350 Browning Rd. Columbia, SC 29210-6943',
         phone: '(803) 354-9977',
         fax: '(803) 354-9207',
@@ -454,7 +454,7 @@ export const organizationsData = {
       },
       {
         name: 'South Carolina Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '701 Exposition Place Suite 206 Raleigh NC, 27615',
         phone: '(877) 256-7021',
         fax: '(803) 252-0589',
@@ -462,7 +462,7 @@ export const organizationsData = {
       },
       {
         name: 'Tennessee Pharmacist Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '1732 Lebanon Pike Circle Nashville, TN 37210',
         phone: '(615) 256-3023',
         fax: '(615) 255-3528',
@@ -471,7 +471,7 @@ export const organizationsData = {
       },
       {
         name: 'Texas Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '3200 Steck Avenue, Suite 370 Austin, TX 78757',
         phone: '512-836-8350',
         fax: '512-836-0308',
@@ -479,7 +479,7 @@ export const organizationsData = {
       },
       {
         name: 'Texas Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '3000 Joe DiMaggio, #30-A Round Rock, TX 78665-3920',
         phone: '(512) 906-0546',
         website: 'https://tshp.org/',
@@ -487,14 +487,14 @@ export const organizationsData = {
       },
       {
         name: 'Utah Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '7414 S. State Street Midvale, UT 84047',
         phone: '(801) 438-2524',
         website: 'https://www.upha.com/',
       },
       {
         name: 'Virginia Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '2530 Professional Road Richmond, VA 23235-3217',
         phone: '(804) 285-4145',
         fax: '(804) 285-4227',
@@ -502,7 +502,7 @@ export const organizationsData = {
       },
       {
         name: 'Virginia Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         phone: '(850) 906-0779',
         fax: '(850) 893-1845',
         website: 'https://www.vshp.org/',
@@ -510,7 +510,7 @@ export const organizationsData = {
       },
       {
         name: 'Washington State Pharmacy Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '411 Williams Ave South Renton, WA 98057',
         phone: '(425) 228-7171',
         fax: '(425) 277-3897',
@@ -519,7 +519,7 @@ export const organizationsData = {
       },
       {
         name: 'West Virginia Pharmacists Association',
-        region: 'USA',
+        region: 'United States of America',
         address: '2016 1/2 Kanawha Blvd East Charleston, WV 25311-2204',
         phone: '(304) 344-5302',
         fax: '(304) 344-5316',
@@ -528,13 +528,13 @@ export const organizationsData = {
       },
       {
         name: 'Wyoming Society of Health-System Pharmacists',
-        region: 'USA',
+        region: 'United States of America',
         address: '1000 E University Ave Dept 3375 Laramie, WY 82071',
         email: 'dren@uwyo.edu',
       },
       {
         name: 'American Association of Pharmacy Technicians (AAPT)',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 391043 Omaha, NE 68139',
         phone: '(336) 333-9356',
         website: 'https://www.pharmacytechnician.com/',
@@ -542,7 +542,7 @@ export const organizationsData = {
       },
       {
         name: 'National Pharmacy Technician Association (NPTA)',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 683148 Houston, TX 77268',
         phone: '(888) 247-8700',
         fax: '(888) 247-8706',
@@ -630,21 +630,21 @@ export const organizationsData = {
     boards: [
       {
         name: 'Pharmacy Technician Certification Board (PTCB)',
-        region: 'USA',
+        region: 'United States of America',
         address: '2215 Constitution Avenue NW Ste 101, Washington, DC 20037-2985',
         fax: '(202) 888-1699',
         website: 'https://www.ptcb.org',
       },
       {
         name: 'Alabama State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '111 Village St Birmingham, AL 35242',
         phone: '(205) 981-2280',
         website: 'www.albop.com'
       },
       {
         name: 'Alaska Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '203 W. 15th Ave. #100 Anchorage, Alaska 99501',
         phone: '(907) 563-8880',
         fax: '(907) 563-7880',
@@ -652,7 +652,7 @@ export const organizationsData = {
       },
       {
         name: 'Arizona State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '1616 W. Adams St., Suite 120 Phoenix, AZ 85007',
         phone: '(602) 771-2727',
         fax: '(602) 771-2749',
@@ -660,7 +660,7 @@ export const organizationsData = {
       },
       {
         name: 'Arkansas State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '322 South Main Street Suite 600 Little Rock, AR 72201',
         phone: '(501) 682-0190',
         fax: '(501) 682-0195',
@@ -669,7 +669,7 @@ export const organizationsData = {
       },
       {
         name: 'California State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '720 Gateway Oaks Drive, Suite 100 Sacramento, CA 95833',
         phone: '(916) 518-3100',
         fax: '(916) 574-8618',
@@ -677,7 +677,7 @@ export const organizationsData = {
       },
       {
         name: 'Colorado State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '1560 Broadway, Suite 1350 Denver, CO 80202',
         phone: '(303) 894-7800',
         fax: '(303) 894-7692',
@@ -686,7 +686,7 @@ export const organizationsData = {
       },
       {
         name: 'Connecticut Commission of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Department of Consumer Protection Commission of Pharmacy 450 Columbus Boulevard Suite 901 Hartford, CT 06103',
         phone: '(860) 713-6070',
         fax: '(860) 706-1242',
@@ -694,7 +694,7 @@ export const organizationsData = {
       },
       {
         name: 'Delaware State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Cannon Building Suite 203 861 Silver Lake Blvd. Dover, DE 19904',
         phone: '(302) 744-4500',
         fax: '(302) 739-2711',
@@ -703,7 +703,7 @@ export const organizationsData = {
       },
       {
         name: 'District of Columbia Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '899 N Capitol St, NE, 2nd Floor Washington, DC 20002',
         phone: '(202) 724-8800',
         fax: '(877) 862-4252',
@@ -712,7 +712,7 @@ export const organizationsData = {
       },
       {
         name: 'Florida Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '4052 Bald Cypress Way, Bin #C04 Tallahassee, FL 32399-3254',
         phone: '(850) 245-4474',
         fax: '(850) 921-5389',
@@ -721,7 +721,7 @@ export const organizationsData = {
       },
       {
         name: 'Georgia State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Georgia Department of Community Health, 2 Peachtree St NW, 6th Floor Atlanta, GA 30303',
         phone: '(404) 651-8000',
         fax: '(678) 717-6694',
@@ -730,7 +730,7 @@ export const organizationsData = {
       },
       {
         name: 'Guam Board of Examiners for Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '123 Chalan Kareta Mangilao, Guam 96913',
         phone: '(671) 735-7404-13',
         fax: '(671) 735-7413',
@@ -739,7 +739,7 @@ export const organizationsData = {
       },
       {
         name: 'Hawaii State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 3469 Honolulu, HI 96801',
         phone: '(808) 586-2695',
         fax: '(808) 586-2689',
@@ -748,7 +748,7 @@ export const organizationsData = {
       },
       {
         name: 'Idaho State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 83720 Boise, ID 83720-0067',
         phone: '(208) 334-2356',
         fax: '(208) 334-3536',
@@ -757,7 +757,7 @@ export const organizationsData = {
       },
       {
         name: 'Illinois Department of Financial and Professional Regulation, Division of Professional Regulation',
-        region: 'USA',
+        region: 'United States of America',
         address: 'State Board of Pharmacy 320 W Washington, 3rd Floor Springfield, IL 62786',
         phone: '(800) 560-6420',
         fax: '(217) 782-7645',
@@ -765,7 +765,7 @@ export const organizationsData = {
       },
       {
         name: 'Indiana Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '402 W Washington St, Room W072 Indianapolis, IN 46204-2739',
         phone: '(317) 234-2067',
         fax: '(317) 233-4236',
@@ -774,7 +774,7 @@ export const organizationsData = {
       },
       {
         name: 'Iowa Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '400 SW 8th St, Suite E Des Moines, IA 50309-4688',
         phone: '(515) 281-5944',
         fax: '(515) 281-4609',
@@ -783,7 +783,7 @@ export const organizationsData = {
       },
       {
         name: 'Kansas State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Landon State Office Building 800 SW Jackson, Suite 414 Topeka, KS 66612-1231',
         phone: '(785) 296-4056',
         fax: '(785) 296-8420',
@@ -792,7 +792,7 @@ export const organizationsData = {
       },
       {
         name: 'Kentucky Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'State Office Building Annex 125 Holmes St. Suite 300 Frankfort, KY 40601',
         phone: '(502) 564-7910',
         fax: '(502) 696-3806',
@@ -801,7 +801,7 @@ export const organizationsData = {
       },
       {
         name: 'Louisiana Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '3388 Brentwood Drive Baton Rouge, LA 70809-1700',
         phone: '(225) 925-6496',
         fax: '(225) 925-6499',
@@ -810,7 +810,7 @@ export const organizationsData = {
       },
       {
         name: 'Maine Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Department of Professional and Financial Regulation 35 State House Station Augusta, ME 04333',
         phone: '(207) 624-8686',
         fax: '(207) 624-8666',
@@ -819,7 +819,7 @@ export const organizationsData = {
       },
       {
         name: 'Maryland Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 1991 Baltimore, MD 21203',
         phone: '(410) 764-4755',
         fax: '(410) 358-9512',
@@ -828,7 +828,7 @@ export const organizationsData = {
       },
       {
         name: 'Massachusetts Board of Registration in Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '239 Causeway St, 2nd Floor, Suite 200 Boston, MA 02114',
         phone: '(617) 973-0800',
         fax: '(617) 973-0983',
@@ -837,7 +837,7 @@ export const organizationsData = {
       },
       {
         name: 'Michigan Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '611 W Ottawa, Third Floor PO Box 30670 Lansing, MI 48909-8170',
         phone: '(517) 241-0199',
         fax: '(517) 373-1044',
@@ -846,7 +846,7 @@ export const organizationsData = {
       },
       {
         name: 'Minnesota Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '2829 University Ave SE, Suite 530 Minneapolis, MN 55414-3251',
         phone: '(651) 201-2825',
         fax: '(612) 617-2262',
@@ -855,7 +855,7 @@ export const organizationsData = {
       },
       {
         name: 'Mississippi Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '6360 I-55 North Suite 400 Jackson, MS 39211',
         phone: '(601) 899-8880',
         fax: '(601) 899-8851',
@@ -864,7 +864,7 @@ export const organizationsData = {
       },
       {
         name: 'Missouri Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 625 Jefferson City, MO 65102',
         phone: '(573) 751-0091',
         fax: '(573) 526-3464',
@@ -873,7 +873,7 @@ export const organizationsData = {
       },
       {
         name: 'Montana Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 200513 301 S Park Ave, 4th Floor Helena, MT 59620-0513',
         phone: '(406) 841-2371',
         fax: '(406) 841-2355',
@@ -882,7 +882,7 @@ export const organizationsData = {
       },
       {
         name: 'Nebraska Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 94986 Lincoln, NE 68509-4986',
         phone: '(402) 471-2118',
         fax: '(402) 471-8614',
@@ -891,7 +891,7 @@ export const organizationsData = {
       },
       {
         name: 'Nevada State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '985 Damonte Ranch Pkwy Ste 206 Reno, NV 89521',
         phone: '(775) 850-1440',
         fax: '(775) 850-1444',
@@ -900,7 +900,7 @@ export const organizationsData = {
       },
       {
         name: 'New Hampshire Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Office of Professional Licensure & Certification 121 S Fruit St, Suite 401 Concord, NH 03301-2412',
         phone: '(603) 271-2350',
         fax: '(603) 271-2856',
@@ -909,7 +909,7 @@ export const organizationsData = {
       },
       {
         name: 'New Jersey Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 45013 Newark, NJ 07101',
         phone: '(973) 504-6450',
         fax: '(973) 504-6326',
@@ -918,7 +918,7 @@ export const organizationsData = {
       },
       {
         name: 'New Mexico Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '5500 San Antonio Dr NE, Ste C Albuquerque, NM 87109',
         phone: '(505) 222-9830',
         fax: '(505) 222-9845',
@@ -926,7 +926,7 @@ export const organizationsData = {
       },
       {
         name: 'New York State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '89 Washington Ave, 2nd Floor W Albany, NY 12234-1000',
         phone: '(518) 474-3817 ext. 130',
         fax: '(518) 473-6995',
@@ -935,7 +935,7 @@ export const organizationsData = {
       },
       {
         name: 'North Carolina Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '6015 Farrington Rd Suite 201 Chapel Hill, NC 27517',
         phone: '(919) 246-1050',
         fax: '(919) 246-1056',
@@ -944,7 +944,7 @@ export const organizationsData = {
       },
       {
         name: 'North Dakota State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '1906 E Broadway Ave Bismarck, ND 58501-1354',
         phone: '(701) 328-9535',
         fax: '(701) 328-9536',
@@ -953,7 +953,7 @@ export const organizationsData = {
       },
       {
         name: 'Ohio State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '77 S High St, Room 1702 Columbus, OH 43215-6126',
         phone: '(614) 466-4143',
         fax: '(614) 752-4836',
@@ -962,7 +962,7 @@ export const organizationsData = {
       },
       {
         name: 'Oklahoma State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '2920 N Lincoln Blvd, Ste A Oklahoma City, OK 73105-3488',
         phone: '(405) 521-3815',
         fax: '(405) 521-3758',
@@ -971,7 +971,7 @@ export const organizationsData = {
       },
       {
         name: 'Oregon State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '800 NE Oregon St, Suite 150 Portland, OR 97232',
         phone: '(971) 673-0001',
         fax: '(971) 673-0002',
@@ -980,7 +980,7 @@ export const organizationsData = {
       },
       {
         name: 'Pennsylvania State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 2649 Harrisburg, PA 17105-2649',
         phone: '(717) 783-7156',
         fax: '(717) 787-7769',
@@ -989,14 +989,14 @@ export const organizationsData = {
       },
       {
         name: 'Puerto Rico Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Department of Health, PO Box 10200 San Juan, PR 00908',
         phone: '(787) 765-2929 Ext 6645',
         email: 'marileemaldonado@salud.pr.gov'
       },
       {
         name: 'Rhode Island Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '3 Capitol Hill, Room 205 Providence, RI 02908-5097',
         phone: '(401) 222-2840',
         fax: '(401) 222-2158',
@@ -1005,7 +1005,7 @@ export const organizationsData = {
       },
       {
         name: 'South Carolina Department of Labor, Licensing, and Regulation — Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Kingstree Bldg 110 Centerview Dr, Suite 306 Columbia, SC 29210',
         phone: '(803) 896-4700',
         fax: '(803) 896-4596',
@@ -1014,7 +1014,7 @@ export const organizationsData = {
       },
       {
         name: 'South Dakota State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '4001 W Valhalla Blvd, Ste 106 Sioux Falls, SD 57106',
         phone: '(605) 362-2737',
         fax: '(605) 362-2738',
@@ -1023,7 +1023,7 @@ export const organizationsData = {
       },
       {
         name: 'Tennessee Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '665 Mainstream Dr Nashville, TN 37243',
         phone: '(615) 741-2718',
         fax: '(615) 741-2722',
@@ -1031,7 +1031,7 @@ export const organizationsData = {
       },
       {
         name: 'Texas State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '333 Guadalupe, Tower 3, Suite 500 Austin, TX 78701-3943',
         phone: '(512) 305-8000',
         fax: '(512) 305-8082',
@@ -1040,7 +1040,7 @@ export const organizationsData = {
       },
       {
         name: 'Utah Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '160 East 300 South Salt Lake City, UT 84114-6741',
         phone: '(801) 530-6628',
         fax: '(801) 530-6511',
@@ -1049,7 +1049,7 @@ export const organizationsData = {
       },
       {
         name: 'Vermont Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '89 Main St, Third Floor Montpelier, VT 05620-3402',
         phone: '(802) 828-2373',
         fax: '(802) 828-2465',
@@ -1058,7 +1058,7 @@ export const organizationsData = {
       },
       {
         name: 'Virgin Islands Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '3500 Estate Richmond Christiansted, VI 00820-4370',
         phone: '(340) 718-1311 ext. 3647 or 3849',
         website: 'https://doh.vi.gov/',
@@ -1066,7 +1066,7 @@ export const organizationsData = {
       },
       {
         name: 'Virginia Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'Perimeter Center 9960 Mayland Drive, Suite 300 Richmond, VA 23233-1463',
         phone: '(804) 367-4456',
         fax: '(804) 527-4472',
@@ -1075,7 +1075,7 @@ export const organizationsData = {
       },
       {
         name: 'Washington State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: 'PO Box 47852 Olympia, WA 98504-4853',
         phone: '(360) 236-4946',
         fax: '(360) 236-2260',
@@ -1084,7 +1084,7 @@ export const organizationsData = {
       },
       {
         name: 'West Virginia Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '2310 Kanawha Blvd E Charleston, WV 25311',
         phone: '(304) 558-0558',
         fax: '(304) 558-0474',
@@ -1093,7 +1093,7 @@ export const organizationsData = {
       },
       {
         name: 'Wisconsin Pharmacy Examining Board',
-        region: 'USA',
+        region: 'United States of America',
         address: '4822 Madison Yards Way Madison, WI 53708-8366',
         phone: '(608) 266-2112',
         fax: '(608) 267-0644',
@@ -1102,7 +1102,7 @@ export const organizationsData = {
       },
       {
         name: 'Wyoming State Board of Pharmacy',
-        region: 'USA',
+        region: 'United States of America',
         address: '1712 Carey Ave, Suite 200 Cheyenne, WY 82002',
         phone: '307-634-9636',
         fax: '307-634-6335',

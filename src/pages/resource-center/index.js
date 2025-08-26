@@ -8,18 +8,22 @@ const ResourceCenterPage = () => {
     {
       title: 'Free CEUs',
       description: 'Continuing education units to maintain and enhance your professional credentials.',
+      link: '/resource-center/free-ceus'
     },
     {
       title: 'Organizations',
       description: 'Directory of professional pharmacy technician organizations and associations.',
+      link: '/resource-center/organizations'
     },
     {
       title: 'Conventions',
       description: 'Information on upcoming conventions and events for pharmacy technicians.',
+      link: '/resource-center/conventions'
     },
     {
       title: 'Blog',
       description: 'Insights and articles on pharmacy technician topics and trends.',
+      link: '/resource-center/blog'
     }
   ]
 
@@ -50,7 +54,7 @@ const ResourceCenterPage = () => {
                   {resource.description}
                 </p>
                 <Link
-                  to={`/resource-center/${resource.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '').replace(/,/g, '')}`}
+                  to={resource.link}
                   className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
                 >
                   Learn More

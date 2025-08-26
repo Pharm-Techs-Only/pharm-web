@@ -1,78 +1,12 @@
 import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import { Link } from 'gatsby'
+import { organizationsData } from '../../data/organizations'
 
 const OrganizationsPage = () => {
   const [activeTab, setActiveTab] = useState('associations')
 
-  const organizationsData = {
-    associations: [
-      {
-        name: 'National Pharmacy Technician Association (NPTA)',
-        description: 'Dedicated to advancing the value of pharmacy technicians and the vital roles they play in pharmaceutical care.',
-        website: 'pharmacytechnician.org',
-        benefits: ['Professional development', 'Certification resources', 'Networking opportunities', 'Career advancement']
-      },
-      {
-        name: 'American Association of Pharmacy Technicians (AAPT)',
-        description: 'Provides leadership and represents the interests of its members to the public and healthcare organizations.',
-        website: 'pharmacytechnician.com',
-        benefits: ['Advocacy', 'Professional recognition', 'Educational resources', 'Industry updates']
-      },
-      {
-        name: 'American Society of Health-System Pharmacists (ASHP)',
-        description: 'Professional association of pharmacists and pharmacy technicians who serve in health systems.',
-        website: 'ashp.org',
-        benefits: ['Health-system focus', 'Clinical resources', 'Standards development', 'Career opportunities']
-      },
-      {
-        name: 'International Association of Certified Pharmacy Technicians (IACPT)',
-        description: 'Global organization promoting pharmacy technician professional standards worldwide.',
-        website: 'iacpt.org',
-        benefits: ['Global perspective', 'International standards', 'Cross-cultural learning', 'Global networking']
-      }
-    ],
-    boards: [
-      {
-        name: 'Pharmacy Technician Certification Board (PTCB)',
-        description: 'The national certification organization for pharmacy technicians in the United States.',
-        website: 'ptcb.org',
-        benefits: ['National certification', 'Continuing education', 'Career resources', 'Specialty certifications']
-      },
-      {
-        name: 'National Association of Boards of Pharmacy (NABP)',
-        description: 'Independent organization that assists state boards of pharmacy in developing, implementing, and enforcing policies.',
-        website: 'nabp.pharmacy',
-        benefits: ['Regulatory guidance', 'State board resources', 'Compliance information', 'Professional standards']
-      },
-      {
-        name: 'ExCPT Certification Board',
-        description: 'Alternative certification pathway for pharmacy technicians with experience-based qualifications.',
-        website: 'nhanow.com/excpt',
-        benefits: ['Experience-based certification', 'Flexible testing options', 'Career validation', 'Professional recognition']
-      }
-    ],
-    councils: [
-      {
-        name: 'National Association of Chain Drug Stores (NACDS)',
-        description: 'Represents traditional drug stores, supermarkets and mass merchants with pharmacies.',
-        website: 'nacds.org',
-        benefits: ['Industry advocacy', 'Regulatory updates', 'Business resources', 'Policy information']
-      },
-      {
-        name: 'Healthcare Financial Management Association (HFMA)',
-        description: 'Professional organization for healthcare financial management leaders, including pharmacy operations.',
-        website: 'hfma.org',
-        benefits: ['Financial management resources', 'Healthcare policy updates', 'Professional networking', 'Industry insights']
-      },
-      {
-        name: 'American Pharmacists Association (APhA)',
-        description: 'National professional society of pharmacists supporting the pharmacy profession and patient care.',
-        website: 'pharmacist.com',
-        benefits: ['Professional advocacy', 'Policy influence', 'Educational resources', 'Industry leadership']
-      }
-    ]
-  }
+  
 
   const tabs = [
     { key: 'associations', label: 'Associations', count: organizationsData.associations.length },
@@ -80,36 +14,108 @@ const OrganizationsPage = () => {
     { key: 'councils', label: 'Councils', count: organizationsData.councils.length }
   ]
 
-  const renderOrganizations = (organizations) => (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      {organizations.map((org, index) => (
-        <div key={index} className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-          <h3 className="text-xl font-bold mb-3 text-gray-900">{org.name}</h3>
-          <p className="text-gray-600 mb-4">{org.description}</p>
-          
-          <div className="mb-4">
-            <p className="text-sm text-gray-500 mb-1">Website:</p>
-            <p className="text-blue-600 font-medium">{org.website}</p>
-          </div>
-          
-          <div className="mb-4">
-            <h4 className="font-semibold mb-2 text-gray-800">Key Benefits:</h4>
-            <ul className="list-disc list-inside space-y-1 text-gray-600">
-              {org.benefits.map((benefit, i) => (
-                <li key={i}>{benefit}</li>
+  // Group organizations by region
+  const groupByRegion = (organizations) => {
+    const grouped = organizations.reduce((acc, org) => {
+      if (!acc[org.region]) {
+        acc[org.region] = []
+      }
+      acc[org.region].push(org)
+      return acc
+    }, {})
+    
+    // Sort regions: North America first, then alphabetically
+    const sortedRegions = Object.keys(grouped).sort((a, b) => {
+      if (a === 'North America') return -1
+      if (b === 'North America') return 1
+      return a.localeCompare(b)
+    })
+    
+    return sortedRegions.map(region => ({
+      region,
+      organizations: grouped[region]
+    }))
+  }
+
+  const renderOrganizations = (organizations) => {
+    const regionGroups = groupByRegion(organizations)
+    
+    return (
+      <div className="space-y-8">
+        {regionGroups.map((group, groupIndex) => (
+          <div key={groupIndex} className="border-l-4 border-blue-500 pl-6">
+            <h3 className="text-xl font-bold mb-4 text-gray-900 flex items-center">
+              <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+                {group.organizations.length}
+              </span>
+              {group.region} {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
+            </h3>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {group.organizations.map((org, index) => (
+                <div key={index} className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex justify-between items-start mb-3">
+                    <h4 className="text-lg font-bold text-gray-900">{org.name}</h4>
+                    <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">
+                      {org.region}
+                    </span>
+                  </div>
+                  
+                  {/* Contact Information */}
+                  <div className="space-y-3 mb-4">
+                    {org.address && (
+                      <div>
+                        <p className="text-sm text-gray-500 mb-1">Address:</p>
+                        <p className="text-gray-700 text-sm">
+                          {org.building && <span>{org.building}<br /></span>}
+                          {org.address}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {org.phone && (
+                      <div>
+                        <p className="text-sm text-gray-500 mb-1">Phone:</p>
+                        <p className="text-gray-700 text-sm">{org.phone}</p>
+                      </div>
+                    )}
+                    
+                    {org.fax && (
+                      <div>
+                        <p className="text-sm text-gray-500 mb-1">Fax:</p>
+                        <p className="text-gray-700 text-sm">{org.fax}</p>
+                      </div>
+                    )}
+                    
+                    {org.email && (
+                      <div>
+                        <p className="text-sm text-gray-500 mb-1">Email:</p>
+                        <p className="text-blue-600 text-sm">{org.email}</p>
+                      </div>
+                    )}
+                    
+                    {org.website && (
+                      <div>
+                        <p className="text-sm text-gray-500 mb-1">Website:</p>
+                        <a 
+                          href={org.website} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-800 text-sm underline break-all"
+                        >
+                          {org.website}
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-          
-          <div className="pt-4 border-t">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
+        ))}
+      </div>
+    )
+  }
 
   return (
     <Layout>

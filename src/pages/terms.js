@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 
 const TermsPage = () => {
   return (
-    <Layout>
+    <Layout includeHeader={true}>
       <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
         

@@ -218,7 +218,7 @@ const HomePage = () => {
       {/* Employers Section */}
       <section className="relative py-[60px] lg:py-[120px]">
         <div className="relative content-container">
-          <div className="relative z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
+          <div className="relative z-30 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
             <h2>
               Employer? See our tools built just for you!
             </h2>

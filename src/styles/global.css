@@ -77,7 +77,8 @@
   --color-pharm-purple: #495DA9;
   --color-pharm-grey: #495057;
   --color-pharm-green: #7DF061;
-  --color-bg-blue: #5EAFFF;
+  --color-bg-blue: #87C3FF;
+  --color-bg-white: #CBE5FF;
 }
 
 @layer base {

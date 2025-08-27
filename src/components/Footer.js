@@ -7,13 +7,13 @@ const Footer = () => {
   return (
     <footer className="relative pb-0">
       <div className="content-container relative">
-        <div className="relative px-4 sm:px-6 lg:px-8 z-30 flex flex-col-reverse lg:flex-row justify-between items-center">
-          <div className="flex justify-center w-[50%] px-12 relative -bottom-[150px]">
+        <div className="relative px-4 sm:px-6 lg:px-8 z-30 flex flex-row justify-between items-stretch">
+          <div className="justify-center w-[50%] px-12 pb-12 relative align-end">
             <StaticImage src="../images/footer_image.svg" alt="Pharmacy Technician" className="" />
           </div>
         
           {/* Right side - Links */}
-          <div className="pt-[60px] md:pt-[80px] lg:py-[120px] xl:pt-[170px] w-[100%] lg:w-[50%] pl-0 lg:pl-[120px]">
+          <div className="pt-[60px] md:pt-[80px] lg:pt-[120px] xl:pt-[170px] w-[100%] lg:w-[50%] pb-0 pl-0 lg:pl-[120px]">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <div>
                 <h4 className="font-semibold mb-3">Main</h4>
@@ -93,8 +93,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full left-[0] bottom-[0] absolute -z-1"><StaticImage src="../images/cloud_floor-footer.svg" alt="Cloud Floor" layout="fullWidth" /></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-blue)] to-[var(--color-bg-blue)]/60 opacity-75 pointer-events-none z-20"></div>
+      <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor-footer.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-blue)]/0 to-[var(--color-bg-white)]/100 pointer-events-none z-2"></div>
     </footer>
   )
 }

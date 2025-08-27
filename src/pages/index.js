@@ -54,8 +54,8 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="right-[00px] top-[160px] absolute z-10"><StaticImage src="../images/cloud_community-one.svg" alt="Cloud One" /></div>
-          <div className="-left-[50px] bottom-[120px] absolute z-10"><StaticImage src="../images/cloud_community-three.svg" alt="Cloud Three" /></div>
+          <div className="right-[00px] top-[160px] absolute z-10"><StaticImage src="../images/cloud_one.svg" alt="Cloud One" /></div>
+          <div className="-left-[50px] bottom-[120px] absolute z-10"><StaticImage src="../images/cloud_three.svg" alt="Cloud Three" /></div>
         </div>
         <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </section>

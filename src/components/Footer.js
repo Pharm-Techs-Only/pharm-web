@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="relative pb-0">
       <div className="content-container relative">
         <div className="relative px-4 sm:px-6 lg:px-8 z-30 flex flex-row justify-between items-stretch">
-          <div className="justify-center w-[50%] px-12 pb-12 relative align-end">
+          <div className="justify-center w-[50%] px-12 pb-8 relative flex flex-col self-end">
             <StaticImage src="../images/footer_image.svg" alt="Pharmacy Technician" className="" />
           </div>
         

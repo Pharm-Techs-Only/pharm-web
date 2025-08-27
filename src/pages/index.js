@@ -24,8 +24,8 @@ const HomePage = () => {
               <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
             </div>
           </div>
-          <div className="-left-[60px] top-[40px] absolute z-10"><StaticImage src="../images/cloud_hero-one.svg" alt="Cloud One" /></div>
-          <div className="right-[0] bottom-[180px] absolute z-10"><StaticImage src="../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
+          <div className="-left-[220px] bottom-[240px] absolute z-10"><StaticImage src="../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
+          <div className="right-[260] top-[164px] absolute z-10"><StaticImage src="../images/cloud_hero-one.svg" alt="Cloud One" /></div>
         </div>
         <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </HeroHeader>
@@ -33,11 +33,11 @@ const HomePage = () => {
       {/* Subscribe Section */}
       <section className="relative pb-[60px] lg:pb-[160px]">
         <div className="content-container relative">
-          <div className="relative px-4 sm:px-6 lg:px-8 z-20 flex flex-col-reverse lg:flex-row justify-between items-center">
+          <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between items-center">
             <div className="flex justify-center w-[50%] px-12">
               <StaticImage src="../images/home_community.svg" alt="Two Pharmacy Technicians" />
             </div>
-            <div className="pt-[60px] md:pt-[80px] lg:py-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pl-0 lg:pl-[120px]">
+            <div className="pt-[60px] md:pt-[80px] lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pl-0 lg:pl-[120px]">
               <h2>
                 A Community For Us, By Us
               </h2>
@@ -54,8 +54,8 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="right-[00px] top-[160px] absolute z-10"><StaticImage src="../images/cloud_one.svg" alt="Cloud One" /></div>
-          <div className="-left-[50px] bottom-[120px] absolute z-10"><StaticImage src="../images/cloud_three.svg" alt="Cloud Three" /></div>
+          <div className="-left-[115px] bottom-[420px] absolute z-10"><StaticImage src="../images/cloud_one.svg" alt="Cloud One" /></div>
+          <div className="-right-[180px] bottom-[225px] absolute z-10"><StaticImage src="../images/cloud_three.svg" alt="Cloud Three" /></div>
         </div>
         <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </section>

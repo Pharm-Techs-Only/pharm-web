@@ -27,7 +27,7 @@ const Header = () => {
           <nav className="hidden desktop-nav:flex space-x-8">
             <Link 
               to="/#waitlist" 
-              className="text-pharm-light-blue px-3 py-2 text-sm font-medium transition-colors"
+              className="text-pharm-light-blue hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors"
               activeClassName="text-pharm-blue"
             >
               Tech Connect<br/>

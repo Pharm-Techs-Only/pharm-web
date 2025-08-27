@@ -5,9 +5,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 const Layout = ({ children, includeHeader = false }) => {
   return (
-    <div className="min-h-screen flex flex-col z-20 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col relative overflow-hidden">
       {includeHeader && <Header />}
-      <main className="flex-grow">
+      <main className="flex-grow relative z-20">
         {children}
       </main>
       <Footer />

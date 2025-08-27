@@ -2,17 +2,10 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
-import { 
-  getCEUsGroupedAndSorted, 
-  getAvailableYears,
-  isCEUExpiringSoon
-} from '../../data/ceus'
+import { ceuData } from '../../data/ceus'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const FreeCEUsPage = () => {
-  // Get CEUs grouped by year and sorted
-  const ceusByYear = getCEUsGroupedAndSorted()
-  const availableYears = getAvailableYears()
-
   // Format date for display
   const formatExpirationDate = (dateString) => {
     const date = new Date(dateString)
@@ -23,17 +16,114 @@ const FreeCEUsPage = () => {
     })
   }
 
+  // Utility functions for working with CEU data
+
+  /**
+   * Groups CEUs by expiration year
+   * @param {Array} ceus - Array of CEU objects
+   * @returns {Object} Object with years as keys and arrays of CEUs as values
+   */
+  const groupCEUsByYear = (ceus = ceuData) => {
+    return ceus.reduce((grouped, ceu) => {
+      const year = new Date(ceu.expirationDate).getFullYear()
+      if (!grouped[year]) {
+        grouped[year] = []
+      }
+      grouped[year].push(ceu)
+      return grouped
+    }, {})
+  }
+
+  /**
+   * Sorts CEUs by expiration date (earliest first)
+   * @param {Array} ceus - Array of CEU objects
+   * @returns {Array} Sorted array of CEUs
+   */
+  const sortCEUsByDate = (ceus = ceuData) => {
+    return [...ceus].sort((a, b) => new Date(a.expirationDate) - new Date(b.expirationDate))
+  }
+
+  /**
+   * Gets CEUs grouped by year and sorted within each year (excludes expired CEUs)
+   * @param {Array} ceus - Array of CEU objects
+   * @returns {Object} Object with years as keys and sorted arrays of CEUs as values
+   */
+  const getCEUsGroupedAndSorted = (ceus = ceuData) => {
+    // Filter out expired CEUs first
+    const currentCeus = filterCEUsByExpiration(ceus)
+    const sortedCeus = sortCEUsByDate(currentCeus)
+    const groupedCeus = groupCEUsByYear(sortedCeus)
+    
+    // Sort CEUs within each year group by date
+    Object.keys(groupedCeus).forEach(year => {
+      groupedCeus[year] = sortCEUsByDate(groupedCeus[year])
+    })
+    
+    return groupedCeus
+  }
+
+  /**
+   * Gets available years sorted in ascending order (only years with non-expired CEUs)
+   * @param {Array} ceus - Array of CEU objects
+   * @returns {Array} Array of years as strings, sorted ascending
+   */
+  const getAvailableYears = (ceus = ceuData) => {
+    // Filter out expired CEUs first, then get years
+    const currentCeus = filterCEUsByExpiration(ceus)
+    const years = [...new Set(currentCeus.map(ceu => new Date(ceu.expirationDate).getFullYear().toString()))]
+    return years.sort((a, b) => parseInt(a) - parseInt(b))
+  }
+
+  /**
+   * Filters out expired CEUs (keeps only current and future CEUs)
+   * @param {Array} ceus - Array of CEU objects
+   * @returns {Array} Filtered array of non-expired CEUs
+   */
+  const filterCEUsByExpiration = (ceus = ceuData) => {
+    const today = new Date()
+    today.setHours(0, 0, 0, 0) // Set to start of day for accurate comparison
+    
+    return ceus.filter(ceu => {
+      const expirationDate = new Date(ceu.expirationDate)
+      return expirationDate >= today
+    })
+  }
+
+  /**
+   * Checks if a CEU is expiring soon (within specified days)
+   * @param {Object} ceu - CEU object
+   * @param {number} days - Number of days to consider as "soon" (default: 30)
+   * @returns {boolean} True if expiring soon
+   */
+  const isCEUExpiringSoon = (ceu, days = 30) => {
+    const today = new Date()
+    const expiration = new Date(ceu.expirationDate)
+    const timeDiff = expiration.getTime() - today.getTime()
+    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24))
+    return daysDiff <= days && daysDiff > 0
+  }
+
+  
+  // Get CEUs grouped by year and sorted
+  const ceusByYear = getCEUsGroupedAndSorted(ceuData)
+  const availableYears = getAvailableYears(ceuData)
+
   return (
     <Layout>
       {/* Hero Section */}
       <HeroHeader>
-        <div className="content-container text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Free Continuing Education Units (CEUs)
-          </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
-          </p>
+        <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
+          <div className="pt-[60px] md:pt-[80px] py-0 lg:py-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Free Continuing Education Units (CEUs)
+            </h1>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
+            </p>
+          </div>
+          <div className="flex justify-center w-[50%] relative px-12">
+              <StaticImage src="../images/hero_ceus.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
+            </div>
         </div>
       </HeroHeader>
 

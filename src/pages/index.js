@@ -9,10 +9,10 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Main Hero Section */}
-      <HeroHeader className="relative pb-[60px]">
+      <HeroHeader className="pb-[60px] relative">
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
-            <div className="pt-[60px] md:pt-[80px] py-0 lg:py-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+            <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
               <h1>
                 Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
               </h1>
@@ -68,7 +68,7 @@ const HomePage = () => {
               Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
             </p>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 xlg:grid-cols-4 gap-12 mb-8">
               <Link to="/resource-center/free-ceus" target="_blank" className="icon-wrap">
                 <div className="height-[102px] mb-4">
                   <StaticImage src="../images/icon_global-careers.svg" alt="Free CEUs" className="" />
@@ -112,7 +112,7 @@ const HomePage = () => {
             Supporting your career growth from certification through career advancement.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 xlg:grid-cols-4 gap-12 mb-8">
             <a href="https://careers.pharmtechsonly.com" target="_blank" className="icon-wrap">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_global-careers.svg" alt="Global Career Center" className="" />
@@ -157,7 +157,7 @@ const HomePage = () => {
             Building community, a centralized place to connect, share, and interact with other pharmacy technicians, just like you.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 xlg:grid-cols-4 gap-12 mb-8">
             <div className="icon-wrap">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_interact.svg" alt="Interact" className="" />
@@ -211,7 +211,7 @@ const HomePage = () => {
             Are you a pharmacy looking to fill your opening with the certified, experienced pharmacy technicians?
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 xlg:grid-cols-4 gap-12 mb-8">
             <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" className="icon-wrap">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_post-jobs.svg" alt="Post Jobs" className="" />

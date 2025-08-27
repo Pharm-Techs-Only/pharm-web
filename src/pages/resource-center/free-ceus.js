@@ -111,20 +111,25 @@ const FreeCEUsPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroHeader>
-        <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
-          <div className="pt-[60px] md:pt-[80px] py-0 lg:py-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Free Continuing Education Units (CEUs)
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
-            </p>
-          </div>
-          <div className="flex justify-center w-[50%] relative px-12">
+      <HeroHeader className="pb-[60px] relative">
+        <div className="content-container relative">
+          <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
+            <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+              <h1>
+                Free Continuing Education Units (CEUs)
+              </h1>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
+              </p>
+            </div>
+            <div className="flex justify-center w-[50%] relative px-12">
               <StaticImage src="../images/hero_ceus.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
             </div>
+          </div>
+          <div className="-left-[220px] bottom-[240px] absolute z-10"><StaticImage src="../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
+          <div className="right-[260] top-[164px] absolute z-10"><StaticImage src="../images/cloud_hero-one.svg" alt="Cloud One" /></div>
         </div>
+        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </HeroHeader>
 
       <div className="content-container px-4 py-8">
@@ -160,13 +165,6 @@ const FreeCEUsPage = () => {
                       <div className="flex justify-between items-start mb-3">
                         <h3 className="text-xl font-semibold pr-4">{ceu.title}</h3>
                         <div className="flex flex-col items-end space-y-2">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            ceu.status === 'Available' 
-                              ? 'bg-green-100 text-green-800' 
-                              : 'bg-gray-100 text-gray-600'
-                          }`}>
-                            {ceu.status}
-                          </span>
                           {isCEUExpiringSoon(ceu) && (
                             <span className="px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
                               Expiring Soon

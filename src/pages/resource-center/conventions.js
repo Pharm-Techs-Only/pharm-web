@@ -97,9 +97,6 @@ const ConventionsPage = () => {
                   {countryGroup.years.map((yearGroup, yearIndex) => (
                     <div key={yearIndex} className="ml-4">
                       <h3 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
-                        <span className="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
-                          {yearGroup.conventions.length}
-                        </span>
                         {yearGroup.year}
                       </h3>
                       
@@ -149,7 +146,7 @@ const ConventionsPage = () => {
                                   href={convention.website} 
                                   target="_blank" 
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                                  className="inline-flex items-center px-4 py-2 bg-pharm-blue text-white text-sm font-medium rounded-lg hover:bg-pharm-light-blue transition-colors"
                                 >
                                   Learn More
                                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

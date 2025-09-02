@@ -1,5 +1,5 @@
 // CEU data as a flat array for easier management
-export const ceuData = [
+export const CeusData = [
   // 2025 CEUs
   {
     title: 'Enhancing Pharmacy Roles in Hormonal Contraception Care',

@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import { conventionsData } from '../../data/conventions'
+import { ConventionsData } from '../../data/conventions'
 import HeroHeader from '../../components/HeroHeader'
 import { StaticImage } from 'gatsby-plugin-image'
 import ResourceLink from '../../components/ResourceLink'
@@ -8,7 +8,7 @@ import ResourceLink from '../../components/ResourceLink'
 const ConventionsPage = () => {
   // Group conventions by country, then by year, then sort by date within each year
   const groupConventions = () => {
-    const grouped = conventionsData.reduce((acc, convention) => {
+    const grouped = ConventionsData.reduce((acc, convention) => {
       if (!acc[convention.country]) {
         acc[convention.country] = {}
       }
@@ -36,7 +36,7 @@ const ConventionsPage = () => {
   }
 
   const countryGroups = groupConventions()
-  const totalConventions = conventionsData.length
+  const totalConventions = ConventionsData.length
 
   return (
     <Layout includeCTA={true}>
@@ -61,7 +61,7 @@ const ConventionsPage = () => {
         <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </HeroHeader>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="content-container px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-6">
             <ResourceLink />

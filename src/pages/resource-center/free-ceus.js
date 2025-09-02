@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
-import { ceuData } from '../../data/ceus'
+import { CeusData } from '../../data/ceus'
 import { StaticImage } from 'gatsby-plugin-image'
 import ResourceLink from '../../components/ResourceLink'
 
@@ -24,7 +24,7 @@ const FreeCEUsPage = () => {
    * @param {Array} ceus - Array of CEU objects
    * @returns {Object} Object with years as keys and arrays of CEUs as values
    */
-  const groupCEUsByYear = (ceus = ceuData) => {
+  const groupCEUsByYear = (ceus = CeusData) => {
     return ceus.reduce((grouped, ceu) => {
       const year = new Date(ceu.expirationDate).getFullYear()
       if (!grouped[year]) {
@@ -40,7 +40,7 @@ const FreeCEUsPage = () => {
    * @param {Array} ceus - Array of CEU objects
    * @returns {Array} Sorted array of CEUs
    */
-  const sortCEUsByDate = (ceus = ceuData) => {
+  const sortCEUsByDate = (ceus = CeusData) => {
     return [...ceus].sort((a, b) => new Date(a.expirationDate) - new Date(b.expirationDate))
   }
 
@@ -49,7 +49,7 @@ const FreeCEUsPage = () => {
    * @param {Array} ceus - Array of CEU objects
    * @returns {Object} Object with years as keys and sorted arrays of CEUs as values
    */
-  const getCEUsGroupedAndSorted = (ceus = ceuData) => {
+  const getCEUsGroupedAndSorted = (ceus = CeusData) => {
     // Filter out expired CEUs first
     const currentCeus = filterCEUsByExpiration(ceus)
     const sortedCeus = sortCEUsByDate(currentCeus)
@@ -68,7 +68,7 @@ const FreeCEUsPage = () => {
    * @param {Array} ceus - Array of CEU objects
    * @returns {Array} Array of years as strings, sorted ascending
    */
-  const getAvailableYears = (ceus = ceuData) => {
+  const getAvailableYears = (ceus = CeusData) => {
     // Filter out expired CEUs first, then get years
     const currentCeus = filterCEUsByExpiration(ceus)
     const years = [...new Set(currentCeus.map(ceu => new Date(ceu.expirationDate).getFullYear().toString()))]
@@ -80,7 +80,7 @@ const FreeCEUsPage = () => {
    * @param {Array} ceus - Array of CEU objects
    * @returns {Array} Filtered array of non-expired CEUs
    */
-  const filterCEUsByExpiration = (ceus = ceuData) => {
+  const filterCEUsByExpiration = (ceus = CeusData) => {
     const today = new Date()
     today.setHours(0, 0, 0, 0) // Set to start of day for accurate comparison
     
@@ -106,8 +106,8 @@ const FreeCEUsPage = () => {
 
   
   // Get CEUs grouped by year and sorted
-  const ceusByYear = getCEUsGroupedAndSorted(ceuData)
-  const availableYears = getAvailableYears(ceuData)
+  const ceusByYear = getCEUsGroupedAndSorted(CeusData)
+  const availableYears = getAvailableYears(CeusData)
 
   return (
     <Layout includeCTA={true}>

@@ -1,4 +1,4 @@
-export const conventionsData = [
+export const ConventionsData = [
   // United States - 2025
   {
     name: 'American Association of Colleges of Pharmacy- Pharmacy Education 2025',

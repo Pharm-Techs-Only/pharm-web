@@ -1,4 +1,4 @@
-export const organizationsData = {
+export const OrganizationsData = {
     associations: [
       {
         name: 'Federation of Asian Pharmaceutical Associations',

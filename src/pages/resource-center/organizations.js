@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import { Link } from 'gatsby'
 import HeroHeader from '../../components/HeroHeader'
-import { organizationsData } from '../../data/organizations'
+import { OrganizationsData } from '../../data/organizations'
 import { StaticImage } from 'gatsby-plugin-image'
 import ResourceLink from '../../components/ResourceLink'
 
@@ -12,9 +12,9 @@ const OrganizationsPage = () => {
   
 
   const tabs = [
-    { key: 'associations', label: 'Associations', count: organizationsData.associations.length },
-    { key: 'boards', label: 'Boards', count: organizationsData.boards.length },
-    { key: 'councils', label: 'Councils', count: organizationsData.councils.length }
+    { key: 'associations', label: 'Associations', count: OrganizationsData.associations.length },
+    { key: 'boards', label: 'Boards', count: OrganizationsData.boards.length },
+    { key: 'councils', label: 'Councils', count: OrganizationsData.councils.length }
   ]
 
   // Group organizations by region
@@ -191,7 +191,7 @@ const OrganizationsPage = () => {
                     Professional associations focused on advancing pharmacy technician careers, advocacy, and professional development.
                   </p>
                 </div>
-                {renderOrganizations(organizationsData.associations)}
+                {renderOrganizations(OrganizationsData.associations)}
               </div>
             )}
 
@@ -203,7 +203,7 @@ const OrganizationsPage = () => {
                     Certification organizations and regulatory boards that establish standards and provide credentials for pharmacy technicians.
                   </p>
                 </div>
-                {renderOrganizations(organizationsData.boards)}
+                {renderOrganizations(OrganizationsData.boards)}
               </div>
             )}
 
@@ -215,7 +215,7 @@ const OrganizationsPage = () => {
                     Industry councils and organizations that represent pharmacy operations, policy, and business interests.
                   </p>
                 </div>
-                {renderOrganizations(organizationsData.councils)}
+                {renderOrganizations(OrganizationsData.councils)}
               </div>
             )}
           </div>

@@ -3,10 +3,10 @@ import { Link } from 'gatsby'
 
 const CTA = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white-500">
       <div className="content-container text-center">
         <h2 className="text-3xl font-bold text-pharm-blue mb-4">
-          Ready to advance your career?
+          Ready to advance your career
         </h2>
         <p className="text-xl text-pharm-grey mb-8">
           Join thousands of pharmacy technicians who are already using our resources to grow professionally.

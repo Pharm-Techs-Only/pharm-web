@@ -46,9 +46,9 @@ const OrganizationsPage = () => {
     return (
       <div className="space-y-8">
         {regionGroups.map((group, groupIndex) => (
-          <div key={groupIndex} className="border-l-4 border-blue-500 pl-6">
-            <h3 className="text-xl font-bold mb-4 text-gray-900 flex items-center">
-              <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+          <div key={groupIndex} className="pl-6">
+            <h3 className="text-xl font-bold mb-4 flex items-center">
+              <span className="bg-pharm-blue text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
                 {group.organizations.length}
               </span>
               {group.region} {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
@@ -56,8 +56,8 @@ const OrganizationsPage = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {group.organizations.map((org, index) => (
-                <div key={index} className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex justify-between items-start mb-3">
+                <div key={index} className="item-wrap justify-start items-start">
+                  <div className="flex justify-between w-full items-start align-center mb-3">
                     <h4 className="text-lg font-bold text-gray-900">{org.name}</h4>
                     <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">
                       {org.region}
@@ -123,24 +123,17 @@ const OrganizationsPage = () => {
   return (
     <Layout includeCTA={true}>
       <HeroHeader>
-        <div className="content-container relative">
-          <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
-            <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
-              <h1>
-                Organizations
-              </h1>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Connect with pharmacy technician organizations in your country.
-              </p>
-            </div>
-            <div className="flex justify-center w-[50%] relative px-12">
-              <StaticImage src="../images/hero_organizations.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
-            </div>
-          </div>
-          <div className="-left-[220px] bottom-[240px] absolute z-10"><StaticImage src="../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
-          <div className="right-[260] top-[164px] absolute z-10"><StaticImage src="../images/cloud_hero-one.svg" alt="Cloud One" /></div>
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+          <h1>
+            Organizations
+          </h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Connect with pharmacy technician organizations in your country.
+          </p>
         </div>
-        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        <div className="flex justify-center w-[50%] relative px-12">
+          <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
+        </div>
       </HeroHeader>
 
       <div className="container mx-auto px-4 py-8">
@@ -160,12 +153,12 @@ const OrganizationsPage = () => {
           {/* Tab Navigation */}
           <div className="mb-8">
             <div className="border-b border-gray-200">
-              <nav className="-mb-px flex space-x-8">
+              <nav className="-mb-px flex">
                 {tabs.map((tab) => (
                   <button
                     key={tab.key}
                     onClick={() => setActiveTab(tab.key)}
-                    className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                    className={`py-4 px-6 border-b-2 font-medium text-md ${
                       activeTab === tab.key
                         ? 'border-blue-500 text-blue-600'
                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'

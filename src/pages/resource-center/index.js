@@ -42,20 +42,16 @@ const ResourceCenterPage = () => {
     <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
-        <div className="content-container relative">
-          <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
-            <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
-              <h1>
-                Resource Center
-              </h1>
-              <p>
-                Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
-              </p>
-            </div>
-            <div className="flex justify-center w-[50%] relative px-12">
-              <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
-            </div>
-          </div>
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+          <h1>
+            Resource Center
+          </h1>
+          <p>
+            Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
+          </p>
+        </div>
+        <div className="flex justify-center w-[50%] relative px-12">
+          <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

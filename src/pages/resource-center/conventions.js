@@ -41,24 +41,17 @@ const ConventionsPage = () => {
   return (
     <Layout includeCTA={true}>
       <HeroHeader>
-        <div className="content-container relative">
-          <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
-            <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
-              <h1>
-                Conventions
-              </h1>
-              <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
-                Discover upcoming pharmacy technician conventions.
-              </p>
-            </div>
-            <div className="flex justify-center w-[50%] relative px-12">
-              <StaticImage src="../../images/hero_home.svg" alt="Pharmacy Convention" className="lg:!absolute -bottom-[20px]" />
-            </div>
-          </div>
-          <div className="-left-[220px] bottom-[240px] absolute z-10"><StaticImage src="../../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
-          <div className="right-[260] top-[164px] absolute z-10"><StaticImage src="../../images/cloud_hero-one.svg" alt="Cloud One" /></div>
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+          <h1>
+            Conventions
+          </h1>
+          <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
+            Discover upcoming pharmacy technician conventions.
+          </p>
         </div>
-        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        <div className="flex justify-center w-[50%] relative px-12">
+          <StaticImage src="../../images/hero_home.svg" alt="Pharmacy Convention" className="lg:!absolute -bottom-[20px]" />
+        </div>
       </HeroHeader>
 
       <div className="content-container px-4 py-8">
@@ -92,7 +85,7 @@ const ConventionsPage = () => {
           {/* Conventions by Country and Year */}
           <div className="space-y-12">
             {countryGroups.map((countryGroup, countryIndex) => (
-              <div key={countryIndex} className="border-l-4 border-green-500 pl-6">
+              <div key={countryIndex} className="pl-6">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900 flex items-center">
                   <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
                     {countryGroup.years.reduce((total, year) => total + year.conventions.length, 0)}
@@ -112,7 +105,7 @@ const ConventionsPage = () => {
                       
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {yearGroup.conventions.map((convention, index) => (
-                          <div key={index} className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                          <div key={index} className="item-wrap">
                             <div className="flex justify-between items-start mb-3">
                               <h4 className="text-lg font-bold text-gray-900 leading-tight">{convention.name}</h4>
                               <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium whitespace-nowrap ml-2">

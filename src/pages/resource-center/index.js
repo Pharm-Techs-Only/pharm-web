@@ -4,32 +4,42 @@ import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
+// Import icons
+import IconFreeCeus from '../../images/icon_free-ceus.svg'
+import IconOrganizations from '../../images/icon_organizations.svg'
+import IconConventions from '../../images/icon_conventions.svg'
+import IconBlog from '../../images/icon_blog.svg'
+
 const ResourceCenterPage = () => {
   const resources = [
     {
       title: 'Free CEUs',
       description: 'Continuing education units to maintain and enhance your professional credentials.',
-      link: '/resource-center/free-ceus'
+      link: '/resource-center/free-ceus',
+      icon: IconFreeCeus
     },
     {
       title: 'Organizations',
       description: 'Directory of professional pharmacy technician organizations and associations.',
-      link: '/resource-center/organizations'
+      link: '/resource-center/organizations',
+      icon: IconOrganizations
     },
     {
       title: 'Conventions',
       description: 'Information on upcoming conventions and events for pharmacy technicians.',
-      link: '/resource-center/conventions'
+      link: '/resource-center/conventions',
+      icon: IconConventions
     },
     {
       title: 'Blog',
       description: 'Insights and articles on pharmacy technician topics and trends.',
-      link: '/resource-center/blog'
+      link: '/resource-center/blog',
+      icon: IconBlog
     }
   ]
 
   return (
-    <Layout>
+    <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
         <div className="content-container relative">
@@ -43,58 +53,39 @@ const ResourceCenterPage = () => {
               </p>
             </div>
             <div className="flex justify-center w-[50%] relative px-12">
-              <StaticImage src="../images/hero_resources.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
+              <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
             </div>
           </div>
         </div>
       </HeroHeader>
 
       {/* Resources Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="content-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <div key={index} className="item-wrap flex flex-col items-center">
+                {resource.icon && (
+                  <img
+                    src={resource.icon}
+                    alt={resource.title}
+                    className="w-12 h-12 mb-4"
+                  />
+                )}
+                <h3 className="text-xl text-center font-semibold text-gray-900 mb-3">
                   {resource.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 text-center mb-4">
                   {resource.description}
                 </p>
                 <Link
                   to={resource.link}
-                  className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                  className="text-pharm-light-blue text-center hover:text-pharm-blue font-medium transition-colors"
                 >
-                  Learn More
+                  Learn More &gt;
                 </Link>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
-        <div className="content-container text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to advance your career?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join thousands of pharmacy technicians who are already using our resources to grow professionally.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/careers"
-              className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3 rounded-md font-medium transition-colors"
-            >
-              Explore Career Opportunities
-            </Link>
-            <Link
-              to="/tech-connect"
-              className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-md font-medium transition-colors"
-            >
-              Join Our Community
-            </Link>
           </div>
         </div>
       </section>

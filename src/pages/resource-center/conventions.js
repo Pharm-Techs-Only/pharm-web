@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import { Link } from 'gatsby'
 import { conventionsData } from '../../data/conventions'
 import HeroHeader from '../../components/HeroHeader'
 import { StaticImage } from 'gatsby-plugin-image'
+import ResourceLink from '../../components/ResourceLink'
 
 const ConventionsPage = () => {
   // Group conventions by country, then by year, then sort by date within each year
@@ -39,7 +39,7 @@ const ConventionsPage = () => {
   const totalConventions = conventionsData.length
 
   return (
-    <Layout>
+    <Layout includeCTA={true}>
       <HeroHeader>
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
@@ -47,26 +47,24 @@ const ConventionsPage = () => {
               <h1>
                 Conventions
               </h1>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
                 Discover upcoming pharmacy technician conventions.
               </p>
             </div>
             <div className="flex justify-center w-[50%] relative px-12">
-              <StaticImage src="../images/hero_conventions.svg" alt="Pharmacy Convention" className="lg:!absolute -bottom-[20px]" />
+              <StaticImage src="../../images/hero_home.svg" alt="Pharmacy Convention" className="lg:!absolute -bottom-[20px]" />
             </div>
           </div>
-          <div className="-left-[220px] bottom-[240px] absolute z-10"><StaticImage src="../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
-          <div className="right-[260] top-[164px] absolute z-10"><StaticImage src="../images/cloud_hero-one.svg" alt="Cloud One" /></div>
+          <div className="-left-[220px] bottom-[240px] absolute z-10"><StaticImage src="../../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
+          <div className="right-[260] top-[164px] absolute z-10"><StaticImage src="../../images/cloud_hero-one.svg" alt="Cloud One" /></div>
         </div>
-        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </HeroHeader>
 
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-6">
-            <Link to="/resource-center" className="text-blue-600 hover:text-blue-800">
-              ← Back to Resource Center
-            </Link>
+            <ResourceLink />
           </nav>
           
           <h1 className="text-4xl font-bold mb-4">Pharmacy Conventions</h1>

@@ -70,7 +70,7 @@
 
 @theme {
   --font-family-sans: Poppins, ui-sans-serif, system-ui, sans-serif;
-  --font-family-heading: "MADE Tommy Soft", ui-sans-serif, system-ui, sans-serif;
+  --font-family-heading: "Baloo Da", ui-sans-serif, system-ui, sans-serif;
   --font-family-nav: "Baloo Da", ui-sans-serif, system-ui, sans-serif;
   --color-pharm-blue: #09447E;
   --color-pharm-light-blue: #5776D3;
@@ -79,6 +79,15 @@
   --color-pharm-green: #7DF061;
   --color-bg-blue: #87C3FF;
   --color-bg-white: #CBE5FF;
+  
+  /* Custom breakpoints for responsive grid */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1800px;
 }
 
 @layer base {
@@ -88,12 +97,17 @@
     font-weight: 500;
   }
 
-  nav, nav a {
+  .font-body {
+    font-family: var(--font-family-sans);
+    font-weight: 500;
+  }
+
+  nav, nav a, .font-nav {
     font-family: var(--font-family-nav);
     font-weight: 600;
   }
   
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .font-heading {
     font-family: var(--font-family-heading);
     font-weight: 800;
     margin: 0 0 2rem;
@@ -119,15 +133,15 @@
     z-index: -1;
   }
 
-  .icon-wrap {
-    width: 292px;
-    height: 275px;
+  .item-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background:#fff;
-    border-radius: 8px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.11);
+    padding: 20px;
   }
 }
 

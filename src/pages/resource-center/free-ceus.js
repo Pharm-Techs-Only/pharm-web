@@ -4,6 +4,7 @@ import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { ceuData } from '../../data/ceus'
 import { StaticImage } from 'gatsby-plugin-image'
+import ResourceLink from '../../components/ResourceLink'
 
 const FreeCEUsPage = () => {
   // Format date for display
@@ -109,45 +110,43 @@ const FreeCEUsPage = () => {
   const availableYears = getAvailableYears(ceuData)
 
   return (
-    <Layout>
+    <Layout includeCTA={true}>
       {/* Hero Section */}
-      <HeroHeader className="pb-[60px] relative">
+      <HeroHeader>
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
             <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
               <h1>
                 Free Continuing Education Units (CEUs)
               </h1>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
                 Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
               </p>
             </div>
             <div className="flex justify-center w-[50%] relative px-12">
-              <StaticImage src="../images/hero_ceus.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
+              <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
             </div>
           </div>
-          <div className="-left-[220px] bottom-[240px] absolute z-10"><StaticImage src="../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
-          <div className="right-[260] top-[164px] absolute z-10"><StaticImage src="../images/cloud_hero-one.svg" alt="Cloud One" /></div>
+          <div className="-left-[220px] bottom-[240px] absolute z-10"><StaticImage src="../../images/cloud_hero-three.svg" alt="Cloud Three" /></div>
+          <div className="right-[260] top-[164px] absolute z-10"><StaticImage src="../../images/cloud_hero-one.svg" alt="Cloud One" /></div>
         </div>
-        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../../images/cloud_floor-hero.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </HeroHeader>
 
       <div className="content-container px-4 py-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <nav className="mb-6">
-            <Link to="/resource-center" className="text-blue-600 hover:text-blue-800">
-              ← Back to Resource Center
-            </Link>
+            <ResourceLink />
           </nav>
           
           <div className="prose max-w-none">
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-pharm-grey mb-8">
               Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
             </p>
             
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
-              <h2 className="text-xl font-semibold mb-2 text-yellow-800">Important Note</h2>
-              <p className="text-gray-700">
+            <div className="item-wrap p-6 mb-8 items-start">
+              <h2 className="text-xl font-semibold mb-2 text-pharm-blue">Important Note</h2>
+              <p className="text-pharm-grey">
                 All courses are accredited and meet state requirements for pharmacy technician continuing education. 
                 Certificates are provided upon successful completion. Please note the expiration dates for each course.
               </p>
@@ -155,47 +154,52 @@ const FreeCEUsPage = () => {
             
             {availableYears.map(year => (
               <div key={year} className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-gray-800">
-                  Courses Expiring in {year}
+                <h2 className="text-2xl font-semibold mb-6 text-pharm-blue">
+                  Expiring in {year}
                 </h2>
                 
-                <div className="space-y-6">
+                <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                   {ceusByYear[year]?.map((ceu, index) => (
-                    <div key={index} className="bg-white border rounded-lg p-6 shadow-sm">
+                    <div key={index} className="item-wrap items-start">
                       <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-xl font-semibold pr-4">{ceu.title}</h3>
+                        <h3 className="text-xl font-semibold font-body text-pharm-blue pr-4">{ceu.title}</h3>
                         <div className="flex flex-col items-end space-y-2">
                           {isCEUExpiringSoon(ceu) && (
-                            <span className="px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                            <span className="px-3 py-1 text-xs font-medium bg-red-100 text-red-800">
                               Expiring Soon
                             </span>
                           )}
                         </div>
                       </div>
-                      
-                      <div className="flex flex-wrap items-center gap-4 mb-2">
-                        <p className="text-blue-600 font-medium">{ceu.hours}</p>
-                        <p className="text-red-600 font-medium">
-                          Expires: {formatExpirationDate(ceu.expirationDate)}
-                        </p>
+                      <div className="mb-6">
+                        <div className="flex flex-wrap items-center gap-4 mb-2">
+                          <StaticImage src="../../images/icon_cal.svg" alt="Calendar Icon" className="w-[24px] h-[24px]" />
+                          <p className="text-pharm-grey font-medium mb-0">
+                            Expiration Date: {formatExpirationDate(ceu.expirationDate)}
+                          </p>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-4 mb-2">
+                          <StaticImage src="../../images/icon_clock.svg" alt="Clock Icon" className="w-[24px] h-[24px]" />
+                          <p className="text-pharm-grey font-medium mb-0">{ceu.hours}</p>
+                        </div>
                       </div>
                       
-                      <p className="text-gray-600 mb-4">{ceu.description}</p>
+                      <p className="text-pharm-grey mb-8">{ceu.description}</p>
                       
                       <button 
                         className={`px-4 py-2 rounded transition-colors ${
-                          ceu.status === 'Available'
-                            ? 'bg-blue-600 text-white hover:bg-blue-700'
+                          ceu.link
+                            ? 'bg-pharm-green text-white hover:bg-pharm-green/80'
                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                         }`}
-                        disabled={ceu.status !== 'Available'}
+                        disabled={!ceu.link || ceu.link === '#'}
                         onClick={() => {
-                          if (ceu.status === 'Available' && ceu.link && ceu.link !== '#') {
+                          if (ceu.link && ceu.link !== '#') {
                             window.open(ceu.link, '_blank')
                           }
                         }}
                       >
-                        {ceu.status === 'Available' ? 'View CEU' : 'Coming Soon'}
+                        {ceu.link && ceu.link !== '#' ? 'Click to View!' : 'Coming Soon...'}
                       </button>
                     </div>
                   )) || []}
@@ -208,19 +212,19 @@ const FreeCEUsPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold mb-2">National Requirements</h3>
-                  <p className="text-gray-700">Most states require 20-40 hours of continuing education every 2 years for pharmacy technician license renewal.</p>
+                  <p className="text-pharm-grey">Most states require 20-40 hours of continuing education every 2 years for pharmacy technician license renewal.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">State-Specific Info</h3>
-                  <p className="text-gray-700">Check with your state board of pharmacy for specific requirements in your jurisdiction.</p>
+                  <p className="text-pharm-grey">Check with your state board of pharmacy for specific requirements in your jurisdiction.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Expiration Dates</h3>
-                  <p className="text-gray-700">All courses have expiration dates. Complete courses before they expire to ensure credit eligibility.</p>
+                  <p className="text-pharm-grey">All courses have expiration dates. Complete courses before they expire to ensure credit eligibility.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Certificates</h3>
-                  <p className="text-gray-700">Completion certificates are provided upon successful course completion and can be downloaded for your records.</p>
+                  <p className="text-pharm-grey">Completion certificates are provided upon successful course completion and can be downloaded for your records.</p>
                 </div>
               </div>
             </div>

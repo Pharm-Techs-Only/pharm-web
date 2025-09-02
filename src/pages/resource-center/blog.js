@@ -3,6 +3,7 @@ import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+import ResourceLink from '../../components/ResourceLink'
 
 const BlogPage = () => {
   const ceuCourses = [
@@ -33,7 +34,7 @@ const BlogPage = () => {
   ];
 
   return (
-    <Layout>
+    <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
         <div className="content-container relative">
@@ -59,9 +60,7 @@ const BlogPage = () => {
       <div className="content-container px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <nav className="mb-6">
-            <Link to="/resource-center" className="text-blue-600 hover:text-blue-800">
-              ← Back to Resource Center
-            </Link>
+            <ResourceLink />
           </nav>
           <div id="dib-posts"></div>
         </div>

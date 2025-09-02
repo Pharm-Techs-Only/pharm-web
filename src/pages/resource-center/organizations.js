@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import HeroHeader from '../../components/HeroHeader'
 import { organizationsData } from '../../data/organizations'
 import { StaticImage } from 'gatsby-plugin-image'
+import ResourceLink from '../../components/ResourceLink'
 
 const OrganizationsPage = () => {
   const [activeTab, setActiveTab] = useState('associations')
@@ -101,7 +102,7 @@ const OrganizationsPage = () => {
                         <p className="text-sm text-gray-500 mb-1">Website:</p>
                         <a 
                           href={org.website} 
-                          target="_blank" 
+                          target="_blank" rel="noreferrer" 
                           rel="noopener noreferrer"
                           className="text-blue-600 hover:text-blue-800 text-sm underline break-all"
                         >
@@ -120,7 +121,7 @@ const OrganizationsPage = () => {
   }
 
   return (
-    <Layout>
+    <Layout includeCTA={true}>
       <HeroHeader>
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
@@ -145,9 +146,7 @@ const OrganizationsPage = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-6">
-            <Link to="/resource-center" className="text-blue-600 hover:text-blue-800">
-              ← Back to Resource Center
-            </Link>
+            <ResourceLink />
           </nav>
           
           <h1 className="text-4xl font-bold mb-4">Professional Organizations</h1>

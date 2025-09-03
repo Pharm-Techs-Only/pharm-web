@@ -25,7 +25,7 @@ const BlogPage = () => {
       </HeroHeader>
 
       <div className="content-container px-4 py-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <nav className="mb-6">
             <ResourceLink />
           </nav>

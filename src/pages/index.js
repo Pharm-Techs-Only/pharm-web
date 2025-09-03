@@ -62,25 +62,25 @@ const HomePage = () => {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-              <Link to="/resource-center/free-ceus" target="_blank" rel="noreferrer" className="item-wrap">
+              <Link to="/resource-center/free-ceus" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
                 <div className="height-[102px] mb-4">
                   <StaticImage src="../images/icon_global-careers.svg" alt="Free CEUs" className="w-[106px]" />
                 </div>
                 <h3 className="font-semibold text-purple-900 text-center mb-0">Free CEUs</h3>
               </Link>
-              <Link to="/resource-center/organizations" target="_blank" rel="noreferrer" className="item-wrap">
+              <Link to="/resource-center/organizations" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
                 <div className="height-[102px] mb-4">
                   <StaticImage src="../images/icon_organizations.svg" alt="Organizations" className="w-[106px]" />
                 </div>
                 <h3 className="font-semibold text-purple-900 text-center mb-0">Organizations</h3>
               </Link>
-              <Link to="/resource-center/conventions" target="_blank" rel="noreferrer" className="item-wrap">
+              <Link to="/resource-center/conventions" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
                 <div className="height-[102px] mb-4">
                   <StaticImage src="../images/icon_conventions.svg" alt="Conventions" className="w-[106px]" />
                 </div>
                 <h3 className="font-semibold text-purple-900 text-center mb-0">Conventions</h3>
               </Link>
-              <Link to="/resource-center/blog" target="_blank" rel="noreferrer" className="item-wrap">
+              <Link to="/resource-center/blog" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
                 <div className="height-[102px] mb-4">
                   <StaticImage src="../images/icon_blog.svg" alt="Blog" className="w-[106px]" />
                 </div>
@@ -106,25 +106,25 @@ const HomePage = () => {
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <a href="https://careers.pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap">
+            <a href="https://careers.pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_global-careers.svg" alt="Global Career Center" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Global Career Center</h3>
             </a>
-            <a href="https://careers.pharmtechsonly.com/career-resources" target="_blank" rel="noreferrer" className="item-wrap">
+            <a href="https://careers.pharmtechsonly.com/career-resources" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_career-resources.svg" alt="Career Resources" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
             </a>
-            <a href="https://careers.pharmtechsonly.com/interview-coach" target="_blank" rel="noreferrer" className="item-wrap">
+            <a href="https://careers.pharmtechsonly.com/interview-coach" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_interview-coach.svg" alt="Interview Coach" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Interview Coach</h3>
             </a>
-            <a href="https://careers.pharmtechsonly.com/analyze-offer" target="_blank" rel="noreferrer" className="item-wrap">
+            <a href="https://careers.pharmtechsonly.com/analyze-offer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_offer-analyzer.svg" alt="Offer Analyzer" className="w-[106px]" />
               </div>
@@ -151,31 +151,31 @@ const HomePage = () => {
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-8">
-            <div className="item-wrap">
+            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_interact.svg" alt="Interact" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Interact</h3>
             </div>
-            <div className="item-wrap">
+            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_connect.svg" alt="Connect" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Connect</h3>
             </div>
-            <div className="item-wrap">
+            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_chat.svg" alt="Chat" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Chat</h3>
             </div>
-            <div className="item-wrap">
+            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_polls.svg" alt="Polls" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Polls</h3>
             </div>
-            <div className="item-wrap">
+            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_communities.svg" alt="Communities" className="w-[106px]" />
               </div>
@@ -205,25 +205,25 @@ const HomePage = () => {
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap">
+            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_post-jobs.svg" alt="Post Jobs" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Post Jobs</h3>
             </a>
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap">
+            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_search-candidates.svg" alt="Search Candidates" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Search Candidates</h3>
             </a>
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap">
+            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_feature-job.svg" alt="Feature Your Job Opening" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Feature Your Job Opening</h3>
             </a>
-            <a href="mailto:questions@pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap">
+            <a href="mailto:questions@pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <StaticImage src="../images/icon_advertise.svg" alt="Advertise on Tech Connect" className="w-[106px]" />
               </div>

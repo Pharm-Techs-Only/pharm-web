@@ -139,7 +139,7 @@ const FreeCEUsPage = () => {
             
             <div className="item-wrap p-6 mb-8 items-start">
               <h2 className="text-xl font-semibold mb-2 text-pharm-blue">Important Note</h2>
-              <p className="text-pharm-grey">
+              <p className="text-pharm-grey text-left">
                 All courses are accredited and meet state requirements for pharmacy technician continuing education. 
                 Certificates are provided upon successful completion. Please note the expiration dates for each course.
               </p>
@@ -153,7 +153,7 @@ const FreeCEUsPage = () => {
                 
                 <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                   {ceusByYear[year]?.map((ceu, index) => (
-                    <div key={index} className="item-wrap items-start">
+                    <div key={index} className="item-wrap items-start text-left">
                       <div className="flex justify-between items-start mb-3">
                         <h3 className="text-xl font-semibold font-body text-pharm-blue pr-4">{ceu.title}</h3>
                         <div className="flex flex-col items-end space-y-2">
@@ -182,7 +182,7 @@ const FreeCEUsPage = () => {
                       <button 
                         className={`px-4 py-2 rounded transition-colors ${
                           ceu.link
-                            ? 'bg-pharm-green text-white hover:bg-pharm-green/80'
+                            ? 'btn text-white'
                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                         }`}
                         disabled={!ceu.link || ceu.link === '#'}

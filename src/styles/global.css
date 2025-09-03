@@ -129,6 +129,14 @@
     line-height: 35px;
     color: var(--color-pharm-grey)
   }
+
+  .btn {
+    background:linear-gradient(#6BCE53 0%, #63E044 100%);
+    transition: all 1s ease-in-out;
+    &:hover {
+      background:#6BCE53;
+    }
+  }
   
   .-z-1 {
     z-index: -1;

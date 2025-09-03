@@ -64,25 +64,25 @@ const HomePage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
               <Link to="/resource-center/free-ceus" target="_blank" rel="noreferrer" className="item-wrap">
                 <div className="height-[102px] mb-4">
-                  <StaticImage src="../images/icon_global-careers.svg" alt="Free CEUs" className="" />
+                  <StaticImage src="../images/icon_global-careers.svg" alt="Free CEUs" className="w-[106px]" />
                 </div>
                 <h3 className="font-semibold text-purple-900 text-center mb-0">Free CEUs</h3>
               </Link>
               <Link to="/resource-center/organizations" target="_blank" rel="noreferrer" className="item-wrap">
                 <div className="height-[102px] mb-4">
-                  <StaticImage src="../images/icon_organizations.svg" alt="Organizations" className="" />
+                  <StaticImage src="../images/icon_organizations.svg" alt="Organizations" className="w-[106px]" />
                 </div>
                 <h3 className="font-semibold text-purple-900 text-center mb-0">Organizations</h3>
               </Link>
               <Link to="/resource-center/conventions" target="_blank" rel="noreferrer" className="item-wrap">
                 <div className="height-[102px] mb-4">
-                  <StaticImage src="../images/icon_conventions.svg" alt="Conventions" className="" />
+                  <StaticImage src="../images/icon_conventions.svg" alt="Conventions" className="w-[106px]" />
                 </div>
                 <h3 className="font-semibold text-purple-900 text-center mb-0">Conventions</h3>
               </Link>
               <Link to="/resource-center/blog" target="_blank" rel="noreferrer" className="item-wrap">
                 <div className="height-[102px] mb-4">
-                  <StaticImage src="../images/icon_blog.svg" alt="Blog" className="" />
+                  <StaticImage src="../images/icon_blog.svg" alt="Blog" className="w-[106px]" />
                 </div>
                 <h3 className="font-semibold text-purple-900 text-center mb-0">Blog</h3>
               </Link>
@@ -90,7 +90,7 @@ const HomePage = () => {
             
             <Link
               to="/resource-center"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
+              className="bg-pharm-blue hover:bg-pharm-blue/80 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
             >
               Go to Resources
             </Link>
@@ -108,25 +108,25 @@ const HomePage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
             <a href="https://careers.pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_global-careers.svg" alt="Global Career Center" className="" />
+                <StaticImage src="../images/icon_global-careers.svg" alt="Global Career Center" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Global Career Center</h3>
             </a>
             <a href="https://careers.pharmtechsonly.com/career-resources" target="_blank" rel="noreferrer" className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_career-resources.svg" alt="Career Resources" className="" />
+                <StaticImage src="../images/icon_career-resources.svg" alt="Career Resources" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
             </a>
             <a href="https://careers.pharmtechsonly.com/interview-coach" target="_blank" rel="noreferrer" className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_interview-coach.svg" alt="Interview Coach" className="" />
+                <StaticImage src="../images/icon_interview-coach.svg" alt="Interview Coach" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Interview Coach</h3>
             </a>
             <a href="https://careers.pharmtechsonly.com/analyze-offer" target="_blank" rel="noreferrer" className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_offer-analyzer.svg" alt="Offer Analyzer" className="" />
+                <StaticImage src="../images/icon_offer-analyzer.svg" alt="Offer Analyzer" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Offer Analyzer</h3>
             </a>
@@ -135,7 +135,7 @@ const HomePage = () => {
           <a
             href="https://careers.pharmtechsonly.com"
             target="_blank" rel="noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
+            className="bg-pharm-green hover:bg-pharm-green/80 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Go to Careers
           </a>
@@ -153,31 +153,31 @@ const HomePage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-8">
             <div className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_interact.svg" alt="Interact" className="" />
+                <StaticImage src="../images/icon_interact.svg" alt="Interact" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Interact</h3>
             </div>
             <div className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_connect.svg" alt="Connect" className="" />
+                <StaticImage src="../images/icon_connect.svg" alt="Connect" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Connect</h3>
             </div>
             <div className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_chat.svg" alt="Chat" className="" />
+                <StaticImage src="../images/icon_chat.svg" alt="Chat" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Chat</h3>
             </div>
             <div className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_polls.svg" alt="Polls" className="" />
+                <StaticImage src="../images/icon_polls.svg" alt="Polls" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Polls</h3>
             </div>
             <div className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_communities.svg" alt="Communities" className="" />
+                <StaticImage src="../images/icon_communities.svg" alt="Communities" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Communities</h3>
             </div>
@@ -187,7 +187,7 @@ const HomePage = () => {
             <p>Tech Connect Coming Soon!</p>
             <Link
               to="/#waitlist"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
+              className="bg-pharm-green hover:bg-pharm-green/80 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
               Join the Waitlist
             </Link>
           </div>
@@ -204,34 +204,28 @@ const HomePage = () => {
             Employer? See our tools built just for you!Are you a pharmacy looking to fill your opening with the certified, experienced pharmacy technicians?
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
             <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_post-jobs.svg" alt="Post Jobs" className="" />
+                <StaticImage src="../images/icon_post-jobs.svg" alt="Post Jobs" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Post Jobs</h3>
             </a>
             <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_search-candidates.svg" alt="Search Candidates" className="" />
+                <StaticImage src="../images/icon_search-candidates.svg" alt="Search Candidates" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Search Candidates</h3>
             </a>
             <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_list-company.svg" alt="List Your Company" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">List Your Company</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_feature-job.svg" alt="Feature Your Job Opening" className="" />
+                <StaticImage src="../images/icon_feature-job.svg" alt="Feature Your Job Opening" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Feature Your Job Opening</h3>
             </a>
             <a href="mailto:questions@pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap">
               <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_advertise.svg" alt="Advertise on Tech Connect" className="w-[98px] h-[89px]" />
+                <StaticImage src="../images/icon_advertise.svg" alt="Advertise on Tech Connect" className="w-[106px]" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Advertise on Tech Connect</h3>
             </a>
@@ -239,7 +233,7 @@ const HomePage = () => {
 
           <a
             href="https://careers.pharmtechsonly.com/register-employer"
-            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
+            className="bg-pharm-green hover:bg-pharm-green/80 text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Create your FREE Employer Account
           </a>

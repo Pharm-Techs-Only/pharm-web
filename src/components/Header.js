@@ -33,7 +33,7 @@ const Header = () => {
     <>
       <Link 
         to="/#waitlist" 
-        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors`}
+        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue px-3 py-2 text-sm font-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Tech Connect<br/>
@@ -42,21 +42,21 @@ const Header = () => {
       <a 
         href="https://careers.pharmtechsonly.com" 
         target="_blank" rel="noreferrer"
-        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors`}
+        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Careers
       </a>
       <Link 
         to="/resource-center" 
-        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors`}
+        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Resource Center
       </Link>
       <a 
         href="https://careers.pharmtechsonly.com/register-employer" 
-        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors`}
+        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
         target="_blank" rel="noreferrer"
       >
@@ -65,7 +65,7 @@ const Header = () => {
       <a 
         href="https://store.pharmtechsonly.com" 
         target="_blank" rel="noreferrer"
-        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-medium transition-colors`}
+        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm font-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Store

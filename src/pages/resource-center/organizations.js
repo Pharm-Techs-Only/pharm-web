@@ -56,10 +56,10 @@ const OrganizationsPage = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {group.organizations.map((org, index) => (
-                <div key={index} className="item-wrap justify-start items-start">
+                <div key={index} className="item-wrap justify-start items-start text-left">
                   <div className="flex justify-between w-full items-start align-center mb-3">
-                    <h4 className="text-lg font-bold text-gray-900">{org.name}</h4>
-                    <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">
+                    <h4 className="text-lg font-bold">{org.name}</h4>
+                    <span className="bg-gray-100 px-2 py-1 rounded-[4px] text-xs font-medium">
                       {org.region}
                     </span>
                   </div>
@@ -68,8 +68,8 @@ const OrganizationsPage = () => {
                   <div className="space-y-3 mb-4">
                     {org.address && (
                       <div>
-                        <p className="text-sm text-gray-500 mb-1">Address:</p>
-                        <p className="text-gray-700 text-sm">
+                        <p className="font-medium text-pharm-grey mb-1">Address:</p>
+                        <p className="text-sm">
                           {org.building && <span>{org.building}<br /></span>}
                           {org.address}
                         </p>
@@ -78,33 +78,33 @@ const OrganizationsPage = () => {
                     
                     {org.phone && (
                       <div>
-                        <p className="text-sm text-gray-500 mb-1">Phone:</p>
-                        <p className="text-gray-700 text-sm">{org.phone}</p>
+                        <p className="font-medium text-pharm-grey mb-1">Phone:</p>
+                        <p className="text-sm">{org.phone}</p>
                       </div>
                     )}
                     
                     {org.fax && (
                       <div>
-                        <p className="text-sm text-gray-500 mb-1">Fax:</p>
-                        <p className="text-gray-700 text-sm">{org.fax}</p>
+                        <p className="font-medium text-pharm-grey mb-1">Fax:</p>
+                        <p className="text-sm">{org.fax}</p>
                       </div>
                     )}
                     
                     {org.email && (
                       <div>
-                        <p className="text-sm text-gray-500 mb-1">Email:</p>
-                        <p className="text-blue-600 text-sm">{org.email}</p>
+                        <p className="font-medium text-pharm-grey mb-1">Email:</p>
+                        <p className="text-sm">{org.email}</p>
                       </div>
                     )}
                     
                     {org.website && (
                       <div>
-                        <p className="text-sm text-gray-500 mb-1">Website:</p>
-                        <a 
-                          href={org.website} 
-                          target="_blank" rel="noreferrer" 
+                        <p className="font-medium text-pharm-grey mb-1">Website:</p>
+                        <a
+                          href={org.website}
+                          target="_blank" rel="noreferrer"
                           rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800 text-sm underline break-all"
+                          className="text-pharm-blue hover:text-pharm-light-blue text-sm underline break-all"
                         >
                           {org.website}
                         </a>
@@ -158,7 +158,7 @@ const OrganizationsPage = () => {
                   <button
                     key={tab.key}
                     onClick={() => setActiveTab(tab.key)}
-                    className={`py-4 px-6 border-b-2 font-medium text-md ${
+                    className={`py-4 px-6 border-b-2 font-medium text-[16px] ${
                       activeTab === tab.key
                         ? 'border-blue-500 text-blue-600'
                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
@@ -191,8 +191,8 @@ const OrganizationsPage = () => {
             {activeTab === 'boards' && (
               <div>
                 <div className="mb-6">
-                  <h2 className="text-2xl font-semibold mb-2">Certification & Regulatory Boards</h2>
-                  <p className="text-gray-600">
+                  <h2 className="mb-2">Certification & Regulatory Boards</h2>
+                  <p className="">
                     Certification organizations and regulatory boards that establish standards and provide credentials for pharmacy technicians.
                   </p>
                 </div>
@@ -203,8 +203,8 @@ const OrganizationsPage = () => {
             {activeTab === 'councils' && (
               <div>
                 <div className="mb-6">
-                  <h2 className="text-2xl font-semibold mb-2">Industry Councils</h2>
-                  <p className="text-gray-600">
+                  <h2 className="mb-2">Industry Councils</h2>
+                  <p className="">
                     Industry councils and organizations that represent pharmacy operations, policy, and business interests.
                   </p>
                 </div>

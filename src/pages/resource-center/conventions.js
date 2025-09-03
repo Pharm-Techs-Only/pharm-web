@@ -85,9 +85,9 @@ const ConventionsPage = () => {
           {/* Conventions by Country and Year */}
           <div className="space-y-12">
             {countryGroups.map((countryGroup, countryIndex) => (
-              <div key={countryIndex} className="pl-6">
-                <h2 className="text-3xl font-bold mb-6 text-pharm-grey">
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+              <div key={countryIndex} className="pl-6 flex items-start flex-col">
+                <h2 className="mb-6 flex items-center">
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-[4px] text-sm font-medium mr-3">
                     {countryGroup.years.reduce((total, year) => total + year.conventions.length, 0)}
                   </span>
                   {countryGroup.country}
@@ -104,35 +104,35 @@ const ConventionsPage = () => {
                         {yearGroup.conventions.map((convention, index) => (
                           <div key={index} className="item-wrap justify-start text-left">
                             <div className="flex justify-between items-start mb-3">
-                              <h4 className="text-lg font-bold text-pharm-grey leading-tight">{convention.name}</h4>
-                              <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium whitespace-nowrap ml-2">
+                              <h4 className="leading-tight">{convention.name}</h4>
+                              <span className="px-2 py-1 rounded text-xs font-medium whitespace-nowrap ml-2">
                                 {convention.year}
                               </span>
                             </div>
                             
                             {convention.description && (
-                              <p className="text-sm text-gray-600 mb-3 italic">{convention.description}</p>
+                              <p className="mb-3 italic">{convention.description}</p>
                             )}
                             
-                            <div className="space-y-3 mb-4">
+                            <div className="w-full mb-4">
                               <div>
-                                <p className="text-sm text-gray-500 mb-1">Location:</p>
-                                <p className="text-gray-700 text-sm">{convention.location}</p>
+                                <p className="font-medium mb-1">Location:</p>
+                                <p className="text-sm">{convention.location}</p>
                               </div>
                               
                               <div>
-                                <p className="text-sm text-gray-500 mb-1">Date:</p>
-                                <p className="text-gray-700 text-sm font-medium">{convention.dateRange}</p>
+                                <p className="font-medium mb-1">Date:</p>
+                                <p className="text-sm">{convention.dateRange}</p>
                               </div>
                               
                               {convention.website && (
                                 <div>
-                                  <p className="text-sm text-gray-500 mb-1">Website:</p>
+                                  <p className="font-medium mb-1">Website:</p>
                                   <a 
                                     href={convention.website} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 text-sm underline break-all"
+                                    className="text-pharm-blue :hover:text-pharm-light-blue text-sm underline break-all"
                                   >
                                     {convention.website}
                                   </a>
@@ -146,7 +146,7 @@ const ConventionsPage = () => {
                                   href={convention.website} 
                                   target="_blank" 
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center px-4 py-2 bg-pharm-blue text-white text-sm font-medium rounded-lg hover:bg-pharm-light-blue transition-colors"
+                                  className="inline-flex items-center px-4 py-2 btn text-white text-sm"
                                 >
                                   Learn More
                                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

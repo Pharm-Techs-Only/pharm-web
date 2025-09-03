@@ -68,7 +68,7 @@ const ResourceCenterPage = () => {
                     className="w-12 h-12 mb-4"
                   />
                 )}
-                <h3 className="text-xl text-center font-semibold text-gray-900 mb-3">
+                <h3 className="mb-3">
                   {resource.title}
                 </h3>
                 <p className="text-gray-600 text-center mb-4">

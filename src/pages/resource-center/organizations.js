@@ -65,11 +65,11 @@ const OrganizationsPage = () => {
                   </div>
                   
                   {/* Contact Information */}
-                  <div className="space-y-3 mb-4">
+                  <div className="mb-4">
                     {org.address && (
-                      <div>
+                      <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Address:</p>
-                        <p className="text-sm">
+                        <p className="text-sm mb-0">
                           {org.building && <span>{org.building}<br /></span>}
                           {org.address}
                         </p>
@@ -77,34 +77,34 @@ const OrganizationsPage = () => {
                     )}
                     
                     {org.phone && (
-                      <div>
+                      <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Phone:</p>
-                        <p className="text-sm">{org.phone}</p>
+                        <p className="text-sm mb-0">{org.phone}</p>
                       </div>
                     )}
                     
                     {org.fax && (
-                      <div>
+                      <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Fax:</p>
-                        <p className="text-sm">{org.fax}</p>
+                        <p className="text-sm mb-0">{org.fax}</p>
                       </div>
                     )}
                     
                     {org.email && (
-                      <div>
+                      <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Email:</p>
-                        <p className="text-sm">{org.email}</p>
+                        <p className="text-sm mb-0">{org.email}</p>
                       </div>
                     )}
                     
                     {org.website && (
-                      <div>
+                      <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Website:</p>
                         <a
                           href={org.website}
                           target="_blank" rel="noreferrer"
                           rel="noopener noreferrer"
-                          className="text-pharm-blue hover:text-pharm-light-blue text-sm underline break-all"
+                          className="text-pharm-blue hover:text-pharm-light-blue text-sm underline break-all mb-0"
                         >
                           {org.website}
                         </a>

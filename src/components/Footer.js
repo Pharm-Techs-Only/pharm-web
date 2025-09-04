@@ -29,21 +29,19 @@ const Footer = () => {
               
               <div>
                 <h4 className="font-semibold mb-3">Resource Center</h4>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-2 text-sm mb-6">
                   <li><Link to="/resource-center/free-ceus" className="text-white hover:underline transition-colors">Free CEUs</Link></li>
                   <li><Link to="/resource-center/organizations" className="text-white hover:underline transition-colors">Organizations</Link></li>
                   <li><Link to="/resource-center/conventions" className="text-white hover:underline transition-colors">Conventions</Link></li>
                   <li><Link to="/resource-center/blog" className="text-white hover:underline transition-colors">Blog</Link></li>
                 </ul>
-              </div>
-              
-              <div>
                 <h4 className="font-semibold mb-3">Tech Connect</h4>
                 <ul className="space-y-2 text-sm">
                   <li><Link to="/#waitlist" className="text-white hover:underline transition-colors">Join The Waitlist</Link></li>
                 </ul>
-                
-                <h4 className="font-semibold mb-3 mt-6">Career Tools</h4>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-3">Career Tools</h4>
                 <ul className="space-y-2 text-sm">
                   <li><a href="https://careers.pharmtechsonly.com" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Global Career Center</a></li>
                   <li><a href="https://careers.pharmtechsonly.com/career-resources" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Career Resources</a></li>

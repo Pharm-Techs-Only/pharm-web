@@ -37,7 +37,7 @@ const Header = () => {
         activeClassName="text-pharm-blue"
       >
         Tech Connect<br/>
-        (Coming Soon)
+        <span className="text-xs">(Coming Soon)</span>
       </Link>
       <a 
         href="https://careers.pharmtechsonly.com" 

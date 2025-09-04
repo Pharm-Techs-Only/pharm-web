@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 const ResourceLink = () => {
   return (
-    <Link to="/resource-center" className="text-pharm-blue hover:underline text-[16px]">
+    <Link to="/resource-center" className="text-pharm-blue hover:underline font-normal text-[18px]">
       ← Back to Resource Center
     </Link>
   )

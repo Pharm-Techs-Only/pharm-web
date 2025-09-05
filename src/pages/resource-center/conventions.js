@@ -6,33 +6,63 @@ import { StaticImage } from 'gatsby-plugin-image'
 import ResourceLink from '../../components/ResourceLink'
 
 const ConventionsPage = () => {
+  // Add error checking for ConventionsData
+  if (!ConventionsData || !Array.isArray(ConventionsData) || ConventionsData.length === 0) {
+    return (
+      <Layout includeCTA={true}>
+        <div className="content-container px-4 py-8">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-4xl font-bold mb-4">Pharmacy Conventions</h1>
+            <p className="text-lg text-gray-600 mb-8">
+              No conventions data available at this time.
+            </p>
+          </div>
+        </div>
+      </Layout>
+    )
+  }
+
   // Group conventions by country, then by year, then sort by date within each year
   const groupConventions = () => {
-    const grouped = ConventionsData.reduce((acc, convention) => {
-      if (!acc[convention.country]) {
-        acc[convention.country] = {}
-      }
-      if (!acc[convention.country][convention.year]) {
-        acc[convention.country][convention.year] = []
-      }
-      acc[convention.country][convention.year].push(convention)
-      return acc
-    }, {})
-    
-    // Sort countries alphabetically
-    const sortedCountries = Object.keys(grouped).sort()
-    
-    return sortedCountries.map(country => ({
-      country,
-      years: Object.keys(grouped[country])
-        .sort((a, b) => parseInt(a) - parseInt(b))
-        .map(year => ({
-          year: parseInt(year),
-          conventions: grouped[country][year].sort((a, b) => 
-            new Date(a.date) - new Date(b.date)
-          )
-        }))
-    }))
+    try {
+      const grouped = ConventionsData.reduce((acc, convention) => {
+        // Add safety checks for convention properties
+        if (!convention || !convention.country || !convention.year) {
+          console.warn('Skipping invalid convention:', convention)
+          return acc
+        }
+        
+        if (!acc[convention.country]) {
+          acc[convention.country] = {}
+        }
+        if (!acc[convention.country][convention.year]) {
+          acc[convention.country][convention.year] = []
+        }
+        acc[convention.country][convention.year].push(convention)
+        return acc
+      }, {})
+      
+      // Sort countries alphabetically
+      const sortedCountries = Object.keys(grouped).sort()
+      
+      return sortedCountries.map(country => ({
+        country,
+        years: Object.keys(grouped[country])
+          .sort((a, b) => parseInt(a) - parseInt(b))
+          .map(year => ({
+            year: parseInt(year),
+            conventions: grouped[country][year].sort((a, b) => {
+              // Add safety check for date sorting
+              const dateA = new Date(a.date || '1970-01-01')
+              const dateB = new Date(b.date || '1970-01-01')
+              return dateA - dateB
+            })
+          }))
+      }))
+    } catch (error) {
+      console.error('Error grouping conventions:', error)
+      return []
+    }
   }
 
   const countryGroups = groupConventions()
@@ -132,7 +162,7 @@ const ConventionsPage = () => {
                                     href={convention.website} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="text-pharm-blue :hover:text-pharm-light-blue text-sm underline break-all"
+                                    className="text-pharm-blue hover:text-pharm-light-blue text-sm underline break-all"
                                   >
                                     {convention.website}
                                   </a>
@@ -146,7 +176,7 @@ const ConventionsPage = () => {
                                   href={convention.website} 
                                   target="_blank" 
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center px-4 py-2 btn text-white text-sm"
+                                  className="px-4 py-2 btn "
                                 >
                                   Learn More
                                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

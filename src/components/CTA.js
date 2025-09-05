@@ -14,7 +14,7 @@ const CTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/careers"
-            className="btn"
+            className="btn text-white px-8 py-3 rounded-md font-medium transition-all"
           >
             Explore Career Opportunities
           </Link>

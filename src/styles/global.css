@@ -134,7 +134,8 @@
     background:linear-gradient(#6BCE53 0%, #63E044 100%);
     transition: all 1s ease-in-out;
     &:hover {
-      background:#6BCE53;
+      background:linear-gradient(#63E044 0%, #6BE044 100%);
+      cursor: pointer;
     }
   }
   
@@ -152,6 +153,14 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.11);
     padding: 20px;
     text-align: center;
+  }
+  #dib-posts {
+    #dib-template-2 .dib-post-text h2 {
+      font-size: 24px !important;
+      font-weight: 700;
+      color: var(--color-pharm-blue);
+    }
+
   }
 }
 

@@ -3,37 +3,38 @@ import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import ResourceLink from '../components/ResourceLink'
 
 const StorePage = () => {
   useEffect(() => {
-    // Check if script is already loaded
-    const existingScript = document.getElementById('dropin-blog-script')
+    // Load Ecwid store script
+    const existingScript = document.getElementById('ecwid-script')
     if (existingScript) {
-      // If script exists but blog hasn't loaded, try to reinitialize
-      if (window.DIB && typeof window.DIB.init === 'function') {
-        window.DIB.init()
+      // If script exists, reinitialize if needed
+      if (window.xProductBrowser && typeof window.xProductBrowser === 'function') {
+        window.xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-85557832")
       }
       return
     }
 
-    // Create and load the DropIn Blog script
+    // Create and load the Ecwid script
     const script = document.createElement('script')
-    script.id = 'dropin-blog-script'
-    script.src = 'https://io.dropinblog.com/embedjs/2e37eb85-3320-46a6-adb0-28174e06195c.js'
-    script.async = true
+    script.id = 'ecwid-script'
+    script.src = 'https://app.ecwid.com/script.js?85557832&data_platform=code&data_date=2025-09-05'
+    script.setAttribute('data-cfasync', 'false')
+    script.type = 'text/javascript'
+    script.charset = 'utf-8'
     
     // Add error handling
     script.onerror = () => {
-      console.error('Failed to load DropIn Blog script')
+      console.error('Failed to load Ecwid store script')
     }
     
-    // Add load handler to ensure initialization
+    // Add load handler to initialize store
     script.onload = () => {
       // Give a small delay to ensure the script has fully initialized
       setTimeout(() => {
-        if (window.DIB && typeof window.DIB.init === 'function') {
-          window.DIB.init()
+        if (window.xProductBrowser && typeof window.xProductBrowser === 'function') {
+          window.xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-85557832")
         }
       }, 100)
     }
@@ -53,23 +54,20 @@ const StorePage = () => {
       <HeroHeader>
         <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
-            Blog
+            Store
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Stay current with the latest news for Pharmacy Technicians and industry trends.
+            Explore our store for the latest products and resources tailored for pharmacy technicians.
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 
       <div className="content-container px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <div id="my-store-85557832"></div>
-          <div>
-            <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?85557832&data_platform=code&data_date=2025-09-05" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-85557832");</script>
-          </div>
         </div>
       </div>
     </Layout>

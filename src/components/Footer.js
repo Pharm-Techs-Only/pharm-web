@@ -20,8 +20,8 @@ const Footer = () => {
                 <ul className="space-y-2 text-sm">
                   <li><Link to="/" className="text-white hover:underline transition-colors">Home</Link></li>
                   <li><Link to="/about" className="text-white hover:underline transition-colors">About</Link></li>
-                  <li><a href="https://store.pharmtechsonly.com" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Store</a></li>
-                  <li><Link to="mailto:questions@pharmtechsonly.com" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Contact</Link></li>
+                  <li><Link to="/store" className="text-white hover:underline transition-colors">Store</Link></li>
+                  <li><Link to="/contact" className="text-white hover:underline transition-colors">Contact</Link></li>
                   <li><Link to="/privacy" className="text-white hover:underline transition-colors">Privacy</Link></li>
                   <li><Link to="/terms" className="text-white hover:underline transition-colors">Terms</Link></li>
                 </ul>

@@ -62,14 +62,13 @@ const Header = () => {
       >
         Employers
       </a>
-      <a 
-        href="https://store.pharmtechsonly.com" 
-        target="_blank" rel="noreferrer"
+      <Link 
+        to="/store" 
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Store
-      </a>
+      </Link>
     </>);
 
   return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
@@ -6,6 +6,46 @@ import { StaticImage } from 'gatsby-plugin-image'
 import ResourceLink from '../../components/ResourceLink'
 
 const BlogPage = () => {
+  useEffect(() => {
+    // Check if script is already loaded
+    const existingScript = document.getElementById('dropin-blog-script')
+    if (existingScript) {
+      // If script exists but blog hasn't loaded, try to reinitialize
+      if (window.DIB && typeof window.DIB.init === 'function') {
+        window.DIB.init()
+      }
+      return
+    }
+
+    // Create and load the DropIn Blog script
+    const script = document.createElement('script')
+    script.id = 'dropin-blog-script'
+    script.src = 'https://io.dropinblog.com/embedjs/2e37eb85-3320-46a6-adb0-28174e06195c.js'
+    script.async = true
+    
+    // Add error handling
+    script.onerror = () => {
+      console.error('Failed to load DropIn Blog script')
+    }
+    
+    // Add load handler to ensure initialization
+    script.onload = () => {
+      // Give a small delay to ensure the script has fully initialized
+      setTimeout(() => {
+        if (window.DIB && typeof window.DIB.init === 'function') {
+          window.DIB.init()
+        }
+      }, 100)
+    }
+
+    document.head.appendChild(script)
+
+    // Cleanup function
+    return () => {
+      // Don't remove the script on unmount as it might be needed for other pages
+      // The script will persist and be reused
+    }
+  }, [])
 
   return (
     <Layout includeCTA={true}>
@@ -32,7 +72,6 @@ const BlogPage = () => {
           <div id="dib-posts"></div>
         </div>
       </div>
-      <script async src="https://io.dropinblog.com/embedjs/2e37eb85-3320-46a6-adb0-28174e06195c.js"></script>
     </Layout>
   )
 }

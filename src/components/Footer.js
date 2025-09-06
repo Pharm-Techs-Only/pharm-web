@@ -55,7 +55,7 @@ const Footer = () => {
                 <ul className="space-y-2 text-sm">
                   <li><a href="https://careers.pharmtechsonly.com/register-employer" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Post Jobs</a></li>
                   <li><a href="https://careers.pharmtechsonly.com/register-employer" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Search Candidates</a></li>
-                  <li><a href="mailto:questions@pharmtechsonly.com" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Advertise on Tech Connect</a></li>
+                  <li><Link to="/marketing-opps" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Marketing Opportunities</Link></li>
                 </ul>
               </div>
             </div>

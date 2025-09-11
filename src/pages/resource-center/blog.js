@@ -60,7 +60,7 @@ const BlogPage = () => {
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../../images/hero_blog.svg" alt="Pharm Techs Only Blog" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

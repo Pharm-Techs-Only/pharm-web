@@ -80,7 +80,7 @@ const ConventionsPage = () => {
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../../images/hero_home.svg" alt="Pharmacy Convention" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../../images/hero_conventions.svg" alt="Pharmacy Technician Conventions" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

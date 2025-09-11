@@ -4,8 +4,9 @@ import HeroHeader from '../components/HeroHeader'
 import MailchimpSubscribe from '../components/MailchimpSubscribe'
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+import CTA from '../components/CTA'
 
-const HomePage = () => {
+const ContactPage = () => {
   return (
     <Layout>
       {/* Main Hero Section */}
@@ -26,228 +27,53 @@ const HomePage = () => {
       {/* Subscribe Section */}
       <section className="relative pb-[60px] lg:pb-[160px]">
         <div className="content-container relative">
-          <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between items-center">
-            <div className="flex justify-center w-[50%] px-12">
-              <StaticImage src="../images/home_community.svg" alt="Two Pharmacy Technicians" />
-            </div>
-            <div className="pt-[60px] md:pt-[80px] lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pl-0 lg:pl-[120px]">
-              <h2>
-                A Community For Us, By Us
+          <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col items-start">
+            <div className="pt-[60px] md:pt-[80px] lg:pt-[120px] xl:py-[170px] w-[100%] pl-0 lg:pl-[120px]">
+              <h2 className="mb-12">
+                Stay Connected with Pharm Techs Only!
               </h2>
+              <div className="flex items-center space-x-12 mb-22">
+                <a href="https://www.facebook.com/4PharmTechsOnly" target="_blank" rel="noreferrer" className="text-white hover:bg-gray-200 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 32 32"><path d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/pharmtechsonly" target="_blank" rel="noreferrer" className="text-white hover:bg-gray-200 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/company/pharmtechsonly" target="_blank" rel="noreferrer" className="text-white hover:bg-gray-200 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 32 32"><path d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z" fill-rule="evenodd"></path></svg>
+                </a>
+              </div>
               <p>
-                Being a pharmacy technician can be a challenging, and isolating career. It is hard to find the right resources, advance one's career, and find others that you can connect with.
+                Stay updated on the latest news and resources from PharmTechs Only! Join our mailing list today.
               </p>
-              <p>
-                Our founder has felt this first-hand, and for the past 5 years she has been working tirelessly to build Pharm Techs Only!... a place for Pharm Techs, by Pharm Techs. Where our global community can come together to learn, share, support, and grow.
-              </p>
-              
               {/* Mailchimp signup form */}
-              <div id="waitlist" className="py-[60px]">
+              <div id="waitlist">
                 <MailchimpSubscribe />
               </div>
             </div>
           </div>
-          <div className="-left-[115px] bottom-[420px] absolute z-10"><StaticImage src="../images/cloud_one.svg" alt="Cloud One" /></div>
-          <div className="-right-[180px] bottom-[225px] absolute z-10"><StaticImage src="../images/cloud_three.svg" alt="Cloud Three" /></div>
-        </div>
-        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        </div><div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </section>
 
-      {/* Learn Section */}
+      {/* Email Section */}
       <section className="relative py-[60px] lg:py-[120px]">
           <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
-            <h2>Resource Center</h2>
+            <h2>Get in Touch with us by Email</h2>
             <p>
-              Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
+              Email us at <a href="mailto:questions@pharmtechsonly.com" className="text-pharm-blue hover:underline">questions@pharmtechsonly.com</a>
             </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-              <Link to="/resource-center/free-ceus" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-                <div className="height-[102px] mb-4">
-                  <StaticImage src="../images/icon_global-careers.svg" alt="Free CEUs" className="" />
-                </div>
-                <h3 className="font-semibold text-purple-900 text-center mb-0">Free CEUs</h3>
-              </Link>
-              <Link to="/resource-center/organizations" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-                <div className="height-[102px] mb-4">
-                  <StaticImage src="../images/icon_organizations.svg" alt="Organizations" className="" />
-                </div>
-                <h3 className="font-semibold text-purple-900 text-center mb-0">Organizations</h3>
-              </Link>
-              <Link to="/resource-center/conventions" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-                <div className="height-[102px] mb-4">
-                  <StaticImage src="../images/icon_conventions.svg" alt="Conventions" className="" />
-                </div>
-                <h3 className="font-semibold text-purple-900 text-center mb-0">Conventions</h3>
-              </Link>
-              <Link to="/resource-center/blog" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-                <div className="height-[102px] mb-4">
-                  <StaticImage src="../images/icon_blog.svg" alt="Blog" className="" />
-                </div>
-                <h3 className="font-semibold text-purple-900 text-center mb-0">Blog</h3>
-              </Link>
-            </div>
-            
-            <Link
-              to="/resource-center"
-              className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
-            >
-              Go to Resources
-            </Link>
         </div>
       </section>
-
-      {/* Careers Section */}
-      <section className="relative py-[60px] lg:py-[120px]">
-        <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
-          <h2>Career Portal</h2>
-          <p>
-            Supporting your career growth from certification through career advancement.
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <a href="https://careers.pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_global-careers.svg" alt="Global Career Center" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Global Career Center</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/career-resources" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_career-resources.svg" alt="Career Resources" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/interview-coach" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_interview-coach.svg" alt="Interview Coach" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Interview Coach</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/analyze-offer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_offer-analyzer.svg" alt="Offer Analyzer" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Offer Analyzer</h3>
-            </a>
-          </div>
-          
-          <a
-            href="https://careers.pharmtechsonly.com"
-            target="_blank" rel="noreferrer"
-            className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
-          >
-            Go to Careers
-          </a>
-        </div>
-      </section>
-
-      {/* Tech Connect Section */}
-      <section className="relative py-[60px] lg:py-[120px]">
-        <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
-          <h2>Tech Connect</h2>
-          <p>
-            Building community, a centralized place to connect, share, and interact with other pharmacy technicians, just like you.
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mb-8">
-            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_interact.svg" alt="Interact" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Interact</h3>
-            </div>
-            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_connect.svg" alt="Connect" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Connect</h3>
-            </div>
-            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_chat.svg" alt="Chat" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Chat</h3>
-            </div>
-            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_polls.svg" alt="Polls" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Polls</h3>
-            </div>
-            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_communities.svg" alt="Communities" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Communities</h3>
-            </div>
-          </div>
-          
-          <div className="p-6 flex flex-col items-center">
-            <p>Tech Connect Coming Soon!</p>
-            <Link
-              to="/#waitlist"
-              className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
-              Join the Waitlist
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Employers Section */}
-      <section className="relative py-[60px] lg:py-[120px]">
-        <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
-          <h2>
-            Employer Tools
-          </h2>
-          <p>
-            Employer? See our tools built just for you!Are you a pharmacy looking to fill your opening with the certified, experienced pharmacy technicians?
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_post-jobs.svg" alt="Post Jobs" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Post Jobs</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_search-candidates.svg" alt="Search Candidates" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Search Candidates</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_feature-job.svg" alt="Feature Your Job Opening" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Feature Your Job Opening</h3>
-            </a>
-            <a href="mailto:questions@pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <StaticImage src="../images/icon_advertise.svg" alt="Advertise on Tech Connect" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Advertise on Tech Connect</h3>
-            </a>
-          </div>
-
-          <a
-            href="https://careers.pharmtechsonly.com/register-employer"
-            className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
-          >
-            Create your FREE Employer Account
-          </a>
-        </div>
-      </section>
+      <CTA type="donate" />
     </Layout>
   )
 }
 
-export default HomePage
+export default ContactPage
 
 export const Head = () => (
   <>
-    <title>PharmTechs Only - Community for Pharmacy Technicians</title>
-    <meta name="description" content="A community for pharmacy technicians to connect, learn, and grow together." />
+    <title>PharmTechs Only - Contact</title>
+    <meta name="description" content="Get in touch with PharmTechs Only." />
   </>
 )

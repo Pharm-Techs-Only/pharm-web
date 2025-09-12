@@ -56,7 +56,10 @@ const BlogPage = () => {
             Blog
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Stay current with the latest news for Pharmacy Technicians and industry trends.
+            Stay current with the latest news for Pharmacy Technicians and industry trends on our blog.
+          </p>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Updated regularly with articles, tips, and resources to help you advance your career.
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">

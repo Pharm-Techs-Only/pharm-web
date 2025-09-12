@@ -76,7 +76,10 @@ const ConventionsPage = () => {
             Conventions
           </h1>
           <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
-            Discover upcoming pharmacy technician conventions.
+            Discover upcoming pharmacy conventions, conferences, and professional meetings. 
+          </p>
+          <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
+            Network with industry professionals, learn about the latest developments, and advance your pharmacy career.
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
@@ -90,11 +93,8 @@ const ConventionsPage = () => {
             <ResourceLink />
           </nav>
           
-          <h1 className="text-4xl font-bold mb-4">Pharmacy Conventions</h1>
-          
           <p className="text-lg text-gray-600 mb-8">
-            Discover upcoming pharmacy conventions, conferences, and professional meetings. 
-            Network with industry professionals, learn about the latest developments, and advance your pharmacy career.
+            
           </p>
 
           {/* Summary */}

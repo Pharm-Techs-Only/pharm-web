@@ -120,6 +120,9 @@ const FreeCEUsPage = () => {
           <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
             Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
           </p>
+          <p className="text-lg text-pharm-grey mb-8">
+            Our courses are self-paced and available online, allowing you to complete them at your convenience.
+          </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
           <StaticImage src="../../images/hero_ceus.svg" alt="Free CEUs" className="lg:!absolute -bottom-[20px]" />
@@ -133,9 +136,6 @@ const FreeCEUsPage = () => {
           </nav>
           
           <div className="prose max-w-none">
-            <p className="text-lg text-pharm-grey mb-8">
-              Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
-            </p>
             
             <div className="item-wrap p-6 mb-8 items-start">
               <h2 className="text-xl font-semibold mb-2 text-pharm-blue">Important Note</h2>

@@ -128,7 +128,9 @@ const OrganizationsPage = () => {
             Organizations
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Connect with pharmacy technician organizations in your country.
+            Explore professional organizations that support pharmacy technicians through advocacy, education, 
+            and career development. Connect with associations, certification boards, and industry councils 
+            to advance your pharmacy career.
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
@@ -141,14 +143,6 @@ const OrganizationsPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
-          
-          <h1 className="text-4xl font-bold mb-4">Professional Organizations</h1>
-          
-          <p className="text-lg text-gray-600 mb-8">
-            Explore professional organizations that support pharmacy technicians through advocacy, education, 
-            and career development. Connect with associations, certification boards, and industry councils 
-            to advance your pharmacy career.
-          </p>
 
           {/* Tab Navigation */}
           <div className="mb-8">

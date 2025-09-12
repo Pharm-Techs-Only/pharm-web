@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const MailchimpSubscribe = ({ 
   containerClasses = "",
@@ -8,6 +8,7 @@ const MailchimpSubscribe = ({
   layout = "vertical", // "vertical" or "horizontal"
   inputContainerClasses = ""
 }) => {
+  const [userType, setUserType] = useState('pharmtech')
   return (
     <div className={containerClasses}>
       <div id="mc_embed_shell">
@@ -30,6 +31,38 @@ const MailchimpSubscribe = ({
                       placeholder="Email address"
                     />
                   </div>
+                  
+                  {/* Radio button group for user type */}
+                  <div className="mc-field-group mb-4">
+                    <div className="flex flex-col space-y-3">
+                      <label className="flex items-center space-x-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="user-type"
+                          value="pharmtech"
+                          checked={userType === 'pharmtech'}
+                          onChange={(e) => setUserType(e.target.value)}
+                          className="h-4 w-4 text-[var(--color-pharm-green)] border-gray-300 focus:ring-[var(--color-pharm-green)]"
+                        />
+                        <span className="text-gray-700 font-medium">Pharm Tech</span>
+                      </label>
+                      
+                      <label className="flex items-center space-x-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="user-type"
+                          value="employer"
+                          checked={userType === 'employer'}
+                          onChange={(e) => setUserType(e.target.value)}
+                          className="h-4 w-4 text-[var(--color-pharm-green)] border-gray-300 focus:ring-[var(--color-pharm-green)]"
+                        />
+                        <span className="text-gray-700 font-medium">Employer</span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  {/* Hidden field to send the tag to Mailchimp */}
+                  <input type="hidden" name="MERGE7" value={userType} />
               <div id="mce-responses" className="clear foot">
                   <div className="response" id="mce-error-response" style={{display: "none"}}></div>
                   <div className="response" id="mce-success-response" style={{display: "none"}}></div>

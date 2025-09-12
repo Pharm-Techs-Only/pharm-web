@@ -43,4 +43,21 @@ module.exports = {
       },
     },
   ]
+}, 
+{
+  resolve: `gatsby-plugin-sharp`,
+  options: {
+    defaults: {
+      formats: [`auto`, `webp`, `png`, `jpg`, `svg`],
+      placeholder: `none`,
+      breakpoints: [750, 1080, 1366, 1920],
+      backgroundColor: `white`,
+      tracedSVGOptions: {},
+      blurredOptions: {},
+      jpgOptions: {},
+      pngOptions: {},
+      webpOptions: {},
+      avifOptions: {},
+    }
+  }
 };

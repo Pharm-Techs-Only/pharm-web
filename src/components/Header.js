@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+import { useLocation } from '@gatsbyjs/reach-router'
 
 const Header = () => {
+  const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef(null)
 
@@ -79,10 +81,17 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-blue-600">
-              <StaticImage
-                src="../images/logo.svg"
-                alt="PharmTechsOnly!"
-              />
+              {location.pathname === '/store' ? (
+                <StaticImage
+                  src="../images/logo_store.png"
+                  alt="PharmTechsOnly! Store"
+                />
+              ) : (
+                <StaticImage
+                  src="../images/logo.svg"
+                  alt="PharmTechsOnly!"
+                />
+              )}
             </Link>
           </div>
           

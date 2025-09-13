@@ -118,10 +118,10 @@ const FreeCEUsPage = () => {
             Free Continuing Education Units (CEUs)
           </h1>
           <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
-            Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians.
+            Free CEUs for Pharmacy Technicians – Stay Certified for Free!
           </p>
           <p className="text-lg text-pharm-grey mb-8">
-            Our courses are self-paced and available online, allowing you to complete them at your convenience.
+            Explore Pharm Techs Only!'s curated list of Absolutely FREE CEUs from leading continuing education providers. Some sites may require a quick, free registration to access courses. Updated regularly, our resource helps Pharmacy Technicians stay compliant, advance their careers, and boost their skills—all without spending a penny. Check back often for new opportunities!
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">

@@ -31,50 +31,18 @@ const MailchimpSubscribe = ({
                       placeholder="Email address"
                     />
                   </div>
-                  
-                  {/* Radio button group for user type */}
-                  <div className="mc-field-group mb-4">
-                    <div className="flex flex-col space-y-3">
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="user-type"
-                          value="pharmtech"
-                          checked={userType === 'pharmtech'}
-                          onChange={(e) => setUserType(e.target.value)}
-                          className="h-4 w-4 text-[var(--color-pharm-green)] border-gray-300 focus:ring-[var(--color-pharm-green)]"
-                        />
-                        <span className="text-gray-700 font-medium">Pharm Tech</span>
-                      </label>
-                      
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="user-type"
-                          value="employer"
-                          checked={userType === 'employer'}
-                          onChange={(e) => setUserType(e.target.value)}
-                          className="h-4 w-4 text-[var(--color-pharm-green)] border-gray-300 focus:ring-[var(--color-pharm-green)]"
-                        />
-                        <span className="text-gray-700 font-medium">Employer</span>
-                      </label>
-                    </div>
+                  <div id="mce-responses" className="clear foot">
+                      <div className="response" id="mce-error-response" style={{display: "none"}}></div>
+                      <div className="response" id="mce-success-response" style={{display: "none"}}></div>
                   </div>
-                  
-                  {/* Hidden field to send the tag to Mailchimp */}
-                  <input type="hidden" name="MERGE7" value={userType} />
-              <div id="mce-responses" className="clear foot">
-                  <div className="response" id="mce-error-response" style={{display: "none"}}></div>
-                  <div className="response" id="mce-success-response" style={{display: "none"}}></div>
+                  <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
+                      {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+                      <input type="text" name="b_647acc4c58e278ba9635c4a4b_6fa4d8c02e" tabIndex="-1" value="" />
+                  </div>
+                  <div className="clear foot">
+                    <input type="submit" value={buttonText} name="subscribe" id="mc-embedded-subscribe" className={buttonClasses} />
+                  </div>
               </div>
-              <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
-                  {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-                  <input type="text" name="b_647acc4c58e278ba9635c4a4b_6fa4d8c02e" tabIndex="-1" value="" />
-              </div>
-              <div className="clear foot">
-                <input type="submit" value={buttonText} name="subscribe" id="mc-embedded-subscribe" className={buttonClasses} />
-              </div>
-            </div>
           </form>
         </div>
         <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>

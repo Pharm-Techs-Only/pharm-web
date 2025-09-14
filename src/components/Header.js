@@ -81,10 +81,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-blue-600">
-              {location.pathname === '/store' ? (
+              {location.pathname.indexOf('/store') !== -1 ? (
                 <StaticImage
                   src="../images/logo_store.png"
                   alt="PharmTechsOnly! Store"
+                  width={200}
                 />
               ) : (
                 <StaticImage

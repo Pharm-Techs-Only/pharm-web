@@ -8,10 +8,9 @@ const MailchimpSubscribe = ({
   layout = "vertical", // "vertical" or "horizontal"
   inputContainerClasses = ""
 }) => {
-  const [userType, setUserType] = useState('pharmtech')
   return (
     <div className={containerClasses}>
-      <div id="mc_embed_shell">
+      <div id="mc_embed_shell" className="pt-2 pb-8">
         <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
         <style type="text/css">{`
           #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width: 100%; max-width: 600px;}
@@ -19,7 +18,7 @@ const MailchimpSubscribe = ({
             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
         `}</style>
         <div id="mc_embed_signup" className="lg:mx-0 mx-auto">
-          <form action="https://pharmtechsonly.us10.list-manage.com/subscribe/post?u=647acc4c58e278ba9635c4a4b&amp;id=6fa4d8c02e&amp;f_id=005a48e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" rel="noreferrer">
+          <form action="https://pharmtechsonly.us10.list-manage.com/subscribe/post?u=647acc4c58e278ba9635c4a4b&amp;id=6fa4d8c02e&amp;f_id=005a48e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" style={{margin:0}} target="_blank" rel="noreferrer">
               <div id="mc_embed_signup_scroll">
                   <div className={layout === "horizontal" ? "mc-field-group flex max-w-md" : "mc-field-group"}>
                     <input 

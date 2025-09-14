@@ -24,7 +24,7 @@ const HomePage = () => {
       </HeroHeader>
 
       {/* Subscribe Section */}
-      <section className="relative pb-[60px] lg:pb-[160px]">
+      <section id="waitlist" className="relative pb-[60px] lg:pb-[160px]">
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between items-center">
             <div className="flex justify-center w-[50%] px-12">
@@ -42,7 +42,7 @@ const HomePage = () => {
               </p>
               
               {/* Mailchimp signup form */}
-              <div id="waitlist" className="py-[60px]">
+              <div className="py-[60px]">
                 <MailchimpSubscribe />
               </div>
             </div>

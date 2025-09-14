@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
-import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const StorePage = () => {
@@ -61,7 +60,7 @@ const StorePage = () => {
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../images/hero_store.svg" alt="Pharmacy Technicians Store" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

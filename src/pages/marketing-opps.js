@@ -1,8 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
-import MailchimpSubscribe from '../components/MailchimpSubscribe'
-import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 
 const MarketingOppsPage = () => {
@@ -26,7 +24,7 @@ const MarketingOppsPage = () => {
       {/* Subscribe Section */}
       <section className="relative pb-[60px] lg:pb-[160px]">
         <div className="content-container relative">
-          <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between items-center">
+          <div className="relative z-20 px-4 sm:px-6 lg:px-8">
             <p>Pharm Techs Only! (PTO!) offers several affiliate marketing opportunities for businesses and content creators in the pharmaceutical industry. Our platform, with a strong following on social media and a growing audience of pharmacy professionals, is an ideal place to showcase your information, products, and services. By partnering with PTO!, you can reach an engaged audience of pharmacy technicians, employers, and industry leaders.</p>
             <p>Below is an overview of our marketing offerings:</p>
 

@@ -7,4 +7,4 @@ steps:
   args: ['run', 'build']
   dir: '.' 
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['rsync', '-r', '-d', './public', 'gs://web.pharmtechsonly.com']
+  args: ['rsync', '-r', '-d', './public', 'gs://www.pharmtechsonly.com']

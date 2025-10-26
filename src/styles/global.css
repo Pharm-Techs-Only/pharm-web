@@ -130,6 +130,15 @@
     color: var(--color-pharm-grey)
   }
 
+  .content-container p a {
+    color: var(--color-pharm-blue);
+    text-decoration: underline;
+  }
+
+  .content-container p a:hover {
+    color: var(--color-pharm-purple);
+  }
+
   .btn {
     background:linear-gradient(#6BCE53 0%, #63E044 100%);
     transition: all 1s ease-in-out;

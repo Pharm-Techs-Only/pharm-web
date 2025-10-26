@@ -40,7 +40,7 @@ const MarketingOppsPage = () => {
 
             <p>▶ Partner with Pharm Techs Only! today to promote your business to a highly targeted audience of Pharmacy Technicians.</p>
 
-            <p><a href="mailto:questions@pharmtechsonly.com" title="Email Us!">📧 Email us</a> for more details, including pricing and current search and audience metrics.</p>
+            <p><a href="mailto:questions@pharmtechsonly.com" target="_blank" title="Email Us!">📧 Email us</a> for more details, including pricing and current search and audience metrics.</p>
 
             <p>Let us help you grow your pharmaceutical brand!</p>
           </div>

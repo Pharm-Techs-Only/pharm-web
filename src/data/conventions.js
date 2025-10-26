@@ -1,79 +1,4 @@
 export const ConventionsData = [
-  // United States - 2025
-  {
-    name: 'American Association of Colleges of Pharmacy- Pharmacy Education 2025',
-    country: 'United States of America',
-    year: 2025,
-    location: 'Chicago, Illinois',
-    date: '2025-07-19',
-    dateRange: 'July 19-22, 2025',
-    website: 'https://www.aacp.org/pharmed25'
-  },
-  {
-    name: '2025 TPA CONFERENCE & EXPO -Texas Pharmacy Association',
-    country: 'United States of America',
-    year: 2025,
-    location: 'Austin Marriott Downtown - Austin, TX',
-    date: '2025-07-18',
-    dateRange: 'July 18-20, 2025',
-    website: 'https://www.texaspharmacy.org/page/confexpo'
-  },
-  {
-    name: "The National Pharmaceutical Association's Annual Convention - 2025 NPhA/SNPhA Convention",
-    country: 'United States of America',
-    year: 2025,
-    location: 'Cincinnati, OH',
-    date: '2025-08-01',
-    dateRange: 'August 1-4, 2025',
-    website: 'https://nationalpharmaceuticalassociation.org/FutureConventions'
-  },
-  {
-    name: 'RX Fest',
-    country: 'United States of America',
-    year: 2025,
-    location: 'Austin, TX',
-    date: '2025-08-08',
-    dateRange: '8-Aug-25',
-    website: 'https://www.pharmfest.com/rxfest'
-  },
-  {
-    name: 'PSW Annual Meeting - Pharmacy Society of Wisconsin',
-    country: 'United States of America',
-    year: 2025,
-    location: 'Baird Center, Milwaukee',
-    date: '2025-08-14',
-    dateRange: 'August 14-16, 2025',
-    website: 'https://www.pswi.org/Education/Conferences'
-  },
-  {
-    name: 'NASP - National Association of Specialty Pharmacy Annual Meeting & Expo',
-    description: "Specialty Pharmacy's Premier Event",
-    country: 'United States of America',
-    year: 2025,
-    location: 'Gaylord Rockies Resort & Convention Center Denver, CO',
-    date: '2025-09-14',
-    dateRange: 'Sept 14-27, 2025',
-    website: 'https://naspnet.org/annual-meeting'
-  },
-  {
-    name: 'CPA 150th Anniversary Celebration & Annual Meeting',
-    country: 'United States of America',
-    year: 2025,
-    location: 'St. Clements Castle -Portland, CT',
-    date: '2025-09-17',
-    dateRange: 'Sept 17, 2025',
-    website: 'https://cpa150.org/'
-  },
-  {
-    name: 'NCPA 2025 Annual Convention and Expo',
-    country: 'United States of America',
-    year: 2025,
-    location: 'New Orleans, LA',
-    date: '2025-10-18',
-    dateRange: 'October 18-21, 2025',
-    website: 'https://ncpa.org/annual-convention'
-  },
-
   // United States - 2026
   {
     name: 'Western Pharmacy Exchange 2026',
@@ -131,6 +56,15 @@ export const ConventionsData = [
     website: 'https://www.gpha.org/pharmacy-conventions-future-dates/'
   },
   {
+    name: 'NCPA 2026 Annual Convention and Expo',
+    country: 'United States of America',
+    year: 2026,
+    location: 'Kansas City, Missouri',
+    date: '2026-10-3',
+    dateRange: 'October 3 - 6, 2026',
+    website: 'https://www.ncpa.org/annual-convention'
+  },
+  {
     name: 'PSW Annual Meeting - Pharmacy Society of Wisconsin',
     country: 'United States of America',
     year: 2026,
@@ -138,6 +72,60 @@ export const ConventionsData = [
     date: '2026-08-27',
     dateRange: 'August 27-29, 2026',
     website: 'https://www.pswi.org/Education/Conferences'
+  },
+  {
+    name: 'California Pharmacy Exchange=APhA 2026 (Formerly Western Pharmacy Exchange)',
+    country: 'United States of America',
+    year: 2026,
+    location: 'Kalahari Wisconsin Dells',
+    date: '2026-03-27',
+    dateRange: 'March 27-30, 2026',
+    website: 'https://cpe.cpha.com/'
+  },
+  {
+    name: 'PPA Annual Conference 2026 - Pennsylvania Pharmacists Association',
+    country: 'United States of America',
+    year: 2026,
+    location: 'Hilton, Harrisburg, PA',
+    date: '2026-02-20',
+    dateRange: 'February 20-22, 2026',
+    website: 'https://www.papharmacists.com/page/Annual2026'
+  },
+  {
+    name: '2026 TPA CONFERENCE & EXPO -Texas Pharmacy Association',
+    country: 'United States of America',
+    year: 2026,
+    location: 'Marriott Woodlands Waterway- Woodlands, TX',
+    date: '2026-07-24',
+    dateRange: 'July 24-26, 2026',
+    website: 'https://www.texaspharmacy.org/page/confexpo'
+  },
+  {
+    name: 'Pacific Coast Patient Safety Conference 2026',
+    country: 'United States of America',
+    year: 2026,
+    location: 'Montereey Plaza Hotel & Spa,  Monterey, CA',
+    date: '2026-02-26',
+    dateRange: 'February 26-27, 2026',
+    website: 'https://www.cshp.org/general/custom.asp?page=PCPSC-2026'
+  },
+  {
+    name: 'NASP - National Association of Specialty Pharmacy Annual Meeting & Expo',
+    country: 'United States of America',
+    year: 2026,
+    location: 'Gaylord Rockies Resort & Convention Center National Harbor, MD',
+    date: '2026-09-22',
+    dateRange: 'September 22 - 25, 2026',
+    website: 'https://naspnet.org/annual-meeting'
+  },
+  {
+    name: '2026 NORTHWEST PHARMACY CONVENTION',
+    country: 'United States of America',
+    year: 2026,
+    location: 'Coeur d\'Alene Resort- Coeur d\'Alene, ID',
+    date: '2026-05-28',
+    dateRange: 'May 28 - 31, 2026',
+    website: 'https://www.wsparx.org/events/EventDetails.aspx?id=1990230&group='
   },
 
   // United States - 2027
@@ -189,19 +177,19 @@ export const ConventionsData = [
     year: 2030,
     location: 'Kalahari Wisconsin Dells',
     date: '2030-08-22',
-    dateRange: 'August 22-24, 2030',
+    dateRange: 'August 22 - 24, 2030',
     website: 'https://www.pswi.org/Education/Conferences'
   },
 
   // Canada - 2025
   {
-    name: '2025 Alberta Pharmacy Technician Conference in Calgary',
+    name: '19th Annual Pharmacy Technician Conference',
     country: 'Canada',
     year: 2025,
-    location: 'Best Western Premier Calgary Plaza Hotel and Conference Centre - Calgary',
-    date: '2025-09-12',
-    dateRange: 'September 12-13, 2025',
-    website: 'https://ptsa.ca/ptsa-conference/'
+    location: 'Richmond BC, Canada- River Rock Hotel',
+    date: '2025-10-24',
+    dateRange: 'October 24 - 25, 2025',
+    website: 'https://ptsbc.ca/'
   },
 
   // Canada - 2026
@@ -214,26 +202,71 @@ export const ConventionsData = [
     dateRange: 'April 23-26. 2026',
     website: 'https://www.capho.org/capho-conference-2026'
   },
+  {
+    name: 'CAPT National Professional Development Conference',
+    country: 'Canada',
+    year: 2026,
+    location: 'TBD as more information becomes available...',
+    date: '2026-08-01',
+    dateRange: 'TBD 2026',
+    website: 'https://capt.ca/client/event/roster/eventRosterView.html?eventRosterId=32'
+  },
+  {
+    name: '2026 BC Pharmacy Association Annual Conference',
+    country: 'Canada',
+    year: 2026,
+    location: 'TBD as more information becomes available...',
+    date: '2026-08-01',
+    dateRange: 'TBD 2026',
+    website: 'https://www.bcpharmacy.ca/conference'
+  },
+  {
+    name: '2026 Alberta Pharmacy Technician Conference in Edmonton',
+    country: 'Canada',
+    year: 2026,
+    location: 'Evario Events Centre- Edmonton',
+    date: '2026-09-11',
+    dateRange: 'September 11 - 12, 2026',
+    website: 'https://ptsa.ca/ptsa-conference/'
+  },
+  {
+    name: 'Pharmacy Technician Professional Development Conference',
+    country: 'Canada',
+    year: 2026,
+    location: 'TBD as more information becomes available...',
+    date: '2026-08-01',
+    dateRange: 'TBD 2026',
+    website: 'https://www.linkedin.com/posts/ptpdc_ptpdc2026-pharmacytechnicians-healthcaresponsors-activity-7384371363886768129-N0pe'
+  },
+  {
+    name: 'Pharmacy U',
+    country: 'Canada',
+    year: 2026,
+    location: 'TBD as more information becomes available...',
+    date: '2026-08-01',
+    dateRange: 'TBD 2026',
+    website: 'https://events.pharmacyu.ca/toronto2025/home?code=VIP'
+  },
+  {
+    name: 'Professional Practice Conference 2026',
+    country: 'Canada',
+    year: 2026,
+    location: 'Halifax',
+    date: '2026-04-30',
+    dateRange: 'April 30 - May 2, 2026',
+    website: 'https://www.cshp.ca/Site/Professional-Development/Together_2023/Site/Content/Professional-Development/together-2023.aspx?hkey=e1a4a84a-6930-4bf4-8f4f-eef50018eb86'
+  },
+  {
+    name: '"FIP Montreal 2026 84th FIP World Congress of Pharmacy and Pharmaceutical Sciences"',
+    country: 'Canada',
+    year: 2026,
+    location: 'Montreal',
+    date: '2026-08-30',
+    dateRange: 'August 30 - September 2, 2026',
+    website: 'https://montreal2026.fip.org/'
+  },
 
   // Australia - 2025
-  {
-    name: 'PSA25 National Conference 2025',
-    country: 'Australia',
-    year: 2025,
-    location: 'ICC Sydney: International Convention Center',
-    date: '2025-08-01',
-    dateRange: 'Aug 1-3, 2025',
-    website: 'https://www.psa.org.au/networking-events/information-on-major-events-and-conferences/'
-  },
-  {
-    name: 'Pharmacy Connect 2025',
-    country: 'Australia',
-    year: 2025,
-    location: 'Hyatt Regency | Sydney, Australia',
-    date: '2025-09-03',
-    dateRange: 'September 3-5, 2025',
-    website: 'https://pharmacyassistants.com/'
-  },
   {
     name: 'MM2025',
     country: 'Australia',
@@ -254,43 +287,24 @@ export const ConventionsData = [
     dateRange: 'March 12-14, 2026',
     website: 'https://www.facebook.com/APPConference/'
   },
-
-  // Europe - 2025
   {
-    name: 'FIP COPENHAGEN 2025 83rd FIP WORLD CONGRESS OF PHARMACY AND PHARMACEUTICAL SCIENCES',
-    country: 'Europe',
-    year: 2025,
-    location: 'Copenhagen, Denmark',
-    date: '2025-08-31',
-    dateRange: 'Aug 31 - Sept 2, 2025',
-    website: 'https://copenhagen2025.fip.org/'
+    name: 'Pharmacy Connect 2026',
+    country: 'Australia',
+    year: 2026,
+    location: 'TBD as more information becomes available...',
+    date: '2026-08-01',
+    dateRange: 'TBD: 2026',
+    website: ''
   },
+  // Japan 2026
   {
-    name: 'APTUK 2025 Annual Conference and Exhibition',
-    country: 'Europe',
-    year: 2025,
-    location: 'Hilton NewCastle, Gateshead',
-    date: '2025-09-19',
-    dateRange: 'Sept 19-20, 2025',
-    website: 'https://www.aptuk.org/events/aptuk-2025-conference-and-exhibition'
-  },
-  {
-    name: '10th International Conference on Future Pharma and Innovations',
-    country: 'Europe',
-    year: 2025,
-    location: 'Amsterdam, Netherlands',
-    date: '2025-09-23',
-    dateRange: 'Sept 23-24, 2025',
-    website: 'https://futurepharmameetings.pharmaceuticalconferences.com/'
-  },
-  {
-    name: 'Pharmacy Show 2025 - NEC Birmingham',
-    country: 'Europe',
-    year: 2025,
-    location: 'National Exhibition Centre - HALL 4 - NEC BIRMINGHAM North Ave Marston Green Birmingham B40 1NT',
-    date: '2025-10-12',
-    dateRange: 'October 12-13, 2025',
-    website: 'https://www.thepharmacyshow.co.uk/'
+    name: 'PSA  Offshore Refresher Conference 2026',
+    country: 'Japan',
+    year: 2026,
+    location: 'TBD as more information becomes available...',
+    date: '2026-05-08',
+    dateRange: 'May 8 - 20, 2026',
+    website: 'https://impactevents.eventsair.com/cmspreview/psaoffshore2026'
   },
 
   // Europe - 2026
@@ -300,19 +314,44 @@ export const ConventionsData = [
     year: 2026,
     location: 'Paris Expo, Porte de Versailles - Hall 4 | Paris, France',
     date: '2026-01-21',
-    dateRange: 'January 21-22, 2026',
+    dateRange: 'January 21 - 22, 2026',
     website: 'https://www.pharmapackeurope.com/en/home.html'
   },
-
-  // West Indies - 2025
   {
-    name: 'CAPS Annual Conference 2025',
-    country: 'West Indies',
-    year: 2025,
-    location: 'Dominica',
-    date: '2025-08-17',
-    dateRange: 'August 17-24, 2025',
-    website: 'https://cap-pharmacists.com/event/annual-conference-2025/'
+    name: 'Pharmacy Show 2026 - NEC BirminghaM',
+    country: 'Europe',
+    year: 2026,
+    location: 'National Exhibition Centre - HALL 4 - NEC BIRMINGHAM North Ave Marston Green Birmingham B40 1NT',
+    date: '2026-10-11',
+    dateRange: 'October 11 - 12, 2026',
+    website: 'https://www.thepharmacyshow.co.uk/'
+  },
+  {
+    name: 'APTUK 2026 Annual Conference and Exhibition',
+    country: 'Europe',
+    year: 2026,
+    location: 'TBD as more information becomes available...',
+    date: '2026-08-01',
+    dateRange: 'TBD: 2026',
+    website: ''
+  },
+  {
+    name: '2026 EAFP Annual Conference - European Association of Faculties of Pharmacy',
+    country: 'Europe',
+    year: 2026,
+    location: 'TBD as more information becomes available...',
+    date: '2026-08-01',
+    dateRange: 'TBD: 2026',
+    website: 'https://eafponline.eu/future-conferences/'
+  },
+  {
+    name: '10th International Conference on Future Pharma and Innovations',
+    country: 'Europe',
+    year: 2026,
+    location: 'Netherlands',
+    date: '2026-09-01',
+    dateRange: 'Septemmber 2026',
+    website: ''
   },
 
   // West Indies - 2026
@@ -363,9 +402,18 @@ export const ConventionsData = [
     description: 'TBD as more info becomes available...',
     country: 'Asia',
     year: 2026,
-    location: 'Philippines',
-    date: '2026-01-01', // Placeholder date since specific date is TBD
-    dateRange: 'TBD 2026',
-    website: 'https://www.facebook.com/hashtag/2025nationalconvention'
+    location: 'Ilocos Sur, Vigan City- Chavit Coliseum',
+    date: '2026-04-21', // Placeholder date since specific date is TBD
+    dateRange: 'April 21 - 24, 2026',
+    website: 'https://www.facebook.com/watch/?v=716987187984073'
+  }, 
+  {
+    name: 'CPHI South East Asia',
+    country: 'Asia',
+    year: 2026,
+    location: 'QSNCC, Bangkok, Thailand',
+    date: '2026-06-08', 
+    dateRange: 'July 8 - 10, 2026',
+    website: 'https://www.facebook.com/CPhISEA/'
   }
 ]

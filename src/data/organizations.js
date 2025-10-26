@@ -1448,6 +1448,14 @@ export const OrganizationsData = {
         email: 'pssa@pharmail.co.za'
       },
       {
+        name: 'South Africa Pharmacy Technician Association',
+        region: 'South Africa',
+        address: 'SAPTA Headquarters Johannesburg, 0001',
+        phone: '(27) 68 593 6648',
+        website: 'https://www.sapta.co.za/',
+        email: 'info@SAPTA.co.za'
+      },
+      {
         name: 'South African Pharmacy Council',
         region: 'South Africa',
         building: 'PB X40040, Arcadia, 0007 SAPC Building',

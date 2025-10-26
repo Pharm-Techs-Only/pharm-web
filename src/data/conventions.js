@@ -292,21 +292,10 @@ export const ConventionsData = [
     country: 'Australia',
     year: 2026,
     location: 'TBD as more information becomes available...',
-    date: '2026-08-01',
-    dateRange: 'TBD: 2026',
-    website: ''
+    date: '2026-09-11',
+    dateRange: 'September 9 - 11, 2026',
+    website: 'https://www.facebook.com/PharmacyConnectConference/'
   },
-  // Japan 2026
-  {
-    name: 'PSA  Offshore Refresher Conference 2026',
-    country: 'Japan',
-    year: 2026,
-    location: 'TBD as more information becomes available...',
-    date: '2026-05-08',
-    dateRange: 'May 8 - 20, 2026',
-    website: 'https://impactevents.eventsair.com/cmspreview/psaoffshore2026'
-  },
-
   // Europe - 2026
   {
     name: 'PharmaPak Europe 2026- 25th Anniversary',
@@ -349,9 +338,9 @@ export const ConventionsData = [
     country: 'Europe',
     year: 2026,
     location: 'Netherlands',
-    date: '2026-09-01',
-    dateRange: 'Septemmber 2026',
-    website: ''
+    date: '2026-09-23',
+    dateRange: 'Septemmber 23 - 24, 2026',
+    website: 'https://futurepharmameetings.pharmaceuticalconferences.com/'
   },
 
   // West Indies - 2026
@@ -399,7 +388,7 @@ export const ConventionsData = [
   // Asia - 2026
   {
     name: '2026 PPhA National Convention',
-    description: 'TBD as more info becomes available...',
+    // description: 'TBD as more info becomes available...',
     country: 'Asia',
     year: 2026,
     location: 'Ilocos Sur, Vigan City- Chavit Coliseum',
@@ -415,5 +404,14 @@ export const ConventionsData = [
     date: '2026-06-08', 
     dateRange: 'July 8 - 10, 2026',
     website: 'https://www.facebook.com/CPhISEA/'
-  }
+  }, 
+  {
+    name: 'PSA Offshore Refresher Conference 2026',
+    country: 'Asia',
+    year: 2026,
+    location: 'Southern Japan Splendour Luxury Cruise - Tokyo, Japan',
+    date: '2026-05-08',
+    dateRange: 'May 9 - 20, 2026',
+    website: 'https://impactevents.eventsair.com/cmspreview/psaoffshore2026'
+  },
 ]

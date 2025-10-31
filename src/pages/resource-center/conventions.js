@@ -27,7 +27,7 @@ const ConventionsPage = () => {
       today.setHours(0, 0, 0, 0) // Set to start of day for accurate comparison
 
       return conventions.filter(convention => {
-        const expirationDate = new Date(convention.expirationDate)
+        const expirationDate = new Date(convention.date)
         return expirationDate >= today
       })
     }

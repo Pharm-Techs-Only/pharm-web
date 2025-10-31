@@ -16,7 +16,7 @@ export const ConventionsData = [
     year: 2026,
     location: 'Washington, DC',
     date: '2026-04-18',
-    dateRange: 'April 18-- April 22, 2026',
+    dateRange: 'April 18 - April 22, 2026',
     website: 'https://conference.nhia.org/'
   },
   {

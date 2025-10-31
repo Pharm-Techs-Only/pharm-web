@@ -21,11 +21,22 @@ const ConventionsPage = () => {
       </Layout>
     )
   }
+  // Filter expired conventions
+  const filterConventionsByExpiration = (conventions = ConventionsData) => {
+      const today = new Date()
+      today.setHours(0, 0, 0, 0) // Set to start of day for accurate comparison
+
+      return conventions.filter(convention => {
+        const expirationDate = new Date(convention.expirationDate)
+        return expirationDate >= today
+      })
+    }
 
   // Group conventions by country, then by year, then sort by date within each year
   const groupConventions = () => {
     try {
-      const grouped = ConventionsData.reduce((acc, convention) => {
+      const filteredConventions = filterConventionsByExpiration(ConventionsData)
+      const grouped = filteredConventions.reduce((acc, convention) => {
         // Add safety checks for convention properties
         if (!convention || !convention.country || !convention.year) {
           console.warn('Skipping invalid convention:', convention)

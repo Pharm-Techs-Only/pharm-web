@@ -35,7 +35,8 @@ const BlogPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
-          <div id="dib-posts"></div>
+          {/* suppressHydrationWarning allows DIB Worker to inject content without React errors */}
+          <div id="dib-posts" suppressHydrationWarning={true}></div>
         </div>
       </div>
     </Layout>

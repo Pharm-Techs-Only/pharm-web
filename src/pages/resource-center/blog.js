@@ -50,4 +50,3 @@ export const Head = () => (
     <meta name="description" content="Stay current with your PharmTech career through our blog featuring the latest news, tips, and resources for pharmacy technicians." />
   </>
 )
-        }

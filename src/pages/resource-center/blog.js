@@ -7,17 +7,34 @@ import ResourceLink from '../../components/ResourceLink'
 
 const BlogPage = () => {
   useEffect(() => {
-    // Check if script is already loaded
-    const existingScript = document.getElementById('dropin-blog-script')
-    if (existingScript) {
-      // If script exists but blog hasn't loaded, try to reinitialize
+    // Check if DIB script/content was already loaded by Cloudflare Worker
+    // The Worker serves pre-rendered pages that already include the DIB script
+    if (window.DIB || window.dibMenu) {
+      // DIB already loaded (likely from Worker), just reinitialize if needed
       if (window.DIB && typeof window.DIB.init === 'function') {
         window.DIB.init()
       }
       return
     }
 
-    // Create and load the DropIn Blog script
+    // Check if script element already exists
+    const existingScript = document.getElementById('dropin-blog-script')
+    if (existingScript) {
+      // Script tag exists, try to reinitialize
+      if (window.DIB && typeof window.DIB.init === 'function') {
+        window.DIB.init()
+      }
+      return
+    }
+
+    // Check for any existing DIB scripts in the page
+    const existingDibScripts = document.querySelectorAll('script[src*="dropinblog.com"], script[src*="io.dropinblog.com"]')
+    if (existingDibScripts.length > 0) {
+      // DIB script already in page (from Worker), don't load again
+      return
+    }
+
+    // Only load if DIB is not present at all (fallback for non-Worker requests)
     const script = document.createElement('script')
     script.id = 'dropin-blog-script'
     script.src = 'https://io.dropinblog.com/embedjs/2e37eb85-3320-46a6-adb0-28174e06195c.js'

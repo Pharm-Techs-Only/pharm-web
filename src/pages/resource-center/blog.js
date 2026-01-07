@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
@@ -6,63 +6,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 import ResourceLink from '../../components/ResourceLink'
 
 const BlogPage = () => {
-  useEffect(() => {
-    // Check if DIB script/content was already loaded by Cloudflare Worker
-    // The Worker serves pre-rendered pages that already include the DIB script
-    if (window.DIB || window.dibMenu) {
-      // DIB already loaded (likely from Worker), just reinitialize if needed
-      if (window.DIB && typeof window.DIB.init === 'function') {
-        window.DIB.init()
-      }
-      return
-    }
-
-    // Check if script element already exists
-    const existingScript = document.getElementById('dropin-blog-script')
-    if (existingScript) {
-      // Script tag exists, try to reinitialize
-      if (window.DIB && typeof window.DIB.init === 'function') {
-        window.DIB.init()
-      }
-      return
-    }
-
-    // Check for any existing DIB scripts in the page
-    const existingDibScripts = document.querySelectorAll('script[src*="dropinblog.com"], script[src*="io.dropinblog.com"]')
-    if (existingDibScripts.length > 0) {
-      // DIB script already in page (from Worker), don't load again
-      return
-    }
-
-    // Only load if DIB is not present at all (fallback for non-Worker requests)
-    const script = document.createElement('script')
-    script.id = 'dropin-blog-script'
-    script.src = 'https://io.dropinblog.com/embedjs/2e37eb85-3320-46a6-adb0-28174e06195c.js'
-    script.async = true
-    
-    // Add error handling
-    script.onerror = () => {
-      console.error('Failed to load DropIn Blog script')
-    }
-    
-    // Add load handler to ensure initialization
-    script.onload = () => {
-      // Give a small delay to ensure the script has fully initialized
-      setTimeout(() => {
-        if (window.DIB && typeof window.DIB.init === 'function') {
-          window.DIB.init()
-        }
-      }, 100)
-    }
-
-    document.head.appendChild(script)
-
-    // Cleanup function
-    return () => {
-      // Don't remove the script on unmount as it might be needed for other pages
-      // The script will persist and be reused
-    }
-  }, [])
+  // Note: Blog content is served by the Cloudflare Worker via Drop In Blog
+  // The Worker intercepts requests to /resource-center/blog/* and serves
+  // DIB-rendered content. No client-side script loading needed.
 
   return (
     <Layout includeCTA={true}>
@@ -104,3 +50,4 @@ export const Head = () => (
     <meta name="description" content="Stay current with your PharmTech career through our blog featuring the latest news, tips, and resources for pharmacy technicians." />
   </>
 )
+        }

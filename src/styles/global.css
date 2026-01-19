@@ -135,7 +135,7 @@
     list-style-type: disc;
   }
   ol {
-    list-style-type: lower-alpha;
+    list-style-type: decimal;
   }
 
   .content-container p a {

@@ -51,19 +51,19 @@ const MarketingOppsPage = () => {
             <h4 className="font-semibold mb-3">💡 Pharmacy Technician Job Boost - $19.95</h4>
             <p>Have an open pharmacy technician role that needs more visibility?</p>
             <p>Our Job Boost is a one-time social media promotion designed specifically to help pharmacy technician roles get seen by the right audience, without recruiter fees or long-term contracts.</p>
-            <p>Job Boos includes:</p>
-            <ul>
+            <p>Job Boost includes:</p>
+            <ul className="mb-3 list-disc list-inside">
               <li>1 pharmacy technician job per purchase</li>
               <li>2 social media posts over a short 7-10 day promotion window</li>
               <li>Shared across Pharm Techs Only!’s social platforms</li>
               <li>Targeted visibility to pharmacy technicians actively watching for new roles</li>
             </ul>
-            <p>✔️ No subscriptions</p>
-            <p>✔️ No contracts</p>
-            <p>✔️ No recruiter fees</p>
-            <p>✔️ Pharmacy technician–focused audience</p>
+            <p>✔️ No subscriptions<br />
+            ✔️ No contracts<br />
+            ✔️ No recruiter fees<br />
+            ✔️ Pharmacy technician–focused audience</p>
             <p>👉 How it works</p>
-            <ol>
+            <ol className="mb-3 list-numeric list-inside">
               <li>Complete payment first</li>
               <li>You'll be given a link to the job submission form immediately after payment</li>
               <li>Submit your role details and we handle the promotion</li>

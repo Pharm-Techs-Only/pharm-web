@@ -36,13 +36,42 @@ const MarketingOppsPage = () => {
             <p>Promote your products or services across our community with an eye-catching ad. Platform and newsletter ads ensure maximum visibility to our highly targeted audience.</p>
 
             <h4 className="font-semibold mb-3">📱 Paid Social Media Posts</h4>
-            <p>Leverage our growing social media presence with a paid post featuring your product, service, or campaign. Each post is tailored to match the tone and interests of our pharmacy technician audience to maximize engagement and reach. Posts can include a direct link to your website, discount code, or promo page. Perfect for boosting awareness, driving traffic, and getting in front of our 40K+ followers and active LinkedIn network.</p>
+            <p>Leverage our growing social media presence with a paid post featuring your product, service, campaign, or employer brand. Each post is tailored to match the tone and interests of our global pharmacy technician audience to maximize engagement and reach.</p>
+            <p>What's included:</p>
+            <ul>
+              <li>Paid social media post shared across all of our platforms</li>
+              <li>Distribution on LinkedIn, Facebook, Instagram, and Pinterest</li>
+              <li>Direct link to your website, landing page, or promo page</li>
+              <li>Ideal for brand awareness, traffic, and targeted visibility</li>
+            </ul>
+            <p>Perfect for companies, vendors, educators, and organizations looking to reach 55,000+ followers across all platforms, including an active LinkedIn network of pharmacy technicians.</p>
 
-            <p>▶ Partner with Pharm Techs Only! today to promote your business to a highly targeted audience of Pharmacy Technicians.</p>
+            <p>📧 For questions, custom requests, or additional details, contact <a href="mailto:questions@pharmtechsonly.com" target="_blank" title="Email Us!">questions@pharmtechsonly.com</a>.</p>
 
-            <p><a href="mailto:questions@pharmtechsonly.com" target="_blank" title="Email Us!">📧 Email us</a> for more details, including pricing and current search and audience metrics.</p>
-
-            <p>Let us help you grow your pharmaceutical brand!</p>
+            <h4 className="font-semibold mb-3">💡 Pharmacy Technician Job Boost - $19.95</h4>
+            <p>Have an open pharmacy technician role that needs more visibility?</p>
+            <p>Our Job Boost is a one-time social media promotion designed specifically to help pharmacy technician roles get seen by the right audience, without recruiter fees or long-term contracts.</p>
+            <p>Job Boos includes:</p>
+            <ul>
+              <li>1 pharmacy technician job per purchase</li>
+              <li>2 social media posts over a short 7-10 day promotion window</li>
+              <li>Shared across Pharm Techs Only!’s social platforms</li>
+              <li>Targeted visibility to pharmacy technicians actively watching for new roles</li>
+            </ul>
+            <p>✔️ No subscriptions</p>
+            <p>✔️ No contracts</p>
+            <p>✔️ No recruiter fees</p>
+            <p>✔️ Pharmacy technician–focused audience</p>
+            <p>👉 How it works</p>
+            <ol>
+              <li>Complete payment first</li>
+              <li>You'll be given a link to the job submission form immediately after payment</li>
+              <li>Submit your role details and we handle the promotion</li>
+            </ol>
+            <p><strong>🔗 Purchase Job Boost:</strong></p>
+            <p><a href="https://buy.stripe.com/4gM6oH8pLaKGgYe3ip2oE01">https://buy.stripe.com/4gM6oH8pLaKGgYe3ip2oE01</a></p>
+            <p><strong>▶️ Partner with Pharm Techs Only!</strong> to promote your business, brand, or open roles directly to a global pharmacy technician audience.</p>
+            <p>📧 For questions, custom requests, or additional details, contact <a href="mailto:questions@pharmtechsonly.com" target="_blank" title="Email Us!">questions@pharmtechsonly.com</a>.</p>
           </div>
           <div className="-left-[115px] bottom-[420px] absolute z-10"><StaticImage src="../images/cloud_one.svg" alt="Cloud One" /></div>
           <div className="-right-[180px] bottom-[225px] absolute z-10"><StaticImage src="../images/cloud_three.svg" alt="Cloud Three" /></div>

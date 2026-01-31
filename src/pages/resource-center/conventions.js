@@ -82,7 +82,7 @@ const ConventionsPage = () => {
   return (
     <Layout includeCTA={true}>
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Conventions
           </h1>
@@ -93,7 +93,7 @@ const ConventionsPage = () => {
             Network with industry professionals, learn about the latest developments, and advance your pharmacy career.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] relative px-12">
+        <div className="flex justify-center w-[50%] lg:pt-[40px] xl:pt-0 relative px-12">
           <StaticImage src="../../images/hero_conventions.svg" alt="Pharmacy Technician Conventions" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>

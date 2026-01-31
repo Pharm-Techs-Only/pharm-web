@@ -123,7 +123,7 @@ const OrganizationsPage = () => {
   return (
     <Layout includeCTA={true}>
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Organizations
           </h1>
@@ -133,7 +133,7 @@ const OrganizationsPage = () => {
             to advance your pharmacy career.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] relative px-12">
+        <div className="flex justify-center w-[50%] lg:pt-[40px] xl:pt-0 relative px-12">
           <StaticImage src="../../images/hero_organizations.svg" alt="Pharmacy Technician Organizations" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>

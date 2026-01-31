@@ -113,7 +113,7 @@ const FreeCEUsPage = () => {
     <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Free Continuing Education Units (CEUs)
           </h1>
@@ -124,7 +124,7 @@ const FreeCEUsPage = () => {
             Explore Pharm Techs Only!'s curated list of Absolutely FREE CEUs from leading continuing education providers. Some sites may require a quick, free registration to access courses. Updated regularly, our resource helps Pharmacy Technicians stay compliant, advance their careers, and boost their skills—all without spending a penny. Check back often for new opportunities!
           </p>
         </div>
-        <div className="flex justify-center w-[50%] relative px-12">
+        <div className="flex justify-center lg:pt-[40px] xl:pt-0 w-[50%] relative px-12">
           <StaticImage src="../../images/hero_ceus.svg" alt="Free CEUs" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>

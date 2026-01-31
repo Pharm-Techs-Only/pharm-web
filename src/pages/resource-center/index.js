@@ -42,7 +42,7 @@ const ResourceCenterPage = () => {
     <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Resource Center
           </h1>
@@ -50,7 +50,7 @@ const ResourceCenterPage = () => {
             Providing comprehensive tools and resources to support your job and growth as a pharmacy technician.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] relative px-12">
+        <div className="flex justify-center lg:pt-[40px] xl:pt-0 w-[50%] relative px-12">
           <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
@@ -61,16 +61,20 @@ const ResourceCenterPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource, index) => (
               <div key={index} className="item-wrap flex flex-col items-center">
-                {resource.icon && (
-                  <img
-                    src={resource.icon}
-                    alt={resource.title}
-                    className="w-12 h-12 mb-4"
-                  />
-                )}
-                <h3 className="mb-3">
-                  {resource.title}
-                </h3>
+                <Link
+                  to={resource.link}
+                >
+                  {resource.icon && (
+                    <img
+                      src={resource.icon}
+                      alt={resource.title}
+                      className="w-12 h-12 mb-4"
+                    />
+                  )}
+                  <h3 className="mb-3">
+                    {resource.title}
+                  </h3>
+                </Link>
                 <p className="text-gray-600 text-center mb-4">
                   {resource.description}
                 </p>

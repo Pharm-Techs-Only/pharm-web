@@ -9,6 +9,7 @@ import IconFreeCeus from '../../assets/images/icon_free-ceus.svg'
 import IconOrganizations from '../../assets/images/icon_organizations.svg'
 import IconConventions from '../../assets/images/icon_conventions.svg'
 import IconBlog from '../../assets/images/icon_blog.svg'
+import IconCareerResources from '../../assets/images/icon_career-resources.svg'
 
 const ResourceCenterPage = () => {
   const resources = [
@@ -35,7 +36,13 @@ const ResourceCenterPage = () => {
       description: 'Insights and articles on pharmacy technician topics and trends.',
       link: '/resource-center/blog',
       icon: IconBlog
-    }
+    },
+    {
+      title: 'Career Resources',
+      description: 'Downloadable guides, templates, and tips to help you advance your career.',
+      link: '/resource-center/careers',
+      icon: IconFreeCeus
+    },
   ]
 
   return (
@@ -63,6 +70,7 @@ const ResourceCenterPage = () => {
               <div key={index} className="item-wrap flex flex-col items-center">
                 <Link
                   to={resource.link}
+                  className="flex flex-col items-center"
                 >
                   {resource.icon && (
                     <img

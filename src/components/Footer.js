@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="content-container relative">
         <div className="relative px-4 sm:px-6 lg:px-8 z-30 flex flex-col-reverse lg:flex-row justify-between items-center lg:items-stretch">
           <div className="justify-center w-[50%] px-12 pb-8 relative flex flex-col hidden lg:block lg:self-end">
-            <StaticImage src="../images/footer_image.svg" alt="Pharmacy Technician" className="" />
+            <StaticImage src="../assets/images/footer_image.svg" alt="Pharmacy Technician" className="" />
           </div>
         
           {/* Right side - Links */}
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor-footer.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+      <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../assets/images/cloud_floor-footer.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-blue)]/0 to-[var(--color-bg-white)]/100 pointer-events-none z-2"></div>
     </footer>
   )

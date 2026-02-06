@@ -17,7 +17,7 @@ const MarketingOppsPage = () => {
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../images/hero_home.svg" alt="Marketing Opportunities" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../assets/images/hero_home.svg" alt="Marketing Opportunities" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 
@@ -73,10 +73,10 @@ const MarketingOppsPage = () => {
             <p><strong>▶️ Partner with Pharm Techs Only!</strong> to promote your business, brand, or open roles directly to a global pharmacy technician audience.</p>
             <p>📧 For questions, custom requests, or additional details, contact <a href="mailto:questions@pharmtechsonly.com" target="_blank" title="Email Us!">questions@pharmtechsonly.com</a>.</p>
           </div>
-          <div className="-left-[115px] bottom-[420px] absolute z-10"><StaticImage src="../images/cloud_one.svg" alt="Cloud One" /></div>
-          <div className="-right-[180px] bottom-[225px] absolute z-10"><StaticImage src="../images/cloud_three.svg" alt="Cloud Three" /></div>
+          <div className="-left-[115px] bottom-[420px] absolute z-10"><StaticImage src="../assets/images/cloud_one.svg" alt="Cloud One" /></div>
+          <div className="-right-[180px] bottom-[225px] absolute z-10"><StaticImage src="../assets/images/cloud_three.svg" alt="Cloud Three" /></div>
         </div>
-        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../assets/images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </section>
     </Layout>
   )

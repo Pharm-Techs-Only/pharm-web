@@ -83,13 +83,13 @@ const Header = () => {
             <Link to="/" className="text-2xl font-bold text-blue-600">
               {location.pathname.indexOf('/store') !== -1 ? (
                 <StaticImage
-                  src="../images/logo_store.png"
+                  src="../assets/images/logo_store.png"
                   alt="PharmTechsOnly! Store"
                   width={200}
                 />
               ) : (
                 <StaticImage
-                  src="../images/logo.svg"
+                  src="../assets/images/logo.svg"
                   alt="PharmTechsOnly!"
                 />
               )}

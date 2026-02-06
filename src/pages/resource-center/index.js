@@ -5,10 +5,10 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 // Import icons
-import IconFreeCeus from '../../images/icon_free-ceus.svg'
-import IconOrganizations from '../../images/icon_organizations.svg'
-import IconConventions from '../../images/icon_conventions.svg'
-import IconBlog from '../../images/icon_blog.svg'
+import IconFreeCeus from '../../assets/images/icon_free-ceus.svg'
+import IconOrganizations from '../../assets/images/icon_organizations.svg'
+import IconConventions from '../../assets/images/icon_conventions.svg'
+import IconBlog from '../../assets/images/icon_blog.svg'
 
 const ResourceCenterPage = () => {
   const resources = [
@@ -51,7 +51,7 @@ const ResourceCenterPage = () => {
           </p>
         </div>
         <div className="flex justify-center lg:pt-[40px] xl:pt-0 w-[50%] relative px-12">
-          <StaticImage src="../../images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../../assets/images/hero_home.svg" alt="Two Pharmacy Technicians" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

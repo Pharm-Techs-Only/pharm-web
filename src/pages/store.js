@@ -60,7 +60,7 @@ const StorePage = () => {
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../images/hero_store.svg" alt="Pharmacy Technicians Store" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../assets/images/hero_store.svg" alt="Pharmacy Technicians Store" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

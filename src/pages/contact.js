@@ -20,7 +20,7 @@ const ContactPage = () => {
           </p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../images/hero_contact.svg" alt="Contact Us" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../assets/images/hero_contact.svg" alt="Contact Us" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 
@@ -52,7 +52,7 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-        </div><div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        </div><div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../assets/images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
       </section>
 
       {/* Email Section */}

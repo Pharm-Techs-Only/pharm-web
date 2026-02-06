@@ -18,7 +18,7 @@ const HomePage = () => {
           <p>We know the daily grind because we've lived it. We understand the pressure of a ringing phone, a long queue of patients, and a complex insurance rejection—all while ensuring 100% accuracy. That shared experience is the foundation of everything we do. We're not a top-down organization run by people who don't understand your role; we are a grassroots movement dedicated to empowering our own.</p>
         </div>
         <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../images/hero_about.svg" alt="About Pharm Techs Only!" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../assets/images/hero_about.svg" alt="About Pharm Techs Only!" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 
@@ -45,7 +45,7 @@ const HomePage = () => {
             <p>Through Pharm Techs Only!, Courtney is creating more than a platform, she's creating a global movement of empowered pharmacy technicians.</p>
           </div>
           <div className="flex w-[50%] pt-[60px] md:pt-[80px] lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pl-0 lg:pl-[120px]">
-            <StaticImage src="../images/cmiller.jpg" alt="Courtney Miller" />
+            <StaticImage src="../assets/images/cmiller.jpg" alt="Courtney Miller" />
           </div>            
         </div>
       </section>

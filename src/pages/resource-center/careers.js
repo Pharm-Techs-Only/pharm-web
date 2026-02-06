@@ -6,7 +6,7 @@ import { CeusData } from '../../data/ceus'
 import { StaticImage } from 'gatsby-plugin-image'
 import ResourceLink from '../../components/ResourceLink'
 
-const FreeCEUsPage = () => {
+const CareerResourcesPage = () => {
   // Format date for display
   const formatExpirationDate = (dateString) => {
     const date = new Date(dateString)
@@ -54,12 +54,12 @@ const FreeCEUsPage = () => {
     const currentCeus = filterCEUsByExpiration(ceus)
     const sortedCeus = sortCEUsByDate(currentCeus)
     const groupedCeus = groupCEUsByYear(sortedCeus)
-    
+
     // Sort CEUs within each year group by date
     Object.keys(groupedCeus).forEach(year => {
       groupedCeus[year] = sortCEUsByDate(groupedCeus[year])
     })
-    
+
     return groupedCeus
   }
 
@@ -83,7 +83,7 @@ const FreeCEUsPage = () => {
   const filterCEUsByExpiration = (ceus = CeusData) => {
     const today = new Date()
     today.setHours(0, 0, 0, 0) // Set to start of day for accurate comparison
-    
+
     return ceus.filter(ceu => {
       const expirationDate = new Date(ceu.expirationDate)
       return expirationDate >= today
@@ -104,7 +104,7 @@ const FreeCEUsPage = () => {
     return daysDiff <= days && daysDiff > 0
   }
 
-  
+
   // Get CEUs grouped by year and sorted
   const ceusByYear = getCEUsGroupedAndSorted(CeusData)
   const availableYears = getAvailableYears(CeusData)
@@ -134,23 +134,23 @@ const FreeCEUsPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
-          
+
           <div className="prose max-w-none">
-            
+
             <div className="item-wrap p-6 mb-8 items-start">
               <h2 className="text-xl font-semibold mb-2 text-pharm-blue">Important Note</h2>
               <p className="text-pharm-grey text-left">
-                All courses are accredited and meet state requirements for pharmacy technician continuing education. 
+                All courses are accredited and meet state requirements for pharmacy technician continuing education.
                 Certificates are provided upon successful completion. Please note the expiration dates for each course.
               </p>
             </div>
-            
+
             {availableYears.map(year => (
               <div key={year} className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-pharm-blue">
                   Expiring in {year}
                 </h2>
-                
+
                 <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                   {ceusByYear[year]?.map((ceu, index) => (
                     <div key={index} className="item-wrap items-start text-left">
@@ -176,15 +176,14 @@ const FreeCEUsPage = () => {
                           <p className="text-pharm-grey font-medium mb-0">{ceu.hours}</p>
                         </div>
                       </div>
-                      
+
                       <p className="text-pharm-grey mb-8">{ceu.description}</p>
-                      
-                      <button 
-                        className={`px-4 py-2 rounded inline-flex items-center transition-colors ${
-                          ceu.link
+
+                      <button
+                        className={`px-4 py-2 rounded inline-flex items-center transition-colors ${ceu.link
                             ? 'btn text-white'
                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                        }`}
+                          }`}
                         disabled={!ceu.link || ceu.link === '#'}
                         onClick={() => {
                           if (ceu.link && ceu.link !== '#') {
@@ -204,7 +203,7 @@ const FreeCEUsPage = () => {
                 </div>
               </div>
             ))}
-            
+
             <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h2 className="text-2xl font-semibold mb-4 text-blue-800">CEU Requirements & Important Information</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -233,11 +232,11 @@ const FreeCEUsPage = () => {
   )
 }
 
-export default FreeCEUsPage
+export default CareerResourcesPage
 
 export const Head = () => (
   <>
-    <title>Free CEUs - PharmTechs Only</title>
-    <meta name="description" content="Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians." />
+    <title>Career Resources - PharmTechs Only</title>
+    <meta name="description" content="Explore resources to help boost your pharmacy technician career, including job boards, resume tips, interview preparation, and professional development opportunities." />
   </>
 )

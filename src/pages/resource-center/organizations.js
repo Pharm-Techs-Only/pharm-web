@@ -134,7 +134,7 @@ const OrganizationsPage = () => {
           </p>
         </div>
         <div className="flex justify-center w-[50%] lg:pt-[40px] xl:pt-0 relative px-12">
-          <StaticImage src="../../images/hero_organizations.svg" alt="Pharmacy Technician Organizations" className="lg:!absolute -bottom-[20px]" />
+          <StaticImage src="../../assets/images/hero_organizations.svg" alt="Pharmacy Technician Organizations" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

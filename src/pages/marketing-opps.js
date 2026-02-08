@@ -9,8 +9,8 @@ const MarketingOppsPage = () => {
       {/* Main Hero Section */}
       <HeroHeader>
         <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
-          <h1>
-            Market your business with Pharm Techs Only!
+          <h1 className="flex items-center">
+            Partner with <img src="../assets/images/logo_pharmtechsonly.svg" alt="Pharm Techs Only!" className="block" />
           </h1>
           <p>
             Explore our tailored marketing opportunities designed to help you reach and engage with the pharmacy technician community effectively.
@@ -59,9 +59,9 @@ const MarketingOppsPage = () => {
               <li>Targeted visibility to pharmacy technicians actively watching for new roles</li>
             </ul>
             <p>✔️ No subscriptions<br />
-            ✔️ No contracts<br />
-            ✔️ No recruiter fees<br />
-            ✔️ Pharmacy technician–focused audience</p>
+              ✔️ No contracts<br />
+              ✔️ No recruiter fees<br />
+              ✔️ Pharmacy technician–focused audience</p>
             <p>👉 How it works</p>
             <ol>
               <li>Complete payment first</li>

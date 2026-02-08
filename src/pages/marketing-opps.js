@@ -9,8 +9,8 @@ const MarketingOppsPage = () => {
       {/* Main Hero Section */}
       <HeroHeader>
         <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
-          <h1 className="flex items-center">
-            Partner with <img src="../assets/images/logo_pharmtechsonly.svg" alt="Pharm Techs Only!" className="block" />
+          <h1 className="flex flex-col items-center">
+            <span>Partner with</span><StaticImage src="../assets/images/logo-white.svg" alt="Pharm Techs Only!" />
           </h1>
           <p>
             Explore our tailored marketing opportunities designed to help you reach and engage with the pharmacy technician community effectively.

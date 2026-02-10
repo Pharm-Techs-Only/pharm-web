@@ -4,6 +4,9 @@ import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { CeusData } from '../../data/ceus'
 import { StaticImage } from 'gatsby-plugin-image'
+import heroCeus from '../../assets/images/hero_ceus.svg'
+import iconCal from '../../assets/images/icon_cal.svg'
+import iconClock from '../../assets/images/icon_clock.svg'
 import ResourceLink from '../../components/ResourceLink'
 
 const FreeCEUsPage = () => {
@@ -54,12 +57,12 @@ const FreeCEUsPage = () => {
     const currentCeus = filterCEUsByExpiration(ceus)
     const sortedCeus = sortCEUsByDate(currentCeus)
     const groupedCeus = groupCEUsByYear(sortedCeus)
-    
+
     // Sort CEUs within each year group by date
     Object.keys(groupedCeus).forEach(year => {
       groupedCeus[year] = sortCEUsByDate(groupedCeus[year])
     })
-    
+
     return groupedCeus
   }
 
@@ -83,7 +86,7 @@ const FreeCEUsPage = () => {
   const filterCEUsByExpiration = (ceus = CeusData) => {
     const today = new Date()
     today.setHours(0, 0, 0, 0) // Set to start of day for accurate comparison
-    
+
     return ceus.filter(ceu => {
       const expirationDate = new Date(ceu.expirationDate)
       return expirationDate >= today
@@ -104,7 +107,7 @@ const FreeCEUsPage = () => {
     return daysDiff <= days && daysDiff > 0
   }
 
-  
+
   // Get CEUs grouped by year and sorted
   const ceusByYear = getCEUsGroupedAndSorted(CeusData)
   const availableYears = getAvailableYears(CeusData)
@@ -113,7 +116,7 @@ const FreeCEUsPage = () => {
     <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Free Continuing Education Units (CEUs)
           </h1>
@@ -124,8 +127,8 @@ const FreeCEUsPage = () => {
             Explore Pharm Techs Only!'s curated list of Absolutely FREE CEUs from leading continuing education providers. Some sites may require a quick, free registration to access courses. Updated regularly, our resource helps Pharmacy Technicians stay compliant, advance their careers, and boost their skills—all without spending a penny. Check back often for new opportunities!
           </p>
         </div>
-        <div className="flex justify-center lg:pt-[40px] xl:pt-0 w-[50%] relative px-12">
-          <StaticImage src="../../assets/images/hero_ceus.svg" alt="Free CEUs" className="lg:!absolute -bottom-[20px]" />
+        <div className="flex justify-center lg:pt-[40px] xl:pt-0 w-[100%] md:w-[70%] lg:w-[50%] relative px-12">
+          <img src={heroCeus} alt="Free CEUs" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 
@@ -134,23 +137,23 @@ const FreeCEUsPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
-          
+
           <div className="prose max-w-none">
-            
+
             <div className="item-wrap p-6 mb-8 items-start">
               <h2 className="text-xl font-semibold mb-2 text-pharm-blue">Important Note</h2>
               <p className="text-pharm-grey text-left">
-                All courses are accredited and meet state requirements for pharmacy technician continuing education. 
+                All courses are accredited and meet state requirements for pharmacy technician continuing education.
                 Certificates are provided upon successful completion. Please note the expiration dates for each course.
               </p>
             </div>
-            
+
             {availableYears.map(year => (
               <div key={year} className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-pharm-blue">
                   Expiring in {year}
                 </h2>
-                
+
                 <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                   {ceusByYear[year]?.map((ceu, index) => (
                     <div key={index} className="item-wrap items-start text-left">
@@ -166,25 +169,24 @@ const FreeCEUsPage = () => {
                       </div>
                       <div className="mb-6">
                         <div className="flex flex-wrap items-center gap-4 mb-2">
-                          <StaticImage src="../../assets/images/icon_cal.svg" alt="Calendar Icon" className="w-[24px] h-[24px]" />
+                          <img src={iconCal} alt="Calendar Icon" className="w-[24px] h-[24px]" />
                           <p className="text-pharm-grey font-medium mb-0">
                             Expiration Date: {formatExpirationDate(ceu.expirationDate)}
                           </p>
                         </div>
                         <div className="flex flex-wrap items-center gap-4 mb-2">
-                          <StaticImage src="../../assets/images/icon_clock.svg" alt="Clock Icon" className="w-[24px] h-[24px]" />
+                          <img src={iconClock} alt="Clock Icon" className="w-[24px] h-[24px]" />
                           <p className="text-pharm-grey font-medium mb-0">{ceu.hours}</p>
                         </div>
                       </div>
-                      
+
                       <p className="text-pharm-grey mb-8">{ceu.description}</p>
-                      
-                      <button 
-                        className={`px-4 py-2 rounded inline-flex items-center transition-colors ${
-                          ceu.link
-                            ? 'btn text-white'
-                            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                        }`}
+
+                      <button
+                        className={`px-4 py-2 rounded inline-flex items-center transition-colors ${ceu.link
+                          ? 'btn text-white'
+                          : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                          }`}
                         disabled={!ceu.link || ceu.link === '#'}
                         onClick={() => {
                           if (ceu.link && ceu.link !== '#') {
@@ -204,7 +206,7 @@ const FreeCEUsPage = () => {
                 </div>
               </div>
             ))}
-            
+
             <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h2 className="text-2xl font-semibold mb-4 text-blue-800">CEU Requirements & Important Information</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

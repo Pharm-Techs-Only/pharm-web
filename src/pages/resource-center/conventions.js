@@ -3,6 +3,7 @@ import Layout from '../../components/Layout'
 import { ConventionsData } from '../../data/conventions'
 import HeroHeader from '../../components/HeroHeader'
 import { StaticImage } from 'gatsby-plugin-image'
+import heroConventions from '../../assets/images/hero_conventions.svg'
 import ResourceLink from '../../components/ResourceLink'
 
 const ConventionsPage = () => {
@@ -23,14 +24,14 @@ const ConventionsPage = () => {
   }
   // Filter expired conventions
   const filterConventionsByExpiration = (conventions = ConventionsData) => {
-      const today = new Date()
-      today.setHours(0, 0, 0, 0) // Set to start of day for accurate comparison
+    const today = new Date()
+    today.setHours(0, 0, 0, 0) // Set to start of day for accurate comparison
 
-      return conventions.filter(convention => {
-        const expirationDate = new Date(convention.date)
-        return expirationDate >= today
-      })
-    }
+    return conventions.filter(convention => {
+      const expirationDate = new Date(convention.date)
+      return expirationDate >= today
+    })
+  }
 
   // Group conventions by country, then by year, then sort by date within each year
   const groupConventions = () => {
@@ -42,7 +43,7 @@ const ConventionsPage = () => {
           console.warn('Skipping invalid convention:', convention)
           return acc
         }
-        
+
         if (!acc[convention.country]) {
           acc[convention.country] = {}
         }
@@ -52,10 +53,10 @@ const ConventionsPage = () => {
         acc[convention.country][convention.year].push(convention)
         return acc
       }, {})
-      
+
       // Sort countries alphabetically
       const sortedCountries = Object.keys(grouped).sort()
-      
+
       return sortedCountries.map(country => ({
         country,
         years: Object.keys(grouped[country])
@@ -82,19 +83,19 @@ const ConventionsPage = () => {
   return (
     <Layout includeCTA={true}>
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Conventions
           </h1>
           <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
-            Discover upcoming pharmacy conventions, conferences, and professional meetings. 
+            Discover upcoming pharmacy conventions, conferences, and professional meetings.
           </p>
           <p className="text-xl text-pharm-grey max-w-3xl mx-auto">
             Network with industry professionals, learn about the latest developments, and advance your pharmacy career.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] lg:pt-[40px] xl:pt-0 relative px-12">
-          <StaticImage src="../../assets/images/hero_conventions.svg" alt="Pharmacy Technician Conventions" className="lg:!absolute -bottom-[20px]" />
+        <div className="flex justify-center w-[100%] md:w-[70%] lg:w-[50%] lg:pt-[40px] xl:pt-0 relative px-12">
+          <img src={heroConventions} alt="Pharmacy Technician Conventions" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 
@@ -103,9 +104,9 @@ const ConventionsPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
-          
+
           <p className="text-lg text-gray-600 mb-8">
-            
+
           </p>
 
           {/* Summary */}
@@ -133,14 +134,14 @@ const ConventionsPage = () => {
                   </span>
                   {countryGroup.country}
                 </h2>
-                
+
                 <div className="space-y-8">
                   {countryGroup.years.map((yearGroup, yearIndex) => (
                     <div key={yearIndex} className="ml-4">
                       <h3 className="text-2xl font-semibold mb-4 text-pharm-grey">
                         {yearGroup.year}
                       </h3>
-                      
+
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {yearGroup.conventions.map((convention, index) => (
                           <div key={index} className="item-wrap justify-start text-left">
@@ -150,28 +151,28 @@ const ConventionsPage = () => {
                                 {convention.year}
                               </span>
                             </div>
-                            
+
                             {convention.description && (
                               <p className="mb-3 italic">{convention.description}</p>
                             )}
-                            
+
                             <div className="w-full mb-4">
                               <div>
                                 <p className="font-medium mb-1">Location:</p>
                                 <p className="text-sm">{convention.location}</p>
                               </div>
-                              
+
                               <div>
                                 <p className="font-medium mb-1">Date:</p>
                                 <p className="text-sm">{convention.dateRange}</p>
                               </div>
-                              
+
                               {convention.website && (
                                 <div>
                                   <p className="font-medium mb-1">Website:</p>
-                                  <a 
-                                    href={convention.website} 
-                                    target="_blank" 
+                                  <a
+                                    href={convention.website}
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-pharm-blue hover:text-pharm-light-blue text-sm underline break-all"
                                   >
@@ -180,12 +181,12 @@ const ConventionsPage = () => {
                                 </div>
                               )}
                             </div>
-                            
+
                             {convention.website && (
                               <div className="pt-3 border-t border-gray-100">
-                                <a 
-                                  href={convention.website} 
-                                  target="_blank" 
+                                <a
+                                  href={convention.website}
+                                  target="_blank"
                                   rel="noopener noreferrer"
                                   className="px-4 py-2 btn "
                                 >
@@ -205,7 +206,7 @@ const ConventionsPage = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Benefits Section */}
           <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-12">
             <h2 className="text-2xl font-semibold mb-4 text-green-800">Why Attend Pharmacy Conventions?</h2>
@@ -224,7 +225,7 @@ const ConventionsPage = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Planning Tips Section */}
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mt-8">
             <h2 className="text-2xl font-semibold mb-4 text-yellow-800">Convention Planning Tips</h2>

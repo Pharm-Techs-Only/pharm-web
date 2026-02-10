@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
 import { StaticImage } from 'gatsby-plugin-image'
+import heroStore from '../assets/images/hero_store.svg'
 
 const StorePage = () => {
   useEffect(() => {
@@ -10,7 +11,7 @@ const StorePage = () => {
     if (existingScript) {
       // If script exists, reinitialize if needed
       if (window.xProductBrowser && typeof window.xProductBrowser === 'function') {
-        window.xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-85557832")
+        window.xProductBrowser("categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-85557832")
       }
       return
     }
@@ -22,18 +23,18 @@ const StorePage = () => {
     script.setAttribute('data-cfasync', 'false')
     script.type = 'text/javascript'
     script.charset = 'utf-8'
-    
+
     // Add error handling
     script.onerror = () => {
       console.error('Failed to load Ecwid store script')
     }
-    
+
     // Add load handler to initialize store
     script.onload = () => {
       // Give a small delay to ensure the script has fully initialized
       setTimeout(() => {
         if (window.xProductBrowser && typeof window.xProductBrowser === 'function') {
-          window.xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-85557832")
+          window.xProductBrowser("categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-85557832")
         }
       }, 100)
     }
@@ -51,7 +52,7 @@ const StorePage = () => {
     <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Store
           </h1>
@@ -59,8 +60,8 @@ const StorePage = () => {
             Explore our store for the latest products and resources tailored for pharmacy technicians.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../assets/images/hero_store.svg" alt="Pharmacy Technicians Store" className="lg:!absolute -bottom-[20px]" />
+        <div className="flex justify-center w-[100%] md:w-[70%] lg:w-[50%] relative px-12">
+          <img src={heroStore} alt="Pharmacy Technicians Store" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

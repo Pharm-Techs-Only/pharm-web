@@ -3,6 +3,7 @@ import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+import heroBlog from '../../assets/images/hero_blog.svg'
 import ResourceLink from '../../components/ResourceLink'
 
 const BlogPage = () => {
@@ -14,7 +15,7 @@ const BlogPage = () => {
     <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Blog
           </h1>
@@ -25,8 +26,8 @@ const BlogPage = () => {
             Updated regularly with articles, tips, and resources to help you advance your career.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../../assets/images/hero_blog.svg" alt="Pharm Techs Only Blog" className="lg:!absolute -bottom-[20px]" />
+        <div className="flex justify-center w-[100%] md:w-[70%] lg:w-[50%] relative px-12">
+          <img src={heroBlog} alt="Pharm Techs Only Blog" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

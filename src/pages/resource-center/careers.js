@@ -4,6 +4,7 @@ import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { ResourceData } from '../../data/careers'
 import { StaticImage } from 'gatsby-plugin-image'
+import heroCeus from '../../assets/images/hero_ceus.svg'
 import ResourceLink from '../../components/ResourceLink'
 
 const CareerResourcesPage = () => {
@@ -11,7 +12,7 @@ const CareerResourcesPage = () => {
     <Layout includeCTA={true}>
       {/* Hero Section */}
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Career Resources
           </h1>
@@ -22,8 +23,8 @@ const CareerResourcesPage = () => {
             Explore our curated collection of downloadable guides, templates, and tips designed to help you advance your career. From resume building to interview prep, we have the resources you need to succeed.
           </p>
         </div>
-        <div className="flex justify-center lg:pt-[40px] xl:pt-0 w-[50%] relative px-12">
-          <StaticImage src="../../assets/images/hero_ceus.svg" alt="Career Resources" className="lg:!absolute -bottom-[20px]" />
+        <div className="flex justify-center lg:pt-[40px] xl:pt-0 w-[100%] md:w-[70%] lg:w-[50%] relative px-12">
+          <img src={heroCeus} alt="Career Resources" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 

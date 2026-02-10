@@ -4,12 +4,13 @@ import { Link } from 'gatsby'
 import HeroHeader from '../../components/HeroHeader'
 import { OrganizationsData } from '../../data/organizations'
 import { StaticImage } from 'gatsby-plugin-image'
+import heroOrganizations from '../../assets/images/hero_organizations.svg'
 import ResourceLink from '../../components/ResourceLink'
 
 const OrganizationsPage = () => {
   const [activeTab, setActiveTab] = useState('associations')
 
-  
+
 
   const tabs = [
     { key: 'associations', label: 'Associations', count: OrganizationsData.associations.length },
@@ -26,14 +27,14 @@ const OrganizationsPage = () => {
       acc[org.region].push(org)
       return acc
     }, {})
-    
+
     // Sort regions: North America first, then alphabetically
     const sortedRegions = Object.keys(grouped).sort((a, b) => {
       if (a === 'North America') return -1
       if (b === 'North America') return 1
       return a.localeCompare(b)
     })
-    
+
     return sortedRegions.map(region => ({
       region,
       organizations: grouped[region]
@@ -42,7 +43,7 @@ const OrganizationsPage = () => {
 
   const renderOrganizations = (organizations) => {
     const regionGroups = groupByRegion(organizations)
-    
+
     return (
       <div className="space-y-8">
         {regionGroups.map((group, groupIndex) => (
@@ -53,7 +54,7 @@ const OrganizationsPage = () => {
               </span>
               {group.region} {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
             </h3>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {group.organizations.map((org, index) => (
                 <div key={index} className="item-wrap justify-start items-start text-left">
@@ -63,7 +64,7 @@ const OrganizationsPage = () => {
                       {org.region}
                     </span>
                   </div>
-                  
+
                   {/* Contact Information */}
                   <div className="mb-4">
                     {org.address && (
@@ -75,34 +76,34 @@ const OrganizationsPage = () => {
                         </p>
                       </div>
                     )}
-                    
+
                     {org.phone && (
                       <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Phone:</p>
                         <p className="text-sm mb-0">{org.phone}</p>
                       </div>
                     )}
-                    
+
                     {org.fax && (
                       <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Fax:</p>
                         <p className="text-sm mb-0">{org.fax}</p>
                       </div>
                     )}
-                    
+
                     {org.email && (
                       <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Email:</p>
                         <p className="text-sm mb-0">{org.email}</p>
                       </div>
                     )}
-                    
+
                     {org.website && (
                       <div className="mb-3">
                         <p className="font-medium text-pharm-grey mb-1">Website:</p>
                         <a
                           href={org.website}
-                          target="_blank" rel="noreferrer"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-pharm-blue hover:text-pharm-light-blue text-sm underline break-all mb-0"
                         >
@@ -123,18 +124,18 @@ const OrganizationsPage = () => {
   return (
     <Layout includeCTA={true}>
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[120px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
             Organizations
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Explore professional organizations that support pharmacy technicians through advocacy, education, 
-            and career development. Connect with associations, certification boards, and industry councils 
+            Explore professional organizations that support pharmacy technicians through advocacy, education,
+            and career development. Connect with associations, certification boards, and industry councils
             to advance your pharmacy career.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] lg:pt-[40px] xl:pt-0 relative px-12">
-          <StaticImage src="../../assets/images/hero_organizations.svg" alt="Pharmacy Technician Organizations" className="lg:!absolute -bottom-[20px]" />
+        <div className="flex justify-center w-[100%] md:w-[70%] lg:w-[50%] lg:pt-[40px] xl:pt-0 relative px-12">
+          <img src={heroOrganizations} alt="Pharmacy Technician Organizations" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 
@@ -152,11 +153,10 @@ const OrganizationsPage = () => {
                   <button
                     key={tab.key}
                     onClick={() => setActiveTab(tab.key)}
-                    className={`py-4 px-6 border-b-2 font-medium text-[16px] cursor-pointer ${
-                      activeTab === tab.key
-                        ? 'border-blue-500 text-blue-600'
-                        : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                    } transition-colors`}
+                    className={`py-4 px-6 border-b-2 font-medium text-[16px] cursor-pointer ${activeTab === tab.key
+                      ? 'border-blue-500 text-blue-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                      } transition-colors`}
                   >
                     {tab.label}
                     <span className="ml-2 bg-gray-100 text-gray-600 py-0.5 px-2 rounded-full text-xs">
@@ -206,7 +206,7 @@ const OrganizationsPage = () => {
               </div>
             )}
           </div>
-          
+
           {/* Benefits Section */}
           <div className="bg-green-50 border border-green-200 rounded-lg p-6">
             <h2 className="text-2xl font-semibold mb-4 text-green-800">Why Join Professional Organizations?</h2>

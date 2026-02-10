@@ -2,22 +2,27 @@ import React from 'react'
 import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
 import { StaticImage } from "gatsby-plugin-image"
+import logoWhite from '../assets/images/logo-white.svg'
+import heroHome from '../assets/images/hero_home.svg'
+import cloudOne from '../assets/images/cloud_one.svg'
+import cloudThree from '../assets/images/cloud_three.svg'
+import cloudFloor from '../assets/images/cloud_floor.svg'
 
 const MarketingOppsPage = () => {
   return (
     <Layout>
       {/* Main Hero Section */}
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] lg:w-[50%] pr-0 lg:pr-[120px]">
+        <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1 className="flex flex-col items-center">
-            <span>Partner with</span><StaticImage src="../assets/images/logo-white.svg" alt="Pharm Techs Only!" />
+            <span>Partner with</span><img src={logoWhite} alt="Pharm Techs Only!" />
           </h1>
           <p>
             Explore our tailored marketing opportunities designed to help you reach and engage with the pharmacy technician community effectively.
           </p>
         </div>
-        <div className="flex justify-center w-[50%] relative px-12">
-          <StaticImage src="../assets/images/hero_home.svg" alt="Marketing Opportunities" className="lg:!absolute -bottom-[20px]" />
+        <div className="flex justify-center w-[100%] md:w-[70%] lg:w-[50%] relative px-12">
+          <img src={heroHome} alt="Marketing Opportunities" className="lg:!absolute -bottom-[20px]" />
         </div>
       </HeroHeader>
 
@@ -73,10 +78,10 @@ const MarketingOppsPage = () => {
             <p><strong>▶️ Partner with Pharm Techs Only!</strong> to promote your business, brand, or open roles directly to a global pharmacy technician audience.</p>
             <p>📧 For questions, custom requests, or additional details, contact <a href="mailto:questions@pharmtechsonly.com" target="_blank" title="Email Us!">questions@pharmtechsonly.com</a>.</p>
           </div>
-          <div className="-left-[115px] bottom-[420px] absolute z-10"><StaticImage src="../assets/images/cloud_one.svg" alt="Cloud One" /></div>
-          <div className="-right-[180px] bottom-[225px] absolute z-10"><StaticImage src="../assets/images/cloud_three.svg" alt="Cloud Three" /></div>
+          <div className="-left-[115px] bottom-[420px] absolute z-10"><img src={cloudOne} alt="Cloud One" /></div>
+          <div className="-right-[180px] bottom-[225px] absolute z-10"><img src={cloudThree} alt="Cloud Three" /></div>
         </div>
-        <div className="w-full left-[0] bottom-[0] absolute z-10"><StaticImage src="../assets/images/cloud_floor.svg" alt="Cloud Floor" layout="fullWidth" /></div>
+        <div className="w-full left-[0] bottom-[0] absolute z-10"><img src={cloudFloor} alt="Cloud Floor" className="w-full" /></div>
       </section>
     </Layout>
   )

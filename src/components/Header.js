@@ -35,21 +35,19 @@ const Header = () => {
   const navLinks = (mobile = false) => (
     <>
       <Link
-        to="/#waitlist"
+        to="/techconnect"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
-        Tech Connect<br />
-        <span className="text-xs">(Coming Soon)</span>
+        Tech Connect
       </Link>
-      <a
-        href="https://careers.pharmtechsonly.com"
-        target="_blank" rel="noreferrer"
+      <Link
+        to="/techconnect/careers"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Careers
-      </a>
+      </Link>
       <Link
         to="/resource-center"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
@@ -57,14 +55,13 @@ const Header = () => {
       >
         Resource Center
       </Link>
-      <a
-        href="https://careers.pharmtechsonly.com/register-employer"
+      <Link
+        to="/techconnect/employers"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
-        target="_blank" rel="noreferrer"
       >
         Employers
-      </a>
+      </Link>
       <Link
         to="/store"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}

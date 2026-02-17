@@ -34,11 +34,12 @@ const HomePage = () => {
       <HeroHeader>
         <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1>
-            Exciting News! A New Era for Pharm Techs Only! is on the Horizon!
+            Welcome to the Pharm Techs Only! community.
           </h1>
-          <p>
-            Get ready for a revolutionary new way to connect, learn, and grow within our global community! We are thrilled to announce that we are in the process of building an entirely new, custom experience for both web and mobile. This next-generation platform is being crafted from the ground up with one goal in mind: to better support and empower you, our dedicated community of pharmacy technicians. This is more than just an update; it's a complete reimagining of how we connect and advance together. Stay tuned for more details as we build the future of our community, together!
-          </p>
+          <p>Get ready for a revolutionary new way to connect, learn, and grow with pharmacy technicians from around the world!</p>
+          <p>Our community was built with one goal in mind: to better support and empower you, our dedicated community of pharmacy technicians.</p>
+          <p>Being a pharmacy technician can be a challenging, and isolating career. It is hard to find the right resources, advance one's career, and find others that you can connect with.</p>
+          <p>But not any more!</p>
         </div>
         <div className="flex justify-center w-[100%] md:w-[70%] lg:w-[50%] relative px-12">
           <img src={heroHome} alt="Pharm Techs Only!" className="lg:!absolute -bottom-[20px]" />
@@ -54,19 +55,17 @@ const HomePage = () => {
             </div>
             <div className="pt-[60px] md:pt-[80px] lg:pt-[120px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pl-0 lg:pl-[120px]">
               <h2>
-                A Community For Us, By Us
+                We are thrilled to announce that TechConnect is back!
               </h2>
-              <p>
-                Being a pharmacy technician can be a challenging, and isolating career. It is hard to find the right resources, advance one's career, and find others that you can connect with.
-              </p>
-              <p>
-                Our founder has felt this first-hand, and for the past 5 years she has been working tirelessly to build Pharm Techs Only!... a place for Pharm Techs, by Pharm Techs. Where our global community can come together to learn, share, support, and grow.
-              </p>
-
-              {/* Mailchimp signup form */}
-              <div className="py-[60px]">
-                <MailchimpSubscribe />
-              </div>
+              <p>TechConnect provides a platform for pharmacy technicians to connect with each other, share experiences, ask questions, and support one another in a professional space.</p>
+              <p>Instead of scattered Facebook groups and job sites that don&apos;t understand our role, you now have one place to connect, learn, and grow your career.</p>
+              <p>Create your free account and start connecting today.</p>
+              <p><em>Mobile access is available now, and dedicated apps are coming soon.</em></p>
+              <Link
+                to="/techconnect"
+                className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
+                Join Now
+              </Link>
             </div>
           </div>
           <div className="-left-[115px] bottom-[420px] absolute z-10"><img src={cloudOne} alt="Cloud One" /></div>
@@ -76,7 +75,7 @@ const HomePage = () => {
       </section>
 
       {/* Learn Section */}
-      <section className="relative py-[60px] lg:py-[120px]">
+      <section className="relative py-[30px] md:py-[40px] lg:py-[80px]">
         <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
           <h2>Resource Center</h2>
           <p>
@@ -120,52 +119,45 @@ const HomePage = () => {
       </section>
 
       {/* Careers Section */}
-      <section className="relative py-[60px] lg:py-[120px]">
+      <section className="relative py-[30px] md:py-[40px] lg:py-[80px]">
         <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
           <h2>Career Portal</h2>
           <p>
             Supporting your career growth from certification through career advancement.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <a href="https://careers.pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-8">
+            <Link to="/techconnect/careers" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconGlobalCareers} alt="Global Career Center" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Global Career Center</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/career-resources" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            </Link>
+            <Link to="/resource-center/careers" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconCareerResources} alt="Career Resources" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/interview-coach" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            </Link>
+            <Link to="/techconnect/account/resume" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
-                <img src={iconInterviewCoach} alt="Interview Coach" className="" />
+                <img src={iconOfferAnalyzer} alt="Digital Resume" className="" />
               </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Interview Coach</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/analyze-offer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <img src={iconOfferAnalyzer} alt="Offer Analyzer" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Offer Analyzer</h3>
-            </a>
+              <h3 className="font-semibold text-purple-900 text-center mb-0">Searchable Digital Resume</h3>
+            </Link>
           </div>
 
-          <a
-            href="https://careers.pharmtechsonly.com"
-            target="_blank" rel="noreferrer"
+          <Link
+            to="/techconnect/careers"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Go to Careers
-          </a>
+          </Link>
         </div>
       </section>
 
       {/* Tech Connect Section */}
-      <section className="relative py-[60px] lg:py-[120px]">
+      <section className="relative py-[30px] md:py-[40px] lg:py-[80px]">
         <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
           <h2>Tech Connect</h2>
           <p>
@@ -204,20 +196,16 @@ const HomePage = () => {
               <h3 className="font-semibold text-purple-900 text-center mb-0">Communities</h3>
             </div>
           </div>
-
-          <div className="p-6 flex flex-col items-center">
-            <p>Tech Connect Coming Soon!</p>
-            <Link
-              to="/#waitlist"
-              className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
-              Join the Waitlist
-            </Link>
-          </div>
+          <Link
+            to="/techconnect"
+            className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
+            Join Now
+          </Link>
         </div>
       </section>
 
       {/* Employers Section */}
-      <section className="relative py-[60px] lg:py-[120px]">
+      <section className="relative py-[30px] md:py-[40px] lg:py-[80px]">
         <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
           <h2>
             Employer Tools
@@ -227,19 +215,7 @@ const HomePage = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <img src={iconPostJobs} alt="Post Jobs" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Post Jobs</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
-              <div className="height-[102px] mb-4">
-                <img src={iconSearchCandidates} alt="Search Candidates" className="" />
-              </div>
-              <h3 className="font-semibold text-purple-900 text-center mb-0">Search Candidates</h3>
-            </a>
-            <a href="https://careers.pharmtechsonly.com/register-employer" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <a href="mailto:questions@pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconFeatureJob} alt="Feature Your Job Opening" className="" />
               </div>
@@ -251,14 +227,26 @@ const HomePage = () => {
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Advertise on Tech Connect</h3>
             </a>
+            <a href="#" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+              <div className="height-[102px] mb-4">
+                <img src={iconPostJobs} alt="Post Jobs" className="" />
+              </div>
+              <h3 className="font-semibold text-purple-900 text-center mb-0">Post Jobs<br /><span className="text-sm italic">*coming soon*</span></h3>
+            </a>
+            <a href="#" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+              <div className="height-[102px] mb-4">
+                <img src={iconSearchCandidates} alt="Search Candidates" className="" />
+              </div>
+              <h3 className="font-semibold text-purple-900 text-center mb-0">Search Candidates<br /><span className="text-sm italic">*coming soon*</span></h3>
+            </a>
           </div>
 
-          <a
-            href="https://careers.pharmtechsonly.com/register-employer"
+          <Link
+            to="/techconnect/employers"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Create your FREE Employer Account
-          </a>
+          </Link>
         </div>
       </section>
     </Layout>

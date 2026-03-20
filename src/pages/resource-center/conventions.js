@@ -105,10 +105,6 @@ const ConventionsPage = () => {
             <ResourceLink />
           </nav>
 
-          <p className="text-lg text-gray-600 mb-8">
-
-          </p>
-
           {/* Summary */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
             <div className="flex items-center justify-between">

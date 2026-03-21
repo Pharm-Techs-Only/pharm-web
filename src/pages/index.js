@@ -62,7 +62,7 @@ const HomePage = () => {
               <p>Create your free account and start connecting today.</p>
               <p><em>Mobile access is available now, and dedicated apps are coming soon.</em></p>
               <Link
-                to="/techconnect"
+                to="https://tc.pharmtechsonly.com"
                 className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
                 Join Now
               </Link>
@@ -127,7 +127,7 @@ const HomePage = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-8">
-            <Link to="/techconnect/careers" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="https://tc.pharmtechsonly.com/careers" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconGlobalCareers} alt="Global Career Center" className="" />
               </div>
@@ -139,7 +139,7 @@ const HomePage = () => {
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
             </Link>
-            <Link to="/techconnect/account/resume" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="https://tc.pharmtechsonly.com/account/resume" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconOfferAnalyzer} alt="Digital Resume" className="" />
               </div>
@@ -148,7 +148,7 @@ const HomePage = () => {
           </div>
 
           <Link
-            to="/techconnect/careers"
+            to="https://tc.pharmtechsonly.com/careers"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Go to Careers
@@ -197,7 +197,7 @@ const HomePage = () => {
             </div>
           </div>
           <Link
-            to="/techconnect"
+            to="https://tc.pharmtechsonly.com"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
             Join Now
           </Link>
@@ -242,7 +242,7 @@ const HomePage = () => {
           </div>
 
           <Link
-            to="/techconnect/employers"
+            to="https://tc.pharmtechsonly.com/employers"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Create your FREE Employer Account

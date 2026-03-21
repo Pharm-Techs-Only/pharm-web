@@ -35,14 +35,14 @@ const Header = () => {
   const navLinks = (mobile = false) => (
     <>
       <Link
-        to="/techconnect"
+        to="https://tc.pharmtechsonly.com"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Tech Connect
       </Link>
       <Link
-        to="/techconnect/careers"
+        to="https://tc.pharmtechsonly.com/careers"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
@@ -56,7 +56,7 @@ const Header = () => {
         Resource Center
       </Link>
       <Link
-        to="/techconnect/employers"
+        to="https://tc.pharmtechsonly.com/employers"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >

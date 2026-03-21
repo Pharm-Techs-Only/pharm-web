@@ -38,6 +38,7 @@ const Header = () => {
         to="https://tc.pharmtechsonly.com"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
+        target="_blank"
       >
         Tech Connect
       </Link>
@@ -45,6 +46,7 @@ const Header = () => {
         to="https://tc.pharmtechsonly.com/careers"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
+        target="_blank"
       >
         Careers
       </Link>
@@ -59,6 +61,7 @@ const Header = () => {
         to="https://tc.pharmtechsonly.com/employers"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
+        target="_blank"
       >
         Employers
       </Link>

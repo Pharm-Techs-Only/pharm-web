@@ -47,7 +47,7 @@ const Footer = () => {
                 </ul>
                 <h4 className="font-semibold mb-3">Tech Connect</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="https://tc.pharmtechsonly.com" className="text-white text-shadow-2xs hover:underline transition-colors">Join Now</Link></li>
+                  <li><Link to="https://tc.pharmtechsonly.com" target="_blank" className="text-white text-shadow-2xs hover:underline transition-colors">Join Now</Link></li>
                 </ul>
               </div>
 

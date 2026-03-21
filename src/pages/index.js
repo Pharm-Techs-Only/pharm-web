@@ -63,6 +63,7 @@ const HomePage = () => {
               <p><em>Mobile access is available now, and dedicated apps are coming soon.</em></p>
               <Link
                 to="https://tc.pharmtechsonly.com"
+                target="_blank"
                 className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
                 Join Now
               </Link>
@@ -127,7 +128,7 @@ const HomePage = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-8">
-            <Link to="https://tc.pharmtechsonly.com/careers" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="https://tc.pharmtechsonly.com/careers" target="_blank" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconGlobalCareers} alt="Global Career Center" className="" />
               </div>
@@ -139,7 +140,7 @@ const HomePage = () => {
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
             </Link>
-            <Link to="https://tc.pharmtechsonly.com/account/resume" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="https://tc.pharmtechsonly.com/account/resume" target="_blank" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconOfferAnalyzer} alt="Digital Resume" className="" />
               </div>
@@ -149,6 +150,7 @@ const HomePage = () => {
 
           <Link
             to="https://tc.pharmtechsonly.com/careers"
+            target="_blank"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Go to Careers
@@ -198,6 +200,7 @@ const HomePage = () => {
           </div>
           <Link
             to="https://tc.pharmtechsonly.com"
+            target="_blank"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
             Join Now
           </Link>
@@ -243,6 +246,7 @@ const HomePage = () => {
 
           <Link
             to="https://tc.pharmtechsonly.com/employers"
+            target="_blank"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Create your FREE Employer Account

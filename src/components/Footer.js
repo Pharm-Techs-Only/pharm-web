@@ -21,42 +21,42 @@ const Footer = () => {
               <div>
                 <h4 className="font-semibold mb-3">Main</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="/" className="text-white hover:underline transition-colors">Home</Link></li>
-                  <li><Link to="/about" className="text-white hover:underline transition-colors">About</Link></li>
-                  <li><Link to="/store" className="text-white hover:underline transition-colors">Store</Link></li>
-                  <li><Link to="/contact" className="text-white hover:underline transition-colors">Contact</Link></li>
-                  <li><Link to="/privacy" className="text-white hover:underline transition-colors">Privacy</Link></li>
-                  <li><Link to="/terms" className="text-white hover:underline transition-colors">Terms</Link></li>
+                  <li><Link to="/" className="text-white text-shadow-2xs hover:underline transition-colors">Home</Link></li>
+                  <li><Link to="/about" className="text-white text-shadow-2xs hover:underline transition-colors">About</Link></li>
+                  <li><Link to="/store" className="text-white text-shadow-2xs hover:underline transition-colors">Store</Link></li>
+                  <li><Link to="/contact" className="text-white text-shadow-2xs hover:underline transition-colors">Contact</Link></li>
+                  <li><Link to="/privacy" className="text-white text-shadow-2xs hover:underline transition-colors">Privacy</Link></li>
+                  <li><Link to="/terms" className="text-white text-shadow-2xs hover:underline transition-colors">Terms</Link></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="font-semibold mb-3">Resource Center</h4>
                 <ul className="space-y-2 text-sm mb-6">
-                  <li><Link to="/resource-center/free-ceus" className="text-white hover:underline transition-colors">Free CEUs</Link></li>
-                  <li><Link to="/resource-center/organizations" className="text-white hover:underline transition-colors">Organizations</Link></li>
-                  <li><Link to="/resource-center/conventions" className="text-white hover:underline transition-colors">Conventions</Link></li>
-                  <li><Link to="/resource-center/blog" className="text-white hover:underline transition-colors">Blog</Link></li>
+                  <li><Link to="/resource-center/free-ceus" className="text-white text-shadow-2xs hover:underline transition-colors">Free CEUs</Link></li>
+                  <li><Link to="/resource-center/organizations" className="text-white text-shadow-2xs hover:underline transition-colors">Organizations</Link></li>
+                  <li><Link to="/resource-center/conventions" className="text-white text-shadow-2xs hover:underline transition-colors">Conventions</Link></li>
+                  <li><Link to="/resource-center/blog" className="text-white text-shadow-2xs hover:underline transition-colors">Blog</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-3">Career Tools</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="/careers" className="text-white hover:underline transition-colors">Global Career Center</Link></li>
-                  <li><Link to="/resource-center/careers" className="text-white hover:underline transition-colors">Career Resources</Link></li>
+                  <li><Link to="/careers" className="text-white text-shadow-2xs hover:underline transition-colors">Global Career Center</Link></li>
+                  <li><Link to="/resource-center/careers" className="text-white text-shadow-2xs hover:underline transition-colors">Career Resources</Link></li>
                 </ul>
                 <h4 className="font-semibold mb-3">Tech Connect</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="/techconnect" className="text-white hover:underline transition-colors">Join Now</Link></li>
+                  <li><Link to="/techconnect" className="text-white text-shadow-2xs hover:underline transition-colors">Join Now</Link></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="font-semibold mb-3">Employers</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Post Jobs<br /><span className="text-sm italic">*coming soon*</span></a></li>
-                  <li><a href="#" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Search Candidates<br /><span className="text-sm italic">*coming soon*</span></a></li>
-                  <li><Link to="/marketing-opps" className="text-white hover:underline transition-colors" target="_blank" rel="noreferrer">Marketing Opportunities</Link></li>
+                  <li><a href="#" className="text-white text-shadow-2xs hover:underline transition-colors" target="_blank" rel="noreferrer">Post Jobs<br /><span className="text-sm italic">*coming soon*</span></a></li>
+                  <li><a href="#" className="text-white text-shadow-2xs hover:underline transition-colors" target="_blank" rel="noreferrer">Search Candidates<br /><span className="text-sm italic">*coming soon*</span></a></li>
+                  <li><Link to="/marketing-opps" className="text-white text-shadow-2xs hover:underline transition-colors" target="_blank" rel="noreferrer">Marketing Opportunities</Link></li>
                 </ul>
               </div>
             </div>

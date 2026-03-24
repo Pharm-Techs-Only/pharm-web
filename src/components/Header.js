@@ -8,27 +8,35 @@ const Header = () => {
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef(null)
+  const menuButtonRef = useRef(null)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
+    setIsMenuOpen((prev) => !prev)
   }
 
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isMenuOpen) {
-        setTimeout(() => setIsMenuOpen(false), 250);
+      if (!isMenuOpen) {
+        return
+      }
+
+      const clickedInsideMenu = menuRef.current && menuRef.current.contains(event.target)
+      const clickedMenuButton = menuButtonRef.current && menuButtonRef.current.contains(event.target)
+
+      if (!clickedInsideMenu && !clickedMenuButton) {
+        setIsMenuOpen(false)
       }
     }
 
     // Add event listener when menu is open
     if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('pointerdown', handleClickOutside)
     }
 
     // Cleanup event listener
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('pointerdown', handleClickOutside)
     }
   }, [isMenuOpen])
 
@@ -72,7 +80,8 @@ const Header = () => {
       >
         Store
       </Link>
-    </>);
+    </>
+  )
 
   return (
     <>
@@ -106,6 +115,7 @@ const Header = () => {
             <div className="mobile-menu-btn">
               <button
                 onClick={toggleMenu}
+                ref={menuButtonRef}
                 className="text-pharm-grey hover:text-blue-600 hover:cursor-pointer focus:outline-none focus:text-blue-600"
                 aria-label="Toggle menu"
               >

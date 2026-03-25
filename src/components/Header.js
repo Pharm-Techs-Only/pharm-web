@@ -10,13 +10,31 @@ const Header = () => {
   const menuRef = useRef(null)
   const menuButtonRef = useRef(null)
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
     setIsMenuOpen((prev) => !prev)
   }
 
+  useEffect(() => {
+    document.addEventListener('onclick', (e) => {
+      if (isMenuOpen) {
+        toggleMenu(e)
+      }
+    })
+    return () => {
+      document.removeEventListener('onclick', (e) => {
+        if (isMenuOpen) {
+          toggleMenu(e)
+        }
+      })
+    }
+  }, [])
+
   // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    // if (isMenuOpen) toggleMenu()
+    /*const handleClickOutside = (event) => {
       if (!isMenuOpen) {
         return
       }
@@ -31,13 +49,13 @@ const Header = () => {
 
     // Add event listener when menu is open
     if (isMenuOpen) {
-      document.addEventListener('pointerdown', handleClickOutside)
+      document.addEventListener('onclick', handleClickOutside)
     }
 
     // Cleanup event listener
     return () => {
-      document.removeEventListener('pointerdown', handleClickOutside)
-    }
+      document.removeEventListener('onclick', handleClickOutside)
+    }*/
   }, [isMenuOpen])
 
   const navLinks = (mobile = false) => (
@@ -114,7 +132,7 @@ const Header = () => {
             {/* Mobile menu button - Show for screens < 1100px */}
             <div className="mobile-menu-btn">
               <button
-                onClick={toggleMenu}
+                onClick={(e) => toggleMenu(e)}
                 ref={menuButtonRef}
                 className="text-pharm-grey hover:text-blue-600 hover:cursor-pointer focus:outline-none focus:text-blue-600"
                 aria-label="Toggle menu"

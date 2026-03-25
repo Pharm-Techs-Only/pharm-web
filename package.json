@@ -12,8 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean", 
-    "build-and-clean": "npm run build && gatsby clean"
+    "clean": "gatsby clean",
+    "clean-build": "npm clean && gatsby build"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",

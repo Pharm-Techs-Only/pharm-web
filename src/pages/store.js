@@ -49,7 +49,7 @@ const StorePage = () => {
   }, [])
 
   return (
-    <Layout includeCTA={true}>
+    <Layout includeCTA="default">
       {/* Hero Section */}
       <HeroHeader>
         <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">

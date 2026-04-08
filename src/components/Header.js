@@ -103,7 +103,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="relative z-90 bg-[#fff]/90 shadow-[0_4px_5px_3px_rgba(0,0,0,0.15)] h-[117px] flex items-center">
+      <header className="relative z-90 bg-[#fff]/90 shadow-[0_4px_5px_3px_rgba(0,0,0,0.15)] h-[117px] flex items-center justify-center flex-col">
         <div className="header-container px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -151,6 +151,11 @@ const Header = () => {
           </div>
         </div>
       </header>
+      <div className="bg-pharm-blue/40 w-full">
+        <Link to="https://tc.pharmtechsonly.com" target="_blank" className="header-container h-10 text-white flex justify-center items-center">
+          👉 Join the conversation with other Pharmacy Technicians on TechConnect
+        </Link>
+      </div>
       {/* Mobile Navigation Menu - Show for screens < 1100px */}
       <div className={`mobile-menu bg-white border-t border-gray-200 ${isMenuOpen ? 'h-auto py-4' : 'h-0 py-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
         <nav className="flex flex-col space-y-2" ref={menuRef}>

@@ -8,7 +8,7 @@ import heroAbout from '../assets/images/hero_about.svg'
 
 const HomePage = () => {
   return (
-    <Layout includeCTA={true}>
+    <Layout includeCTA="default">
       {/* Main Hero Section */}
       <HeroHeader>
         <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
@@ -24,7 +24,7 @@ const HomePage = () => {
       </HeroHeader>
 
       {/* About Section */}
-      <section className="relative pb-[60px] lg:pb-[160px]">
+      <section className="relative pb-[60px] lg:pb-[120px]">
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col">
             <h2>Our Mission</h2>
@@ -36,16 +36,16 @@ const HomePage = () => {
       </section>
 
       {/* Learn Section */}
-      <section className="relative py-[60px] lg:py-[120px]">
-        <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row items-start">
-          <div className="pt-[60px] md:pt-[80px] lg:pt-[120px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pl-0 lg:pl-[120px]">
+      <section className="relative pb-[60px] lg:pb-[120px]">
+        <div className="relative content-container z-20 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start">
+          <div className="pt-[60px] md:pt-[80px] lg:pt-[120px] w-[100%] md:w-[70%] lg:w-[50%] pl-0 lg:pl-[120px] md:mr-4 mr-0">
             <h2>About the Founder – Courtney Miller</h2>
             <p>Courtney Miller is a dedicated pharmacy technician with over three decades of hands-on experience spanning retail, long-term care, correctional facilities, and specialized pharmacy environments. She’s lived the reality of pharmacy tech life… from exhausting shifts and high-pressure days to stepping into leadership roles where she mentored and guided fellow techs.</p>
             <p>With a deep-rooted passion for advocacy and firsthand knowledge of the profession's struggles, Courtney launched Pharm Techs Only! to build the kind of support network she longed for during her own career. Her mission is to amplify the voices of pharmacy technicians, enhance their visibility, and open doors to greater career growth and recognition.</p>
             <p>Beyond that, she's focused on building a strong, united community… a space where techs from all over the world can connect, share experiences, support one another, and finally feel seen.</p>
             <p>Through Pharm Techs Only!, Courtney is creating more than a platform, she's creating a global movement of empowered pharmacy technicians.</p>
           </div>
-          <div className="flex w-[100%] md:w-[70%] lg:w-[50%] pt-[60px] md:pt-[80px] lg:pt-[120px] xl:py-[170px] pl-0 lg:pl-[120px]">
+          <div className="flex w-[100%] md:w-[70%] lg:w-[50%] pt-[60px] md:pt-[80px] lg:pt-[120px] pl-0 lg:pl-[120px]">
             <StaticImage src="../assets/images/cmiller.jpg" alt="Courtney Miller" />
           </div>
         </div>

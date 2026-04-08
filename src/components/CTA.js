@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Donate from './Donate'
 
-const CTA = (type = "default") => {
+const CTA = ({ type = "default" }) => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-20 bg-white">
       <div className="content-container text-center">
@@ -30,7 +30,15 @@ const CTA = (type = "default") => {
             </div>
           </>
         ) : (
-          <Donate />
+          <>
+            <h2 className="text-3xl font-bold text-pharm-blue mb-4">
+              Support Pharmacy Technicians
+            </h2>
+            <p className="text-xl text-pharm-grey mb-8">
+              Your contribution helps us provide valuable resources and support to pharmacy technicians across the globe.
+            </p>
+            <Donate />
+          </>
         )}
       </div>
     </section>

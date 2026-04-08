@@ -10,7 +10,7 @@ import CTA from '../components/CTA'
 
 const ContactPage = () => {
   return (
-    <Layout>
+    <Layout includeCTA="donate">
       {/* Main Hero Section */}
       <HeroHeader>
         <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
@@ -27,7 +27,7 @@ const ContactPage = () => {
       </HeroHeader>
 
       {/* Subscribe Section */}
-      <section className="relative pb-[60px] lg:pb-[160px]">
+      <section className="relative pb-[60px] lg:pb-[120px]">
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col items-start">
             <div className="pt-[60px] md:pt-[80px] lg:pt-[120px] xl:py-[170px] w-[100%] pl-0 lg:pl-[120px]">
@@ -66,7 +66,6 @@ const ContactPage = () => {
           </p>
         </div>
       </section>
-      <CTA type="donate" />
     </Layout>
   )
 }

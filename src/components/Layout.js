@@ -6,14 +6,14 @@ import { StaticImage } from 'gatsby-plugin-image'
 import circlesRight from '../assets/images/circles_right.svg'
 import circlesLeft from '../assets/images/circles_left.svg'
 
-const Layout = ({ children, includeHeader = false, includeCTA = false }) => {
+const Layout = ({ children, includeHeader = false, includeCTA = null }) => {
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
       {includeHeader && <Header />}
       <main className="flex-grow relative z-20">
         {children}
       </main>
-      {includeCTA && <CTA />}
+      {includeCTA && <CTA type={includeCTA} />}
       <Footer />
       <div className="-right-[60px] top-[1875px] absolute z-10"><img src={circlesRight} alt="Circles" /></div>
       <div className="-left-[60px] top-[2515px] absolute z-10"><img src={circlesLeft} alt="Circles" /></div>

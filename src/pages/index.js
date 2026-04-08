@@ -47,7 +47,7 @@ const HomePage = () => {
       </HeroHeader>
 
       {/* Subscribe Section */}
-      <section id="waitlist" className="relative pb-[60px] lg:pb-[160px]">
+      <section id="waitlist" className="relative pb-[60px] lg:pb-[120px]">
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row justify-between items-center">
             <div className="flex justify-center w-[100%] md:w-[70%] lg:w-[50%] px-12">

@@ -1,0 +1,10 @@
+logsBucket: 'weblogs-pharma'
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+  dir: '.' 
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'clean-build']
+  dir: '.' 
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['rsync', '-r', '-d', './public', 'gs://www.pharmtechsonly.com']

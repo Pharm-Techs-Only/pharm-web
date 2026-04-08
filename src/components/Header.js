@@ -151,8 +151,8 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="bg-pharm-blue/40 w-full">
-        <Link to="https://tc.pharmtechsonly.com" target="_blank" className="header-container h-10 text-white flex justify-center items-center">
+      <div className="relative z-90 bg-pharm-blue/40 w-full">
+        <Link to="https://tc.pharmtechsonly.com" target="_blank" className="header-container h-10 text-white flex justify-center items-center hover:underline">
           👉 Join the conversation with other Pharmacy Technicians on TechConnect
         </Link>
       </div>

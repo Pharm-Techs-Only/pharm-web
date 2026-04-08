@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import HeroHeader from '../../components/HeroHeader'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import heroBlog from '../../assets/images/hero_blog.svg'
 import ResourceLink from '../../components/ResourceLink'
 
-const BlogPage = () => {
-  // Note: Blog content is served by the Cloudflare Worker via Drop In Blog
-  // The Worker intercepts requests to /resource-center/blog/* and serves
-  // DIB-rendered content. No client-side script loading needed.
+const BlogPage = ({ data }) => {
+  const posts = data?.allDropInBlogPost?.edges || []
+  const [visibleCount, setVisibleCount] = useState(9)
+
+  const handleLoadMore = () => {
+    setVisibleCount(prev => prev + 9)
+  }
+
+  const visiblePosts = posts.slice(0, visibleCount)
 
   return (
     <Layout includeCTA="default">
@@ -33,16 +38,85 @@ const BlogPage = () => {
 
       <div className="content-container px-4 py-8">
         <div className="max-w-6xl mx-auto">
-          <nav className="mb-6">
+          <nav className="mb-8">
             <ResourceLink />
           </nav>
-          {/* suppressHydrationWarning allows DIB Worker to inject content without React errors */}
-          <div id="dib-posts" suppressHydrationWarning={true}></div>
+          
+          {posts.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-xl text-gray-500">No blog posts found. Please add some via DropInBlog!</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {visiblePosts.map(({ node }) => (
+                <Link 
+                  key={node.slug} 
+                  to={`/resource-center/blog/${node.slug}`}
+                  className="flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group"
+                >
+                  {node.featuredImage && (
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={node.featuredImage} 
+                        alt={node.title} 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h2 className="text-xl font-bold text-pharm-blue mb-3 line-clamp-2">
+                      {node.title}
+                    </h2>
+                    {node.summary && (
+                      <p className="text-gray-600 mb-4 line-clamp-3 text-sm flex-grow">
+                        {node.summary}
+                      </p>
+                    )}
+                    <div className="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center text-sm text-gray-500">
+                      {node.publishedAt && (
+                        <span>{node.publishedAt}</span>
+                      )}
+                      <span className="text-pharm-light-blue font-semibold group-hover:text-pharm-blue transition-colors">
+                        Read post &rarr;
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
+          
+          {visibleCount < posts.length && (
+            <div className="text-center mt-12">
+              <button 
+                onClick={handleLoadMore}
+                className="bg-pharm-blue text-white px-8 py-3 rounded-md font-semibold hover:bg-pharm-dark-blue transition-colors shadow-sm"
+              >
+                Load More Articles
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allDropInBlogPost {
+      edges {
+        node {
+          slug
+          title
+          summary
+          featuredImage
+          publishedAt
+        }
+      }
+    }
+  }
+`
 
 export default BlogPage
 

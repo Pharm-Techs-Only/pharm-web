@@ -79,7 +79,7 @@
   --color-pharm-green: #7DF061;
   --color-bg-blue: #87C3FF;
   --color-bg-white: #CBE5FF;
-  
+
   /* Custom breakpoints for responsive grid */
   --breakpoint-xs: 480px;
   --breakpoint-sm: 640px;
@@ -102,38 +102,51 @@
     font-weight: 500;
   }
 
-  nav, nav a, .font-nav {
+  nav,
+  nav a,
+  .font-nav {
     font-family: var(--font-family-nav);
     font-weight: 600;
   }
-  
-  h1, h2, h3, h4, h5, h6, .font-heading {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-heading {
     font-family: var(--font-family-heading);
     font-weight: 800;
     margin: 0 0 2rem;
-    font-size:22px;
+    font-size: 22px;
     line-height: 1.2;
     color: var(--color-pharm-purple);
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 42px;
     margin-bottom: 2rem;
   }
-  
-  p, ul, ol {
+
+  p,
+  ul,
+  ol {
     font-family: var(--font-family-sans);
     font-weight: 500;
     margin: 0 0 2rem;
-    font-size:  18px;
+    font-size: 18px;
     line-height: 35px;
     color: var(--color-pharm-grey)
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 20px;
     list-style-type: disc;
   }
+
   ol {
     list-style-type: decimal;
   }
@@ -148,15 +161,16 @@
   }
 
   .btn {
-    background:linear-gradient(#6BCE53 0%, #63E044 100%);
+    background: linear-gradient(#6BCE53 0%, #63E044 100%);
     transition: all 1s ease-in-out;
-    display:flex;
+    display: flex;
+
     &:hover {
-      background:linear-gradient(#63E044 0%, #6BE044 100%);
+      background: linear-gradient(#63E044 0%, #6BE044 100%);
       cursor: pointer;
     }
   }
-  
+
   .-z-1 {
     z-index: -1;
   }
@@ -166,12 +180,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:rgba(255, 255, 255, 0.76);
+    background: rgba(255, 255, 255, 0.76);
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.11);
     padding: 20px;
     text-align: center;
   }
+
   #dib-posts {
     #dib-template-2 .dib-post-text h2 {
       font-size: 24px !important;
@@ -182,15 +197,16 @@
   }
 }
 
-
 /* Custom breakpoint for navigation at 1100px */
 @media (min-width: 1100px) {
   .desktop-nav\:flex {
     display: flex;
   }
+
   .mobile-menu-btn {
-    visibility:hidden;
+    visibility: hidden;
   }
+
   .mobile-menu {
     display: none;
   }
@@ -200,6 +216,7 @@
   .desktop-nav\:flex {
     display: none;
   }
+
   .mobile-menu-btn {
     display: block;
   }
@@ -207,10 +224,11 @@
 
 @layer components {
   .header-container {
-    width:100%;
+    width: 100%;
     max-width: 1612px;
     margin: 0 auto;
   }
+
   .content-container {
     width: 100%;
     max-width: 1612px;

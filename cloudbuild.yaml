@@ -1,8 +1,11 @@
 logsBucket: 'weblogs-pharma'
 steps:
+- name: 'ubuntu'
+  args: ['rm', '-f', 'package-lock.json']
+  dir: '.'
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
-  dir: '.' 
+  dir: '.'
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'clean-build']
   dir: '.' 

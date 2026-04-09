@@ -41,7 +41,7 @@ const BlogPage = ({ data }) => {
           <nav className="mb-8">
             <ResourceLink />
           </nav>
-          
+
           {posts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-xl text-gray-500">No blog posts found. Please add some via DropInBlog!</p>
@@ -49,16 +49,16 @@ const BlogPage = ({ data }) => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {visiblePosts.map(({ node }) => (
-                <Link 
-                  key={node.slug} 
+                <Link
+                  key={node.slug}
                   to={`/resource-center/blog/${node.slug}`}
                   className="flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group"
                 >
                   {node.featuredImage && (
                     <div className="h-48 overflow-hidden">
-                      <img 
-                        src={node.featuredImage} 
-                        alt={node.title} 
+                      <img
+                        src={node.featuredImage}
+                        alt={node.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -85,12 +85,12 @@ const BlogPage = ({ data }) => {
               ))}
             </div>
           )}
-          
+
           {visibleCount < posts.length && (
             <div className="text-center mt-12">
-              <button 
+              <button
                 onClick={handleLoadMore}
-                className="bg-pharm-blue text-white px-8 py-3 rounded-md font-semibold hover:bg-pharm-dark-blue transition-colors shadow-sm"
+                className="bg-pharm-blue text-white px-8 py-3 rounded-md font-semibold hover:bg-pharm-dark-blue transition-colors shadow-sm cursor-pointer"
               >
                 Load More Articles
               </button>

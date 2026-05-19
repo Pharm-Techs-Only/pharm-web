@@ -1,4 +1,4 @@
-logsBucket: 'weblogs-pharma'
+logsBucket: 'gs://weblogs-pharma'
 steps:
 - name: 'ubuntu'
   args: ['rm', '-f', 'package-lock.json']

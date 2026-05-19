@@ -22,10 +22,9 @@ export default function BlogPostTemplate({ data }) {
               &larr; Back to Blog
             </Link>
           </nav>
-          
+
           <article className="bg-white rounded-lg shadow-sm p-8 md:p-12 mb-12">
             <header className="mb-10 text-center">
-              
               <div className="flex items-center justify-center space-x-4 text-gray-500 mb-8">
                 {post.author && (
                   <span className="flex items-center">
@@ -57,9 +56,9 @@ export default function BlogPostTemplate({ data }) {
             </header>
 
             {/* DIB injects standard HTML, we render it directly using dangerouslySetInnerHTML */}
-            <div 
+            <div
               className="prose prose-lg max-w-none prose-blue prose-headings:text-pharm-blue prose-a:text-pharm-light-blue hover:prose-a:text-pharm-blue"
-              dangerouslySetInnerHTML={{ __html: post.content }} 
+              dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </article>
         </div>

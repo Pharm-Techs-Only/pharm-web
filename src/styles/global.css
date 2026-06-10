@@ -130,6 +130,10 @@
     margin-bottom: 2rem;
   }
 
+  article h2 {
+    font-size: 28px;
+  }
+
   p,
   ul,
   ol {

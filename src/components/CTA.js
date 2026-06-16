@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, StaticImage } from 'gatsby'
 import Donate from './Donate'
 
 const CTA = ({ type = "default" }) => {
@@ -16,19 +16,52 @@ const CTA = ({ type = "default" }) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/careers"
+                to="https://tc.pharmtechsonly.com/careers"
                 className="btn text-white px-8 py-3 rounded-md font-medium transition-all"
               >
                 Explore Career Opportunities
               </Link>
               <Link
-                to="/tech-connect"
+                to="https://tc.pharmtechsonly.com/"
                 className="bg-pharm-light-blue hover:bg-pharm-blue text-white px-8 py-3 rounded-md font-medium transition-colors"
               >
                 Join Our Community
               </Link>
             </div>
           </>
+        ) : (type === "ce") ? (
+          <div className="flex justify-between items-end">
+            <StaticImage src="./images/cta_ceu.png" alt="TechConnect" />
+            <div>
+              <h2 className="text-3xl font-bold text-pharm-blue mb-4">
+                🚀 Join the TechConnect&trade; Community
+              </h2>
+              <p className="text-xl text-pharm-grey mb-8">
+                You're already investing in your career through CE, take the next step and connect with Pharmacy Technicians worldwide.
+              </p>
+              <div className="flex flex-col gap-4 mb-8">
+                <div className="text-xl font-bold">👥 Network</div>
+                <div className="text-xl font-bold">📖 Learn</div>
+                <div className="text-xl font-bold">📈 Grow</div>
+                <div className="text-xl font-bold">💕 Support Each Other</div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="https://tc.pharmtechsonly.com/careers"
+                  className="btn text-white px-8 py-3 rounded-md font-medium transition-all"
+                >
+                  Explore Career Opportunities
+                </Link>
+                <Link
+                  to="https://tc.pharmtechsonly.com/"
+                  className="bg-pharm-light-blue hover:bg-pharm-blue text-white px-8 py-3 rounded-md font-medium transition-colors"
+                >
+                  Join Our Community
+                </Link>
+              </div>
+            </div>
+          </div>
+
         ) : (
           <>
             <h2 className="text-3xl font-bold text-pharm-blue mb-4">

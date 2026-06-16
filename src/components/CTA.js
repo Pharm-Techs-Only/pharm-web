@@ -50,16 +50,16 @@ const CTA = ({ type = "default" }) => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="https://tc.pharmtechsonly.com/careers"
-                  className="btn text-white px-8 py-3 rounded-md font-medium text-center transition-all"
-                >
-                  Explore Career Opportunities
-                </Link>
-                <Link
                   to="https://tc.pharmtechsonly.com/"
                   className="bg-pharm-light-blue hover:bg-pharm-blue text-white px-8 py-3 rounded-md font-medium transition-colors"
                 >
                   Join Our Community
+                </Link>
+                <Link
+                  to="https://tc.pharmtechsonly.com/careers"
+                  className="btn text-white px-8 py-3 rounded-md font-medium text-center transition-all"
+                >
+                  Explore Career Opportunities
                 </Link>
               </div>
             </div>

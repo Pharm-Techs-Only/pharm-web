@@ -168,6 +168,8 @@
     background: linear-gradient(#6BCE53 0%, #63E044 100%);
     transition: all 1s ease-in-out;
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       background: linear-gradient(#63E044 0%, #6BE044 100%);

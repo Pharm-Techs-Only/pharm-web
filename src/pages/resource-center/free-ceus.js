@@ -138,7 +138,7 @@ const FreeCEUsPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
-          <CTA type="ceus" />
+          <CTA type="expanded" />
 
           <div className="prose max-w-none">
 

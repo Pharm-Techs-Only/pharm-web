@@ -30,7 +30,7 @@ const CTA = ({ type = "default" }) => {
               </Link>
             </div>
           </>
-        ) : (type === "ceus") ? (
+        ) : (type === "expanded") ? (
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <div className="flex items-center">
               <StaticImage src="../assets/images/cta_ceu.png" alt="TechConnect" />

@@ -8,6 +8,7 @@ import heroCeus from '../../assets/images/hero_ceus.svg'
 import iconCal from '../../assets/images/icon_cal.svg'
 import iconClock from '../../assets/images/icon_clock.svg'
 import ResourceLink from '../../components/ResourceLink'
+import CTA from '../../components/CTA'
 
 const FreeCEUsPage = () => {
   // Format date for display
@@ -137,6 +138,7 @@ const FreeCEUsPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
+          <CTA type="ceus" />
 
           <div className="prose max-w-none">
 

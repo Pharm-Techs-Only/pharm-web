@@ -1,8 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
-import { StaticImage } from "gatsby-plugin-image"
-import logoWhite from '../assets/images/logo-white.svg'
 import heroHome from '../assets/images/hero_home.svg'
 import cloudOne from '../assets/images/cloud_one.svg'
 import cloudThree from '../assets/images/cloud_three.svg'
@@ -15,10 +13,11 @@ const MarketingOppsPage = () => {
       <HeroHeader>
         <div className="pt-[60px] md:pt-[80px] py-0 lg:pt-[100px] xl:py-[170px] w-[100%] md:w-[70%] lg:w-[50%] pr-0 lg:pr-[120px]">
           <h1 className="flex flex-col items-center">
-            <span>Partner with</span><img src={logoWhite} alt="Pharm Techs Only!" />
+            <span>Your Global Pharmacy Technician Media & Marketing Partner</span>
           </h1>
           <p>
-            Explore our tailored marketing opportunities designed to help you reach and engage with the pharmacy technician community effectively.
+            Helping employers, educators, organizations, and industry partners connect with pharmacy
+            technicians through targeted visibility and strategic promotion.
           </p>
         </div>
         <div className="flex justify-center w-[100%] md:w-[70%] lg:w-[50%] relative px-12">
@@ -30,53 +29,101 @@ const MarketingOppsPage = () => {
       <section className="relative pb-[60px] lg:pb-[120px]">
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8">
-            <p>Pharm Techs Only! (PTO!) offers several affiliate marketing opportunities for businesses and content creators in the pharmaceutical industry. Our platform, with a strong following on social media and a growing audience of pharmacy professionals, is an ideal place to showcase your information, products, and services. By partnering with PTO!, you can reach an engaged audience of pharmacy technicians, employers, and industry leaders.</p>
-            <p>Below is an overview of our marketing offerings:</p>
+            <div className="pb-4 mb-6 border-b border-gray-200">
+              <h4 className="font-semibold mb-3">Our Audience</h4>
+              <p>Pharm Techs Only! reaches pharmacy technicians through multiple channels, including:</p>
+              <ul>
+                <li>26,000+ LinkedIn Company Followers</li>
+                <li>21,000+ Personal LinkedIn Followers</li>
+                <li>7,500+ Facebook Community Members</li>
+                <li>20,000+ Monthly Pinterest Views</li>
+                <li>12,000+ Newsletter Subscribers</li>
+                <li>TechConnect™ Professional Community</li>
+                <li>Career Portal & Resource Center</li>
+              </ul>
+              <p>Our audience includes pharmacy technicians, students, educators, employers, and healthcare professionals from around the world</p>
+            </div>
+            <div className="pb-4 mb-6 border-b border-gray-200">
+              <h4 className="font-semibold mb-3">Why Partner With PTO?</h4>
+              <p>Unlike broad healthcare advertising platforms, Pharm Techs Only! focuses exclusively on the pharmacy technician profession.</p>
+              <p>Our niche audience allows partners to connect with pharmacy technicians through trusted channels built specifically for the profession.</p>
+              <p><strong>Targeted visibility. Customized solutions. Meaningful results.</strong></p>
+            </div>
+            <div className="pb-4 mb-6 border-b border-gray-200">
+              <h4 className="font-semibold mb-3">How We Can Help</h4>
+              <div className="flex flex-row flex-wrap justify-between">
+                <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
+                  <h5 className="font-semibold mb-3">📣 Recruitment Marketing</h5>
+                  <p className="text-left">Increase visibility for pharmacy technician career opportunities through targeted promotion
+                    across PTO's professional network.</p>
+                </div>
+                <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
+                  <h5 className="font-semibold mb-3">🌐 Sponsored Visibility Campaigns</h5>
+                  <p className="text-left">Promote your organization, service, event, educational program, or initiative using your
+                    approved articles, graphics, videos, and digital assets across PTO channels.</p>
+                </div>
+                <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
+                  <h5 className="font-semibold mb-3">📣 Newsletter Promotion</h5>
+                  <p className="text-left">Reach pharmacy technicians directly through sponsored newsletter placements.</p>
+                </div>
+                <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
+                  <h5 className="font-semibold mb-3">📣 Social Media Promotion</h5>
+                  <p className="text-left">Expand your reach through PTO's growing social media communities and professional networks.</p>
+                </div>
+                <div className="item-wrap flex flex-col mb-6 w-[100%]">
+                  <h5 className="font-semibold mb-3">⭐ Brand & Program Awareness</h5>
+                  <p>Increase awareness for products, services, organizations, events, and educational programs
+                    within the pharmacy technician profession.</p>
+                </div>
+              </div>
+            </div>
+            <div className="pb-4 mb-6 border-b border-gray-200">
+              <h4 className="font-semibold mb-3">Flexible Solutions</h4>
+              <p>Whether you're promoting a single opportunity or launching a larger campaign, PTO can tailor a
+                solution that aligns with your objectives and resources.</p>
+              <ul>
+                <li>✅ Flexible promotion options</li>
+                <li>✅ No long-term contracts</li>
+                <li>✅ Customized solutions</li>
+                <li>✅ Pharmacy technician-focused audience</li>
+              </ul>
+              <p><strong>Tell us your goals and budget, and we'll recommend the right combination of opportunities
+                to help maximize your visibility.</strong></p>
+            </div>
+            <div className="pb-4 mb-6 border-b border-gray-200">
+              <h4 className="font-semibold mb-3">Pharmacy Technician Job Boost - $49.95</h4>
+              <p>Increase visibility for your pharmacy technician openings through targeted promotion across
+                Pharm Techs Only!'s professional network.</p>
+              <ul>
+                <li>✅ One position per purchase</li>
+                <li>✅ Two social media promotions</li>
+                <li>✅ 7-10 day campaign</li>
+                <li>✅ No contracts or recruiter fees</li>
+              </ul>
+              <h5 className="font-semibold mb-3">👉 How It Works</h5>
+              <ol>
+                <li>Purchase your Job Boost.</li>
+                <li>After checkout, you'll receive a link to the job submission form.</li>
+                <li>Submit your position details and we'll handle the promotion.</li>
+              </ol>
+              <p><a href="https://buy.stripe.com/cNi7sL49vcSO0Zg9GN2oE03" target="_blank" rel="noopener noreferrer" className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block no-underline">Purchase Job Boost 🚀</a></p>
+            </div>
+            {/*<div className="pb-4 mb-6 border-b border-gray-200">
+              <h4 className="font-semibold mb-3">Featured Blog Article - $299</h4>
+              <p>Gain visibility for your products or services with an SEO-focused article featured on PTO!. Our blog gets great traffic both from search and our community. Each article can include up to 3 links back to your site or product pages. All articles are promoted through our newsletter as well as our social media accounts.</p>
+              <p>We also offer content writing services at an affordable rate to make promoting your business easy. All blogs receive monthly performance metrics so you can track the effectiveness of your content.</p>
+              <p><a href="https://buy.stripe.com/cNi7sL49vcSO0Zg9GN2oE03" target="_blank" rel="noopener noreferrer" className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block decoration-none">⭐ Purchase Featured Blog Article</a></p>
+            </div>
+            <div className="pb-4 mb-6 border-b border-gray-200">
+              <h4 className="font-semibold mb-3">Newsletter Promotion - $199</h4>
+              <p>Promote your products or services across our community with an eye-catching ad. Platform and newsletter ads ensure maximum visibility to our highly targeted audience.</p>
+              <p><a href="https://buy.stripe.com/cNi7sL49vcSO0Zg9GN2oE03" target="_blank" rel="noopener noreferrer" className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block underline-none">📣 Purchase Newsletter Promotion</a></p>
+            </div>*/}
 
-            <h4 className="font-semibold mb-3">✏️ Blog Writing and Posting Services</h4>
-            <p>Gain visibility for your products or services with an SEO-focused article featured on PTO!. Our blog gets great traffic both from search and our community. Each article can include up to 3 links back to your site or product pages. All articles are promoted through our newsletter as well as our social media accounts.</p>
-            <p>We also offer content writing services at an affordable rate to make promoting your business easy. All blogs receive monthly performance metrics so you can track the effectiveness of your content.</p>
-
-            <h4 className="font-semibold mb-3">📰 Ads</h4>
-            <p>Promote your products or services across our community with an eye-catching ad. Platform and newsletter ads ensure maximum visibility to our highly targeted audience.</p>
-
-            <h4 className="font-semibold mb-3">📱 Paid Social Media Posts</h4>
-            <p>Leverage our growing social media presence with a paid post featuring your product, service, campaign, or employer brand. Each post is tailored to match the tone and interests of our global pharmacy technician audience to maximize engagement and reach.</p>
-            <p>What's included:</p>
-            <ul>
-              <li>Paid social media post shared across all of our platforms</li>
-              <li>Distribution on LinkedIn, Facebook, Instagram, and Pinterest</li>
-              <li>Direct link to your website, landing page, or promo page</li>
-              <li>Ideal for brand awareness, traffic, and targeted visibility</li>
-            </ul>
-            <p>Perfect for companies, vendors, educators, and organizations looking to reach 55,000+ followers across all platforms, including an active LinkedIn network of pharmacy technicians.</p>
-
-            <p>📧 For questions, custom requests, or additional details, contact <a href="mailto:questions@pharmtechsonly.com" target="_blank" title="Email Us!">questions@pharmtechsonly.com</a>.</p>
-
-            <h4 className="font-semibold mb-3">💡 Pharmacy Technician Job Boost - $19.95</h4>
-            <p>Have an open pharmacy technician role that needs more visibility?</p>
-            <p>Our Job Boost is a one-time social media promotion designed specifically to help pharmacy technician roles get seen by the right audience, without recruiter fees or long-term contracts.</p>
-            <p>Job Boost includes:</p>
-            <ul>
-              <li>1 pharmacy technician job per purchase</li>
-              <li>2 social media posts over a short 7-10 day promotion window</li>
-              <li>Shared across Pharm Techs Only!'s social platforms</li>
-              <li>Targeted visibility to pharmacy technicians actively watching for new roles</li>
-            </ul>
-            <p>✔️ No subscriptions<br />
-              ✔️ No contracts<br />
-              ✔️ No recruiter fees<br />
-              ✔️ Pharmacy technician–focused audience</p>
-            <p>👉 How it works</p>
-            <ol>
-              <li>Complete payment first</li>
-              <li>You'll be given a link to the job submission form immediately after payment</li>
-              <li>Submit your role details and we handle the promotion</li>
-            </ol>
-            <p><strong>🔗 Purchase Job Boost:</strong></p>
-            <p><a href="https://buy.stripe.com/4gM6oH8pLaKGgYe3ip2oE01">https://buy.stripe.com/4gM6oH8pLaKGgYe3ip2oE01</a></p>
-            <p><strong>▶️ Partner with Pharm Techs Only!</strong> to promote your business, brand, or open roles directly to a global pharmacy technician audience.</p>
-            <p>📧 For questions, custom requests, or additional details, contact <a href="mailto:questions@pharmtechsonly.com" target="_blank" title="Email Us!">questions@pharmtechsonly.com</a>.</p>
+            <div className="pb-4 mb-6 border-b border-gray-200">
+              <h4 className="font-semibold mb-3">Ready to Get Started?</h4>
+              <p><a href="mailto:questions@pharmtechsonly.com" className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block no-underline">Email us</a></p>
+            </div>
           </div>
           <div className="-left-[115px] bottom-[420px] absolute z-10"><img src={cloudOne} alt="Cloud One" /></div>
           <div className="-right-[180px] bottom-[225px] absolute z-10"><img src={cloudThree} alt="Cloud Three" /></div>
@@ -91,7 +138,7 @@ export default MarketingOppsPage
 
 export const Head = () => (
   <>
-    <title>PharmTechs Only - Community for Pharmacy Technicians</title>
-    <meta name="description" content="A community for pharmacy technicians to connect, learn, and grow together." />
+    <title>Marketing Opportunities - PharmTechs Only</title>
+    <meta name="description" content="Promote your products, services, or job openings to pharmacy technicians through PharmTechs Only!" />
   </>
 )

@@ -54,25 +54,25 @@ const MarketingOppsPage = () => {
               <div className="flex flex-row flex-wrap justify-between">
                 <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
                   <h5 className="font-semibold mb-3">📣 Recruitment Marketing</h5>
-                  <p className="text-left">Increase visibility for pharmacy technician career opportunities through targeted promotion
+                  <p className="text-left mb-0">Increase visibility for pharmacy technician career opportunities through targeted promotion
                     across PTO's professional network.</p>
                 </div>
                 <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
                   <h5 className="font-semibold mb-3">🌐 Sponsored Visibility Campaigns</h5>
-                  <p className="text-left">Promote your organization, service, event, educational program, or initiative using your
+                  <p className="text-left mb-0">Promote your organization, service, event, educational program, or initiative using your
                     approved articles, graphics, videos, and digital assets across PTO channels.</p>
                 </div>
                 <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
                   <h5 className="font-semibold mb-3">📣 Newsletter Promotion</h5>
-                  <p className="text-left">Reach pharmacy technicians directly through sponsored newsletter placements.</p>
+                  <p className="text-left mb-0">Reach pharmacy technicians directly through sponsored newsletter placements.</p>
                 </div>
                 <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
                   <h5 className="font-semibold mb-3">📣 Social Media Promotion</h5>
-                  <p className="text-left">Expand your reach through PTO's growing social media communities and professional networks.</p>
+                  <p className="text-left mb-0">Expand your reach through PTO's growing social media communities and professional networks.</p>
                 </div>
                 <div className="item-wrap flex flex-col mb-6 w-[100%]">
                   <h5 className="font-semibold mb-3">⭐ Brand & Program Awareness</h5>
-                  <p>Increase awareness for products, services, organizations, events, and educational programs
+                  <p className="mb-0">Increase awareness for products, services, organizations, events, and educational programs
                     within the pharmacy technician profession.</p>
                 </div>
               </div>

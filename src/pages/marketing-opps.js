@@ -63,11 +63,11 @@ const MarketingOppsPage = () => {
                     approved articles, graphics, videos, and digital assets across PTO channels.</p>
                 </div>
                 <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
-                  <h5 className="font-semibold mb-3">📣 Newsletter Promotion</h5>
+                  <h5 className="font-semibold mb-3">📰 Newsletter Promotion</h5>
                   <p className="text-left mb-0">Reach pharmacy technicians directly through sponsored newsletter placements.</p>
                 </div>
                 <div className="item-wrap flex flex-col mb-6 w-[100%] md:w-[48%]">
-                  <h5 className="font-semibold mb-3">📣 Social Media Promotion</h5>
+                  <h5 className="font-semibold mb-3">📱 Social Media Promotion</h5>
                   <p className="text-left mb-0">Expand your reach through PTO's growing social media communities and professional networks.</p>
                 </div>
                 <div className="item-wrap flex flex-col mb-6 w-[100%]">

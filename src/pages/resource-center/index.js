@@ -68,32 +68,28 @@ const ResourceCenterPage = () => {
         <div className="content-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource, index) => (
-              <div key={index} className="item-wrap flex flex-col items-center">
-                <Link
-                  to={resource.link}
-                  className="flex flex-col items-center"
-                >
-                  {resource.icon && (
-                    <img
-                      src={resource.icon}
-                      alt={resource.title}
-                      className="w-12 h-12 mb-4"
-                    />
-                  )}
-                  <h3 className="mb-3">
-                    {resource.title}
-                  </h3>
-                </Link>
+              <Link
+                key={index}
+                to={resource.link}
+                className="item-wrap flex flex-col items-center cursor-pointer no-underline"
+              >
+                {resource.icon && (
+                  <img
+                    src={resource.icon}
+                    alt={resource.title}
+                    className="w-12 h-12 mb-4"
+                  />
+                )}
+                <h3 className="mb-3">
+                  {resource.title}
+                </h3>
                 <p className="text-gray-600 text-center mb-4">
                   {resource.description}
                 </p>
-                <Link
-                  to={resource.link}
-                  className="text-pharm-light-blue text-center hover:text-pharm-blue font-medium transition-colors"
-                >
+                <span className="text-pharm-light-blue text-center hover:text-pharm-blue font-medium transition-colors">
                   Learn More &gt;
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
         </div>

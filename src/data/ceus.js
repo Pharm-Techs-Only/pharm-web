@@ -219,6 +219,18 @@ export const CeusData = [
     expirationDate: '2026-12-05',
     link: 'https://www.pharmacytimes.org/courses/patient-safety-and-reporting-errors-a-guide-for-pharmacists-and-technicians-pharmacy-technician-credit'
   },
+  {
+    title: 'Achieving Improved Ocular Surface Health in Dry Eye Disease: A Pharmacy-Focused Review at the Forefront of a New Treatment Era',
+    hours: '2 Contact Hours',
+    expirationDate: '2026-11-10',
+    link: 'https://www.powerpak.com/course/preamble/138886',
+  },
+  {
+    title: 'Artificial Intelligence in Pharmacy Practice: Validated Tools, Real-World Applications, and Emerging Innovations (Pharmacy Technician Credit)',
+    hours: '2 Contact Hours',
+    expirationDate: '2026-12-19',
+    link: 'https://www.pharmacytimes.org/courses/artificial-intelligence-in-pharmacy-practice-validated-tools-real-world-applications-and-emerging-innovations-pharmacy-technician-credit-l0a9?sessionFields=%5B%5B%22profession%22%2C%22Pharmacy%20Technician%22%5D%5D',
+  },
   // 2027 CEUs
   {
     title: 'Immunization: A Quick Refresher: Perfect Intramuscular Injection Technique',
@@ -262,6 +274,66 @@ export const CeusData = [
     expirationDate: '2027-06-12',
     link: 'https://elearning.ashp.org/products/11923/how-to-work-with-just-about-anyone-ways-to-build-connections-for-an-inclusive-work-culture'
   },
+  {
+    title: 'New Oncology Therapy Approvals for 2025 (Pharmacy Technician Credit)',
+    hours: '2 Contact Hours',
+    expirationDate: '2027-02-01',
+    link: 'https://www.pharmacytimes.org/courses/new-oncology-therapy-approvals-for-2025-pharmacy-technician-credit-enduring?sessionFields=%5B%5B%22profession%22%2C%22Pharmacy%20Technician%22%5D%5D',
+  },
+  {
+    title: 'Tagged for Success: Impactful Applications and Future Opportunities of RFID Technology',
+    hours: '1.5 Contact Hour',
+    expirationDate: '2027-02-26',
+    link: 'https://elearning.ashp.org/products/13652/tagged-for-success-impactful-applications-and-future-opportunities-of-rfid-technology',
+  },
+  {
+    title: 'Leveraging CGM Data & Digital Tools (Pharmacy Technician Credit)',
+    hours: '1 Contact Hour',
+    expirationDate: '2027-05-22',
+    link: 'https://www.pharmacytimes.org/courses/leveraging-cgm-data-digital-tools-pharmacy-technician-credit-ukyk?sessionFields=%5B%5B%22profession%22%2C%22Pharmacy%20Technician%22%5D%5D',
+  },
+  {
+    title: 'How to Work with (Just About) Anyone: Ways to Build Connections for an Inclusive Work Culture',
+    hours: '1.25 Contact Hours',
+    expirationDate: '2027-06-12',
+    link: 'https://elearning.ashp.org/products/11923/how-to-work-with-just-about-anyone-ways-to-build-connections-for-an-inclusive-work-culture',
+  },
+  {
+    title: 'Level Up Your BUD Game: An Interactive, Choose Your Own Adventure Activity on Beyond Use Dates in Sterile Compounding',
+    hours: '2 Contact Hours',
+    expirationDate: '2027-06-15',
+    link: 'https://elearning.ashp.org/products/14064/level-up-your-bud-game-an-interactive-choose-your-own-adventure-activity-on-beyond-use-dates-in-sterile-compounding',
+  },
+  {
+    title: 'Making USP <797> as Easy as 123: Overcoming Sterile Compounding Insourcing Challenges and Adult Versus Pediatric Considerations',
+    hours: '1.5 Contact Hours',
+    expirationDate: '2027-06-15',
+    link: 'https://elearning.ashp.org/products/14012/making-usp-797-as-easy-as-123-overcoming-sterile-compounding-insourcing-challenges-and-adult-versus-pediatric-considerations',
+  },
+  {
+    title: 'Eye on Relief: Pharmacist-Driven Care in Allergic Conjunctivitis (Pharmacy Technician Credit)',
+    hours: '2 Contact Hours',
+    expirationDate: '2027-06-26',
+    link: 'https://www.pharmacytimes.org/courses/eye-on-relief-pharmacist-driven-care-in-allergic-conjunctivitis-pharmacy-technician-credit?sessionFields=%5B%5B%22profession%22%2C%22Pharmacy%20Technician%22%5D%5D',
+  },
+  {
+    title: 'Evolving Care: Treating Demodex Blepharitis for Pharmacists (Pharmacy Technician Credit)',
+    hours: '1.5 Contact Hours',
+    expirationDate: '2027-06-26',
+    link: 'https://www.pharmacytimes.org/courses/evolving-care-treating-demodex-blepharitis-for-pharmacists-pharmacy-technician-credit-5m70?sessionFields=%5B%5B%22profession%22%2C%22Pharmacy%20Technician%22%5D%5D',
+  },
+  {
+    title: 'Pharmacists in Action: Targeted Treatment Approaches for Dry Eye Disease (Pharmacy Technician Credit)',
+    hours: '1 Contact Hour',
+    expirationDate: '2027-06-30',
+    link: 'https://www.pharmacytimes.org/courses/pharmacists-in-action-targeted-treatment-approaches-for-dry-eye-disease-pharmacy-technician-credit?sessionFields=%5B%5B%22profession%22%2C%22Pharmacy%20Technician%22%5D%5D',
+  },
+  {
+    title: 'Expanding the Pharmacist\'s Role in Travel Medicine: Engagement, Education, and Impact (Pharmacy Technician Credit)',
+    hours: '1.5 Contact Hours',
+    expirationDate: '2027-06-30',
+    link: 'https://www.pharmacytimes.org/courses/expanding-the-pharmacists-role-in-travel-medicine-engagement-education-and-impact-pharmacy-technician-credit?sessionFields=%5B%5B%22profession%22%2C%22Pharmacy%20Technician%22%5D%5D',
+  },
   // 2028 CEUs
   {
     title: 'SMARTen Up: Asthma Management Guidelines',
@@ -278,14 +350,14 @@ export const CeusData = [
     link: 'https://pharmacy.uconn.edu/course/polypharmacy/'
   },
   {
-    title: 'Sjogren’s Disease: How Dry Am I?',
+    title: 'Sjogren\'s Disease: How Dry Am I?',
     hours: '2 Contact Hours',
     // description: 'Identify the clinical indications and common adverse effects of the new drugs approved by the US Food and Drug Administration in 2024',
     expirationDate: '2028-08-01',
     link: 'https://pharmacy.uconn.edu/course/sjogrens-2025how-dry-am-i-2/'
   },
   {
-    title: 'The Mediterranean Diet’s Effect on Health',
+    title: 'The Mediterranean Diet\'s Effect on Health',
     hours: '1.5 Contact Hours',
     // description: 'Identify the clinical indications and common adverse effects of the new drugs approved by the US Food and Drug Administration in 2024',
     expirationDate: '2028-10-17',
@@ -297,5 +369,60 @@ export const CeusData = [
     // description: 'Identify the clinical indications and common adverse effects of the new drugs approved by the US Food and Drug Administration in 2024',
     expirationDate: '2028-10-20',
     link: 'https://pharmacy.uconn.edu/course/measles/'
-  }
+  },
+  {
+    title: 'Talk Saves Lives: Suicide Awareness for Pharmacy Residency Programs',
+    hours: '1 Contact Hour',
+    expirationDate: '2028-08-28',
+    link: 'https://elearning.ashp.org/products/12908/talk-saves-lives-suicide-awareness-for-pharmacy-residency-programs'
+  },
+  {
+    title: 'Only Skin Deep: The Pharmacist’s Guide to Intradermal Vaccine Administration 2025',
+    hours: '0.5 Contact Hours',
+    expirationDate: '2028-12-05',
+    link: 'https://pharmacy.uconn.edu/course/itradermalvaccineadmin-2025/',
+  },
+  // 2029 CEUs
+  {
+    title: 'MUSCARINIC MALADIES: 5 KEY STEPS TO NAVIGATE ANTICHOLINERGIC BURDEN IN PATIENTS WITH SERIOUS MENTAL ILLNESS',
+    hours: '0.75 Contact Hours',
+    expirationDate: '2029-03-01',
+    link: 'https://pharmacy.uconn.edu/course/anticholinergicburden/',
+  },
+  {
+    title: 'Delving Beyond the Shelving Podcast: Episode #1: Decongesting Phenylephrine Rumors',
+    hours: '0.5 Contact Hours',
+    expirationDate: '2029-03-25',
+    link: 'https://pharmacy.uconn.edu/course/podcastepisode1phenylephrine/',
+  },
+  {
+    title: 'Pet Allergies',
+    hours: '2 Contact Hours',
+    expirationDate: '2029-03-20',
+    link: 'https://pharmacy.uconn.edu/course/petallergies/',
+  },
+  {
+    title: 'Updates in Hypertension Guidelines: Translating Evidence into Practice',
+    hours: '2 Contact Hours',
+    expirationDate: '2029-06-15',
+    link: 'https://pharmacy.uconn.edu/course/hypertensionupdates/',
+  },
+  {
+    title: 'The Gall of it All: Gallbladder Disease',
+    hours: '2 Contact Hours',
+    expirationDate: '2029-06-16',
+    link: 'https://pharmacy.uconn.edu/course/gallbladderdisease-2026-2/',
+  },
+  {
+    title: 'Delving Beyond the Shelving Podcast Episode #2: Private Equity and PBMs',
+    hours: '0.5 Contact Hours',
+    expirationDate: '2029-06-20',
+    link: 'https://pharmacy.uconn.edu/course/podcastepisode2pbms/',
+  },
+  {
+    title: 'Roughage Gets Rougher: Clinical Clues to Cyclosporiasis',
+    hours: '1 Contact Hours',
+    expirationDate: '2029-07-16',
+    link: 'https://pharmacy.uconn.edu/course/cyclosporiasis/',
+  },
 ]

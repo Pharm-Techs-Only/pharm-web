@@ -346,7 +346,7 @@ export const ConventionsData = [
     location: 'Baltimore, MD',
     date: '2028-07-15',
     dateRange: 'July 15 - 18, 2028',
-    website: 'https://www.aacp.org/events
+    website: 'https://www.aacp.org/events'
   },
   {
     name: 'NASP inSPire 2028',

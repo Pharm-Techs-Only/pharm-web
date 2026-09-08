@@ -304,7 +304,7 @@ export const ConventionsData = [
     name: '2027 Northwest Pharmacy Convention',
     country: 'United States of America',
     year: 2027,
-    location: 'Coeur d'Alene Resort, Coeur d'Alene, ID',
+    location: 'Coeur d\'Alene Resort, Coeur d\'Alene, ID',
     date: '2027-06-03',
     dateRange: 'June 3 - 6, 2027',
     website: 'https://www.wsparx.org/page/LiveCE'

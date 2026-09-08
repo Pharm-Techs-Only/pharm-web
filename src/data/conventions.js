@@ -205,11 +205,111 @@ export const ConventionsData = [
     name: '146th Annual Convention & Trade Show',
     country: 'United States of America',
     year: 2027,
-    location: 'TBD',
-    date: '2027-12-22', // Placeholder since specific date is TBD
-    dateRange: 'TBD 2027',
+    location: 'Perdido Beach Resort, Orange Beach, AL',
+    date: '2027-06-20',
+    dateRange: 'June 20 - 23, 2027',
     website: 'https://www.aparx.org/page/43'
   },
+  {
+    name: 'NCPA 2027 Annual Convention and Expo',
+    country: 'United States of America',
+    year: 2027,
+    location: 'San Antonio, TX',
+    date: '2027-09-25',
+    dateRange: 'September 25 - 28, 2027',
+    website: 'https://www.ncpa.org/ncpa-meetings-calendar'
+  },
+  {
+    name: 'AAPT/NPTA 45th Annual National Convention - 2027',
+    country: 'United States of America',
+    year: 2027,
+    location: 'TBD',
+    date: '2027-09-25',
+    dateRange: 'TBD 2027',
+    website: 'https://www.pharmacytechnician.com/product/convention2027pre/'
+  },
+  {
+    name: 'California Pharmacy Exchange (CPE) 2027',
+    country: 'United States of America',
+    year: 2027,
+    location: 'Sheraton San Diego Resort, San Diego, CA',
+    date: '2027-04-23',
+    dateRange: 'April 23 - 25, 2027',
+    website: 'https://cpe.cpha.com/'
+  },
+  {
+    name: 'NCPDP 2027 Annual Technology & Business Conference',
+    country: 'United States of America',
+    year: 2027,
+    location: 'Westin Kierland Resort & Spa, Scottsdale, AZ',
+    date: '2027-05-3',
+    dateRange: 'May 3 - 5, 2027',
+    website: 'https://ncpdp.org/ac/register.aspx'
+  },
+  {
+    name: '2027 NPhA/SNPhA Annual Convention',
+    country: 'United States of America',
+    year: 2027,
+    location: 'Fort Lauderdale Marriott Harbor Beach Resort & Spa, Fort Lauderdale, FL',
+    date: '2027-07-23',
+    dateRange: 'July 23 - 26, 2027',
+    website: 'https://nationalpharmaceuticalassociation.org/Convention'
+  },
+  {
+    name: 'PPA Annual Conference 2027 - Pennsylvania Pharmacists Association',
+    country: 'United States of America',
+    year: 2027,
+    location: 'Hilton Harrisburg, Harrisburg, PA',
+    date: '2027-02-05',
+    dateRange: 'February 5 - 7, 2027',
+    website: 'https://www.papharmacists.com/continuing-education-events/annual-conference/'
+  },
+  {
+    name: '2027 TPA Conference & Expo - Texas Pharmacy Association',
+    country: 'United States of America',
+    year: 2027,
+    location: 'Marriott Dallas Allen Hotel & Convention Center, Allen, TX',
+    date: '2027-07-23',
+    dateRange: 'July 23 - 25, 2027',
+    website: 'https://www.texaspharmacy.org/events/EventDetails.aspx?group=&id=2048768'
+  },
+  {
+    name: 'NHIA 2027 Annual Conference',
+    country: 'United States of America',
+    year: 2027,
+    location: 'San Diego, CA',
+    date: '2027-04-19',
+    dateRange: 'March 19 - 23, 2027',
+    website: 'https://conference.nhia.org/conference/'
+  },
+  {
+    name: 'Pacific Coast Patient Safety Conference 2027',
+    country: 'United States of America',
+    year: 2027,
+    location: 'Coronado, CA',
+    date: '2027-04-04',
+    dateRange: 'March 4 - 5, 2027',
+    website: 'https://www.cshp.org/page/EventsHome'
+  },
+  {
+    name: 'NASP inSPire 2027',
+    country: 'United States of America',
+    year: 2027,
+    location: 'Gaylord Palms Resort & Convention Center, Orlando, FL',
+    date: '2027-09-27',
+    dateRange: 'September 27 - 30, 2027',
+    website: 'https://naspnet.org/annual-meeting'
+  },
+  {
+    name: '2027 Northwest Pharmacy Convention',
+    country: 'United States of America',
+    year: 2027,
+    location: 'Coeur d'Alene Resort, Coeur d'Alene, ID',
+    date: '2027-06-03',
+    dateRange: 'June 3 - 6, 2027',
+    website: 'https://www.wsparx.org/page/LiveCE'
+  },
+
 
   // United States - 2028
   {
@@ -228,17 +328,53 @@ export const ConventionsData = [
     location: 'The Lodge at Gulf State Park',
     date: '2028-06-04',
     dateRange: 'June 4 - June 7, 2028',
-    website: ' https://www.aparx.org/page/43'
-  },  
+    website: 'https://www.aparx.org/page/43'
+  },
+  {
+    name: 'NCPA 2028 Annual Convention and Expo',
+    country: 'United States of America',
+    year: 2028,
+    location: 'Louisville, KY',
+    date: '2028-09-16',
+    dateRange: 'September 16 - 19, 2028',
+    website: 'https://www.ncpa.org/ncpa-meetings-calendar'
+  },
+  {
+    name: 'Pharmacy Education 2028 - AACP Annual Meeting',
+    country: 'United States of America',
+    year: 2028,
+    location: 'Baltimore, MD',
+    date: '2028-07-15',
+    dateRange: 'July 15 - 18, 2028',
+    website: 'https://www.aacp.org/events
+  },
+  {
+    name: 'NASP inSPire 2028',
+    country: 'United States of America',
+    year: 2028,
+    location: 'Gaylord Texan Resort & Convention Center, Grapevine, TX',
+    date: '2028-09-11',
+    dateRange: 'September 11 - 14, 2028',
+    website: 'https://naspnet.org/annual-meeting'
+  },
+  {
+    name: '2028 Northwest Pharmacy Convention',
+    country: 'United States of America',
+    year: 2028,
+    location: 'Coeur d\'Alene Resort, Coeur d\'Alene, ID',
+    date: '2028-06-1',
+    dateRange: 'June 1 - 4, 2028',
+    website: 'https://www.wsparx.org/page/LiveCE'
+  },
 
   // United States - 2029
   {
     name: 'PSW Annual Meeting - Pharmacy Society of Wisconsin',
     country: 'United States of America',
     year: 2029,
-    location: 'TBD',
-    date: '2029-01-01', // Placeholder since specific date is TBD
-    dateRange: 'TBD 2029',
+    location: 'La Crosse Center, La Crosse, WI',
+    date: '2029-08-23',
+    dateRange: 'August 23 - 25, 2029',
     website: 'https://www.pswi.org/Education/Conferences'
   },
   {
@@ -248,8 +384,26 @@ export const ConventionsData = [
     location: 'The Lodge at Gulf State Park',
     date: '2029-06-10',
     dateRange: 'June 10 - 13, 2029',
-    website: ' https://www.aparx.org/page/43'
-  },  
+    website: 'https://www.aparx.org/page/43'
+  },
+  {
+    name: 'Pharmacy Education 2029 - AACP Annual Meeting',
+    country: 'United States of America',
+    year: 2029,
+    location: 'Phoenix, AZ',
+    date: '2029-07-14',
+    dateRange: 'July 14 - 17, 2029',
+    website: 'https://www.aacp.org/events'
+  },
+  {
+    name: 'NASP inSPire 2029',
+    country: 'United States of America',
+    year: 2029,
+    location: 'Gaylord Rockies Resort & Convention Center, Aurora, CO',
+    date: '2029-09-30',
+    dateRange: 'September 30 - October 3, 2029',
+    website: 'https://naspnet.org/annual-meeting'
+  },
 
   // United States - 2030
   {
@@ -261,18 +415,15 @@ export const ConventionsData = [
     dateRange: 'August 22 - 24, 2030',
     website: 'https://www.pswi.org/Education/Conferences'
   },
-
-  // Canada - 2025
   {
-    name: '19th Annual Pharmacy Technician Conference',
-    country: 'Canada',
-    year: 2025,
-    location: 'Richmond BC, Canada- River Rock Hotel',
-    date: '2025-10-24',
-    dateRange: 'October 24 - 25, 2025',
-    website: 'https://ptsbc.ca/'
+    name: 'Pharmacy Education 2030 - AACP Annual Meeting',
+    country: 'United States of America',
+    year: 2030,
+    location: 'Minneapolis, MN',
+    date: '2030-07-20',
+    dateRange: 'July 20 - 23, 2030',
+    website: 'https://www.aacp.org/events'
   },
-
   // Canada - 2026
   {
     name: 'CAPhO Conference 2026',
@@ -355,18 +506,61 @@ export const ConventionsData = [
     dateRange: 'October 23 - 24, 2026',
     website: 'https://ptsbc.ca/'
   },
-
-  // Australia - 2025
+  // Canada - 2027
   {
-    name: 'MM2025',
-    country: 'Australia',
-    year: 2025,
-    location: 'Melbourne Conference and Exhibition Centre',
-    date: '2025-11-27',
-    dateRange: 'November 27 - 29, 2025',
-    website: 'https://adpha.au/cpd/mm'
+    name: 'CAPT National Professional Development Conference 2027',
+    country: 'Canada',
+    year: 2027,
+    location: 'Saint John, New Brunswick',
+    date: '2027-05-14',
+    dateRange: 'May 14 - 16, 2027',
+    website: 'TBD'
   },
-
+  {
+    name: 'CAPhO Conference 2027',
+    country: 'Canada',
+    year: 2027,
+    location: 'Fairmont The Queen Elizabeth, Montreal, Quebec',
+    date: '2027-04-22',
+    dateRange: 'April 22 - 25, 2027',
+    website: 'https://www.capho.org/conferences/capho-conference-2027'
+  },
+  {
+    name: 'Pharmacy Technician Professional Development Conference 2027',
+    country: 'Canada',
+    year: 2027,
+    location: 'Niagara-on-the-Lake, Ontario',
+    date: '2027-05-14',
+    dateRange: 'May 14 - 15, 2027',
+    website: 'TBD'
+  },
+  {
+    name: 'Pharmacy U Toronto 2027',
+    country: 'Canada',
+    year: 2027,
+    location: 'The International Centre, 6900 Airport Rd, Mississauga, ON L4V 1E8',
+    date: '2027-10-24',
+    dateRange: 'TBD',
+    website: 'https://events.pharmacyu.ca/toronto2026/technicians'
+  },
+  {
+    name: 'Professional Practice Conference 2027',
+    country: 'Canada',
+    year: 2027,
+    location: 'The Westin Harbour Castle, Toronto, ON',
+    date: '2027-05-07',
+    dateRange: 'May 7 - 9, 2027',
+    website: 'https://www.cshp.ca/Site/website/Content/Events/CSHPEvents/PPC-2027.aspx'
+  },
+  {
+    name: 'AACP 2027 Annual Meeting and Teachers\' Seminar',
+    country: 'Canada',
+    year: 2027,
+    location: 'Toronto, Canada',
+    date: '2027-07-10',
+    dateRange: 'July 10 - 13, 2027',
+    website: 'https://www.aacp.org/resource/aacp-aspiring-academics-program'
+  },
   // Australia - 2026
   {
     name: 'APP2026 Australian Pharmacy Professional Conference and Trade Exhibition',
@@ -396,7 +590,7 @@ export const ConventionsData = [
     website: 'https://www.psa.org.au/networking-events/information-on-major-events-and-conferences/'
   },
   {
-    name: 'PSA26 National Confernce 2026 ',
+    name: 'PSA26 National Confernce 2026',
     country: 'Australia',
     year: 2026,
     location: 'ICC Sydney: International Conventrion Centere',
@@ -404,7 +598,16 @@ export const ConventionsData = [
     dateRange: 'July 31 - August 2, 2026',
     website: 'https://www.psa.org.au/networking-events/information-on-major-events-and-conferences/'
   },
-  
+  // Australia - 2027
+  {
+    name: 'APP2027 Australian Pharmacy Professional Conference and Trade Exhibition',
+    country: 'Australia',
+    year: 2027,
+    location: 'Gold Coast Convention and Exhibition Centre, Gold Coast',
+    date: '2027-04-18',
+    dateRange: 'March 18 - 20, 2027',
+    website: 'https://appconference.com/'
+  },
   // Europe - 2026
   {
     name: 'PharmaPak Europe 2026- 25th Anniversary',
@@ -451,7 +654,25 @@ export const ConventionsData = [
     dateRange: 'March 24 - 25, 2026',
     website: 'https://futurepharmameetings.pharmaceuticalconferences.com/'
   },
-
+  // Europe - 2027
+  {
+    name: 'APTUK 2027 Annual Conference and Exhibition',
+    country: 'Europe',
+    year: 2027,
+    location: 'TBD',
+    date: '2027-03-24',
+    dateRange: 'TBD',
+    website: 'https://www.aptuk.org/events'
+  },
+  {
+    name: 'Pharmapack Europe 2027',
+    country: 'Europe',
+    year: 2027,
+    location: 'Paris Expo Porte de Versailles - Hall 4, Paris, France',
+    date: '2027-01-27',
+    dateRange: 'January 27 - 28, 2027',
+    website: 'https://www.pharmapackeurope.com/'
+  },
   // West Indies - 2026
   {
     name: 'CAPS Spring Meeting 2026',
@@ -494,6 +715,26 @@ export const ConventionsData = [
     website: 'https://www.maghrebpharma.com/en/'
   },
 
+  // Africa - 2027
+  {
+    name: 'The Pharmacy Show 2027 - South Africa',
+    country: 'Africa',
+    year: 2027,
+    location: 'Sandton Convention Centre, Johannesburg, South Africa',
+    date: '2027-03-17',
+    dateRange: 'March 17 - 18, 2027',
+    website: 'https://thepharmacyshow.co.za/'
+  },
+  {
+    name: 'MAGHREB PHARMA Expo 2027',
+    country: 'Africa',
+    year: 2027,
+    location: 'Algiers Exhibition Center - SAFEX (Palestine Hall), Algiers, Algeria',
+    date: '2027-04-27',
+    dateRange: 'April 27 - 29, 2027',
+    website: 'https://www.maghrebpharma.com/en/'
+  },
+
   // Asia - 2026
   {
     name: '2026 PPhA National Convention',
@@ -504,16 +745,16 @@ export const ConventionsData = [
     date: '2026-04-21', // Placeholder date since specific date is TBD
     dateRange: 'April 21 - 24, 2026',
     website: 'https://www.facebook.com/watch/?v=716987187984073'
-  }, 
+  },
   {
     name: 'CPHI South East Asia',
     country: 'Asia',
     year: 2026,
     location: 'QSNCC, Bangkok, Thailand',
-    date: '2026-06-08', 
+    date: '2026-06-08',
     dateRange: 'July 8 - 10, 2026',
     website: 'https://www.facebook.com/CPhISEA/'
-  }, 
+  },
   {
     name: 'PSA Offshore Refresher Conference 2026',
     country: 'Asia',
@@ -522,5 +763,33 @@ export const ConventionsData = [
     date: '2026-05-08',
     dateRange: 'May 8 - 20, 2026',
     website: 'https://impactevents.eventsair.com/cmspreview/psaoffshore2026'
+  },
+  // Asia - 2027
+  {
+    name: '35th Singapore Pharmacy Congress',
+    country: 'Asia',
+    year: 2027,
+    location: 'Grand Copthorne Waterfront Hotel, 392 Havelock Road, Singapore',
+    date: '2027-02-26',
+    dateRange: 'February 26 - 28, 2027',
+    website: 'https://pharmacycongress.org.sg'
+  },
+  {
+    name: 'CPHI South East Asia 2027',
+    country: 'Asia',
+    year: 2027,
+    location: 'MITEC, Kuala Lumpur, Malaysia',
+    date: '2027-07-13',
+    dateRange: 'July 13 - 15, 2027',
+    website: 'https://www.cphi.com/sea/'
+  },
+  {
+    name: '85th FIP World Congress of Pharmacy and Pharmaceutical Sciences',
+    country: 'Asia',
+    year: 2027,
+    location: 'Kuala Lumpur Convention Centre, Kuala Lumpur, Malaysia',
+    date: '2027-09-12',
+    dateRange: 'September 12 - 15, 2027',
+    website: 'https://kualalumpur2027.fip.org/'
   },
 ]

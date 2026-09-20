@@ -92,6 +92,13 @@ const Header = () => {
         Employers
       </Link>
       <Link
+        to="/marketing-opps"
+        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
+        activeClassName="text-pharm-blue"
+      >
+        Advertise
+      </Link>
+      <Link
         to="/store"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"

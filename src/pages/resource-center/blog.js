@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import heroBlog from '../../assets/images/hero_blog.svg'
 import ResourceLink from '../../components/ResourceLink'
+import CTA from '../../components/CTA'
 
 const BlogPage = ({ data }) => {
   const posts = data?.allDropInBlogPost?.edges || []
@@ -41,6 +42,7 @@ const BlogPage = ({ data }) => {
           <nav className="mb-8">
             <ResourceLink />
           </nav>
+          <CTA type="expanded" />
 
           {posts.length === 0 ? (
             <div className="text-center py-12">

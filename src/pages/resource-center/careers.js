@@ -6,6 +6,7 @@ import { ResourceData } from '../../data/careers'
 import { StaticImage } from 'gatsby-plugin-image'
 import heroCeus from '../../assets/images/hero_ceus.svg'
 import ResourceLink from '../../components/ResourceLink'
+import CTA from '../../components/CTA'
 
 const CareerResourcesPage = () => {
   return (
@@ -33,6 +34,7 @@ const CareerResourcesPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
+          <CTA type="expanded" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ResourceData.map((resource, index) => (

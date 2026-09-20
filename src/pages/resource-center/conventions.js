@@ -5,6 +5,7 @@ import HeroHeader from '../../components/HeroHeader'
 import { StaticImage } from 'gatsby-plugin-image'
 import heroConventions from '../../assets/images/hero_conventions.svg'
 import ResourceLink from '../../components/ResourceLink'
+import CTA from '../../components/CTA'
 
 const ConventionsPage = () => {
   // Add error checking for ConventionsData
@@ -104,6 +105,7 @@ const ConventionsPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
+          <CTA type="expanded" />
 
           {/* Summary */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">

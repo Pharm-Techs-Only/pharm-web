@@ -6,6 +6,7 @@ import { OrganizationsData } from '../../data/organizations'
 import { StaticImage } from 'gatsby-plugin-image'
 import heroOrganizations from '../../assets/images/hero_organizations.svg'
 import ResourceLink from '../../components/ResourceLink'
+import CTA from '../../components/CTA'
 
 const OrganizationsPage = () => {
   const [activeTab, setActiveTab] = useState('associations')
@@ -144,6 +145,7 @@ const OrganizationsPage = () => {
           <nav className="mb-6">
             <ResourceLink />
           </nav>
+          <CTA type="expanded" />
 
           {/* Tab Navigation */}
           <div className="mb-8">

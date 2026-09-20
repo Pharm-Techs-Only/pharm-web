@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 const CTA = ({ type = "default" }) => {
   return (
-    <section className={`${type === "ceus" ? "py-8 mb-8" : "py-16"} px-4 sm:px-6 lg:px-8 relative z-20 bg-white`}>
+    <section className={`${type === "ceus" ? "py-8 mb-8" : "py-16"} px-4 sm:px-6 lg:px-8 relative z-20 bg-white ${type == 'expanded' ? "mb-8" : ""}`}>
       <div className="content-container text-center">
         {(type === "default") ? (
           <>

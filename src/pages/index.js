@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import HeroHeader from '../components/HeroHeader'
 import MailchimpSubscribe from '../components/MailchimpSubscribe'
 import { Link } from 'gatsby'
@@ -259,9 +260,125 @@ const HomePage = () => {
 
 export default HomePage
 
-export const Head = () => (
-  <>
-    <title>PharmTechs Only - Community for Pharmacy Technicians</title>
-    <meta name="description" content="A community for pharmacy technicians to connect, learn, and grow together." />
-  </>
-)
+
+const PAGE_TITLE = 'Pharm Techs Only! – Community, Resources & Careers for Pharmacy Technicians'
+const PAGE_DESC = 'Pharm Techs Only! (PTO!) is the global community for pharmacy technicians. Access free CEUs, career resources, professional organizations, pharmacy conventions, and connect with techs worldwide through TechConnect.'
+
+export const Head = () => {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://www.pharmtechsonly.com/#organization',
+    name: 'Pharm Techs Only!',
+    alternateName: 'PTO!',
+    url: 'https://www.pharmtechsonly.com',
+    logo: 'https://www.pharmtechsonly.com/icons/icon-512x512.png',
+    description: 'The premier global platform built by pharmacy technicians, for pharmacy technicians. Community, career resources, free CEUs, and professional networking.',
+    foundingDate: '2020',
+    founder: {
+      '@type': 'Person',
+      name: 'Courtney Miller',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'questions@pharmtechsonly.com',
+      contactType: 'customer support',
+    },
+    sameAs: [
+      'https://www.facebook.com/4PharmTechsOnly',
+      'https://www.instagram.com/pharmtechsonly',
+      'https://www.linkedin.com/company/pharmtechsonly',
+    ],
+  }
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://www.pharmtechsonly.com/#website',
+    url: 'https://www.pharmtechsonly.com',
+    name: 'Pharm Techs Only!',
+    publisher: { '@id': 'https://www.pharmtechsonly.com/#organization' },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://www.pharmtechsonly.com/resource-center/blog?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is Pharm Techs Only!?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Pharm Techs Only! (PTO!) is the premier global community built exclusively for pharmacy technicians. We provide free CEUs, career resources, professional organizations directory, pharmacy conventions listings, and a social networking platform called TechConnect where pharmacy techs can connect, share, and grow together.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is TechConnect?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'TechConnect is PTO\'s professional networking platform for pharmacy technicians. It\'s a centralized space to interact, connect, chat, participate in polls, and join communities with other pharmacy technicians from around the world. Create a free account at tc.pharmtechsonly.com.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does Pharm Techs Only! offer free continuing education (CEUs)?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! PTO! maintains a curated, regularly-updated list of completely free CEU courses from leading continuing education providers for pharmacy technicians. All listed courses are accredited and meet state requirements. Visit our Free CEUs page to browse current offerings.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How many CEU hours do pharmacy technicians need for license renewal?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most states require 20–40 hours of continuing education every 2 years for pharmacy technician license renewal. Requirements vary by state, so always check with your state board of pharmacy for the specific requirements in your jurisdiction.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can employers use Pharm Techs Only! to find pharmacy technicians?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Employers can use PTO\'s Employer Tools to feature job openings, advertise on TechConnect, and access a searchable pool of pharmacy technician candidates. We also offer marketing opportunities including job boost packages to increase visibility for pharmacy technician openings.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Pharm Techs Only! free to join?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, creating a free account on TechConnect and accessing PTO\'s resource center, free CEUs, career resources, and community features is completely free for pharmacy technicians.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What career resources are available for pharmacy technicians?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'PTO! offers a full Career Portal including a global career center with job listings, downloadable career guides and resume templates, a searchable digital resume builder, and interview preparation resources. All designed specifically for pharmacy technicians at every stage of their career.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/" />
+      <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+    </>
+  )
+}

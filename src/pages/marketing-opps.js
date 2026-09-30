@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
 import heroHome from '../assets/images/hero_home.svg'
@@ -136,9 +137,47 @@ const MarketingOppsPage = () => {
 
 export default MarketingOppsPage
 
-export const Head = () => (
-  <>
-    <title>Marketing Opportunities - PharmTechs Only</title>
-    <meta name="description" content="Promote your products, services, or job openings to pharmacy technicians through PharmTechs Only!" />
-  </>
-)
+const PAGE_TITLE = 'Marketing Opportunities for Employers & Partners – Pharm Techs Only!'
+const PAGE_DESC = 'Reach 26,000+ pharmacy technician professionals through Pharm Techs Only! advertising and marketing partnerships. Job boost packages from $49.95, newsletter promotions, social media campaigns, and sponsored content for healthcare employers, educators, and organizations.'
+
+export const Head = () => {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Pharmacy Technician Marketing & Advertising',
+    provider: {
+      '@type': 'Organization',
+      name: 'Pharm Techs Only!',
+      url: 'https://www.pharmtechsonly.com',
+    },
+    description: 'Targeted marketing and advertising services to connect healthcare employers and organizations with pharmacy technicians through Pharm Techs Only! networks.',
+    areaServed: 'Worldwide',
+    serviceType: 'Advertising and Marketing',
+    offers: {
+      '@type': 'Offer',
+      name: 'Pharmacy Technician Job Boost',
+      price: '49.95',
+      priceCurrency: 'USD',
+      description: 'Increase visibility for your pharmacy technician job opening through two social media promotions over a 7–10 day campaign.',
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+      { '@type': 'ListItem', position: 2, name: 'Marketing Opportunities', item: 'https://www.pharmtechsonly.com/marketing-opps' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/marketing-opps" />
+      <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </>
+  )
+}

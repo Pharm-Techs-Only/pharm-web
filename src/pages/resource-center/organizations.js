@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Layout from '../../components/Layout'
+import SEO from '../../components/SEO'
 import { Link } from 'gatsby'
 import HeroHeader from '../../components/HeroHeader'
 import { OrganizationsData } from '../../data/organizations'
@@ -235,9 +236,26 @@ const OrganizationsPage = () => {
 
 export default OrganizationsPage
 
-export const Head = () => (
-  <>
-    <title>Professional Organizations - PharmTechs Only</title>
-    <meta name="description" content="Explore professional organizations that support pharmacy technicians through advocacy, education, and career development opportunities." />
-  </>
-)
+const PAGE_TITLE = 'Pharmacy Technician Organizations – Associations, Boards & Councils'
+const PAGE_DESC = 'Directory of professional organizations for pharmacy technicians including national and international associations, certification boards (PTCB, NHA), and industry councils. Advance your career through membership, advocacy, and professional development.'
+
+export const Head = () => {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
+      { '@type': 'ListItem', position: 3, name: 'Organizations', item: 'https://www.pharmtechsonly.com/resource-center/organizations' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/organizations" />
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </>
+  )
+}

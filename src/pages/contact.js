@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import HeroHeader from '../components/HeroHeader'
 import MailchimpSubscribe from '../components/MailchimpSubscribe'
 import { Link } from 'gatsby'
@@ -72,9 +73,33 @@ const ContactPage = () => {
 
 export default ContactPage
 
-export const Head = () => (
-  <>
-    <title>PharmTechs Only - Contact</title>
-    <meta name="description" content="Get in touch with PharmTechs Only." />
-  </>
-)
+const PAGE_TITLE = 'Contact Pharm Techs Only! – Get in Touch'
+const PAGE_DESC = 'Contact Pharm Techs Only! with questions, feedback, or partnership inquiries. Reach us at questions@pharmtechsonly.com or connect on Facebook, Instagram, and LinkedIn. Join our mailing list to stay updated on pharmacy technician resources and news.'
+
+export const Head = () => {
+  const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': 'https://www.pharmtechsonly.com/contact#webpage',
+    url: 'https://www.pharmtechsonly.com/contact',
+    name: PAGE_TITLE,
+    description: PAGE_DESC,
+    isPartOf: { '@id': 'https://www.pharmtechsonly.com/#website' },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+        { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.pharmtechsonly.com/contact' },
+      ],
+    },
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/contact" />
+      <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
+    </>
+  )
+}

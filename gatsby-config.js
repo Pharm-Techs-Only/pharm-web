@@ -6,7 +6,38 @@ module.exports = {
     title: `Pharm Techs Only!`,
     siteUrl: `https://www.pharmtechsonly.com`,
   },
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-transformer-sharp", "gatsby-plugin-sitemap", {
+  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-transformer-sharp", {
+    resolve: "gatsby-plugin-sitemap",
+    options: {
+      output: "/",
+      excludes: ["/privacy", "/terms", "/sitemap", "/404"],
+      query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+      resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
+      resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+        return allPages.map(page => ({ ...page }))
+      },
+      serialize: ({ path }) => {
+        return {
+          url: path,
+          changefreq: "weekly",
+          priority: path === "/" ? 1.0 : path.includes("/resource-center/blog/") ? 0.7 : 0.8,
+        }
+      },
+    },
+  }, {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/assets/images/icon.png"
@@ -63,3 +94,4 @@ module.exports = {
     }
   ]
 };
+

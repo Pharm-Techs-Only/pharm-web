@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Layout from '../../components/Layout'
+import SEO from '../../components/SEO'
 import HeroHeader from '../../components/HeroHeader'
 import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -122,9 +123,42 @@ export const query = graphql`
 
 export default BlogPage
 
-export const Head = () => (
-  <>
-    <title>Blog - PharmTechs Only</title>
-    <meta name="description" content="Stay current with your PharmTech career through our blog featuring the latest news, tips, and resources for pharmacy technicians." />
-  </>
-)
+const PAGE_TITLE = 'Blog – News, Tips & Resources for Pharmacy Technicians'
+const PAGE_DESC = 'The Pharm Techs Only! blog covers pharmacy technician career tips, industry news, certification guidance, workplace advice, and professional development. Updated regularly to keep pharmacy techs informed and empowered.'
+
+export const Head = () => {
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': 'https://www.pharmtechsonly.com/resource-center/blog#webpage',
+    url: 'https://www.pharmtechsonly.com/resource-center/blog',
+    name: PAGE_TITLE,
+    description: PAGE_DESC,
+    publisher: { '@id': 'https://www.pharmtechsonly.com/#organization' },
+    isPartOf: { '@id': 'https://www.pharmtechsonly.com/#website' },
+    about: {
+      '@type': 'Thing',
+      name: 'Pharmacy Technician Career Resources',
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
+      { '@type': 'ListItem', position: 3, name: 'Blog', item: 'https://www.pharmtechsonly.com/resource-center/blog' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/blog" />
+      <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </>
+  )
+}

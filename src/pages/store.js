@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import HeroHeader from '../components/HeroHeader'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -76,9 +77,25 @@ const StorePage = () => {
 
 export default StorePage
 
-export const Head = () => (
-  <>
-    <title>Store - PharmTechs Only</title>
-    <meta name="description" content="Explore our store for the latest products and resources tailored for pharmacy technicians." />
-  </>
-)
+const PAGE_TITLE = 'Pharmacy Technician Store – Study Kits, Apparel & Resources'
+const PAGE_DESC = 'Shop the Pharm Techs Only! store for pharmacy technician study kits, exam prep materials, branded apparel, and professional resources. Products designed to support pharmacy technicians at every stage of their career.'
+
+export const Head = () => {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+      { '@type': 'ListItem', position: 2, name: 'Store', item: 'https://www.pharmtechsonly.com/store' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/store" />
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </>
+  )
+}

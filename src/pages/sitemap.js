@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import HeroHeader from '../components/HeroHeader'
 import { Link } from 'gatsby'
 
@@ -78,9 +79,38 @@ const SitemapPage = () => {
 
 export default SitemapPage
 
-export const Head = () => (
-  <>
-    <title>Site Map | Pharm Techs Only!</title>
-    <meta name="description" content="View the complete site map to easily navigate all sections of Pharm Techs Only!" />
-  </>
-)
+const PAGE_TITLE = 'Site Map – Pharm Techs Only! – All Pages & Sections'
+const PAGE_DESC = 'Complete site map for Pharm Techs Only! Navigate all sections including Resource Center, Free CEUs, Organizations, Conventions, Blog, Career Portal, TechConnect community, Store, and Employer Tools.'
+
+export const Head = () => {
+  const siteNavSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SiteNavigationElement',
+    name: 'Pharm Techs Only! Site Navigation',
+    url: 'https://www.pharmtechsonly.com/sitemap',
+    hasPart: [
+      { '@type': 'SiteNavigationElement', name: 'Home', url: 'https://www.pharmtechsonly.com' },
+      { '@type': 'SiteNavigationElement', name: 'About', url: 'https://www.pharmtechsonly.com/about' },
+      { '@type': 'SiteNavigationElement', name: 'Resource Center', url: 'https://www.pharmtechsonly.com/resource-center' },
+      { '@type': 'SiteNavigationElement', name: 'Free CEUs', url: 'https://www.pharmtechsonly.com/resource-center/free-ceus' },
+      { '@type': 'SiteNavigationElement', name: 'Professional Organizations', url: 'https://www.pharmtechsonly.com/resource-center/organizations' },
+      { '@type': 'SiteNavigationElement', name: 'Pharmacy Conventions', url: 'https://www.pharmtechsonly.com/resource-center/conventions' },
+      { '@type': 'SiteNavigationElement', name: 'Blog', url: 'https://www.pharmtechsonly.com/resource-center/blog' },
+      { '@type': 'SiteNavigationElement', name: 'Career Resources', url: 'https://www.pharmtechsonly.com/resource-center/careers' },
+      { '@type': 'SiteNavigationElement', name: 'Store', url: 'https://www.pharmtechsonly.com/store' },
+      { '@type': 'SiteNavigationElement', name: 'Marketing Opportunities', url: 'https://www.pharmtechsonly.com/marketing-opps' },
+      { '@type': 'SiteNavigationElement', name: 'Contact', url: 'https://www.pharmtechsonly.com/contact' },
+      { '@type': 'SiteNavigationElement', name: 'TechConnect Community', url: 'https://tc.pharmtechsonly.com' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <meta name="robots" content="noindex, follow" />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/sitemap" />
+      <script type="application/ld+json">{JSON.stringify(siteNavSchema)}</script>
+    </>
+  )
+}

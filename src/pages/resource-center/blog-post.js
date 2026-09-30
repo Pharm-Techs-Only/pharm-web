@@ -2,6 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../../components/Layout"
 import HeroHeader from "../../components/HeroHeader"
+import SEO from "../../components/SEO"
+
 export default function BlogPostTemplate({ data }) {
   const post = data.dropInBlogPost
 
@@ -71,6 +73,7 @@ export default function BlogPostTemplate({ data }) {
 export const query = graphql`
   query($slug: String!) {
     dropInBlogPost(slug: { eq: $slug }) {
+      slug
       title
       content
       summary
@@ -84,3 +87,56 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = ({ data }) => {
+  const post = data?.dropInBlogPost
+  if (!post) return null
+
+  const pageTitle = `${post.title} – Pharm Techs Only! Blog`
+  const pageDesc = post.summary || `Read ${post.title} on the Pharm Techs Only! blog for pharmacy technicians.`
+  const canonicalPath = `/resource-center/blog/${post.slug}`
+  const canonicalUrl = `https://www.pharmtechsonly.com${canonicalPath}`
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': `${canonicalUrl}#article`,
+    url: canonicalUrl,
+    headline: post.title,
+    description: pageDesc,
+    image: post.featuredImage || 'https://www.pharmtechsonly.com/og-image.png',
+    datePublished: post.publishedAt,
+    author: post.author
+      ? { '@type': 'Person', name: post.author.name }
+      : { '@type': 'Organization', name: 'Pharm Techs Only!' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Pharm Techs Only!',
+      url: 'https://www.pharmtechsonly.com',
+    },
+    isPartOf: { '@id': 'https://www.pharmtechsonly.com/resource-center/blog#webpage' },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.pharmtechsonly.com/resource-center/blog' },
+        { '@type': 'ListItem', position: 3, name: post.title, item: canonicalUrl },
+      ],
+    },
+  }
+
+  return (
+    <>
+      <title>{pageTitle}</title>
+      <meta name="description" content={pageDesc} />
+      <SEO
+        title={pageTitle}
+        description={pageDesc}
+        path={canonicalPath}
+        ogType="article"
+        ogImage={post.featuredImage || undefined}
+      />
+      <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+    </>
+  )
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import SEO from '../../components/SEO'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { ResourceData } from '../../data/careers'
@@ -73,9 +74,26 @@ const CareerResourcesPage = () => {
 
 export default CareerResourcesPage
 
-export const Head = () => (
-  <>
-    <title>Career Resources - PharmTechs Only</title>
-    <meta name="description" content="Explore resources to help boost your pharmacy technician career, including job boards, resume tips, interview preparation, and professional development opportunities." />
-  </>
-)
+const PAGE_TITLE = 'Career Resources for Pharmacy Technicians – Resume, Interview & Job Search Guides'
+const PAGE_DESC = 'Download free career guides, resume templates, interview prep resources, and job search tools designed specifically for pharmacy technicians. Build your career with expert guidance from Pharm Techs Only!'
+
+export const Head = () => {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
+      { '@type': 'ListItem', position: 3, name: 'Career Resources', item: 'https://www.pharmtechsonly.com/resource-center/careers' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/careers" />
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </>
+  )
+}

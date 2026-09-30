@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import SEO from '../../components/SEO'
 import { ConventionsData } from '../../data/conventions'
 import HeroHeader from '../../components/HeroHeader'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -254,9 +255,26 @@ const ConventionsPage = () => {
 
 export default ConventionsPage
 
-export const Head = () => (
-  <>
-    <title>Pharmacy Conventions - PharmTechs Only</title>
-    <meta name="description" content="Discover upcoming pharmacy conventions, conferences, and professional meetings. Network with industry professionals and advance your pharmacy career." />
-  </>
-)
+const PAGE_TITLE = 'Pharmacy Conventions & Conferences – Upcoming Events for Pharmacy Technicians'
+const PAGE_DESC = 'Find upcoming pharmacy conventions, conferences, and professional meetings for pharmacy technicians worldwide. Browse events by country and year. Network, earn CEUs, and stay current on pharmacy industry trends.'
+
+export const Head = () => {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
+      { '@type': 'ListItem', position: 3, name: 'Conventions', item: 'https://www.pharmtechsonly.com/resource-center/conventions' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/conventions" />
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </>
+  )
+}

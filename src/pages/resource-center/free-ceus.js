@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import SEO from '../../components/SEO'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { CeusData } from '../../data/ceus'
@@ -239,9 +240,66 @@ const FreeCEUsPage = () => {
 
 export default FreeCEUsPage
 
-export const Head = () => (
-  <>
-    <title>Free CEUs - PharmTechs Only</title>
-    <meta name="description" content="Stay current with your continuing education requirements through our free CEU courses designed specifically for pharmacy technicians." />
-  </>
-)
+const PAGE_TITLE = 'Free CEUs for Pharmacy Technicians – Accredited Continuing Education'
+const PAGE_DESC = 'Browse 100% free, accredited continuing education units (CEUs) for pharmacy technicians. Updated regularly from leading providers. Meet your state license renewal requirements without spending a penny. No cost, no tricks.'
+
+export const Head = () => {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
+      { '@type': 'ListItem', position: 3, name: 'Free CEUs', item: 'https://www.pharmtechsonly.com/resource-center/free-ceus' },
+    ],
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Are the CEUs on Pharm Techs Only! really free?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! All CEUs listed on Pharm Techs Only! are 100% free for pharmacy technicians. Some providers may require a quick, free registration to access their courses, but there is no cost involved. We curate only truly free continuing education opportunities.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How many CEU hours do pharmacy technicians need?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most states require 20–40 hours of continuing education every 2 years for pharmacy technician license renewal. The exact requirement depends on your state. Always check with your state board of pharmacy for the specific CEU requirements in your jurisdiction.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are the free CEUs accredited?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. All courses listed on Pharm Techs Only! are accredited and meet state requirements for pharmacy technician continuing education. Completion certificates are provided upon successful course completion.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do the free CEU courses expire?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, each CEU course has an expiration date listed. Pharm Techs Only! automatically removes expired courses from the listing and clearly shows the expiration date for each course so you can plan accordingly. Check back often for new offerings.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/free-ceus" />
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+    </>
+  )
+}

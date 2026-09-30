@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import HeroHeader from '../components/HeroHeader'
 import MailchimpSubscribe from '../components/MailchimpSubscribe'
 import { Link } from 'gatsby'
@@ -57,9 +58,50 @@ const HomePage = () => {
 
 export default HomePage
 
-export const Head = () => (
-  <>
-    <title>PharmTechs Only - About PTO!</title>
-    <meta name="description" content="Learn more about PharmTechs Only and our mission to support pharmacy technicians." />
-  </>
-)
+const PAGE_TITLE = 'About Pharm Techs Only! – Our Mission & Founder Story'
+const PAGE_DESC = 'Learn about Pharm Techs Only! (PTO!), the global platform founded by pharmacy technician Courtney Miller. Discover our mission to empower, connect, and elevate pharmacy technicians worldwide through community, resources, and advocacy.'
+
+export const Head = () => {
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Courtney Miller',
+    jobTitle: 'Founder, Pharm Techs Only!',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Pharm Techs Only!',
+      url: 'https://www.pharmtechsonly.com',
+    },
+    description: 'Pharmacy technician with over three decades of hands-on experience spanning retail, long-term care, correctional facilities, and specialized pharmacy environments. Founder of Pharm Techs Only!',
+    url: 'https://www.pharmtechsonly.com/about',
+    sameAs: ['https://www.linkedin.com/company/pharmtechsonly'],
+  }
+
+  const aboutPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': 'https://www.pharmtechsonly.com/about#webpage',
+    url: 'https://www.pharmtechsonly.com/about',
+    name: PAGE_TITLE,
+    description: PAGE_DESC,
+    isPartOf: { '@id': 'https://www.pharmtechsonly.com/#website' },
+    about: { '@id': 'https://www.pharmtechsonly.com/#organization' },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+        { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.pharmtechsonly.com/about' },
+      ],
+    },
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/about" />
+      <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(aboutPageSchema)}</script>
+    </>
+  )
+}

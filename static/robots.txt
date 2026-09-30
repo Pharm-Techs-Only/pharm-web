@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow legal/utility pages from being crawled
+Disallow: /privacy
+Disallow: /terms
+Disallow: /sitemap
+
+# Sitemap location
+Sitemap: https://www.pharmtechsonly.com/sitemap-index.xml

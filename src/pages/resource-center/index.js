@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import SEO from '../../components/SEO'
 import HeroHeader from '../../components/HeroHeader'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -100,9 +101,33 @@ const ResourceCenterPage = () => {
 
 export default ResourceCenterPage
 
-export const Head = () => (
-  <>
-    <title>Resource Center - PharmTechs Only</title>
-    <meta name="description" content="Comprehensive tools and resources to support your job and growth as a pharmacy technician." />
-  </>
-)
+const PAGE_TITLE = 'Resource Center – Free CEUs, Organizations, Conventions & Career Tools'
+const PAGE_DESC = 'The Pharm Techs Only! Resource Center provides pharmacy technicians with free CEUs, professional organizations directory, upcoming pharmacy conventions, career downloadable guides, and blog articles. Everything you need to grow in your pharmacy career.'
+
+export const Head = () => {
+  const collectionPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': 'https://www.pharmtechsonly.com/resource-center#webpage',
+    url: 'https://www.pharmtechsonly.com/resource-center',
+    name: PAGE_TITLE,
+    description: PAGE_DESC,
+    isPartOf: { '@id': 'https://www.pharmtechsonly.com/#website' },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
+        { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
+      ],
+    },
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center" />
+      <script type="application/ld+json">{JSON.stringify(collectionPageSchema)}</script>
+    </>
+  )
+}

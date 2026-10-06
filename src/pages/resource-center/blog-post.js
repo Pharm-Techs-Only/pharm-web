@@ -94,7 +94,7 @@ export const Head = ({ data }) => {
 
   const pageTitle = `${post.title} – Pharm Techs Only! Blog`
   const pageDesc = post.summary || `Read ${post.title} on the Pharm Techs Only! blog for pharmacy technicians.`
-  const canonicalPath = `/resource-center/blog/${post.slug}`
+  const canonicalPath = `/resource-center/blog/${post.slug}/`
   const canonicalUrl = `https://www.pharmtechsonly.com${canonicalPath}`
 
   const articleSchema = {

@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const TermsPage = () => {
   return (
@@ -430,9 +431,31 @@ const TermsPage = () => {
 
 export default TermsPage
 
-export const Head = () => (
-  <>
-    <title>Terms of Service - PharmTechs Only</title>
-    <meta name="description" content="Terms of service for PharmTechs Only community platform." />
-  </>
-)
+const PAGE_TITLE = 'Terms of Service – Pharm Techs Only!'
+const PAGE_DESC = 'Terms of Service and conditions of use for Pharm Techs Only! website, TechConnect community, and related services.'
+
+export const Head = () => {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: 'https://www.pharmtechsonly.com/terms/' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO
+        title={PAGE_TITLE}
+        description={PAGE_DESC}
+        path="/terms/"
+        noindex={true}
+      />
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </>
+  )
+}
+

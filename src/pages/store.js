@@ -94,7 +94,7 @@ export const Head = () => {
     <>
       <title>{PAGE_TITLE}</title>
       <meta name="description" content={PAGE_DESC} />
-      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/store" />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/store/" />
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
     </>
   )

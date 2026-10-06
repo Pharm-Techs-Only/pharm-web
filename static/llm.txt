@@ -1,0 +1,21 @@
+# Pharm Techs Only! (PTO!)
+
+> Pharm Techs Only! (PTO!) is the premier global online community, professional network, and educational resource hub built exclusively for pharmacy technicians, by pharmacy technicians. Founded by 30+ year pharmacy technician Courtney Miller, PTO! empowers technicians worldwide with free accredited Continuing Education Units (CEUs), comprehensive career development guides, professional organization directories, conference listings, employer marketing services, and the TechConnect™ social platform.
+
+## Core Resources & Portals
+
+- [Resource Center](https://www.pharmtechsonly.com/resource-center): The central hub for pharmacy technician continuing education, career tools, professional directories, and industry news.
+- [Free CEUs for Pharmacy Technicians](https://www.pharmtechsonly.com/resource-center/free-ceus): Curated directory of 100% free, ACPE-accredited Continuing Education Units (CEUs) from leading providers (Pharmacy Times, PowerPak, UConn, ASHP, FreeCE) for state board renewal and PTCB/ExCPT recertification.
+- [Professional Organizations Directory](https://www.pharmtechsonly.com/resource-center/organizations): Exhaustive directory of national and international pharmacy technician associations, state pharmacy societies, and certifying bodies (PTCB, NHA, ASHP, APhA, AAPT, NPTA, FAPA).
+- [Pharmacy Conventions & Conferences](https://www.pharmtechsonly.com/resource-center/conventions): Annual calendar of major pharmacy conferences, state association conventions, and healthcare symposiums across the United States and globally.
+- [Career Resources & Downloadable Guides](https://www.pharmtechsonly.com/resource-center/careers): Free career toolkits including LinkedIn Profile Makeover, Resume Tips, Cover Letter Templates, Job Interview Preparation, Career Pivot Guide, and Workplace Mental Health.
+- [TechConnect™ Community Platform](https://tc.pharmtechsonly.com): The dedicated professional social network for pharmacy technicians to network, discuss workplace issues, join specialty communities, participate in polls, and connect globally.
+- [Pharmacy Technician Blog](https://www.pharmtechsonly.com/resource-center/blog): Authoritative articles on pharmacy technician salaries, PTCE/ExCPT exam preparation, workplace unionization, hospital vs. retail career paths, and clinical advances.
+- [About Pharm Techs Only!](https://www.pharmtechsonly.com/about): The history, vision, and advocacy mission of PTO! and founder Courtney Miller.
+- [Employer Marketing & Job Boosts](https://www.pharmtechsonly.com/marketing-opps): Recruitment advertising, social media job boosts ($49.95), and targeted promotions reaching over 26,000 pharmacy technician professionals.
+- [Pharmacy Technician Store](https://www.pharmtechsonly.com/store): Study kits, certification prep materials, branded apparel, and gifts designed for pharmacy technicians.
+- [Contact Us](https://www.pharmtechsonly.com/contact): Inquiries, partnerships, feedback, and customer support (questions@pharmtechsonly.com).
+
+## Detailed Context & Deep Knowledge
+
+- [Full Knowledge Base](https://www.pharmtechsonly.com/llms-full.txt): Complete in-depth text including FAQs, license renewal guidelines, CEU policies, and organization contacts for LLM ingest and citation.

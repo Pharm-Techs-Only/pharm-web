@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const PrivacyPage = () => {
   return (
@@ -366,9 +367,31 @@ const PrivacyPage = () => {
 
 export default PrivacyPage
 
-export const Head = () => (
-  <>
-    <title>Privacy Policy - PharmTechs Only</title>
-    <meta name="description" content="Privacy policy for PharmTechs Only community platform." />
-  </>
-)
+const PAGE_TITLE = 'Privacy Policy – Pharm Techs Only!'
+const PAGE_DESC = 'Privacy Policy for Pharm Techs Only! platform, TechConnect community, and online services. Learn how we protect and handle your personal data.'
+
+export const Head = () => {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://www.pharmtechsonly.com/privacy/' },
+    ],
+  }
+
+  return (
+    <>
+      <title>{PAGE_TITLE}</title>
+      <meta name="description" content={PAGE_DESC} />
+      <SEO
+        title={PAGE_TITLE}
+        description={PAGE_DESC}
+        path="/privacy/"
+        noindex={true}
+      />
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </>
+  )
+}
+

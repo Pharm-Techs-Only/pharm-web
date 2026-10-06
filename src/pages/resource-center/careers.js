@@ -82,9 +82,53 @@ export const Head = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
-      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
-      { '@type': 'ListItem', position: 3, name: 'Career Resources', item: 'https://www.pharmtechsonly.com/resource-center/careers' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center/' },
+      { '@type': 'ListItem', position: 3, name: 'Career Resources', item: 'https://www.pharmtechsonly.com/resource-center/careers/' },
+    ],
+  }
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Pharmacy Technician Career Guides & Downloads',
+    description: 'Free downloadable toolkits and guides for pharmacy technician career advancement.',
+    itemListElement: ResourceData.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.title,
+      description: item.description,
+    })),
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Are the career guides on Pharm Techs Only! really free?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! All downloadable career guides, resume tips, cover letter templates, and interview preparation resources are 100% free to download for pharmacy technicians.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What career paths can a pharmacy technician pivot into?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Pharmacy technicians can pivot into healthcare IT (Epic Willow, Cerner, pharmacy informatics), pharmaceutical sales, pharmacy benefit management (PBM) prior authorization analysis, medical device coordination, and compliance management.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How should a pharmacy technician write a resume?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A pharmacy technician resume should highlight clinical credentials (CPhT, state license), quantifiable dispensing volume (prescriptions per day), compounding experience (USP <797>/<800>), EHR/pharmacy software proficiency, and patient customer service skills.',
+        },
+      },
     ],
   }
 
@@ -92,8 +136,11 @@ export const Head = () => {
     <>
       <title>{PAGE_TITLE}</title>
       <meta name="description" content={PAGE_DESC} />
-      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/careers" />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/careers/" />
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(itemListSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     </>
   )
 }
+

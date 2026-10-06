@@ -2,48 +2,52 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  trailingSlash: "always",
   siteMetadata: {
     title: `Pharm Techs Only!`,
+    description: `The premier global community, professional network, and educational resource hub built by pharmacy technicians, for pharmacy technicians. Access free CEUs, career tools, professional directories, and connect with peers worldwide.`,
     siteUrl: `https://www.pharmtechsonly.com`,
+    author: `Courtney Miller`,
+    keywords: `pharmacy technician, pharmacy tech, CPhT, PTCB, ExCPT, free CEUs, pharmacy continuing education, TechConnect, pharmacy careers`,
+    image: `/og-image.png`,
+    twitterUsername: `@pharmtechsonly`,
   },
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-transformer-sharp", {
-    resolve: "gatsby-plugin-sitemap",
-    options: {
-      output: "/",
-      excludes: ["/privacy", "/terms", "/sitemap", "/404"],
-      query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
+  plugins: [
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-image",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: "/",
+        excludes: ["/privacy", "/privacy/", "/terms", "/terms/", "/404", "/404/", "/404.html"],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
             }
           }
-          allSitePage {
-            nodes {
-              path
-            }
+        `,
+        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => ({ ...page }))
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: "weekly",
+            priority: path === "/" ? 1.0 : path.includes("/resource-center/blog/") ? 0.7 : 0.8,
           }
-        }
-      `,
-      resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
-      resolvePages: ({ allSitePage: { nodes: allPages } }) => {
-        return allPages.map(page => ({ ...page }))
-      },
-      serialize: ({ path }) => {
-        return {
-          url: path,
-          changefreq: "weekly",
-          priority: path === "/" ? 1.0 : path.includes("/resource-center/blog/") ? 0.7 : 0.8,
-        }
+        },
       },
     },
-  }, {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/assets/images/icon.png"
-    }
-  },
-
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -94,4 +98,5 @@ module.exports = {
     }
   ]
 };
+
 

@@ -99,7 +99,7 @@ export const Head = () => {
     <>
       <title>{PAGE_TITLE}</title>
       <meta name="description" content={PAGE_DESC} />
-      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/about" />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/about/" />
       <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(aboutPageSchema)}</script>
     </>

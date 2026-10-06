@@ -85,25 +85,25 @@ const HomePage = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <Link to="/resource-center/free-ceus" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="/resource-center/free-ceus/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconFreeCeus} alt="Free CEUs" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Free CEUs</h3>
             </Link>
-            <Link to="/resource-center/organizations" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="/resource-center/organizations/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconOrganizations} alt="Organizations" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Organizations</h3>
             </Link>
-            <Link to="/resource-center/conventions" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="/resource-center/conventions/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconConventions} alt="Conventions" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Conventions</h3>
             </Link>
-            <Link to="/resource-center/blog" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="/resource-center/blog/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconBlog} alt="Blog" className="" />
               </div>
@@ -112,7 +112,7 @@ const HomePage = () => {
           </div>
 
           <Link
-            to="/resource-center"
+            to="/resource-center/"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Go to Resources
@@ -129,35 +129,37 @@ const HomePage = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-8">
-            <Link to="https://tc.pharmtechsonly.com/careers" target="_blank" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <a href="https://tc.pharmtechsonly.com/careers" target="_blank" rel="noopener noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconGlobalCareers} alt="Global Career Center" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Global Career Center</h3>
-            </Link>
-            <Link to="/resource-center/careers" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            </a>
+            <Link to="/resource-center/careers/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconCareerResources} alt="Career Resources" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Career Resources</h3>
             </Link>
-            <Link to="https://tc.pharmtechsonly.com/account/resume" target="_blank" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <a href="https://tc.pharmtechsonly.com/account/resume" target="_blank" rel="noopener noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconOfferAnalyzer} alt="Digital Resume" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Searchable Digital Resume</h3>
-            </Link>
+            </a>
           </div>
 
-          <Link
-            to="https://tc.pharmtechsonly.com/careers"
+          <a
+            href="https://tc.pharmtechsonly.com/careers"
             target="_blank"
+            rel="noopener noreferrer"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Go to Careers
-          </Link>
+          </a>
         </div>
       </section>
+
 
       {/* Tech Connect Section */}
       <section className="relative py-[30px] md:py-[40px] lg:py-[80px]">
@@ -199,12 +201,13 @@ const HomePage = () => {
               <h3 className="font-semibold text-purple-900 text-center mb-0">Communities</h3>
             </div>
           </div>
-          <Link
-            to="https://tc.pharmtechsonly.com"
+          <a
+            href="https://tc.pharmtechsonly.com"
             target="_blank"
+            rel="noopener noreferrer"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block">
             Join Now
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -215,45 +218,47 @@ const HomePage = () => {
             Employer Tools
           </h2>
           <p>
-            Employer? See our tools built just for you!Are you a pharmacy looking to fill your opening with the certified, experienced pharmacy technicians?
+            Are you a pharmacy or healthcare employer looking to fill openings with certified, experienced pharmacy technicians? Explore our recruitment solutions.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <a href="mailto:questions@pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="/marketing-opps/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconFeatureJob} alt="Feature Your Job Opening" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Feature Your Job Opening</h3>
-            </a>
-            <a href="mailto:questions@pharmtechsonly.com" target="_blank" rel="noreferrer" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            </Link>
+            <Link to="/marketing-opps/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconAdvertise} alt="Advertise on Tech Connect" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Advertise on Tech Connect</h3>
-            </a>
-            <a href="#" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            </Link>
+            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full opacity-60">
               <div className="height-[102px] mb-4">
                 <img src={iconPostJobs} alt="Post Jobs" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Post Jobs<br /><span className="text-sm italic">*coming soon*</span></h3>
-            </a>
-            <a href="#" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            </div>
+            <div className="item-wrap m-w-[292px] w-full m-h-[275px] h-full opacity-60">
               <div className="height-[102px] mb-4">
                 <img src={iconSearchCandidates} alt="Search Candidates" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Search Candidates<br /><span className="text-sm italic">*coming soon*</span></h3>
-            </a>
+            </div>
           </div>
 
-          <Link
-            to="https://tc.pharmtechsonly.com/employers"
+          <a
+            href="https://tc.pharmtechsonly.com/employers"
             target="_blank"
+            rel="noopener noreferrer"
             className="btn text-white px-8 py-3 rounded-md font-medium transition-colors inline-block"
           >
             Create your FREE Employer Account
-          </Link>
+          </a>
         </div>
       </section>
+
     </Layout>
   )
 }

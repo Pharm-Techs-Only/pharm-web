@@ -248,9 +248,9 @@ export const Head = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
-      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
-      { '@type': 'ListItem', position: 3, name: 'Free CEUs', item: 'https://www.pharmtechsonly.com/resource-center/free-ceus' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center/' },
+      { '@type': 'ListItem', position: 3, name: 'Free CEUs', item: 'https://www.pharmtechsonly.com/resource-center/free-ceus/' },
     ],
   }
 
@@ -297,7 +297,7 @@ export const Head = () => {
     <>
       <title>{PAGE_TITLE}</title>
       <meta name="description" content={PAGE_DESC} />
-      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/free-ceus" />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/free-ceus/" />
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     </>

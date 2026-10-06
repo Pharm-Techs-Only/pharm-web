@@ -45,7 +45,7 @@ const SitemapPage = () => {
               <div>
                 <h3 className="text-xl font-bold mb-4 text-pharm-blue">Career Tools</h3>
                 <ul className="space-y-3">
-                  <li><Link to="/careers" className="text-blue-600 hover:underline">Global Career Center</Link></li>
+                  <li><a href="https://tc.pharmtechsonly.com/careers" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Global Career Center</a></li>
                   <li><Link to="/resource-center/careers" className="text-blue-600 hover:underline">Career Resources</Link></li>
                 </ul>
               </div>
@@ -53,18 +53,18 @@ const SitemapPage = () => {
               <div>
                 <h3 className="text-xl font-bold mb-4 text-pharm-blue">Tech Connect</h3>
                 <ul className="space-y-3">
-                  <li><Link to="https://tc.pharmtechsonly.com" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Community Portal</Link></li>
-                  <li><Link to="https://tc.pharmtechsonly.com/careers" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Careers Portal</Link></li>
+                  <li><a href="https://tc.pharmtechsonly.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Community Portal</a></li>
+                  <li><a href="https://tc.pharmtechsonly.com/careers" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Careers Portal</a></li>
                 </ul>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold mb-4 text-pharm-blue">Employers</h3>
                 <ul className="space-y-3">
-                  <li><a href="#" className="text-blue-600 hover:underline opacity-50 cursor-not-allowed">Post Jobs (Coming Soon)</a></li>
-                  <li><a href="#" className="text-blue-600 hover:underline opacity-50 cursor-not-allowed">Search Candidates (Coming Soon)</a></li>
+                  <li><span className="text-gray-400">Post Jobs (Coming Soon)</span></li>
+                  <li><span className="text-gray-400">Search Candidates (Coming Soon)</span></li>
                   <li><Link to="/marketing-opps" className="text-blue-600 hover:underline">Marketing Opportunities</Link></li>
-                  <li><Link to="https://tc.pharmtechsonly.com/employers" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Employer Portal</Link></li>
+                  <li><a href="https://tc.pharmtechsonly.com/employers" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Employer Portal</a></li>
                 </ul>
               </div>
 
@@ -87,19 +87,19 @@ export const Head = () => {
     '@context': 'https://schema.org',
     '@type': 'SiteNavigationElement',
     name: 'Pharm Techs Only! Site Navigation',
-    url: 'https://www.pharmtechsonly.com/sitemap',
+    url: 'https://www.pharmtechsonly.com/sitemap/',
     hasPart: [
-      { '@type': 'SiteNavigationElement', name: 'Home', url: 'https://www.pharmtechsonly.com' },
-      { '@type': 'SiteNavigationElement', name: 'About', url: 'https://www.pharmtechsonly.com/about' },
-      { '@type': 'SiteNavigationElement', name: 'Resource Center', url: 'https://www.pharmtechsonly.com/resource-center' },
-      { '@type': 'SiteNavigationElement', name: 'Free CEUs', url: 'https://www.pharmtechsonly.com/resource-center/free-ceus' },
-      { '@type': 'SiteNavigationElement', name: 'Professional Organizations', url: 'https://www.pharmtechsonly.com/resource-center/organizations' },
-      { '@type': 'SiteNavigationElement', name: 'Pharmacy Conventions', url: 'https://www.pharmtechsonly.com/resource-center/conventions' },
-      { '@type': 'SiteNavigationElement', name: 'Blog', url: 'https://www.pharmtechsonly.com/resource-center/blog' },
-      { '@type': 'SiteNavigationElement', name: 'Career Resources', url: 'https://www.pharmtechsonly.com/resource-center/careers' },
-      { '@type': 'SiteNavigationElement', name: 'Store', url: 'https://www.pharmtechsonly.com/store' },
-      { '@type': 'SiteNavigationElement', name: 'Marketing Opportunities', url: 'https://www.pharmtechsonly.com/marketing-opps' },
-      { '@type': 'SiteNavigationElement', name: 'Contact', url: 'https://www.pharmtechsonly.com/contact' },
+      { '@type': 'SiteNavigationElement', name: 'Home', url: 'https://www.pharmtechsonly.com/' },
+      { '@type': 'SiteNavigationElement', name: 'About', url: 'https://www.pharmtechsonly.com/about/' },
+      { '@type': 'SiteNavigationElement', name: 'Resource Center', url: 'https://www.pharmtechsonly.com/resource-center/' },
+      { '@type': 'SiteNavigationElement', name: 'Free CEUs', url: 'https://www.pharmtechsonly.com/resource-center/free-ceus/' },
+      { '@type': 'SiteNavigationElement', name: 'Professional Organizations', url: 'https://www.pharmtechsonly.com/resource-center/organizations/' },
+      { '@type': 'SiteNavigationElement', name: 'Pharmacy Conventions', url: 'https://www.pharmtechsonly.com/resource-center/conventions/' },
+      { '@type': 'SiteNavigationElement', name: 'Blog', url: 'https://www.pharmtechsonly.com/resource-center/blog/' },
+      { '@type': 'SiteNavigationElement', name: 'Career Resources', url: 'https://www.pharmtechsonly.com/resource-center/careers/' },
+      { '@type': 'SiteNavigationElement', name: 'Store', url: 'https://www.pharmtechsonly.com/store/' },
+      { '@type': 'SiteNavigationElement', name: 'Marketing Opportunities', url: 'https://www.pharmtechsonly.com/marketing-opps/' },
+      { '@type': 'SiteNavigationElement', name: 'Contact', url: 'https://www.pharmtechsonly.com/contact/' },
       { '@type': 'SiteNavigationElement', name: 'TechConnect Community', url: 'https://tc.pharmtechsonly.com' },
     ],
   }
@@ -108,9 +108,9 @@ export const Head = () => {
     <>
       <title>{PAGE_TITLE}</title>
       <meta name="description" content={PAGE_DESC} />
-      <meta name="robots" content="noindex, follow" />
-      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/sitemap" />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/sitemap/" />
       <script type="application/ld+json">{JSON.stringify(siteNavSchema)}</script>
     </>
   )
 }
+

@@ -244,9 +244,40 @@ export const Head = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
-      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
-      { '@type': 'ListItem', position: 3, name: 'Organizations', item: 'https://www.pharmtechsonly.com/resource-center/organizations' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center/' },
+      { '@type': 'ListItem', position: 3, name: 'Organizations', item: 'https://www.pharmtechsonly.com/resource-center/organizations/' },
+    ],
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What are the main pharmacy technician certification organizations?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The two primary nationally recognized certification boards in the United States are the Pharmacy Technician Certification Board (PTCB), which administers the PTCE, and the National Healthcareer Association (NHA), which administers the ExCPT exam.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What professional associations represent pharmacy technicians?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Leading organizations include the American Association of Pharmacy Technicians (AAPT), the National Pharmacy Technician Association (NPTA), the American Society of Health-System Pharmacists (ASHP), and state-specific pharmacy associations.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why should a pharmacy technician join a professional association?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Joining professional pharmacy organizations provides access to free or discounted CEUs, career mentorship, advocacy representation for technician wages and scope of practice, and networking opportunities at state and national conferences.',
+        },
+      },
     ],
   }
 
@@ -254,8 +285,10 @@ export const Head = () => {
     <>
       <title>{PAGE_TITLE}</title>
       <meta name="description" content={PAGE_DESC} />
-      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/organizations" />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/organizations/" />
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     </>
   )
 }
+

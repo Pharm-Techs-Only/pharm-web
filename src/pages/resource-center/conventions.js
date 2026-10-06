@@ -263,9 +263,40 @@ export const Head = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com' },
-      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center' },
-      { '@type': 'ListItem', position: 3, name: 'Conventions', item: 'https://www.pharmtechsonly.com/resource-center/conventions' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.pharmtechsonly.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Resource Center', item: 'https://www.pharmtechsonly.com/resource-center/' },
+      { '@type': 'ListItem', position: 3, name: 'Conventions', item: 'https://www.pharmtechsonly.com/resource-center/conventions/' },
+    ],
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Can pharmacy technicians earn CEUs by attending conventions?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Major pharmacy conferences and conventions provide live ACPE-accredited continuing education sessions where pharmacy technicians can earn live CEU hours required for PTCB, NHA, and state board license renewals.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the best conventions for pharmacy technicians to attend?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Top conventions for pharmacy technicians include the AAPT (American Association of Pharmacy Technicians) Annual Convention, the ASHP Midyear Clinical Meeting, the NPTA Annual Conference, NHIA (National Home Infusion Association), and state-level pharmacy association annual meetings.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why should pharmacy technicians attend professional conferences?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Attending pharmacy conventions allows technicians to network with healthcare leaders, discover emerging pharmacy automation and AI technologies, earn live CEUs, and explore new career paths in specialty, hospital, and compounding pharmacy.',
+        },
+      },
     ],
   }
 
@@ -273,8 +304,10 @@ export const Head = () => {
     <>
       <title>{PAGE_TITLE}</title>
       <meta name="description" content={PAGE_DESC} />
-      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/conventions" />
+      <SEO title={PAGE_TITLE} description={PAGE_DESC} path="/resource-center/conventions/" />
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     </>
   )
 }
+

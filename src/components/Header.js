@@ -17,89 +17,59 @@ const Header = () => {
   }
 
   useEffect(() => {
-    document.addEventListener('onclick', (e) => {
-      if (isMenuOpen) {
-        toggleMenu(e)
-      }
-    })
-    return () => {
-      document.removeEventListener('onclick', (e) => {
-        if (isMenuOpen) {
-          toggleMenu(e)
-        }
-      })
-    }
-  }, [])
-
-  // Close menu when clicking outside
-  useEffect(() => {
-    // if (isMenuOpen) toggleMenu()
-    /*const handleClickOutside = (event) => {
-      if (!isMenuOpen) {
-        return
-      }
-
-      const clickedInsideMenu = menuRef.current && menuRef.current.contains(event.target)
-      const clickedMenuButton = menuButtonRef.current && menuButtonRef.current.contains(event.target)
-
-      if (!clickedInsideMenu && !clickedMenuButton) {
+    const handleDocumentClick = (e) => {
+      if (isMenuOpen && menuRef.current && !menuRef.current.contains(e.target) && menuButtonRef.current && !menuButtonRef.current.contains(e.target)) {
         setIsMenuOpen(false)
       }
     }
-
-    // Add event listener when menu is open
-    if (isMenuOpen) {
-      document.addEventListener('onclick', handleClickOutside)
-    }
-
-    // Cleanup event listener
+    document.addEventListener('click', handleDocumentClick)
     return () => {
-      document.removeEventListener('onclick', handleClickOutside)
-    }*/
+      document.removeEventListener('click', handleDocumentClick)
+    }
   }, [isMenuOpen])
 
   const navLinks = (mobile = false) => (
     <>
-      <Link
-        to="https://tc.pharmtechsonly.com"
+      <a
+        href="https://tc.pharmtechsonly.com"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
-        activeClassName="text-pharm-blue"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Tech Connect
-      </Link>
-      <Link
-        to="https://tc.pharmtechsonly.com/careers"
-        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
-        activeClassName="text-pharm-blue"
+      </a>
+      <a
+        href="https://tc.pharmtechsonly.com/careers"
+        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         target="_blank"
+        rel="noopener noreferrer"
       >
         Careers
-      </Link>
+      </a>
       <Link
-        to="/resource-center"
+        to="/resource-center/"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Resource Center
       </Link>
-      <Link
-        to="https://tc.pharmtechsonly.com/employers"
-        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
-        activeClassName="text-pharm-blue"
+      <a
+        href="https://tc.pharmtechsonly.com/employers"
+        className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         target="_blank"
+        rel="noopener noreferrer"
       >
         Employers
-      </Link>
+      </a>
       <Link
-        to="/marketing-opps"
+        to="/marketing-opps/"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
         Advertise
       </Link>
       <Link
-        to="/store"
+        to="/store/"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >
@@ -107,6 +77,7 @@ const Header = () => {
       </Link>
     </>
   )
+
 
   return (
     <>

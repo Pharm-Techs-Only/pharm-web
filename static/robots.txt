@@ -1,10 +1,44 @@
+# Pharm Techs Only! - robots.txt
+# https://www.pharmtechsonly.com
+
 User-agent: *
 Allow: /
 
-# Disallow legal/utility pages from being crawled
-Disallow: /privacy
-Disallow: /terms
-Disallow: /sitemap
+# Prevent crawling of technical Gatsby internals and utility error pages
+Disallow: /page-data/
+Disallow: /404/
+Disallow: /404.html
+Disallow: /*?*q=
 
-# Sitemap location
+# Allow and encourage AI search and reasoning engines (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+Disallow: /page-data/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /page-data/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /page-data/
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# XML Sitemaps
+Sitemap: https://www.pharmtechsonly.com/sitemap.xml
 Sitemap: https://www.pharmtechsonly.com/sitemap-index.xml
+
+# LLM / AI Context Files
+# https://www.pharmtechsonly.com/llms.txt
+# https://www.pharmtechsonly.com/llms-full.txt

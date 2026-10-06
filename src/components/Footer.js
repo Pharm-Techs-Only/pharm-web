@@ -22,43 +22,43 @@ const Footer = () => {
                 <h4 className="font-semibold mb-3">Main</h4>
                 <ul className="space-y-2 text-sm">
                   <li><Link to="/" className="text-blue-400 hover:underline transition-colors">Home</Link></li>
-                  <li><Link to="/about" className="text-blue-400 hover:underline transition-colors">About</Link></li>
-                  <li><Link to="/store" className="text-blue-400 hover:underline transition-colors">Store</Link></li>
-                  <li><Link to="/marketing-opps" className="text-blue-400 hover:underline transition-colors">Advertise</Link></li>
-                  <li><Link to="/contact" className="text-blue-400 hover:underline transition-colors">Contact</Link></li>
-                  <li><Link to="/privacy" className="text-blue-400 hover:underline transition-colors">Privacy</Link></li>
-                  <li><Link to="/terms" className="text-blue-400 hover:underline transition-colors">Terms</Link></li>
-                  <li><Link to="/sitemap" className="text-blue-400 hover:underline transition-colors">Site Map</Link></li>
+                  <li><Link to="/about/" className="text-blue-400 hover:underline transition-colors">About</Link></li>
+                  <li><Link to="/store/" className="text-blue-400 hover:underline transition-colors">Store</Link></li>
+                  <li><Link to="/marketing-opps/" className="text-blue-400 hover:underline transition-colors">Advertise</Link></li>
+                  <li><Link to="/contact/" className="text-blue-400 hover:underline transition-colors">Contact</Link></li>
+                  <li><Link to="/privacy/" className="text-blue-400 hover:underline transition-colors">Privacy</Link></li>
+                  <li><Link to="/terms/" className="text-blue-400 hover:underline transition-colors">Terms</Link></li>
+                  <li><Link to="/sitemap/" className="text-blue-400 hover:underline transition-colors">Site Map</Link></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="font-semibold mb-3">Resource Center</h4>
                 <ul className="space-y-2 text-sm mb-6">
-                  <li><Link to="/resource-center/free-ceus" className="text-blue-400 hover:underline transition-colors">Free CEUs</Link></li>
-                  <li><Link to="/resource-center/organizations" className="text-blue-400 hover:underline transition-colors">Organizations</Link></li>
-                  <li><Link to="/resource-center/conventions" className="text-blue-400 hover:underline transition-colors">Conventions</Link></li>
-                  <li><Link to="/resource-center/blog" className="text-blue-400 hover:underline transition-colors">Blog</Link></li>
+                  <li><Link to="/resource-center/free-ceus/" className="text-blue-400 hover:underline transition-colors">Free CEUs</Link></li>
+                  <li><Link to="/resource-center/organizations/" className="text-blue-400 hover:underline transition-colors">Organizations</Link></li>
+                  <li><Link to="/resource-center/conventions/" className="text-blue-400 hover:underline transition-colors">Conventions</Link></li>
+                  <li><Link to="/resource-center/blog/" className="text-blue-400 hover:underline transition-colors">Blog</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-3">Career Tools</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="/careers" className="text-blue-400 hover:underline transition-colors">Global Career Center</Link></li>
-                  <li><Link to="/resource-center/careers" className="text-blue-400 hover:underline transition-colors">Career Resources</Link></li>
+                  <li><a href="https://tc.pharmtechsonly.com/careers" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline transition-colors">Global Career Center</a></li>
+                  <li><Link to="/resource-center/careers/" className="text-blue-400 hover:underline transition-colors">Career Resources</Link></li>
                 </ul>
-                <h4 className="font-semibold mb-3">Tech Connect</h4>
+                <h4 className="font-semibold mb-3 mt-6">Tech Connect</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="https://tc.pharmtechsonly.com" target="_blank" className="text-blue-400 hover:underline transition-colors">Join Now</Link></li>
+                  <li><a href="https://tc.pharmtechsonly.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline transition-colors">Join Now</a></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="font-semibold mb-3">Employers</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="text-blue-400 hover:underline transition-colors" target="_blank" rel="noreferrer">Post Jobs<br /><span className="text-sm italic">*coming soon*</span></a></li>
-                  <li><a href="#" className="text-blue-400 hover:underline transition-colors" target="_blank" rel="noreferrer">Search Candidates<br /><span className="text-sm italic">*coming soon*</span></a></li>
-                  <li><Link to="/marketing-opps" className="text-blue-400 hover:underline transition-colors" target="_blank" rel="noreferrer">Marketing Opportunities</Link></li>
+                  <li><span className="text-gray-400">Post Jobs<br /><span className="text-sm italic">*coming soon*</span></span></li>
+                  <li><span className="text-gray-400">Search Candidates<br /><span className="text-sm italic">*coming soon*</span></span></li>
+                  <li><Link to="/marketing-opps/" className="text-blue-400 hover:underline transition-colors">Marketing Opportunities</Link></li>
                 </ul>
               </div>
             </div>

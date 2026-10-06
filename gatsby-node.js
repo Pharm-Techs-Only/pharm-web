@@ -115,3 +115,32 @@ exports.onCreatePage = ({ page, actions }) => {
     deletePage(page)
   }
 }
+
+// Post-build hook to ensure standard SEO and AEO assets are synchronized
+exports.onPostBuild = async () => {
+  const fs = require("fs")
+  
+  // 1. Ensure sitemap.xml exists alongside sitemap-index.xml
+  const sitemapIndexPath = path.join(__dirname, "public", "sitemap-index.xml")
+  const sitemapXmlPath = path.join(__dirname, "public", "sitemap.xml")
+  if (fs.existsSync(sitemapIndexPath)) {
+    try {
+      fs.copyFileSync(sitemapIndexPath, sitemapXmlPath)
+      console.log("onPostBuild: Successfully synchronized sitemap.xml with sitemap-index.xml")
+    } catch (err) {
+      console.warn("onPostBuild: Warning syncing sitemap.xml:", err)
+    }
+  }
+
+  // 2. Ensure /llm.txt is an identical copy of /llms.txt for tools expecting either filename
+  const llmsPath = path.join(__dirname, "public", "llms.txt")
+  const llmPath = path.join(__dirname, "public", "llm.txt")
+  if (fs.existsSync(llmsPath)) {
+    try {
+      fs.copyFileSync(llmsPath, llmPath)
+      console.log("onPostBuild: Successfully synchronized llm.txt from llms.txt")
+    } catch (err) {
+      console.warn("onPostBuild: Warning syncing llm.txt:", err)
+    }
+  }
+}

@@ -74,6 +74,32 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
     console.error("Failed to source DropInBlog data:", error)
   }
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type DropInBlogPostAuthor {
+      name: String
+      photo: String
+    }
+    type DropInBlogPost implements Node {
+      slug: String!
+      title: String!
+      content: String
+      summary: String
+      featuredImage: String
+      publishedAt: String
+      publishedAtIso8601: String
+      updatedAtIso8601: String
+      readtime: String
+      seoTitle: String
+      seoDescription: String
+      author: DropInBlogPostAuthor
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -83,6 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             slug
+            title
           }
         }
       }
@@ -96,12 +123,17 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data?.allDropInBlogPost?.edges || []
   const postTemplate = path.resolve(`src/pages/resource-center/blog-post.js`)
 
-  posts.forEach(({ node }) => {
+  posts.forEach(({ node }, index) => {
+    const prev = index > 0 ? { slug: posts[index - 1].node.slug, title: posts[index - 1].node.title } : null
+    const next = index < posts.length - 1 ? { slug: posts[index + 1].node.slug, title: posts[index + 1].node.title } : null
+
     createPage({
       path: `/resource-center/blog/${node.slug}`,
       component: postTemplate,
       context: {
         slug: node.slug,
+        prev,
+        next,
       },
     })
   })

@@ -9,6 +9,7 @@ Disallow: /page-data/
 Disallow: /404/
 Disallow: /404.html
 Disallow: /*?*q=
+Disallow: /static/*.pdf
 
 # Allow and encourage AI search and reasoning engines (AEO / GEO)
 User-agent: GPTBot

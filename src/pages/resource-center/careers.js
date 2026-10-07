@@ -53,7 +53,7 @@ const CareerResourcesPage = () => {
                   <a
                     href={resource.pdf}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="inline-flex justify-center items-center w-full px-4 py-3 bg-pharm-blue text-white rounded-md hover:bg-blue-700 transition-colors duration-300 font-medium"
                   >
                     Download Guide

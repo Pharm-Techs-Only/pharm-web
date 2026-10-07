@@ -95,9 +95,37 @@ const BlogPage = ({ data }) => {
                 onClick={handleLoadMore}
                 className="bg-pharm-blue text-white px-8 py-3 rounded-md font-semibold hover:bg-pharm-dark-blue transition-colors shadow-sm cursor-pointer"
               >
-                Load More Articles
+                Load More Articles ({visibleCount} of {posts.length})
               </button>
             </div>
+          )}
+
+          {/* Complete Article Directory (Crawlable HTML Archive) */}
+          {posts.length > 0 && (
+            <section className="mt-16 pt-12 border-t border-gray-200">
+              <div className="mb-8 text-center md:text-left">
+                <h3 className="text-2xl font-bold text-pharm-blue !mb-2">
+                  Complete Article Archive ({posts.length} Guides & Topics)
+                </h3>
+                <p className="text-sm text-gray-600 !mb-0">
+                  Browse our complete library of pharmacy technician career advice, industry updates, exam prep, and professional guides.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3 bg-gray-50/70 p-6 md:p-8 rounded-xl border border-gray-200">
+                {posts.map(({ node }) => (
+                  <div key={node.slug} className="py-1">
+                    <Link
+                      to={`/resource-center/blog/${node.slug}`}
+                      className="text-sm text-gray-800 hover:text-pharm-blue font-medium line-clamp-1 flex items-center gap-2 group transition-colors"
+                    >
+                      <span className="text-pharm-light-blue group-hover:translate-x-0.5 transition-transform text-xs">&rsaquo;</span>
+                      <span className="truncate">{node.title}</span>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </section>
           )}
         </div>
       </div>

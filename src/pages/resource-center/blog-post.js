@@ -6,8 +6,33 @@ import SEO from "../../components/SEO"
 
 export default function BlogPostTemplate({ data, pageContext }) {
   const post = data.dropInBlogPost
-  const recentPosts = data.recentPosts?.nodes || []
-  const { prev, next } = pageContext || {}
+  const { prev, next, relatedPosts: contextRelated } = pageContext || {}
+  const recentPosts = (contextRelated && contextRelated.length > 0)
+    ? contextRelated
+    : (data.recentPosts?.nodes || [])
+
+  const authorName = post.author?.name || 'Courtney Miller, CPhT'
+  const isCourtney = authorName.toLowerCase().includes('courtney')
+  const isFaruq = authorName.toLowerCase().includes('faruq')
+  const isGeorge = authorName.toLowerCase().includes('george')
+
+  const authorRoleBadge = isCourtney
+    ? 'Founder & Advocate'
+    : (isFaruq
+        ? 'Certified Pharmacy Tech & Writer'
+        : (isGeorge
+            ? 'Doctor of Pharmacy Scholar'
+            : 'Pharmacy Tech Contributor'))
+
+  const fallbackBio = isCourtney
+    ? 'Courtney has over 30 years of frontline experience as a certified pharmacy technician across retail, hospital, and leadership settings. She founded Pharm Techs Only! to empower, elevate, and support pharmacy technicians worldwide.'
+    : (isFaruq
+        ? 'Faruq Niniola is a certified pharmacy technician, a pharmacy student and health content writer dedicated to turning complex medical information into clear, relatable stories for pharmacy professionals worldwide.'
+        : (isGeorge
+            ? 'Dr. George Bassey (PharmD in view) is a Doctor of Pharmacy student at the University of Calabar and the founder of Impactpreneur Global, exploring healthcare innovation, AI, and digital health.'
+            : 'An experienced pharmacy technician and healthcare advocate contributing insights and career guidance to empower the global pharmacy technician community on Pharm Techs Only!'))
+
+  const authorBioHtml = post.author?.bio || null
 
   return (
     <Layout includeCTA="default">
@@ -98,20 +123,34 @@ export default function BlogPostTemplate({ data, pageContext }) {
             <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-5 bg-gray-50/70 p-6 rounded-xl">
               <img
                 src={post.author?.photo || "/icons/icon-96x96.png"}
-                alt={post.author?.name || "Courtney Miller, CPhT"}
+                alt={authorName}
                 className="w-16 h-16 rounded-full object-cover border-2 border-pharm-light-blue shrink-0 shadow-sm"
               />
-              <div className="text-center sm:text-left">
+              <div className="text-center sm:text-left flex-grow">
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-2">
-                  <h4 className="text-base font-bold text-gray-900 !mb-0">{post.author?.name || "Courtney Miller, CPhT"}</h4>
-                  <span className="text-xs bg-blue-100 text-pharm-blue font-semibold px-2.5 py-0.5 rounded-full">Founder & Advocate</span>
+                  <h4 className="text-base font-bold text-gray-900 !mb-0">{authorName}</h4>
+                  <span className="text-xs bg-blue-100 text-pharm-blue font-semibold px-2.5 py-0.5 rounded-full">
+                    {authorRoleBadge}
+                  </span>
                 </div>
-                <p className="text-sm text-gray-600 !mb-3 leading-relaxed">
-                  Courtney has over 30 years of frontline experience as a certified pharmacy technician across retail, hospital, and leadership settings. She founded Pharm Techs Only! to empower, elevate, and support pharmacy technicians worldwide.
-                </p>
-                <Link to="/about" className="text-xs text-pharm-blue hover:text-pharm-light-blue font-semibold inline-flex items-center gap-1">
-                  Learn more about our mission &rarr;
-                </Link>
+                {authorBioHtml ? (
+                  <div
+                    className="text-sm text-gray-600 !mb-3 leading-relaxed [&_p]:!mb-2 [&_a]:text-pharm-blue hover:[&_a]:underline"
+                    dangerouslySetInnerHTML={{ __html: authorBioHtml }}
+                  />
+                ) : (
+                  <p className="text-sm text-gray-600 !mb-3 leading-relaxed">
+                    {fallbackBio}
+                  </p>
+                )}
+                <div className="pt-2 border-t border-gray-200/60 flex flex-wrap items-center justify-between gap-2 text-xs">
+                  <span className="text-gray-500">
+                    Published on <strong className="text-gray-700">Pharm Techs Only!</strong>
+                  </span>
+                  <Link to="/about" className="text-pharm-blue hover:text-pharm-light-blue font-semibold inline-flex items-center gap-1">
+                    About our community & mission &rarr;
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -212,6 +251,8 @@ export const query = graphql`
       author {
         name
         photo
+        slug
+        bio
       }
     }
     recentPosts: allDropInBlogPost(
@@ -243,6 +284,16 @@ export const Head = ({ data }) => {
   const datePublished = post.publishedAtIso8601 || post.publishedAt
   const dateModified = post.updatedAtIso8601 || post.publishedAtIso8601 || post.publishedAt
 
+  const authorName = post.author?.name || 'Courtney Miller, CPhT'
+  const isCourtney = authorName.toLowerCase().includes('courtney')
+  const authorJobTitle = isCourtney
+    ? 'Founder & Certified Pharmacy Technician'
+    : (authorName.toLowerCase().includes('faruq')
+        ? 'Certified Pharmacy Technician & Health Writer'
+        : (authorName.toLowerCase().includes('george')
+            ? 'Doctor of Pharmacy Scholar & Healthcare Innovator'
+            : 'Pharmacy Technician & Contributor'))
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -259,14 +310,14 @@ export const Head = ({ data }) => {
     dateModified: dateModified,
     author: {
       '@type': 'Person',
-      name: post.author?.name || 'Courtney Miller',
-      jobTitle: 'Founder & Certified Pharmacy Technician',
+      name: authorName,
+      jobTitle: authorJobTitle,
       worksFor: {
         '@type': 'Organization',
         name: 'Pharm Techs Only!',
         url: 'https://www.pharmtechsonly.com',
       },
-      url: 'https://www.pharmtechsonly.com/about',
+      url: isCourtney ? 'https://www.pharmtechsonly.com/about' : undefined,
     },
     publisher: {
       '@type': 'Organization',

@@ -19,25 +19,25 @@ export default function BlogPostTemplate({ data, pageContext }) {
   const authorRoleBadge = isCourtney
     ? 'Founder & Advocate'
     : (isFaruq
-        ? 'Certified Pharmacy Tech & Writer'
-        : (isGeorge
-            ? 'Doctor of Pharmacy Scholar'
-            : 'Pharmacy Tech Contributor'))
+      ? 'Certified Pharmacy Tech & Writer'
+      : (isGeorge
+        ? 'Doctor of Pharmacy Scholar'
+        : 'Pharmacy Tech Contributor'))
 
   const fallbackBio = isCourtney
     ? 'Courtney has over 30 years of frontline experience as a certified pharmacy technician across retail, hospital, and leadership settings. She founded Pharm Techs Only! to empower, elevate, and support pharmacy technicians worldwide.'
     : (isFaruq
-        ? 'Faruq Niniola is a certified pharmacy technician, a pharmacy student and health content writer dedicated to turning complex medical information into clear, relatable stories for pharmacy professionals worldwide.'
-        : (isGeorge
-            ? 'Dr. George Bassey (PharmD in view) is a Doctor of Pharmacy student at the University of Calabar and the founder of Impactpreneur Global, exploring healthcare innovation, AI, and digital health.'
-            : 'An experienced pharmacy technician and healthcare advocate contributing insights and career guidance to empower the global pharmacy technician community on Pharm Techs Only!'))
+      ? 'Faruq Niniola is a certified pharmacy technician, a pharmacy student and health content writer dedicated to turning complex medical information into clear, relatable stories for pharmacy professionals worldwide.'
+      : (isGeorge
+        ? 'Dr. George Bassey (PharmD in view) is a Doctor of Pharmacy student at the University of Calabar and the founder of Impactpreneur Global, exploring healthcare innovation, AI, and digital health.'
+        : 'An experienced pharmacy technician and healthcare advocate contributing insights and career guidance to empower the global pharmacy technician community on Pharm Techs Only!'))
 
   const authorBioHtml = post.author?.bio || null
 
   return (
     <Layout includeCTA="default">
       <HeroHeader>
-        <div className="pt-[60px] md:pt-[80px] pb-[40px] md:pb-[80px] w-full px-4 text-center max-w-4xl mx-auto">
+        <div className="pt-[60px] md:pt-[80px] pb-0 w-full px-4 text-center max-w-4xl mx-auto">
           <h1>
             {post.title}
           </h1>
@@ -275,7 +275,7 @@ export const Head = ({ data }) => {
   const post = data?.dropInBlogPost
   if (!post) return null
 
-  const pageTitle = post.seoTitle 
+  const pageTitle = post.seoTitle
     ? `${post.seoTitle} – Pharm Techs Only!`
     : `${post.title} – Pharm Techs Only! Blog`
   const pageDesc = post.seoDescription || post.summary || `Read ${post.title} on the Pharm Techs Only! blog for pharmacy technicians.`
@@ -289,10 +289,10 @@ export const Head = ({ data }) => {
   const authorJobTitle = isCourtney
     ? 'Founder & Certified Pharmacy Technician'
     : (authorName.toLowerCase().includes('faruq')
-        ? 'Certified Pharmacy Technician & Health Writer'
-        : (authorName.toLowerCase().includes('george')
-            ? 'Doctor of Pharmacy Scholar & Healthcare Innovator'
-            : 'Pharmacy Technician & Contributor'))
+      ? 'Certified Pharmacy Technician & Health Writer'
+      : (authorName.toLowerCase().includes('george')
+        ? 'Doctor of Pharmacy Scholar & Healthcare Innovator'
+        : 'Pharmacy Technician & Contributor'))
 
   const articleSchema = {
     '@context': 'https://schema.org',

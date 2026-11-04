@@ -7,7 +7,7 @@ const TermsPage = () => {
     <Layout includeHeader={true}>
       <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <h1 className="mb-8">Terms of Service</h1>
-        
+
         <div className="prose prose-lg max-w-none">
           <p className="text-pharm-grey mb-8">
             <strong>Updated and effective as March 2024.</strong>
@@ -251,6 +251,46 @@ const TermsPage = () => {
             </p>
             <p className="text-pharm-grey mb-4">
               You may not assign or otherwise transfer your Account to any other person or entity. In certain instances, you may be asked to provide proof of age, identity, or other methods of identity verification to access or use the Services. You agree that you may be denied access to or use of the Services if you refuse to provide the requisite proof of age, identity, or other methods of identity verification.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">11A. Child Safety Standards</h2>
+            <p className="text-pharm-grey mb-4">
+              Pharm Techs Only! LLC prohibits child sexual abuse and exploitation (CSAE) across all its websites, apps, and services, including TechConnect®. For purposes of this section, a child is anyone under the age of 18.
+            </p>
+            <p className="text-pharm-grey mb-4">
+              <strong>Prohibited Content and Conduct</strong>
+            </p>
+            <p className="text-pharm-grey mb-4">
+              Users must not create, upload, publish, distribute, share, solicit, or facilitate child sexual abuse material (CSAM) or any content or conduct that sexually exploits, abuses, or endangers children. Prohibited conduct includes grooming, sexual solicitation of minors, sexual extortion involving minors, trafficking children for sexual purposes, and encouraging or facilitating any such activity.
+            </p>
+            <p className="text-pharm-grey mb-4">
+              <strong>Reporting Child Safety Concerns</strong>
+            </p>
+            <p className="text-pharm-grey mb-4">
+              Users may report suspected violations of these standards or other child safety concerns to <a href="mailto:questions@pharmtechsonly.com" target="_blank">questions@pharmtechsonly.com</a>. Reports should include information sufficient to identify the relevant account, content, or activity, such as a username or a link to the content.
+            </p>
+            <p className="text-pharm-grey mb-4">
+              Do not download, attach, forward, or otherwise redistribute suspected child sexual abuse material when submitting a report.
+            </p>
+            <p className="text-pharm-grey mb-4">
+              <strong>Enforcement and Reporting to Authorities</strong>
+            </p>
+            <p className="text-pharm-grey mb-4">
+              Pharm Techs Only! LLC reviews reports of suspected violations and takes appropriate action, which may include removing prohibited content, restricting access to the Services, and suspending or terminating accounts.
+            </p>
+            <p className="text-pharm-grey mb-4">
+              When we become aware of suspected child sexual abuse material, we take appropriate steps to restrict access to that material and report it to the National Center for Missing & Exploited Children (NCMEC) or the relevant regional authority, as required by applicable law. We comply with applicable child safety laws and cooperate with lawful requests from appropriate authorities.
+            </p>
+            <p className="text-pharm-grey mb-4">
+              <strong>Child Safety Contact</strong>
+            </p>
+            <p className="text-pharm-grey mb-4">
+              The Pharm Techs Only! LLC team serves as the designated point of contact for child safety concerns and questions regarding these standards.
+            </p>
+            <p className="text-pharm-grey mb-4">
+              <strong>Email: <a href="mailto:questions@pharmtechsonly.com" target="_blank">questions@pharmtechsonly.com</a></strong>
             </p>
           </section>
 

@@ -10,7 +10,7 @@ import {
   Mail,
   CheckCircle2,
   Layers,
-  FileText,
+  Megaphone,
   Eye,
   Award,
   Briefcase,
@@ -540,7 +540,7 @@ const AdvertisePage = () => {
                   </div>
                   <div className="flex items-center gap-3 text-sm text-pharm-grey">
                     <div className="icon-badge-soft w-8 h-8 bg-blue-50 text-pharm-light-blue">
-                      <FileText className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
+                      <Megaphone className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
                     </div>
                     <span><strong>We handle the promotion.</strong>  We'll share two posts on LinkedIn and Facebook during the 7-10 day promotion window.</span>
                   </div>

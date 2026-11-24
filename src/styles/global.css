@@ -193,7 +193,6 @@
     text-align: center;
   }
 
-
 }
 
 /* Custom breakpoint for navigation at 1100px */
@@ -232,6 +231,343 @@
     width: 100%;
     max-width: 1612px;
     margin: 0 auto;
+  }
+
+  .hero-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 14px;
+    padding: 20px 16px;
+    text-align: center;
+    color: #ffffff;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.42);
+    }
+  }
+
+  .hero-stat-value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-family-sans);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+
+  .hero-stat-label {
+    font-family: var(--font-family-sans);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 24px;
+    background-color: #ffffff;
+    color: var(--color-pharm-purple);
+    font-family: var(--font-family-sans);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(9, 68, 126, 0.12);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      background-color: #f4f7ff;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(9, 68, 126, 0.18);
+      cursor: pointer;
+    }
+  }
+
+  .btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 24px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-family: var(--font-family-sans);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: rgba(255, 255, 255, 0.55);
+      transform: translateY(-1px);
+      cursor: pointer;
+    }
+  }
+
+  .section-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(87, 118, 211, 0.14);
+    box-shadow: 0 8px 24px rgba(9, 68, 126, 0.08);
+    padding: 28px;
+    position: relative;
+  }
+
+  .section-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(87, 118, 211, 0.22);
+    color: var(--color-pharm-purple);
+    font-family: var(--font-family-sans);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    box-shadow: 0 2px 8px rgba(9, 68, 126, 0.06);
+  }
+
+  .icon-badge-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--color-pharm-purple) 0%, var(--color-pharm-light-blue) 100%);
+    color: #ffffff;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(73, 93, 169, 0.24);
+  }
+
+  .icon-badge-soft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .callout-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: #eff6ff;
+    border-left: 4px solid #5fb54a;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-pharm-grey);
+  }
+
+  .stat-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(87, 118, 211, 0.14);
+  }
+
+  .stat-tile-purple {
+    background: linear-gradient(180deg, #f3f6ff 0%, #e4ecff 100%);
+  }
+
+  .stat-tile-green {
+    background: linear-gradient(180deg, #effcf2 0%, #dcf7e3 100%);
+    border-color: rgba(95, 181, 74, 0.2);
+  }
+
+  .stat-tile-indigo {
+    background: linear-gradient(180deg, #f2f4ff 0%, #e5e9ff 100%);
+  }
+
+  .stat-tile-blue {
+    background: linear-gradient(180deg, #eef6ff 0%, #dceeff 100%);
+  }
+
+  .stat-tile-red {
+    background: linear-gradient(180deg, #fff1f2 0%, #ffe0e4 100%);
+    border-color: rgba(230, 0, 35, 0.16);
+  }
+
+  .stat-tile-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(9, 68, 126, 0.08);
+    margin-bottom: 10px;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: var(--font-family-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-pharm-grey);
+  }
+
+  .sub-panel {
+    background: #f8fafd;
+    border: 1px solid rgba(87, 118, 211, 0.14);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .mini-feature-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px 12px;
+    background: #ffffff;
+    border: 1px solid rgba(87, 118, 211, 0.16);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-pharm-grey);
+  }
+
+  .btn-cta-green {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(#6bce53 0%, #58c93c 100%);
+    color: #ffffff;
+    font-family: var(--font-family-sans);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(95, 181, 74, 0.25);
+    transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      filter: brightness(1.04);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(95, 181, 74, 0.32);
+      cursor: pointer;
+    }
+  }
+
+  .price-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 18px;
+    border-radius: 9999px;
+    background: linear-gradient(#6bce53 0%, #58c93c 100%);
+    color: #ffffff;
+    font-family: var(--font-family-sans);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    box-shadow: 0 3px 10px rgba(95, 181, 74, 0.25);
+    white-space: nowrap;
+  }
+
+  .campaign-price-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #f5f8ff;
+    border: 1px solid rgba(87, 118, 211, 0.14);
+    margin-bottom: 20px;
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    background: linear-gradient(#6bce53 0%, #58c93c 100%);
+    color: #ffffff;
+    font-family: var(--font-family-sans);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(95, 181, 74, 0.28);
+  }
+
+  .cta-banner-emphasis {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    padding: 40px 24px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(180deg, var(--color-pharm-purple) 0%, #5572de 55%, #5d7ef2 100%);
+    box-shadow: 0 12px 30px rgba(73, 93, 169, 0.24);
+  }
+
+  .cta-banner-glass-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 20px 24px;
+    backdrop-filter: blur(4px);
   }
 }
 

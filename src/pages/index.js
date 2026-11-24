@@ -222,13 +222,13 @@ const HomePage = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-8">
-            <Link to="/marketing-opps/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="/advertise/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconFeatureJob} alt="Feature Your Job Opening" className="" />
               </div>
               <h3 className="font-semibold text-purple-900 text-center mb-0">Feature Your Job Opening</h3>
             </Link>
-            <Link to="/marketing-opps/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
+            <Link to="/advertise/" className="item-wrap m-w-[292px] w-full m-h-[275px] h-full">
               <div className="height-[102px] mb-4">
                 <img src={iconAdvertise} alt="Advertise on Tech Connect" className="" />
               </div>

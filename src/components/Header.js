@@ -62,7 +62,7 @@ const Header = () => {
         Employers
       </a>
       <Link
-        to="/marketing-opps/"
+        to="/advertise/"
         className={`text-pharm-light-blue ${mobile ? 'text-center' : ''} hover:text-pharm-blue active:text-pharm-blue px-3 py-2 text-sm text-[16px] transition-colors`}
         activeClassName="text-pharm-blue"
       >

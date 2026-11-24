@@ -13,12 +13,12 @@ const SitemapPage = () => {
           <p>Find your way around Pharm Techs Only!</p>
         </div>
       </HeroHeader>
-      
+
       <section className="relative pb-[60px] lg:pb-[120px]">
         <div className="content-container relative">
           <div className="relative z-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-              
+
               <div>
                 <h3 className="text-xl font-bold mb-4 text-pharm-blue">Main</h3>
                 <ul className="space-y-3">
@@ -63,7 +63,7 @@ const SitemapPage = () => {
                 <ul className="space-y-3">
                   <li><span className="text-gray-400">Post Jobs (Coming Soon)</span></li>
                   <li><span className="text-gray-400">Search Candidates (Coming Soon)</span></li>
-                  <li><Link to="/marketing-opps" className="text-blue-600 hover:underline">Marketing Opportunities</Link></li>
+                  <li><Link to="/advertise" className="text-blue-600 hover:underline">Advertise</Link></li>
                   <li><a href="https://tc.pharmtechsonly.com/employers" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Employer Portal</a></li>
                 </ul>
               </div>
@@ -98,7 +98,7 @@ export const Head = () => {
       { '@type': 'SiteNavigationElement', name: 'Blog', url: 'https://www.pharmtechsonly.com/resource-center/blog/' },
       { '@type': 'SiteNavigationElement', name: 'Career Resources', url: 'https://www.pharmtechsonly.com/resource-center/careers/' },
       { '@type': 'SiteNavigationElement', name: 'Store', url: 'https://www.pharmtechsonly.com/store/' },
-      { '@type': 'SiteNavigationElement', name: 'Marketing Opportunities', url: 'https://www.pharmtechsonly.com/marketing-opps/' },
+      { '@type': 'SiteNavigationElement', name: 'Marketing Opportunities', url: 'https://www.pharmtechsonly.com/advertise/' },
       { '@type': 'SiteNavigationElement', name: 'Contact', url: 'https://www.pharmtechsonly.com/contact/' },
       { '@type': 'SiteNavigationElement', name: 'TechConnect Community', url: 'https://tc.pharmtechsonly.com' },
     ],

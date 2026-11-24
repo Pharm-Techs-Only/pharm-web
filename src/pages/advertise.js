@@ -466,13 +466,11 @@ const AdvertisePage = () => {
                     </p>
                   </div>
                 </div>
-                <span className="price-pill self-start sm:self-center">$19.95</span>
+                <span className="price-pill self-start sm:self-center">$99</span>
               </div>
 
               <p className="text-sm md:text-base leading-relaxed mb-6">
-                Have an open pharmacy technician role that needs more visibility? Our Job Boost is a one-time social
-                media promotion designed specifically to help pharmacy technician roles get seen by the right
-                audience, without recruiter fees or long-term contracts.
+                Get a 30-day job listing on the Pharm Techs Only! Career Portal in TechConnect®, plus two promotional posts shared on LinkedIn and Facebook over 7-10 days. Each purchase covers one pharmacy technician opening.
               </p>
 
               {/* Job Boost Includes */}
@@ -532,19 +530,19 @@ const AdvertisePage = () => {
                     <div className="icon-badge-soft w-8 h-8 bg-blue-50 text-pharm-light-blue">
                       <CreditCard className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
                     </div>
-                    <span><strong>Complete payment first</strong></span>
+                    <span><strong>Purchase your Job Boost.</strong> After checkout, you'll receive a link to submit your job details.</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-pharm-grey">
                     <div className="icon-badge-soft w-8 h-8 bg-blue-50 text-pharm-light-blue">
                       <Mail className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
                     </div>
-                    <span>You&apos;ll be given a <strong>link to the job submission form</strong> immediately after payment</span>
+                    <span><strong>Submit your opening.</strong> Pharm Techs Only! will publish your listing on the Career Portal for 30 days.</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-pharm-grey">
                     <div className="icon-badge-soft w-8 h-8 bg-blue-50 text-pharm-light-blue">
                       <FileText className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
                     </div>
-                    <span><strong>Submit your role details</strong> and we handle the promotion</span>
+                    <span><strong>We handle the promotion.</strong>  We'll share two posts on LinkedIn and Facebook during the 7-10 day promotion window.</span>
                   </div>
                 </div>
               </div>
@@ -556,7 +554,7 @@ const AdvertisePage = () => {
                 className="btn-cta-green py-3.5 text-base"
               >
                 <Sparkles className="w-4 h-4 shrink-0" strokeWidth={2} aria-hidden="true" />
-                <span>Purchase Job Boost - $19.95</span>
+                <span>Purchase Job Boost - $99</span>
                 <ArrowRight className="w-4 h-4 shrink-0" strokeWidth={2} aria-hidden="true" />
               </a>
             </div>

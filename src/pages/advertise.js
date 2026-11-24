@@ -77,7 +77,7 @@ const AdvertisePage = () => {
             <div className="hero-stat-card">
               <div className="hero-stat-value">
                 <Share2 className="w-6 h-6 shrink-0" strokeWidth={1.75} aria-hidden="true" />
-                <span>4</span>
+                <span>6</span>
               </div>
               <span className="hero-stat-label">Platforms</span>
             </div>
